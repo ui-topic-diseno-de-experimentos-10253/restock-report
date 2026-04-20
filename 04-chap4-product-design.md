@@ -2750,4 +2750,4 @@ El contexto **Monitoring** gestiona el seguimiento y registro de las preparacion
 
 ## 4.10. Database Design
 
-### 4.10.1. Relational/Non-Relational Database Diagram
+### 4.10.1. Non-Relational Database Diagram
