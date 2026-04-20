@@ -1,3 +1,5 @@
+# Part II: Verification, Validation & Pipeline
+
 # Capítulo VI: Product Implementation, Validation & Deployment
 
 ## 6.1. Software Configuration Management
@@ -9,7 +11,6 @@
 ### 6.1.3. Source Code Style Guide & Conventions
 
 ### 6.1.4. Software Deployment Configuration
-
 
 ## 6.2. Landing Page, Services & Applications Implementation
 
@@ -33,7 +34,6 @@
 
 #### 6.2.1.9. Team Collaboration Insights during Sprint
 
-
 ### 6.2.2. Sprint 2
 
 #### 6.2.2.1. Sprint Planning 2
@@ -54,7 +54,6 @@
 
 #### 6.2.2.9. Team Collaboration Insights during Sprint
 
-
 ### 6.2.3. Sprint 3
 
 #### 6.2.3.1. Sprint Planning 3
@@ -74,7 +73,6 @@
 #### 6.2.3.8. Software Deployment Evidence for Sprint Review
 
 #### 6.2.3.9. Team Collaboration Insights during Sprint
-
 
 ## 6.3. Validation Interviews
 
