@@ -2107,7 +2107,7 @@ entonces el contenido se organiza en dos columnas con espaciado adecuado, los fo
 
 A continuación se presenta el Impact Map de Restock , el cual permite visualizar de manera clara cómo las funcionalidades clave de la aplicación se alinean con los objetivos de negocio, considerando a los actores involucrados y los impactos esperados en su comportamiento.
 
-![Foto de Impact Mapping](assets/images/cap2/impact-map.png)
+![Foto de Impact Mapping](assets/images/chapter2/impact-map.png)
 
 ### 2.4.3 Product Backlog
 
@@ -2598,6 +2598,3 @@ En esta sección se presenta el Product Backlog de Restock, que contiene las his
         <td>3</td>
     </tr>
 </table>
-## 3.3. Product Backlog
-
-## 3.4. Impact Mapping
