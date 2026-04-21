@@ -11,17 +11,17 @@ A continuación, se listan las herramientas y estándares adoptados por el equip
 | Project Management      | Trello                                                 | Seguimiento de backlog, tareas y sprints.                      | [https://trello.com/](https://trello.com/)                                                                                               |
 | Requirements Management | Gherkin Conventions                                    | Escritura legible de requisitos con formato Given/When/Then.   | [https://cucumber.io/docs/gherkin/](https://cucumber.io/docs/gherkin/)                                                                   |
 | Product UX/UI Design    | Figma                                                  | Prototipos y diseño responsive.                               | SaaS –[https://figma.com](https://figma.com)                                                                                            |
-| Frontend Dev            | Flutter, Dart                                          | Construcción del frontend del sistema.                        | https://flutter.dev/   /   https://dart.dev/                                                                                          |
+| Frontend Dev            | Kotlin, Flutter, Dart                                  | Construcción del frontend del sistema.                        | https://kotlinlang.org/ / https://flutter.dev/   /   https://dart.dev/                                                               |
 | Backend Dev             | Java + Spring Boot                                     | Lógica de negocio y servicios REST.                           | [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)                                                         |
 | IDE                     | IntelliJ IDEA + Android Studio                         | Desarrollo, depuración y pruebas.                             | [https://www.jetbrains.com/idea](https://www.jetbrains.com/idea) / [https://www.jetbrains.com/webstorm](https://www.jetbrains.com/webstorm) |
 | Code Standards          | Google Java Style Guide, Google TypeScript Style Guide | Mantener un código consistente y legible.                     | [https://google.github.io/styleguide](https://google.github.io/styleguide)                                                               |
 | Version Control         | Git + GitHub                                           | Gestión colaborativa del código fuente.                      | SaaS –[https://github.com](https://github.com)                                                                                          |
 | Software Deployment     | Github pages                                           | Despliegue continuo del sistema en ambientes de testing.       | SaaS –[https://railway.app](https://railway.app) / [https://render.com](https://render.com)                                                |
-| Software Documentation  | Swagger                                                | Documentación de APIs, funcionalidades y criterios técnicos. | SaaS –[https://swagger.io/](https://swagger.io/)                                                                                        |
+| Software Documentation  | Swagger                                                | Documentación de APIs, funcionalidades y criterios técnicos. | SaaS –[https://swagger.io/](https://swagger.io/)                                                                                                 |
 
 ### 5.1.2. Source Code Management
 
-#### Frontend (Landing Page - HTML, CSS, JavaScript)
+#### Landing Page (HTML, CSS, JavaScript)
 
 ##### Convenciones generales:
 
@@ -149,6 +149,72 @@ A continuación, se listan las herramientas y estándares adoptados por el equip
 - **Angular DevTools**
 - **Postman** o **Swagger UI** para validación de endpoints
 
+#### Mobile Frontend (Android Studio + Kotlin)
+
+##### Convenciones generales:
+
+- **Idioma**: Todo el código (nombres de paquetes, clases, variables, funciones, recursos) en **inglés**.
+- **Indentación**: 4 espacios.
+- **Formato de archivos**: `.kt` para Kotlin, `.xml` para layouts/resources, `build.gradle` / `build.gradle.kts` para scripts de Gradle.
+- **Estilo de código adoptado**:
+  - [Kotlin Coding Conventions](https://kotlinlang.org/docs/coding-conventions.html)
+  - [Android Kotlin Style Guide (Google)](https://developer.android.com/kotlin/style-guide)
+- **Comportamiento asíncrono**: Usar **Kotlin Coroutines** y `suspend` functions para llamadas de red/IO; preferir **StateFlow** / **SharedFlow** o `LiveData` para exponer estados desde ViewModels.
+
+##### Nomenclatura:
+
+- **Packages**: todo en minúsculas y con puntos (`com.project.restock.admin`).
+- **Clases / Activities / ViewModels / Repositories**: `PascalCase` (ej. `InventoryViewModel`, `SuppliesRepository`).
+- **Funciones y propiedades**: `camelCase` (ej. `fetchSupplies()` , `userId`).
+- **Constantes**: `UPPER_SNAKE_CASE` (ej. `API_TIMEOUT_SECONDS`).
+- **Composables (Jetpack Compose)**: `PascalCase` preferible y con sufijos claros cuando aplique (ej. `LoginScreen`, `SupplyItem`).
+- **Archivos Kotlin**: `PascalCase` para clases (ej. `InventoryViewModel.kt`) o `snake_case` para ficheros que agrupen múltiples composables/pantallas (ej. `login_screen.kt`) según convención del equipo.
+- **IDs y recursos (drawable, layout, string, color, dimens)**: `lowercase_snake_case` (ej. `activity_main.xml` → `@+id/btn_login`, `ic_supply_placeholder`, `color_primary`).
+- **Nombres de layouts XML**: `lowercase_snake_case` con prefijos si aplica (ej. `activity_main.xml`, `fragment_recipe_list.xml`, `item_supply.xml`).
+- **Nombres de pruebas**: sufijo `Test` para unit/instrumented tests (ej. `InventoryViewModelTest`).
+
+##### Archivos y recursos:
+
+- **Kotlin**: `.kt` (packages, ViewModels, Repositories, UseCases, Mappers).
+- **Layouts**: `.xml` (si no se usa Compose) en `res/layout/`.
+- **Drawables**: `res/drawable/` → `lowercase_snake_case`.
+- **Strings**: `res/values/strings.xml` → keys en `lowercase_snake_case`.
+- **Colors / Dimens / Styles**: `res/values/colors.xml`, `dimens.xml`, `styles.xml` → variables en `lowercase_snake_case`.
+- **Build scripts**: `build.gradle` o `build.gradle.kts` (módulo/app) con dependencias centralizadas.
+
+##### Arquitectura y patrones recomendados:
+
+- **Arquitectura**: MVVM (View — ViewModel — Repository) o MVI/Unidirectional UI (usando StateFlow) según preferencia del equipo.
+- **Repository pattern**: separar acceso a datos (remote/local) y exponer modelos de dominio al ViewModel.
+- **Use Cases / Interactors**: opcionalmente encapsular la lógica de negocio en casos de uso reutilizables.
+- **Networking**: usar Retrofit + OkHttp + Moshi/Gson para serialización. Utilizar interceptors para auth/token.
+- **Persistencia local**: Room para almacenamiento local (caches, offline support).
+- **Asincronía**: Kotlin Coroutines + Flow / StateFlow para streams y estados reactivos.
+- **State handling**: usar sealed classes o data classes para representar estados UI (Loading / Success / Error / Empty).
+- **Navigation**: Jetpack Navigation Component (Fragments) o Navigation for Compose según stack elegido.
+
+##### Buenas prácticas y recomendaciones:
+
+- **Código en inglés**: mensajes de commit, comentarios y nombres en inglés.
+- **Suspension naming**: `suspend` functions con nombres verbales claros (`suspend fun fetchSupplies()`).
+- **Error handling**: envolver llamadas de red en `Result`/`Either` o usar patrones claros para propagar errores al UI.
+- **UI/UX**: manejar estados (loading, empty, error) en cada pantalla; mostrar mensajes claros para usuarios de restaurantes.
+- **Testing**: escribir unit tests para ViewModels y repositorios; usar instrumented tests para flujos críticos.
+- **Linting & formatting**: integrar `ktlint` y `detekt` en el pipeline; configurar `editorconfig` y `pre-commit hooks`.
+- **Seguridad**: no guardar tokens en texto plano; usar `EncryptedSharedPreferences` o soluciones seguras.
+- **Accesibilidad**: labels de contentDescription en imágenes, contrastes adecuados y soporte para tamaños de texto.
+
+##### Herramientas / linters / utilidades:
+
+- **Ktlint** (formato y reglas de estilo).
+- **Detekt** (análisis estático).
+- **Android Lint** (recomendaciones Android).
+- **Retrofit + OkHttp + Moshi/Gson** (networking).
+- **Room** (persistencia local).
+- **Jetpack Compose** (opcional para UI moderna) o XML + ViewBinding/Databinding.
+- **Coroutines + Lifecycle (ViewModelScope)**.
+- **Navigation Component** (navegación entre pantallas).
+
 #### Mobile Frontend (Flutter)
 
 ##### Convenciones generales:
@@ -272,6 +338,27 @@ A continuación, se listan las herramientas y estándares adoptados por el equip
 - **Interfaces**: `PascalCase`, prefijo `I` opcional (ej. `User`, `IUser`)
 - **Archivos**: `kebab-case` (ej. `user-profile.component.ts`)
 - **Variables y funciones**: `camelCase`
+
+#### Mobile Frontend (Kotlin + Android Studio + Jetpack Compose)
+
+##### Convenciones generales:
+
+- **Idioma**: Todo el código, nombres de clases, funciones y variables en **inglés**.
+- **Indentación**: 4 espacios (convención oficial de Kotlin/Android).
+- **Formato de archivos**: `.kt` (Kotlin).
+- **Estilo de código adoptado**:
+  - [Kotlin Coding Conventions](https://kotlinlang.org/docs/coding-conventions.html)
+  - [Android Kotlin Style Guide](https://developer.android.com/kotlin/style-guide)
+
+##### Nomenclatura:
+
+- **Clases y objetos**: `PascalCase` (ej. `UserProfileActivity`, `RestockApp`).
+- **Funciones y variables**: `camelCase` (ej. `getUserName()`, `userList`).
+- **Constantes**: `UPPER_SNAKE_CASE` (ej. `MAX_USERS`).
+- **Paquetes**: Todo en minúsculas y separados por punto (ej. `com.restockmobile.ui.profile`).
+- **Layouts y recursos XML**: `snake_case` (ej. `activity_main.xml`, `user_profile_item.xml`).
+- **IDs en layouts**: `camelCase` (ej. `btnSubmit`, `txtUserName`).
+
 
 #### Mobile Frontend (Flutter + Dart)
 
@@ -407,7 +494,24 @@ El frontend se comunica con el backend a través de HTTP consumiendo la API REST
 - El despliegue es automático: cada push a la rama principal activa la reconstrucción y publicación en el servicio de hosting, sin necesidad de configurar pipelines de CI/CD adicionales.
 - La aplicación móvil consume la API pública del backend utilizando HTTP para acceder a los servicios.
 
-#### 4. Aplicación Móvil (Dart + Flutter)
+#### 4. Aplicación Móvil - Android (Kotlin + Android Studio)
+
+**Tecnología Base:**
+
+- Lenguaje: Kotlin
+- Framework: Android Studio + Jetpack Compose
+- Distribución: APK (Android Package)
+- Hosting de pruebas: Firebase App Distribution
+
+**Configuración y Despliegue:**
+
+- El código fuente se gestiona en un repositorio de GitHub.
+- Para la generación de versiones de prueba, se debe compilo el proyecto en Android Studio (`Build > Generate Signed APK`) y se verifico el funcionamiento de la aplicación en dispositivos físicos o emuladores Android.
+- El archivo APK generado se sube a Firebase App Distribution, permitiendo el testeo con usuarios internos y externos seleccionados antes de su publicación oficial.
+- El enlace de descarga puede ser compartido con los testers a través de correo electrónico, Google Drive o mediante un acceso en la Landing Page.
+- Cada nueva versión de la aplicación para testeo se publica y gestiona mediante la plataforma Firebase, facilitando la retroalimentación y el control de versiones.
+
+#### 5. Aplicación Móvil (Dart + Flutter)
 
 **Tecnología Base:**
 
