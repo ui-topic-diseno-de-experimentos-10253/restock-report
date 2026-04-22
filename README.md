@@ -10,11 +10,11 @@
 
 ### Ciclo: 202610
 
-### Curso:
+### Curso: 1ASI0732
 
-### NRC:
+### NRC: 10253
 
-### Docente:
+### Docente: Juan Carlos Tinoco Licas
 
 &nbsp;
 &nbsp;
@@ -34,6 +34,8 @@
 ### u202319448 - Shapiama Rivera, Gabriela Nicole
 
 ### u202213468 - Chavez Uribe, Ario
+
+### u202218181 - Sanchez Guevara, Ivan Fernando
 
 
 &nbsp;
