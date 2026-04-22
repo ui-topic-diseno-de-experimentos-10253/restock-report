@@ -33,6 +33,9 @@
 
 ### u202319448 - Shapiama Rivera, Gabriela Nicole
 
+### u202213468 - Chavez Uribe, Ario
+
+
 &nbsp;
 
 ### Abril 2026
@@ -45,14 +48,10 @@
 
 ## Registro de Versiones
 
-| *Versión* | *Fecha* | *Autor* | *Descripción de modificación* |
-| :----------: | :-------: | :-------- | :-------------------------------- |
-|     1.2     |          |           |                                   |
-|     1.3     |          |           |                                   |
-|     1.4     |          |           |                                   |
-|     1.5     |          |           |                                   |
-|     1.6     |          |           |                                   |
-|     1.7     |          |           |                                   |
+| **Versión** | **Fecha** | **Autor** | **Descripción de modificación** |
+| :---: | :---: | :--- | :--- |
+| 1.6 | 22/04/26 | Ario Chavez | Elaboración de Web Style Guidelines en el Capítulo 4. |
+
 
 # Project Report Collaboration Insights
 

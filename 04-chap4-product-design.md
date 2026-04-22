@@ -77,6 +77,39 @@ Estos elementos y principios no se aplican de forma aislada, sino como parte int
 
 ### 4.1.2. Web Style Guidelines
 
+En esta sección se detallan los estándares visuales y de interacción específicos para las interfaces web de Restock, asegurando coherencia en entornos de escritorio y dispositivos con navegación responsiva basándonos en los lineamientos del General Style Guidelines que reflejan la implementación actual del sitio web.
+
+#### Sistema de Rejilla (Grid System) y Layout
+Para garantizar la adaptabilidad del contenido, la plataforma web de Restock utiliza un diseño responsivo basado en contenedores fluidos y puntos de interrupción estratégicos:
+- **Desktop (Escritorio):** El contenido principal se organiza en un contenedor con un ancho máximo de **1200px**, que permite la lectura en dispositivos pequeños y medianos sin perder calidad visual.
+- **Breakpoints Responsivos:**
+    - **1120px:** Ajuste de márgenes y espaciados para pantallas medianas.
+    - **880px:** Punto de transición donde la navegación cambia a un modelo móvil y el contenido se reestructura verticalmente.
+- **Mobile (Web Browser):** Se utiliza un flujo de una sola columna donde los elementos (cards y texto) ocupan el ancho en la pantalla, con paddings laterales para asegurar la legibilidad.
+
+#### Componentes de Interfaz Web
+- **Botones y CTAs:** Los botones de acción principal, utilizan un gradiente lineal de **Verde Oscuro (#4F8A5B a #3B7047)**. Tienen un diseño redondeado y con una sombra para el diseño.
+- **Estados de Interacción:** 
+    - **Hover:** Los botones cambian a un gradiente más oscuro y se elevan para indicar interactividad.
+    - **Active:** Reduce su escala para simular presión.
+- **Tarjetas (Cards):** Utilizadas en secciones como "Nosotros", cuentan con un borde de **2px** en **Verde (#4F8A5B)**, bordes redondeados y fondos que van del blanco al gris muy claro.
+
+#### Navegación Web
+- **Navbar (Barra de Navegación):** Se mantiene fija con una altura de **64px**. Utiliza un fondo con efecto de desenfoque y cuenta con opacidad para permitir que el contenido se deslice por debajo sin perder legibilidad.
+- **Navegación Móvil:** Al reducirse la pantalla, el menú se oculta tras un botón de alternancia (*toggle*) que despliega las opciones de manera vertical con animaciones de suavizado.
+
+#### Tipografía Web Aplicada
+Se utiliza un sistema de fuentes jerárquico para optimizar la legibilidad en pantallas:
+- **Títulos (H1):** Se aplican gradientes de color al texto para resaltar la identidad de marca.
+- **Subtítulos:** Utilizan un color verde institucional.
+- **Cuerpo de texto:** Cuenta con un tamaño base y un interlineado para facilitar la lectura prolongada.
+
+#### Animaciones y Micro-interacciones
+La experiencia web de Restock utiliza animaciones sutiles:
+- **Entradas:** Los elementos principales utilizan animaciones de *fade-in* (izquierda, derecha o arriba) para aparecer gradualmente al cargar la página.
+- **Scroll:** Se implementa un comportamiento de desplazamiento suave (*scroll-behavior: smooth*) para mejorar la transición entre secciones.
+
+
 ### 4.1.3. Mobile Style Guidelines
 
 #### 4.1.3.1. iOS Mobile Style Guidelines
@@ -2729,23 +2762,23 @@ El contexto **Monitoring** gestiona el seguimiento y registro de las preparacion
 
 ### 4.9.2. Class Dictionary
 
-| Entidad                 | Descripción                                                                                                                                               |
+| Entidad                 | Descripción                                                                                                                                                |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Subscription            | Suscripción activa o pasada que un usuario ha contratado.                                                                                                 |
-| User                    | Cualquier persona que interactúa con el sistema.                                                                                                          |
-| Subscriber              | Tipo de usuario que tiene una suscripción activa para utilizar servicios adicionales/premium del sistema.                                                 |
+| Subscription            | Suscripción activa o pasada que un usuario ha contratado.                                                                                                  |
+| User                    | Cualquier persona que interactúa con el sistema.                                                                                                           |
+| Subscriber              | Tipo de usuario que tiene una suscripción activa para utilizar servicios adicionales/premium del sistema.                                                  |
 | Supplier                | Representa a un suscriptor de tipo proveedor que gestiona sus pedidos e inventario.                                                                        |
 | RestaurantAdmin         | Representa a un suscriptor de tipo administrador de restaurante encargado de gestionar internamente el restaurante, sus operaciones, inventario y pedidos. |
 | Comment                 | Comentario hecho por un administrador de restaurante a un pedido de proveedor.                                                                             |
 | OrderToSupplier         | Pedido de productos o insumos realizado por el restaurante hacia un proveedor.                                                                             |
 | Batch                   | Contiene los detalles del lote del insumo del inventario.                                                                                                  |
-| Notification            | Representa una notificación automática que informa al suscriptor sobre eventos importantes.                                                              |
+| Notification            | Representa una notificación automática que informa al suscriptor sobre eventos importantes.                                                                |
 | Inventory               | Representa el registro de todos los insumos, productos y materiales disponibles del suscriptor.                                                            |
-| DishesCatalog           | Catálogo o listado de platos ofrecidos por el restaurante a sus clientes.                                                                                 |
+| DishesCatalog           | Catálogo o listado de platos ofrecidos por el restaurante a sus clientes.                                                                                  |
 | RestaurantCustomerOrder | Pedido que un cliente realiza al restaurante.                                                                                                              |
-| Report                  | Resumen generado sobre eventos o métricas del sistema.                                                                                                    |
+| Report                  | Resumen generado sobre eventos o métricas del sistema.                                                                                                     |
 | Supply                  | Insumo o materia prima almacenada en el inventario.                                                                                                        |
-| RecipeIngredient        | Ingrediente específico que forma parte de una receta.                                                                                                     |
+| RecipeIngredient        | Ingrediente específico que forma parte de una receta.                                                                                                      |
 | Recipe                  | Representa la receta de un plato del restaurante.                                                                                                          |
 
 ## 4.10. Database Design
