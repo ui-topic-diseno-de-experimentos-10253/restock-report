@@ -1,3 +1,21 @@
+# Registro de Versiones
+
+| **Versión** | **Fecha** | **Autor** | **Descripción de modificación** |
+| :---: | :---: | :--- | :--- |
+| 1.0 | 20/04/26 | Gabriela Shapiama | Estructura inicial del informe y configuración de capítulos base (1-5). |
+| 1.1 | 20/04/26 | Jahaziel Guerra | Elaboración de User Stories y actualización de rutas de imágenes en Impact Mapping. |
+| 1.2 | 20/04/26 | Gabriela Shapiama | Adición de información técnica (Kotlin) y correcciones ortográficas y de enlaces. |
+| 1.3 | 21/04/26 | Julio Castro | Refinamiento de descripciones del informe y correcciones menores. |
+| 1.4 | 21/04/26 | Ivan Sanchez | Actualización de perfiles de los integrantes del equipo. |
+| 1.5 | 22/04/26 | Ario Chavez | Adición de información personal y ajustes finales en el Capítulo 1. |
+
+
+<br>
+
+---
+
+<br>
+
 # Part I: As-Is Software Project
 
 # Capítulo I: Introducción
@@ -70,6 +88,33 @@ Visualizamos un futuro donde todos los restaurantes, sin importar su tamaño, cu
 </div>
 
 <br>
+
+**Ivan Fernando Sanchez Guevara (uXXXXXXXXX)**
+
+<div id="member-ivan" align="center">
+  <img src="https://via.placeholder.com/150" alt="Ivan Fernando Sanchez Guevara" style="width: 150px; margin-right: 20px; border-radius: 10%;">
+  <div style="flex: 1;">
+  <p> 
+    [Descripción pendiente de Ivan Fernando Sanchez Guevara]
+  </p>
+  </div> 
+</div>
+
+<br>
+
+**Ario Chavez (uXXXXXXXXX)**
+
+<div id="member-ario" align="center">
+  <img src="https://via.placeholder.com/150" alt="Ario Chavez" style="width: 150px; margin-right: 20px; border-radius: 10%;">
+  <div style="flex: 1;">
+  <p> 
+    [Descripción pendiente de Ario Chavez]
+  </p>
+  </div> 
+</div>
+
+<br>
+
 
 ## 1.2 Solution Profile
 
