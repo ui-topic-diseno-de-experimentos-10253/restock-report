@@ -71,15 +71,15 @@ Visualizamos un futuro donde todos los restaurantes, sin importar su tamaño, cu
 
 <br>
 
-**Ario Chavez Uribe (u202XXXXXX)**
+**Ario Chavez Uribe (u202213468)**
 
 <div id="member-ario" align="center">
-  <img src="https://via.placeholder.com/150" alt="Imagen Ario Chavez" style="width: 150px; margin-right: 20px; border-radius: 10%;">
-  <div style="flex: 1;">
-  <p> 
-    Soy estudiante de la carrera de Ingeniería de Software con un fuerte interés en el aprendizaje de nuevas tecnologías y el desarrollo de aplicaciones móviles. Poseo conocimientos en lenguajes como C++, Java, Python y GDScript, así como experiencia en el manejo de bases de datos utilizando herramientas como pgAdmin. Además, cuento con conocimientos en frameworks como Angular y Vue, y en desarrollo web (HTML, CSS y Javascript). Me considero un integrante con una participación activa dentro del equipo, siempre dispuesto a colaborar y aportar soluciones técnicas que impulsen el éxito del proyecto.
-  </p>
-  </div> 
+<img src="https://i.ibb.co/vCmXgjM5/ario.png" alt="Imagen Ario Chavez" style="width: 150px; margin-right: 20px; border-radius: 10%;">
+<div style="flex: 1;">
+<p> 
+Soy estudiante de la carrera de Ingeniería de Software con un fuerte interés en el aprendizaje de nuevas tecnologías y el desarrollo de aplicaciones móviles. Poseo conocimientos en lenguajes como C++, Java, Python y GDScript, así como experiencia en el manejo de bases de datos utilizando herramientas como pgAdmin. Además, cuento con conocimientos en frameworks como Angular y Vue, y en desarrollo web (HTML, CSS y Javascript). Me considero un integrante con una participación activa dentro del equipo, siempre dispuesto a colaborar y aportar soluciones técnicas que impulsen el éxito del proyecto.
+</p>
+</div> 
 </div>
 
 <br>

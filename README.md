@@ -33,6 +33,9 @@
 
 ### u202319448 - Shapiama Rivera, Gabriela Nicole
 
+### u202213468 - Chavez Uribe, Ario
+
+
 &nbsp;
 
 ### Abril 2026
