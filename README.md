@@ -10,11 +10,11 @@
 
 ### Ciclo: 202610
 
-### Curso:
+### Curso: 1ASI0732
 
-### NRC:
+### NRC: 10253
 
-### Docente:
+### Docente: Juan Carlos Tinoco Licas
 
 &nbsp;
 &nbsp;
@@ -35,6 +35,9 @@
 
 ### u202213468 - Chavez Uribe, Ario
 
+### u202218181 - Sanchez Guevara, Ivan Fernando
+
+
 
 &nbsp;
 
@@ -48,14 +51,10 @@
 
 ## Registro de Versiones
 
-| *Versión* | *Fecha* | *Autor* | *Descripción de modificación* |
-| :----------: | :-------: | :-------- | :-------------------------------- |
-|     1.2     |          |           |                                   |
-|     1.3     |          |           |                                   |
-|     1.4     |          |           |                                   |
-|     1.5     |          |           |                                   |
-|     1.6     |          |           |                                   |
-|     1.7     |          |           |                                   |
+| **Versión** | **Fecha** | **Autor** | **Descripción de modificación** |
+| :---: | :---: | :--- | :--- |
+| 1.6 | 22/04/26 | Ario Chavez | Elaboración de Web Style Guidelines en el Capítulo 4. |
+
 
 # Project Report Collaboration Insights
 

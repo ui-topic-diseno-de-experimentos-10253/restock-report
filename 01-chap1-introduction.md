@@ -67,6 +67,15 @@ Visualizamos un futuro donde todos los restaurantes, sin importar su tamaño, cu
   Del mismo modo, vengo fortaleciendo mis conocimientos en diseño y arquitectura de proyectos de software, junto con habilidades de liderazgo asertivo. Estoy comprometida con seguir aprendiendo y aportar valor a cada equipo en el que participo.
 </p>
   </div> 
+
+  <div id="member-ario" align="center">
+  <img src="assets/images/chapter1/fersho.png" alt="Imagen Fernando Sanchez" style="width: 150px; margin-right: 20px; border-radius: 10%;">
+  <div style="flex: 1;">
+  <p> 
+    Mi Nombre es Fernando Sanchez Guevara, tengo 22 años, actualmente estudiando la carrera de Ingeniería de Software. Me considero alguien disiplinado respecto con la puntualidad y desarrollar de la mejor manera las asignaciones de trabajo. Ademas, me preocupo por mi equipo, tratando de que no tengan ningun problema respecto al trabajo, y darles la mano para poder ayudar cuando lo necesiten. Por medio de mi compromiso, eh logrado realizar los proyectos en grupo de forma excelente y sin problemas en percanses
+  </p>
+  </div>
+
 </div>
 
 <br>
