@@ -91,6 +91,7 @@ Soy estudiante de la carrera de Ingeniería de Software con un fuerte interés e
   Del mismo modo, vengo fortaleciendo mis conocimientos en diseño y arquitectura de proyectos de software, junto con habilidades de liderazgo asertivo. Estoy comprometida con seguir aprendiendo y aportar valor a cada equipo en el que participo.
 </p>
   </div> 
+<br>
 
 ## 1.2 Solution Profile
 
