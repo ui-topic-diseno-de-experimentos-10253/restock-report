@@ -24,8 +24,6 @@ Visualizamos un futuro donde todos los restaurantes, sin importar su tamaño, cu
 
 ### 1.1.2 Perfiles de integrantes del equipo
 
-<br>
-
 **Julio Castro Alejos (u202021885)**
 
 <div id="member-julio" align="center"> 
@@ -39,6 +37,20 @@ Visualizamos un futuro donde todos los restaurantes, sin importar su tamaño, cu
   </p>
   </div> 
 </div>
+<br>
+
+**Ario Chavez Uribe (u202213468)**
+
+<div id="member-ario" align="center">
+<img src="https://i.ibb.co/vCmXgjM5/ario.png" alt="Imagen Ario Chavez" style="width: 150px; margin-right: 20px; border-radius: 10%;">
+<div style="flex: 1;">
+<p> 
+Soy estudiante de la carrera de Ingeniería de Software con un fuerte interés en el aprendizaje de nuevas tecnologías y el desarrollo de aplicaciones móviles. Poseo conocimientos en lenguajes como C++, Java, Python y GDScript, así como experiencia en el manejo de bases de datos utilizando herramientas como pgAdmin. Además, cuento con conocimientos en frameworks como Angular y Vue, y en desarrollo web (HTML, CSS y Javascript). Me considero un integrante con una participación activa dentro del equipo, siempre dispuesto a colaborar y aportar soluciones técnicas que impulsen el éxito del proyecto.
+</p>
+</div> 
+</div>
+
+<br>
 
 **José Jahaziel Guerra Perez (u202319831)**
 
@@ -56,6 +68,18 @@ Visualizamos un futuro donde todos los restaurantes, sin importar su tamaño, cu
 
 <br>
 
+**Ivan Fernando Sanchez Guevara (u202218181)**
+
+  <div id="member-fernando" align="center">
+  <img src="assets/images/chapter1/fersho.png" alt="Imagen Fernando Sanchez" style="width: 150px; margin-right: 20px; border-radius: 10%;">
+  <div style="flex: 1;">
+  <p> 
+    Mi Nombre es Fernando Sanchez Guevara, tengo 22 años, actualmente estudiando la carrera de Ingeniería de Software. Me considero alguien disiplinado respecto con la puntualidad y desarrollar de la mejor manera las asignaciones de trabajo. Ademas, me preocupo por mi equipo, tratando de que no tengan ningun problema respecto al trabajo, y darles la mano para poder ayudar cuando lo necesiten. Por medio de mi compromiso, eh logrado realizar los proyectos en grupo de forma excelente y sin problemas en percanses
+  </p>
+  </div>
+
+</div>
+
 **Gabriela Nicole Shapiama Rivera (u202319448)**
 
 <div id="member-gabriela" align="center">
@@ -67,31 +91,6 @@ Visualizamos un futuro donde todos los restaurantes, sin importar su tamaño, cu
   Del mismo modo, vengo fortaleciendo mis conocimientos en diseño y arquitectura de proyectos de software, junto con habilidades de liderazgo asertivo. Estoy comprometida con seguir aprendiendo y aportar valor a cada equipo en el que participo.
 </p>
   </div> 
-
-  <div id="member-ario" align="center">
-  <img src="assets/images/chapter1/fersho.png" alt="Imagen Fernando Sanchez" style="width: 150px; margin-right: 20px; border-radius: 10%;">
-  <div style="flex: 1;">
-  <p> 
-    Mi Nombre es Fernando Sanchez Guevara, tengo 22 años, actualmente estudiando la carrera de Ingeniería de Software. Me considero alguien disiplinado respecto con la puntualidad y desarrollar de la mejor manera las asignaciones de trabajo. Ademas, me preocupo por mi equipo, tratando de que no tengan ningun problema respecto al trabajo, y darles la mano para poder ayudar cuando lo necesiten. Por medio de mi compromiso, eh logrado realizar los proyectos en grupo de forma excelente y sin problemas en percanses
-  </p>
-  </div>
-
-</div>
-
-<br>
-
-**Ario Chavez Uribe (u202213468)**
-
-<div id="member-ario" align="center">
-<img src="https://i.ibb.co/vCmXgjM5/ario.png" alt="Imagen Ario Chavez" style="width: 150px; margin-right: 20px; border-radius: 10%;">
-<div style="flex: 1;">
-<p> 
-Soy estudiante de la carrera de Ingeniería de Software con un fuerte interés en el aprendizaje de nuevas tecnologías y el desarrollo de aplicaciones móviles. Poseo conocimientos en lenguajes como C++, Java, Python y GDScript, así como experiencia en el manejo de bases de datos utilizando herramientas como pgAdmin. Además, cuento con conocimientos en frameworks como Angular y Vue, y en desarrollo web (HTML, CSS y Javascript). Me considero un integrante con una participación activa dentro del equipo, siempre dispuesto a colaborar y aportar soluciones técnicas que impulsen el éxito del proyecto.
-</p>
-</div> 
-</div>
-
-<br>
 
 ## 1.2 Solution Profile
 
