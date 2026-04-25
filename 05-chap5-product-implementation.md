@@ -565,6 +565,29 @@ El frontend se comunica con el backend a través de HTTP consumiendo la API REST
 
 ### 5.2.2. Implemented Landing Page Evidence
 
+El repositorio fue reinicializado como parte de la transición del proyecto desde la fase de prototipo a desarrollo de producción. Esta decisión se tomó para establecer un historial limpio que refleje únicamente la arquitectura final del sistema, tras múltiples iteraciones de reestructuración técnica y consolidación de funcionalidades core.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| restock-website | main | 732099d96c19104dd87599fdd058848e45439b4c | feat: initial landing page deployment. | initial commit | 22/04/2026 |
+
+#### Despliegue de Landing Page
+
+**Configuración de GitHub Pages:**
+
+- **Paso 1: Acceder a la Configuración**
+    - Navega a tu repositorio en GitHub.
+    - Haz clic en la pestaña "Settings" (Configuración).
+    - Desplázate hacia abajo hasta la sección "Pages" en el menú lateral.
+
+- **Paso 2: Seleccionar la Fuente**
+    - En la sección "Source" (Fuente): **Opción A: Deploy from a branch**.
+    - **Branch:** Selecciona la rama `main`. **Folder:** Elige `/ (root)`. Es la opción más común y sencilla.
+
+**Link de despliegue de landing page:** [https://ui-topic-diseno-de-experimentos-10253.github.io/restock-website/](https://ui-topic-diseno-de-experimentos-10253.github.io/restock-website/)
+
+![Configuración de GitHub Pages](assets/images/chapter-5/landing-evidence/github-pages-config.png)
+
 ### 5.2.3. Implemented Frontend-Web Application Evidence
 
 ### 5.2.4. Acuerdo de Servicio - SaaS
