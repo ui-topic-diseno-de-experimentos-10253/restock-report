@@ -113,8 +113,17 @@ La experiencia web de Restock utiliza animaciones sutiles:
 ### 4.1.3. Mobile Style Guidelines
 
 #### 4.1.3.1. iOS Mobile Style Guidelines
+<img src="assets/images/chapter4/IOs1.png" alt="IOs" />
+<img src="assets/images/chapter4/IOs2.png" alt="IOs" />
+<img src="assets/images/chapter4/IOs3.png" alt="IOs" />
+<img src="assets/images/chapter4/IOs4.png" alt="IOs" />
+
 
 #### 4.1.3.2. Android Mobile Style Guidelines
+
+<img src="assets/images/chapter4/Android1.png" alt="Android" />
+<img src="assets/images/chapter4/Android2.png" alt="Android" />
+<img src="assets/images/chapter4/Android3.png" alt="Android" />
 
 ## 4.2. Information Architecture
 
