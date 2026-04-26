@@ -11,13 +11,13 @@ A continuación, se listan las herramientas y estándares adoptados por el equip
 | Project Management      | Trello                                                 | Seguimiento de backlog, tareas y sprints.                      | [https://trello.com/](https://trello.com/)                                                                                               |
 | Requirements Management | Gherkin Conventions                                    | Escritura legible de requisitos con formato Given/When/Then.   | [https://cucumber.io/docs/gherkin/](https://cucumber.io/docs/gherkin/)                                                                   |
 | Product UX/UI Design    | Figma                                                  | Prototipos y diseño responsive.                               | SaaS –[https://figma.com](https://figma.com)                                                                                            |
-| Frontend Dev            | Kotlin, Flutter, Dart                                  | Construcción del frontend del sistema.                        | https://kotlinlang.org/ / https://flutter.dev/   /   https://dart.dev/                                                               |
+| Frontend Dev            | Kotlin, Flutter, Dart                                  | Construcción del frontend del sistema.                        | https://kotlinlang.org/ / https://flutter.dev/   /   https://dart.dev/                                                                |
 | Backend Dev             | Java + Spring Boot                                     | Lógica de negocio y servicios REST.                           | [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)                                                         |
 | IDE                     | IntelliJ IDEA + Android Studio                         | Desarrollo, depuración y pruebas.                             | [https://www.jetbrains.com/idea](https://www.jetbrains.com/idea) / [https://www.jetbrains.com/webstorm](https://www.jetbrains.com/webstorm) |
 | Code Standards          | Google Java Style Guide, Google TypeScript Style Guide | Mantener un código consistente y legible.                     | [https://google.github.io/styleguide](https://google.github.io/styleguide)                                                               |
 | Version Control         | Git + GitHub                                           | Gestión colaborativa del código fuente.                      | SaaS –[https://github.com](https://github.com)                                                                                          |
 | Software Deployment     | Github pages                                           | Despliegue continuo del sistema en ambientes de testing.       | SaaS –[https://railway.app](https://railway.app) / [https://render.com](https://render.com)                                                |
-| Software Documentation  | Swagger                                                | Documentación de APIs, funcionalidades y criterios técnicos. | SaaS –[https://swagger.io/](https://swagger.io/)                                                                                                 |
+| Software Documentation  | Swagger                                                | Documentación de APIs, funcionalidades y criterios técnicos. | SaaS –[https://swagger.io/](https://swagger.io/)                                                                                        |
 
 ### 5.1.2. Source Code Management
 
@@ -359,7 +359,6 @@ A continuación, se listan las herramientas y estándares adoptados por el equip
 - **Layouts y recursos XML**: `snake_case` (ej. `activity_main.xml`, `user_profile_item.xml`).
 - **IDs en layouts**: `camelCase` (ej. `btnSubmit`, `txtUserName`).
 
-
 #### Mobile Frontend (Flutter + Dart)
 
 ##### Convenciones generales:
@@ -544,24 +543,11 @@ El frontend se comunica con el backend a través de HTTP consumiendo la API REST
 
 ### 5.2.1. Sprint Backlogs
 
-#### Sprint 1 
+#### Sprint 1
 
-[Landing page] [Sprint Planning + Sprint backlog]
+Sobre correcciones de los productos
 
-#### Sprint 2
-
-[Backend] [Sprint Planning + Sprint backlog]
-
-#### Sprint 3
-
-[Web application] [Sprint Planning + Sprint backlog]
-
-
-#### Sprint 4
-
-[Mobile Application] [Sprint Planning + Sprint backlog]
-
-
+[Sprint Planning + Sprint backlog]
 
 ### 5.2.2. Implemented Landing Page Evidence
 
@@ -571,7 +557,87 @@ El frontend se comunica con el backend a través de HTTP consumiendo la API REST
 
 ### 5.2.5. Implemented Native-Mobile Application Evidence
 
+El aplicativo móvil de Restock fue configurado, compilado y distribuido mediante Firebase App Distribution, permitiendo compartir versiones preliminares (APK/AAB) con testers para pruebas controladas antes de su despliegue en producción.
+
+| Application        | Package Name              | Version | Distribution Tool         | Release Date |
+| :----------------- | :------------------------ | :------ | :------------------------ | :----------- |
+| Restock (Provider) | com.uitopic.restock       | 0.1.1   | Firebase App Distribution | 22/04/2026   |
+| Restock Mobile     | com.uitopic.restock.admin | 0.1.1   | Firebase App Distribution | 22/04/2026   |
+
+<img src="https://i.ibb.co/CKhDKF5g/evidencia-firebaseapp.png" width="100%" alt="firebase-distribution">
+
+#### Despliegue de Aplicación Móvil
+
+**Configuración de Firebase App Distribution:**
+
+* Paso 1: Configuración del proyecto en Firebase
+  - Acceder a Firebase Console.
+  - Crear o seleccionar el proyecto (Restock-Providers).
+  - Registrar la aplicación Android con su Package Name (com.uitopic.restock).
+  - Descargar e integrar el archivo google-services.json.
+
+* Paso 2: Generación del build
+  - Compilar la aplicación en formato APK o AAB.
+  - Configurar versionName y versionCode.
+
+* Paso 3: Distribución de la versión
+  - Ingresar a App Distribution en Firebase.
+  - Subir el archivo APK/AAB.
+  - Añadir notas de versión.
+  - Seleccionar testers o grupos.
+
+* Paso 4: Gestión de testers
+  - Crear grupos de verificadores.
+  - Enviar invitaciones por correo.
+  - Firebase genera enlaces de acceso.
+
+* Paso 5: Instalación y pruebas
+  - Los testers reciben una invitación.
+  - Pueden descargar e instalar la app.
+  - Se monitorean métricas como invitaciones, aceptaciones y descargas.
+
+**Evidencia de invitación y acceso a testers:**
+
+<img src="https://i.ibb.co/v2Jtsk8/muestra-invitaciones-apps.png" width="100%" alt="firebase-invitations">
+
+**Configuración del identificador de la aplicación:**
+
+<img src="https://i.ibb.co/n8mrZK0Y/se-muestra-application-Id.png" width="100%" alt="firebase-app-id">
+
 ### 5.2.6. Implemented RESTful API and/or Serverless Backend Evidence
+
+El repositorio fue reinicializado como parte de la transición del proyecto desde la fase de prototipo a desarrollo de producción.
+
+| Repository       | Branch | Commit Id                                | Commit Message            | Committed on (Date) |
+| :--------------- | :----- | :--------------------------------------- | :------------------------ | :------------------ |
+| restock-platform | main   | 1c30ad1723bd174baa0547b19fe53b7f2e59515c | chore: add project setup. | 22/04/2026          |
+
+<img src="assets/images/chapter5/backend_repository.png" width="600px" alt="registered-alerts">
+
+#### Despliegue de Backend
+
+**Configuración de Render:**
+
+* **Paso 1: Acceder a Render**
+  * Ingresar a [Render](https://render.com/).
+  * Vinculación con cuenta de GitHub.
+  * Autorizar el acceso al repositorio del backend.
+* **Paso 2: Crear nuevo Web Service**
+  * Hacer clic en  **New +** .
+  * Seleccionar la opción  **Web Service** .
+  * Eligir el repositorio correspondiente al backend de `restock-platform`.
+* **Paso 3: Configurar el servicio**
+  * **Name:** Se definió el nombre del servicio backend.
+  * **Region:** Se seleccionó la región más adecuada.
+  * **Branch:** Se seleccionóla rama `main`.
+* **Paso 4: Desplegar el backend**
+  * Se hizo clic en **Create Web Service** .
+  * Render inicia el proceso de build y despliegue automáticamente.
+  * Al finalizar, se generará una URL pública para consumir la API.
+
+**Link de despliegue del backend:** [https://restock-platform-10253.onrender.com/swagger-ui/index.html ](https://restock-platform-10253.onrender.com/swagger-ui/index.html)
+
+<img src="assets/images/chapter5/backend_evidence.png" width="600px" alt="registered-alerts">
 
 ### 5.2.7. RESTful API documentation
 
