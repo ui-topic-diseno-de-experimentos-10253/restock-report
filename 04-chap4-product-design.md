@@ -1124,6 +1124,16 @@ Mobile Applications Prototyping: https://shorturl.at/DLy8l
 
 ### 4.5.2. iOS Mobile Applications Prototyping
 
+En cuanto a la arquitectura de información, el prototipo móvil de RESTOCK para iOS mantiene una navegación jerárquica coherente con las guías de diseño de la plataforma (Human Interface Guidelines), incorporando flujos secuenciales en procesos clave como el registro de compras y la gestión de recetas. Se definieron etiquetas intuitivas, categorías adaptadas a cada tipo de usuario y herramientas de búsqueda que garantizan una experiencia fluida y consistente con el ecosistema Apple.
+
+Asimismo, se implementaron interacciones nativas de iOS (como gestos de deslizamiento y estados de selección), validaciones visuales en formularios y retroalimentaciones inmediatas ante las acciones del usuario. Estos elementos aseguran que tanto el acceso a la información como la ejecución de tareas se realicen de forma eficiente y alineada al contexto de la plataforma iOS.
+
+Además, se grabó un video donde se explican los principales flujos de interacción del prototipo iOS, mostrando cómo las decisiones de diseño se adaptan a las convenciones y expectativas de los usuarios de esta plataforma.
+
+![iOS Mobile User Flow](assets/images/chapter4/mobile/ios-app-prototyping.png)
+
+iOS Mobile Applications Prototyping: https://shortlink.uk/1osCn
+
 ## 4.6. Web Applications UX/UI Design
 
 ### 4.6.1. Web Applications Wireframes
