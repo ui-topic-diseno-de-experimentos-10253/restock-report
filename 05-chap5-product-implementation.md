@@ -571,6 +571,53 @@ El frontend se comunica con el backend a través de HTTP consumiendo la API REST
 
 ### 5.2.5. Implemented Native-Mobile Application Evidence
 
+El aplicativo móvil de Restock fue configurado, compilado y distribuido mediante Firebase App Distribution, permitiendo compartir versiones preliminares (APK/AAB) con testers para pruebas controladas antes de su despliegue en producción.
+
+| Application        | Package Name              | Version | Distribution Tool         | Release Date |
+| :----------------- | :------------------------ | :------ | :------------------------ | :----------- |
+| Restock (Provider) | com.uitopic.restock       | 0.1.1   | Firebase App Distribution | 22/04/2026   |
+| Restock Mobile     | com.uitopic.restock.admin | 0.1.1   | Firebase App Distribution | 22/04/2026   |
+
+<img src="https://i.ibb.co/CKhDKF5g/evidencia-firebaseapp.png" width="100%" alt="firebase-distribution">
+
+#### Despliegue de Aplicación Móvil
+
+**Configuración de Firebase App Distribution:**
+
+* Paso 1: Configuración del proyecto en Firebase
+  - Acceder a Firebase Console.
+  - Crear o seleccionar el proyecto (Restock-Providers).
+  - Registrar la aplicación Android con su Package Name (com.uitopic.restock).
+  - Descargar e integrar el archivo google-services.json.
+
+* Paso 2: Generación del build
+  - Compilar la aplicación en formato APK o AAB.
+  - Configurar versionName y versionCode.
+
+* Paso 3: Distribución de la versión
+  - Ingresar a App Distribution en Firebase.
+  - Subir el archivo APK/AAB.
+  - Añadir notas de versión.
+  - Seleccionar testers o grupos.
+
+* Paso 4: Gestión de testers
+  - Crear grupos de verificadores.
+  - Enviar invitaciones por correo.
+  - Firebase genera enlaces de acceso.
+
+* Paso 5: Instalación y pruebas
+  - Los testers reciben una invitación.
+  - Pueden descargar e instalar la app.
+  - Se monitorean métricas como invitaciones, aceptaciones y descargas.
+
+**Evidencia de invitación y acceso a testers:**
+
+<img src="https://i.ibb.co/v2Jtsk8/muestra-invitaciones-apps.png" width="100%" alt="firebase-invitations">
+
+**Configuración del identificador de la aplicación:**
+
+<img src="https://i.ibb.co/n8mrZK0Y/se-muestra-application-Id.png" width="100%" alt="firebase-app-id">
+
 ### 5.2.6. Implemented RESTful API and/or Serverless Backend Evidence
 
 ### 5.2.7. RESTful API documentation
