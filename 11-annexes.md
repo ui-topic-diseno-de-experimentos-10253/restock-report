@@ -9,7 +9,7 @@ En este apartado se presenta el Product Backlog del proyecto, gestionado a trav�
 **Enlace al Tablero de Jira:**
 [Jira Product Backlog - Restock](https://gabrielashapiama285.atlassian.net/jira/software/projects/TASK/boards/67)
 
-![Jira Product Backlog](assets/images/chapter-5/annexes/jira-backlog.png)
+![Jira Product Backlog](assets/images/annexes/jira-backlog.png)
 
 <br>
 
@@ -22,7 +22,7 @@ Se incluye el acceso al diseño visual de la plataforma, contemplando tanto los 
 **Enlace al Diseño en Figma:**
 [Figma Design - Restock](https://www.figma.com/design/HqVEDf8H2ShiHNgV4btki7/Dise%C3%B1o-Exp-Software---Wireframes-Mockups-Restock?node-id=2-1094&p=f)
 
-![Wireframes y Mockups](assets/images/chapter-5/annexes/wireframes-mockups.png)
+![Wireframes y Mockups](assets/images/annexes/wireframes-mockups.png)
 
 <br>
 
@@ -40,7 +40,7 @@ En esta sección se incluyen de forma progresiva los títulos e hipervínculos a
 
 En esta sección se adjunta el diagrama de Event Storming realizado para el modelado del dominio del negocio, el cual permite visualizar los eventos, comandos y actores del sistema.
 
-![Diagrama de Event Storming](assets/images/chapter-5/annexes/event-storming.png)
+![Diagrama de Event Storming](assets/images/annexes/event-storming.png)
 
 <br>
 
@@ -53,7 +53,7 @@ Aquí se presenta la organización del dominio mediante subdominios y contextos 
 **Enlace al Tablero de Miro:**
 [Strategic DDD - Restock](https://miro.com/app/board/uXjVJObik40=/)
 
-![Diagrama de Strategic DDD](assets/images/chapter-5/annexes/strategic-ddd.png)
+![Diagrama de Strategic DDD](assets/images/annexes/strategic-ddd.png)
 
 <br>
 
@@ -66,7 +66,7 @@ Se detalla la estructura y organización de la organización en GitHub, donde se
 **Enlace a la Organización de GitHub:**
 [UI-Topic GitHub Organization](https://github.com/ui-topic-diseno-de-experimentos-10253/)
 
-![Organización de GitHub](assets/images/chapter-5/annexes/github-org.png)
+![Organización de GitHub](assets/images/annexes/github-org.png)
 
 <br>
 
@@ -76,7 +76,7 @@ Se detalla la estructura y organización de la organización en GitHub, donde se
 
 Se adjunta el diagrama de clases del sistema, detallando las entidades principales (User, Subscriber, Subscription, RestaurantAdmin, Supplier, Inventory, Supply, etc.) y sus relaciones de herencia y asociación.
 
-![Diagrama de Clases](assets/images/chapter-5/annexes/class-diagram.png)
+![Diagrama de Clases](assets/images/annexes/class-diagram.png)
 
 
 
