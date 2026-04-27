@@ -2,12 +2,11 @@
 
 | **Versión** | **Fecha** | **Autor** | **Descripción de modificación** |
 | :---: | :---: | :--- | :--- |
-| 1.0 | 20/04/26 | Gabriela Shapiama | Estructura inicial del informe y configuración de capítulos base (1-5). |
-| 1.1 | 20/04/26 | Jahaziel Guerra | Elaboración de User Stories y actualización de rutas de imágenes en Impact Mapping. |
-| 1.2 | 20/04/26 | Gabriela Shapiama | Adición de información técnica (Kotlin) y correcciones ortográficas y de enlaces. |
-| 1.3 | 21/04/26 | Julio Castro | Refinamiento de descripciones del informe y correcciones menores. |
-| 1.4 | 21/04/26 | Ivan Sanchez | Actualización de perfiles de los integrantes del equipo. |
-| 1.5 | 22/04/26 | Ario Chavez | Adición de información personal y ajustes finales en el Capítulo 1. |
+| 1.0 | 22/04/26 | Ivan Sanchez | Elaboración de carátula, Mockup de Landing Page, Mobile Style Guidelines y conclusiones. |
+| 1.1 | 23/04/26 | Ario Chavez | Evidencia de Landing Page, Web Style Guidelines, Anexos y Registro de Versiones. |
+| 1.2 | 24/04/26 | Julio Castro | Prototipado Móvil/Web, Diagramas de BD, Video del Producto y Team Collaboration Insights. |
+| 1.3 | 25/04/26 | Jahaziel Guerra | User Stories, Backlogs (Product/Sprint), Impact Mapping, API Doc y Software Architecture. |
+| 1.4 | 26/04/26 | Gabriela Shapiama | Evidencia de Backend, Tabla de contenidos, Gestión de Jira/GitHub y revisión final. |
 
 
 <br>
