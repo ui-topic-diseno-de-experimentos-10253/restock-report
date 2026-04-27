@@ -666,4 +666,38 @@ El repositorio fue reinicializado como parte de la transición del proyecto desd
 
 ### 5.2.8. Team Collaboration Insights
 
+Para el desarrollo de este hito, la dinámica del equipo se centró en la integración, refactorización y optimización de componentes de software previamente desarrollados. Se utilizó **GitHub** como plataforma central para el control de versiones, aplicando el flujo de trabajo **GitFlow** para coordinar la consolidación de los productos del ecosistema Restock.
+
+La distribución de actividades permitió que todos los integrantes —Julio Daniel Castro, José Jahaziel Guerra, Gabriela Nicole Shapiama, Ario Chavez e Ivan Fernando Sanchez— participaran activamente en la revisión y estabilización de los repositorios del **Landing Page**, la **Aplicación Web (Angular)** y el **RESTful API (Backend)**.
+
+#### Analíticas de Colaboración (GitHub Insights)
+
+A continuación, se presentan las métricas de colaboración extraídas directamente de la pestaña *Insights* de nuestros repositorios en GitHub.
+
+**1. Contribuciones en el Landing Page:**
+![Commits Landing Page](assets/images/chapter5/team-collaboration/insights_landing_page.png)
+*Gráfico de contribuciones (Contributors) del repositorio del Landing Page durante el Sprint.*
+
+**2. Contribuciones en la Web App (Angular) y Móvil:**
+![Commits Web ](assets/images/chapter5/team-collaboration/insights_frontend.png)
+
+![Commits Mobile](assets/images/chapter5/team-collaboration/insights_mobile.png)
+
+*Historial de commits y frecuencia de aportes en el repositorio Frontend.*
+
+**3. Contribuciones en el RESTful API (Backend):**
+![Commits Backend](assets/images/chapter5/team-collaboration/insights_backend.png)
+*Gráfica de actividad y pull requests resueltos en el repositorio del Backend.*
+
+#### Interpretación de los Datos y Dinámica del Equipo
+
+Para este sprint, la dinámica del equipo se centró principalmente en la integración, refactorización y adaptación de componentes desarrollados en iteraciones previas. Por esta razón, las gráficas de GitHub Insights reflejan un patrón enfocado en consolidar la arquitectura existente.
+
+A partir de los datos, destacamos lo siguiente:
+
+* **Integración Colaborativa:** Todos los miembros del equipo (Julio Daniel, José Jahaziel, Gabriela Nicole, Ario e Ivan Fernando) participaron activamente en la revisión y unificación del código base en los repositorios de Frontend, Backend y Mobile.
+* **Eficiencia y Reutilización:** La estrategia de adaptar y optimizar código de entregas anteriores nos permitió reducir los tiempos de desarrollo puro y enfocar nuestros *commits* en la resolución de *bugs*, configuración de despliegues y el cumplimiento del Sprint Goal. 
+
+En conclusión, la visibilidad de GitHub nos ayudó a coordinar los *merges* necesarios para estabilizar la plataforma y garantizar que los productos estuvieran listos para la fase de validación, demostrando responsabilidad técnica en la entrega.
+
 ## 5.3. Video About-the-Product
