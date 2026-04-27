@@ -2900,6 +2900,21 @@ El contexto **Monitoring** gestiona el seguimiento y registro de las preparacion
 | RecipeIngredient        | Ingrediente específico que forma parte de una receta.                                                                                                     |
 | Recipe                  | Representa la receta de un plato del restaurante.                                                                                                          |
 
-## 4.10. Database Design
+### 4.10. Database Design
 
-### 4.10.1. Non-Relational Database Diagram
+Para el desarrollo de la plataforma **Restock**, se ha optado por un diseño de base de datos no relacional (**NoSQL**) orientada a documentos. Esta decisión arquitectónica permite una alta flexibilidad, escalabilidad y eficiencia para manejar estructuras de datos complejas y dinámicas, propias de la gestión de inventarios y sistemas SaaS. 
+
+El diseño aprovecha las características fundamentales de NoSQL mediante el uso de documentos incrustados (*embedded documents*) y arreglos (*arrays*) para agrupar datos de acceso frecuente (como los ingredientes de las recetas o los ítems de una venta), optimizando así las consultas de lectura y reduciendo la necesidad de operaciones de cruce complejas que afectarían el rendimiento.
+
+### 4.10.1. Relational/Non-Relational Database Diagram
+
+A continuación, se presenta el diagrama del esquema de base de datos no relacional (NoSQL DB Schema) diseñado para el ecosistema de Restock. El modelo organiza la información en diversas colecciones interconectadas lógicamente mediante identificadores únicos (`_id`) y atributos estructurados:
+
+* **Módulo de Autenticación y Suscripciones (SaaS):** Incluye las colecciones `users`, `roles`, `profiles`, `accounts`, `plans`, `subscriptions` y `payments`. Estas entidades estructuran el acceso al sistema, la vinculación de cuentas y la gestión del ciclo de facturación de los clientes.
+* **Módulo Organizacional:** Conformado por `businesses` y `branches`, permitiendo que una misma cuenta administre múltiples sucursales con su respectiva información de ubicación y configuración.
+* **Módulo de Inventario (Core):** Utiliza un catálogo base (`supplies` y `unit_measure`) que se extiende mediante `custom_supplies` (insumos personalizados por negocio con umbrales de stock). El stock físico y sus fechas de caducidad se controlan a través de la colección `batches`.
+* **Módulo de Operaciones:** Compuesto por `recipes` (formulaciones con arreglos de ingredientes integrados) y `sales` (registro histórico de ventas con el detalle de ítems consumidos y costos embebidos).
+* **Módulo de Comunicación:** La colección `notifications` gestiona el historial de alertas y avisos relevantes para los usuarios de cada sucursal.
+
+![Restock - NoSQL DB Schema](assets/images/chapter4/db/nosql-db-schema.png)
+*Diagrama del esquema de la base de datos no relacional (NoSQL) de la plataforma Restock.*
