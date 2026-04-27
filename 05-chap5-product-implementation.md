@@ -576,6 +576,25 @@ El repositorio fue reinicializado como parte de la transición del proyecto desd
 
 ### 5.2.3. Implemented Frontend-Web Application Evidence
 
+La aplicación web frontend fue desarrollada con el framework **Angular** y desplegada 
+mediante **GitHub Pages** como plataforma de hosting estático. Esta plataforma permite 
+publicar la aplicación de forma pública y gratuita directamente desde el repositorio 
+de GitHub de la organización, sirviendo el contenido generado tras el proceso de build 
+de producción.
+
+**Enlace de la aplicación desplegada:**  
+https://ui-topic-diseno-de-experimentos-10253.github.io/restock-webapp/
+
+A continuación se muestra una captura de la aplicación funcionando correctamente en 
+producción, específicamente en la vista del **Dashboard** del restaurante, donde el 
+usuario puede visualizar los pedidos pendientes, las últimas notificaciones de 
+inventario y los insumos recientemente agregados.
+
+![Frontend desplegado - Dashboard](assets/images/chapter5/frontend-deployed.png)
+*Vista del dashboard principal de Restock desplegada en GitHub Pages.*
+
+
+
 ### 5.2.4. Acuerdo de Servicio - SaaS
 
 ### 5.2.5. Implemented Native-Mobile Application Evidence
