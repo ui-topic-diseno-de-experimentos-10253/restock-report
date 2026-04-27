@@ -701,3 +701,29 @@ A partir de los datos, destacamos lo siguiente:
 En conclusión, la visibilidad de GitHub nos ayudó a coordinar los *merges* necesarios para estabilizar la plataforma y garantizar que los productos estuvieran listos para la fase de validación, demostrando responsabilidad técnica en la entrega.
 
 ## 5.3. Video About-the-Product
+
+El video **About-the-Product** ha sido elaborado con el propósito de presentar la propuesta de valor integral de **Restock**, exhibiendo el ecosistema completo de productos desarrollados durante el ciclo. El contenido audiovisual destaca la integración de las siguientes soluciones tecnológicas:
+
+* **Landing Page:** Portal informativo diseñado para la captación de usuarios y presentación de la solución.
+* **Aplicación Web Frontend:** Desarrollada con el framework **Angular**, orientada a la gestión administrativa profunda.
+* **Aplicaciones Móviles:** Se presenta la coexistencia de dos soluciones móviles, una desarrollada de forma **Nativa** y otra mediante el framework **Flutter**, permitiendo una gestión de inventario versátil y en tiempo real.
+
+La narrativa del video guía al espectador a través del flujo principal de la plataforma, mostrando la resolución de problemas reales en la gestión de insumos mediante el uso de sensores y culminando con testimonios de usuarios recolectados durante las sesiones de validación.
+
+**Información del Video:**
+
+* **Nombre del archivo:** `upc-pre-202610-1asi0732-10253-UI-Topic-about-the-product-sprint-1`
+* **Duración:** 00:02:08
+* **Formatos y Plataformas:** Subido a Microsoft Stream (entorno institucional), YouTube (para visualización pública e inserción en el Landing Page).
+
+**Evidencia de Publicación:**
+
+![About the Product - Thumbnail](assets/images/chapter5/about-the-product-screenshot.png)
+*Interfaz de la aplicación Restock presentada en el video institucional.*
+
+**Enlaces de acceso:**
+
+| Plataforma | Enlace de Acceso |
+| :--- | :--- |
+| **Microsoft Stream** | [https://shortlink.uk/1ox4T](https://shortlink.uk/1ox4T) |
+| **YouTube** | [https://youtu.be/hb5CnSDc2PI?si=mi9CKlrrRgStRkQ3](https://youtu.be/hb5CnSDc2PI?si=mi9CKlrrRgStRkQ3) |
