@@ -1207,7 +1207,7 @@ Además, se grabó un video donde se explican los principales flujos de interacc
 
 ![Mobile User Flow 12](assets/images/chapter4/mobile/mobile-app-prototyping.png)
 
-Mobile Applications Prototyping: https://shorturl.at/DLy8l
+Mobile Applications Prototyping: https://shortlink.uk/1tPwN
 
 ### 4.5.2. iOS Mobile Applications Prototyping
 
