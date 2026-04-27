@@ -11,13 +11,13 @@ A continuación, se listan las herramientas y estándares adoptados por el equip
 | Project Management      | Trello                                                 | Seguimiento de backlog, tareas y sprints.                      | [https://trello.com/](https://trello.com/)                                                                                               |
 | Requirements Management | Gherkin Conventions                                    | Escritura legible de requisitos con formato Given/When/Then.   | [https://cucumber.io/docs/gherkin/](https://cucumber.io/docs/gherkin/)                                                                   |
 | Product UX/UI Design    | Figma                                                  | Prototipos y diseño responsive.                               | SaaS –[https://figma.com](https://figma.com)                                                                                            |
-| Frontend Dev            | Kotlin, Flutter, Dart                                  | Construcción del frontend del sistema.                        | https://kotlinlang.org/ / https://flutter.dev/   /   https://dart.dev/                                                               |
+| Frontend Dev            | Kotlin, Flutter, Dart                                  | Construcción del frontend del sistema.                        | https://kotlinlang.org/ / https://flutter.dev/   /   https://dart.dev/                                                                |
 | Backend Dev             | Java + Spring Boot                                     | Lógica de negocio y servicios REST.                           | [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)                                                         |
 | IDE                     | IntelliJ IDEA + Android Studio                         | Desarrollo, depuración y pruebas.                             | [https://www.jetbrains.com/idea](https://www.jetbrains.com/idea) / [https://www.jetbrains.com/webstorm](https://www.jetbrains.com/webstorm) |
 | Code Standards          | Google Java Style Guide, Google TypeScript Style Guide | Mantener un código consistente y legible.                     | [https://google.github.io/styleguide](https://google.github.io/styleguide)                                                               |
 | Version Control         | Git + GitHub                                           | Gestión colaborativa del código fuente.                      | SaaS –[https://github.com](https://github.com)                                                                                          |
 | Software Deployment     | Github pages                                           | Despliegue continuo del sistema en ambientes de testing.       | SaaS –[https://railway.app](https://railway.app) / [https://render.com](https://render.com)                                                |
-| Software Documentation  | Swagger                                                | Documentación de APIs, funcionalidades y criterios técnicos. | SaaS –[https://swagger.io/](https://swagger.io/)                                                                                                 |
+| Software Documentation  | Swagger                                                | Documentación de APIs, funcionalidades y criterios técnicos. | SaaS –[https://swagger.io/](https://swagger.io/)                                                                                        |
 
 ### 5.1.2. Source Code Management
 
@@ -359,7 +359,6 @@ A continuación, se listan las herramientas y estándares adoptados por el equip
 - **Layouts y recursos XML**: `snake_case` (ej. `activity_main.xml`, `user_profile_item.xml`).
 - **IDs en layouts**: `camelCase` (ej. `btnSubmit`, `txtUserName`).
 
-
 #### Mobile Frontend (Flutter + Dart)
 
 ##### Convenciones generales:
@@ -544,37 +543,206 @@ El frontend se comunica con el backend a través de HTTP consumiendo la API REST
 
 ### 5.2.1. Sprint Backlogs
 
-#### Sprint 1 
+#### Sprint 1
 
-[Landing page] [Sprint Planning + Sprint backlog]
+Sobre correcciones de los productos
 
-#### Sprint 2
-
-[Backend] [Sprint Planning + Sprint backlog]
-
-#### Sprint 3
-
-[Web application] [Sprint Planning + Sprint backlog]
-
-
-#### Sprint 4
-
-[Mobile Application] [Sprint Planning + Sprint backlog]
-
-
+[Sprint Planning + Sprint backlog]
 
 ### 5.2.2. Implemented Landing Page Evidence
 
+El repositorio fue reinicializado como parte de la transición del proyecto desde la fase de prototipo a desarrollo de producción. Esta decisión se tomó para establecer un historial limpio que refleje únicamente la arquitectura final del sistema, tras múltiples iteraciones de reestructuración técnica y consolidación de funcionalidades core.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| restock-website | main | 732099d96c19104dd87599fdd058848e45439b4c | feat: initial landing page deployment. | initial commit | 22/04/2026 |
+
+#### Despliegue de Landing Page
+
+**Configuración de GitHub Pages:**
+
+- **Paso 1: Acceder a la Configuración**
+    - Navega a tu repositorio en GitHub.
+    - Haz clic en la pestaña "Settings" (Configuración).
+    - Desplázate hacia abajo hasta la sección "Pages" en el menú lateral.
+
+- **Paso 2: Seleccionar la Fuente**
+    - En la sección "Source" (Fuente): **Opción A: Deploy from a branch**.
+    - **Branch:** Selecciona la rama `main`. **Folder:** Elige `/ (root)`. Es la opción más común y sencilla.
+
+**Link de despliegue de landing page:** [https://ui-topic-diseno-de-experimentos-10253.github.io/restock-website/](https://ui-topic-diseno-de-experimentos-10253.github.io/restock-website/)
+
+![Configuración de GitHub Pages](assets/images/chapter-5/landing-evidence/github-pages-config.png)
+
 ### 5.2.3. Implemented Frontend-Web Application Evidence
+
+La aplicación web frontend fue desarrollada con el framework **Angular** y desplegada 
+mediante **GitHub Pages** como plataforma de hosting estático. Esta plataforma permite 
+publicar la aplicación de forma pública y gratuita directamente desde el repositorio 
+de GitHub de la organización, sirviendo el contenido generado tras el proceso de build 
+de producción.
+
+**Enlace de la aplicación desplegada:**  
+https://ui-topic-diseno-de-experimentos-10253.github.io/restock-webapp/
+
+A continuación se muestra una captura de la aplicación funcionando correctamente en 
+producción, específicamente en la vista del **Dashboard** del restaurante, donde el 
+usuario puede visualizar los pedidos pendientes, las últimas notificaciones de 
+inventario y los insumos recientemente agregados.
+
+![Frontend desplegado - Dashboard](assets/images/chapter5/frontend-deployed.png)
+*Vista del dashboard principal de Restock desplegada en GitHub Pages.*
+
+
 
 ### 5.2.4. Acuerdo de Servicio - SaaS
 
 ### 5.2.5. Implemented Native-Mobile Application Evidence
 
+El aplicativo móvil de Restock fue configurado, compilado y distribuido mediante Firebase App Distribution, permitiendo compartir versiones preliminares (APK/AAB) con testers para pruebas controladas antes de su despliegue en producción.
+
+| Application        | Package Name              | Version | Distribution Tool         | Release Date |
+| :----------------- | :------------------------ | :------ | :------------------------ | :----------- |
+| Restock (Provider) | com.uitopic.restock       | 0.1.1   | Firebase App Distribution | 22/04/2026   |
+| Restock Mobile     | com.uitopic.restock.admin | 0.1.1   | Firebase App Distribution | 22/04/2026   |
+
+<img src="https://i.ibb.co/CKhDKF5g/evidencia-firebaseapp.png" width="100%" alt="firebase-distribution">
+
+#### Despliegue de Aplicación Móvil
+
+**Configuración de Firebase App Distribution:**
+
+* Paso 1: Configuración del proyecto en Firebase
+  - Acceder a Firebase Console.
+  - Crear o seleccionar el proyecto (Restock-Providers).
+  - Registrar la aplicación Android con su Package Name (com.uitopic.restock).
+  - Descargar e integrar el archivo google-services.json.
+
+* Paso 2: Generación del build
+  - Compilar la aplicación en formato APK o AAB.
+  - Configurar versionName y versionCode.
+
+* Paso 3: Distribución de la versión
+  - Ingresar a App Distribution en Firebase.
+  - Subir el archivo APK/AAB.
+  - Añadir notas de versión.
+  - Seleccionar testers o grupos.
+
+* Paso 4: Gestión de testers
+  - Crear grupos de verificadores.
+  - Enviar invitaciones por correo.
+  - Firebase genera enlaces de acceso.
+
+* Paso 5: Instalación y pruebas
+  - Los testers reciben una invitación.
+  - Pueden descargar e instalar la app.
+  - Se monitorean métricas como invitaciones, aceptaciones y descargas.
+
+**Evidencia de invitación y acceso a testers:**
+
+<img src="https://i.ibb.co/v2Jtsk8/muestra-invitaciones-apps.png" width="100%" alt="firebase-invitations">
+
+**Configuración del identificador de la aplicación:**
+
+<img src="https://i.ibb.co/n8mrZK0Y/se-muestra-application-Id.png" width="100%" alt="firebase-app-id">
+
 ### 5.2.6. Implemented RESTful API and/or Serverless Backend Evidence
+
+El repositorio fue reinicializado como parte de la transición del proyecto desde la fase de prototipo a desarrollo de producción.
+
+| Repository       | Branch | Commit Id                                | Commit Message            | Committed on (Date) |
+| :--------------- | :----- | :--------------------------------------- | :------------------------ | :------------------ |
+| restock-platform | main   | 1c30ad1723bd174baa0547b19fe53b7f2e59515c | chore: add project setup. | 22/04/2026          |
+
+<img src="assets/images/chapter5/backend_repository.png" width="600px" alt="registered-alerts">
+
+#### Despliegue de Backend
+
+**Configuración de Render:**
+
+* **Paso 1: Acceder a Render**
+  * Ingresar a [Render](https://render.com/).
+  * Vinculación con cuenta de GitHub.
+  * Autorizar el acceso al repositorio del backend.
+* **Paso 2: Crear nuevo Web Service**
+  * Hacer clic en  **New +** .
+  * Seleccionar la opción  **Web Service** .
+  * Eligir el repositorio correspondiente al backend de `restock-platform`.
+* **Paso 3: Configurar el servicio**
+  * **Name:** Se definió el nombre del servicio backend.
+  * **Region:** Se seleccionó la región más adecuada.
+  * **Branch:** Se seleccionóla rama `main`.
+* **Paso 4: Desplegar el backend**
+  * Se hizo clic en **Create Web Service** .
+  * Render inicia el proceso de build y despliegue automáticamente.
+  * Al finalizar, se generará una URL pública para consumir la API.
+
+**Link de despliegue del backend:** [https://restock-platform-10253.onrender.com/swagger-ui/index.html ](https://restock-platform-10253.onrender.com/swagger-ui/index.html)
+
+<img src="assets/images/chapter5/backend_evidence.png" width="600px" alt="registered-alerts">
 
 ### 5.2.7. RESTful API documentation
 
 ### 5.2.8. Team Collaboration Insights
 
+Para el desarrollo de este hito, la dinámica del equipo se centró en la integración, refactorización y optimización de componentes de software previamente desarrollados. Se utilizó **GitHub** como plataforma central para el control de versiones, aplicando el flujo de trabajo **GitFlow** para coordinar la consolidación de los productos del ecosistema Restock.
+
+La distribución de actividades permitió que todos los integrantes —Julio Daniel Castro, José Jahaziel Guerra, Gabriela Nicole Shapiama, Ario Chavez e Ivan Fernando Sanchez— participaran activamente en la revisión y estabilización de los repositorios del **Landing Page**, la **Aplicación Web (Angular)** y el **RESTful API (Backend)**.
+
+#### Analíticas de Colaboración (GitHub Insights)
+
+A continuación, se presentan las métricas de colaboración extraídas directamente de la pestaña *Insights* de nuestros repositorios en GitHub.
+
+**1. Contribuciones en el Landing Page:**
+![Commits Landing Page](assets/images/chapter5/team-collaboration/insights_landing_page.png)
+*Gráfico de contribuciones (Contributors) del repositorio del Landing Page durante el Sprint.*
+
+**2. Contribuciones en la Web App (Angular) y Móvil:**
+![Commits Web ](assets/images/chapter5/team-collaboration/insights_frontend.png)
+
+![Commits Mobile](assets/images/chapter5/team-collaboration/insights_mobile.png)
+
+*Historial de commits y frecuencia de aportes en el repositorio Frontend.*
+
+**3. Contribuciones en el RESTful API (Backend):**
+![Commits Backend](assets/images/chapter5/team-collaboration/insights_backend.png)
+*Gráfica de actividad y pull requests resueltos en el repositorio del Backend.*
+
+#### Interpretación de los Datos y Dinámica del Equipo
+
+Para este sprint, la dinámica del equipo se centró principalmente en la integración, refactorización y adaptación de componentes desarrollados en iteraciones previas. Por esta razón, las gráficas de GitHub Insights reflejan un patrón enfocado en consolidar la arquitectura existente.
+
+A partir de los datos, destacamos lo siguiente:
+
+* **Integración Colaborativa:** Todos los miembros del equipo (Julio Daniel, José Jahaziel, Gabriela Nicole, Ario e Ivan Fernando) participaron activamente en la revisión y unificación del código base en los repositorios de Frontend, Backend y Mobile.
+* **Eficiencia y Reutilización:** La estrategia de adaptar y optimizar código de entregas anteriores nos permitió reducir los tiempos de desarrollo puro y enfocar nuestros *commits* en la resolución de *bugs*, configuración de despliegues y el cumplimiento del Sprint Goal. 
+
+En conclusión, la visibilidad de GitHub nos ayudó a coordinar los *merges* necesarios para estabilizar la plataforma y garantizar que los productos estuvieran listos para la fase de validación, demostrando responsabilidad técnica en la entrega.
+
 ## 5.3. Video About-the-Product
+
+El video **About-the-Product** ha sido elaborado con el propósito de presentar la propuesta de valor integral de **Restock**, exhibiendo el ecosistema completo de productos desarrollados durante el ciclo. El contenido audiovisual destaca la integración de las siguientes soluciones tecnológicas:
+
+* **Landing Page:** Portal informativo diseñado para la captación de usuarios y presentación de la solución.
+* **Aplicación Web Frontend:** Desarrollada con el framework **Angular**, orientada a la gestión administrativa profunda.
+* **Aplicaciones Móviles:** Se presenta la coexistencia de dos soluciones móviles, una desarrollada de forma **Nativa** y otra mediante el framework **Flutter**, permitiendo una gestión de inventario versátil y en tiempo real.
+
+La narrativa del video guía al espectador a través del flujo principal de la plataforma, mostrando la resolución de problemas reales en la gestión de insumos mediante el uso de sensores y culminando con testimonios de usuarios recolectados durante las sesiones de validación.
+
+**Información del Video:**
+
+* **Nombre del archivo:** `upc-pre-202610-1asi0732-10253-UI-Topic-about-the-product-sprint-1`
+* **Duración:** 00:02:08
+* **Formatos y Plataformas:** Subido a Microsoft Stream (entorno institucional), YouTube (para visualización pública e inserción en el Landing Page).
+
+**Evidencia de Publicación:**
+
+![About the Product - Thumbnail](assets/images/chapter5/about-the-product-screenshot.png)
+*Interfaz de la aplicación Restock presentada en el video institucional.*
+
+**Enlaces de acceso:**
+
+| Plataforma | Enlace de Acceso |
+| :--- | :--- |
+| **Microsoft Stream** | [https://shortlink.uk/1ox4T](https://shortlink.uk/1ox4T) |
+| **YouTube** | [https://youtu.be/hb5CnSDc2PI?si=mi9CKlrrRgStRkQ3](https://youtu.be/hb5CnSDc2PI?si=mi9CKlrrRgStRkQ3) |

@@ -10,11 +10,11 @@
 
 ### Ciclo: 202610
 
-### Curso:
+### Curso: 1ASI0732
 
-### NRC:
+### NRC: 10253
 
-### Docente:
+### Docente: Juan Carlos Tinoco Licas
 
 &nbsp;
 &nbsp;
@@ -33,9 +33,9 @@
 
 ### u202319448 - Shapiama Rivera, Gabriela Nicole
 
-### uXXXXXXXXX - Sanchez Guevara, Ivan Fernando
+### u202213468 - Chavez Uribe, Ario
 
-### uXXXXXXXXX - Chavez, Ario
+### u202218181 - Sanchez Guevara, Ivan Fernando
 
 
 &nbsp;
@@ -58,6 +58,7 @@
 | 1.3 | 21/04/26 | Julio Castro | Refinamiento de descripciones del informe y correcciones menores. |
 | 1.4 | 21/04/26 | Ivan Sanchez | Actualización de perfiles de los integrantes del equipo. |
 | 1.5 | 22/04/26 | Ario Chavez | Adición de información personal y ajustes finales en el Capítulo 1. |
+| 1.6 | 22/04/26 | Ario Chavez | Elaboración de Web Style Guidelines en el Capítulo 4. |
 
 
 # Project Report Collaboration Insights

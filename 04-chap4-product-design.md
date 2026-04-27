@@ -77,11 +77,153 @@ Estos elementos y principios no se aplican de forma aislada, sino como parte int
 
 ### 4.1.2. Web Style Guidelines
 
+En esta sección se detallan los estándares visuales y de interacción específicos para las interfaces web de Restock, asegurando coherencia en entornos de escritorio y dispositivos con navegación responsiva basándonos en los lineamientos del General Style Guidelines que reflejan la implementación actual del sitio web.
+
+#### Sistema de Rejilla (Grid System) y Layout
+
+Para garantizar la adaptabilidad del contenido, la plataforma web de Restock utiliza un diseño responsivo basado en contenedores fluidos y puntos de interrupción estratégicos:
+
+- **Desktop (Escritorio):** El contenido principal se organiza en un contenedor con un ancho máximo de **1200px**, que permite la lectura en dispositivos pequeños y medianos sin perder calidad visual.
+- **Breakpoints Responsivos:**
+  - **1120px:** Ajuste de márgenes y espaciados para pantallas medianas.
+  - **880px:** Punto de transición donde la navegación cambia a un modelo móvil y el contenido se reestructura verticalmente.
+- **Mobile (Web Browser):** Se utiliza un flujo de una sola columna donde los elementos (cards y texto) ocupan el ancho en la pantalla, con paddings laterales para asegurar la legibilidad.
+
+#### Componentes de Interfaz Web
+
+- **Botones y CTAs:** Los botones de acción principal, utilizan un gradiente lineal de **Verde Oscuro (#4F8A5B a #3B7047)**. Tienen un diseño redondeado y con una sombra para el diseño.
+- **Estados de Interacción:**
+  - **Hover:** Los botones cambian a un gradiente más oscuro y se elevan para indicar interactividad.
+  - **Active:** Reduce su escala para simular presión.
+- **Tarjetas (Cards):** Utilizadas en secciones como "Nosotros", cuentan con un borde de **2px** en **Verde (#4F8A5B)**, bordes redondeados y fondos que van del blanco al gris muy claro.
+
+#### Navegación Web
+
+- **Navbar (Barra de Navegación):** Se mantiene fija con una altura de **64px**. Utiliza un fondo con efecto de desenfoque y cuenta con opacidad para permitir que el contenido se deslice por debajo sin perder legibilidad.
+- **Navegación Móvil:** Al reducirse la pantalla, el menú se oculta tras un botón de alternancia (*toggle*) que despliega las opciones de manera vertical con animaciones de suavizado.
+
+#### Tipografía Web Aplicada
+
+Se utiliza un sistema de fuentes jerárquico para optimizar la legibilidad en pantallas:
+
+- **Títulos (H1):** Se aplican gradientes de color al texto para resaltar la identidad de marca.
+- **Subtítulos:** Utilizan un color verde institucional.
+- **Cuerpo de texto:** Cuenta con un tamaño base y un interlineado para facilitar la lectura prolongada.
+
+#### Animaciones y Micro-interacciones
+
+La experiencia web de Restock utiliza animaciones sutiles:
+
+- **Entradas:** Los elementos principales utilizan animaciones de *fade-in* (izquierda, derecha o arriba) para aparecer gradualmente al cargar la página.
+- **Scroll:** Se implementa un comportamiento de desplazamiento suave (*scroll-behavior: smooth*) para mejorar la transición entre secciones.
+
 ### 4.1.3. Mobile Style Guidelines
+
+Esta sección define las guías de estilo visual y de interacción para aplicaciones móviles, asegurando consistencia, usabilidad y alineación con las buenas prácticas de diseño en cada plataforma.
 
 #### 4.1.3.1. iOS Mobile Style Guidelines
 
+En esta subsección se detallan los estándares visuales y de interacción aplicados a la versión móvil de Restock para dispositivos iOS, tomando como referencia las pantallas diseñadas en formato iPhone. Estos lineamientos aseguran una experiencia coherente con la identidad visual de Restock, manteniendo una navegación simple, jerarquía clara y adaptación a pantallas con zonas seguras como el  *Dynamic Island* .
+
+**Sistema de Rejilla y Layout iOS**
+
+Para garantizar una correcta visualización en dispositivos iPhone, la interfaz móvil de Restock utiliza una estructura vertical de una sola columna, priorizando la lectura rápida y el acceso directo a las acciones principales:
+
+* **Formato de pantalla iPhone:** Las vistas están diseñadas para una proporción vertical, considerando espacios superiores seguros para evitar interferencias con el *Dynamic Island* y la barra de estado.
+* **Distribución en una columna:** El contenido principal se organiza de forma vertical, permitiendo que secciones como bienvenida, beneficios, testimonios, preguntas frecuentes y tutorial se visualicen de manera ordenada.
+* **Espaciado lateral:** Se emplean márgenes internos consistentes para evitar que los textos, cards y botones queden pegados a los bordes de la pantalla.
+* **Cards centradas:** Las tarjetas de contenido, como las de “About us”, “Our team”, “Benefits” y “Testimonials”, se muestran centradas, con ancho controlado y separación visual entre bloques.
+
+**Componentes de Interfaz iOS**
+
+* **Botones principales:** Los botones como  **START** ,  **SIGN UP** ,  **SIGN IN** , **SAVE** y **START** del tutorial utilizan el color verde institucional de Restock, con bordes ligeramente redondeados y tamaño compacto.
+* **Cards informativas:** Las tarjetas presentan fondos blancos, bordes suaves y sombras ligeras. Se utilizan para organizar información sobre beneficios, testimonios, servicios y miembros del equipo.
+* **Formularios:** Las pantallas de registro, inicio de sesión, recuperación de contraseña y contacto emplean campos de entrada con fondo gris claro, bordes redondeados y distribución vertical.
+* **Íconos sociales:** En las pantallas de autenticación se incluyen íconos circulares para acceso mediante cuentas externas, manteniendo una alineación centrada debajo de los formularios.
+* **Acordeones FAQ:** En la sección de preguntas frecuentes, las respuestas se organizan mediante bloques desplegables, diferenciados por bordes verdes y encabezados claros.
+
+**Navegación iOS**
+
+* **Header superior:** Cada pantalla mantiene el logo de Restock en la parte superior izquierda y el ícono de menú en la parte superior derecha.
+* **Menú móvil:** El menú se despliega como una vista vertical con fondo verde claro, mostrando opciones como  **Home** ,  **About us** ,  **Benefits** ,  **Testimonials** , **Questions** y  **Download** .
+* **Acciones de autenticación:** Dentro del menú móvil se incluyen botones para **SIGN IN** y  **SIGN UP** , permitiendo al usuario acceder rápidamente desde cualquier sección.
+* **Flujo vertical:** La navegación está pensada para desplazamiento hacia abajo, conectando secciones informativas como bienvenida, nosotros, beneficios, testimonios, tutorial y descarga.
+
+**Tipografía iOS Aplicada**
+
+La tipografía mantiene una jerarquía clara para mejorar la lectura en pantallas pequeñas:
+
+* **Títulos principales:** Se utilizan textos en negrita para secciones como  **Welcome to Restock!** ,  **Sign up** ,  **Sign in** ,  **Benefits** , **Tutorial** y  **Frequently Asked Questions** .
+* **Subtítulos:** Se aplican textos de menor tamaño para explicar cada sección sin saturar la pantalla.
+* **Cuerpo de texto:** El contenido descriptivo utiliza tamaños reducidos, alineación centrada o justificada según el bloque, y suficiente interlineado para mantener la legibilidad.
+* **Énfasis visual:** Algunos elementos importantes, como nombres de usuarios, roles del equipo o preguntas frecuentes, se resaltan con mayor peso tipográfico.
+
+**Animaciones y Micro-interacciones iOS**
+
+La experiencia móvil en iOS debe mantener interacciones suaves y discretas:
+
+* **Apertura del menú:** El menú hamburguesa se despliega de forma vertical con una transición suave.
+* **Botones táctiles:** Los botones deben responder visualmente al toque mediante cambios leves de opacidad o escala.
+* **Cards interactivas:** Las tarjetas de beneficios, testimonios y preguntas frecuentes pueden mostrar una ligera elevación o cambio de borde al interactuar.
+* **Desplazamiento fluido:** Las secciones deben mantener un scroll vertical suave para reforzar la sensación de continuidad entre pantallas.
+
+<img src="assets/images/chapter4/IOs1.png" alt="IOs" />
+<img src="assets/images/chapter4/IOs2.png" alt="IOs" />
+<img src="assets/images/chapter4/IOs3.png" alt="IOs" />
+<img src="assets/images/chapter4/IOs4.png" alt="IOs" />
+
 #### 4.1.3.2. Android Mobile Style Guidelines
+
+En esta subsección se detallan los estándares visuales y de interacción aplicados a la versión móvil de Restock para dispositivos Android, siguiendo principios de Material Design. Estos lineamientos permiten mantener una experiencia clara, accesible y coherente con la identidad visual de Restock, adaptándose a pantallas Android con navegación táctil y desplazamiento vertical.
+
+**Sistema de Rejilla y Layout Android**
+
+Para asegurar una correcta visualización en dispositivos Android, la interfaz móvil de Restock mantiene una estructura responsiva basada en bloques verticales y componentes reutilizables:
+
+* **Formato de pantalla Android:** Las pantallas se diseñan en orientación vertical, considerando la barra superior del dispositivo y la navegación inferior propia del sistema Android.
+* **Diseño de una columna:** Las secciones se organizan de manera secuencial, permitiendo recorrer el contenido mediante scroll.
+* **Contenedores compactos:** El contenido se presenta dentro de cards y bloques con ancho controlado, evitando saturar la pantalla.
+* **Separación entre secciones:** Las vistas como bienvenida, autenticación, beneficios, testimonios, preguntas frecuentes, tutorial, contacto y descarga mantienen espacios visibles entre componentes.
+* **Adaptación a diferentes densidades:** Los textos, íconos y botones deben conservar proporciones adecuadas en pantallas Android de distintas resoluciones.
+
+**Componentes de Interfaz Android**
+
+* **Botones principales:** Los botones de acción, como  **START** ,  **SIGN UP** , **SIGN IN** y  **SAVE** , utilizan el verde institucional de Restock como color principal. Su forma rectangular con bordes suavizados permite reconocerlos fácilmente como acciones táctiles.
+* **Campos de formulario:** Las pantallas de  **Sign up** ,  **Sign in** , **Forgot your password?** y **Contact** emplean inputs con fondo gris claro y distribución vertical, facilitando el llenado desde dispositivos móviles.
+* **Cards Material:** Las tarjetas de beneficios, testimonios, tutoriales y miembros del equipo utilizan fondos blancos, bordes redondeados y sombras suaves, alineándose con el enfoque visual de Material Design.
+* **Botones de descarga:** En la pantalla final se presentan accesos visuales para descarga de la aplicación, incluyendo botones asociados a tiendas móviles como  **Google Play** .
+* **Elementos desplegables:** La sección de preguntas frecuentes utiliza acordeones con borde verde y flechas de despliegue para mostrar u ocultar información.
+
+**Navegación Android**
+
+* **Top App Bar:** La parte superior de cada pantalla mantiene el logo de Restock al lado izquierdo y el menú hamburguesa al lado derecho, funcionando como barra principal de navegación.
+* **Menú desplegable:** Al seleccionar el ícono de menú, se muestra una vista vertical con fondo verde claro que contiene accesos a las secciones principales:  **Home** ,  **About us** ,  **Benefits** ,  **Testimonials** , **Questions** y  **Download** .
+* **Navegación por scroll:** La experiencia se basa en desplazamiento vertical, permitiendo recorrer las secciones de manera continua.
+* **Accesos rápidos:** Las acciones de inicio de sesión y registro se mantienen visibles dentro del menú móvil, facilitando el ingreso del usuario a la plataforma.
+* **Compatibilidad con navegación Android:** La interfaz debe permitir el uso natural del botón o gesto de retroceso del sistema, especialmente en pantallas de formularios o menús desplegados.
+
+**Tipografía Android Aplicada**
+
+La tipografía en Android mantiene una estructura simple y jerárquica, orientada a la lectura rápida:
+
+* **Títulos principales:** Se utilizan textos en negrita para identificar claramente secciones como  **Welcome to Restock!** ,  **Sign up** ,  **Sign in** ,  **Benefits** ,  **Testimonials** , **Tutorial** y  **Contact** .
+* **Subtítulos descriptivos:** Cada sección incluye textos breves que explican el propósito del contenido sin ocupar demasiado espacio.
+* **Texto de apoyo:** En cards y formularios se emplea texto pequeño, con contraste suficiente y distribución clara.
+* **Jerarquía por peso y tamaño:** Los nombres de usuarios, roles, preguntas frecuentes y beneficios se diferencian mediante tamaño, negrita o color verde institucional.
+
+**Animaciones y Micro-interacciones Android**
+
+La versión Android de Restock debe reforzar la respuesta visual del sistema ante cada interacción:
+
+* **Ripple Effect:** Los botones, íconos del menú y elementos seleccionables deben mostrar una respuesta visual al toque, siguiendo el comportamiento común de Android.
+* **Despliegue del menú:** El menú hamburguesa debe abrirse con una transición suave desde la parte superior o lateral, evitando cambios bruscos en la pantalla.
+* **Acordeones interactivos:** Las preguntas frecuentes deben expandirse y contraerse de forma fluida.
+* **Estados de formularios:** Los campos deben mostrar retroalimentación clara ante errores, datos incompletos o acciones completadas.
+* **Scroll continuo:** Las transiciones entre secciones deben mantenerse fluidas, favoreciendo una navegación natural en dispositivos Android.
+
+<img src="assets/images/chapter4/Android1.png" alt="Android" />
+<img src="assets/images/chapter4/Android2.png" alt="Android" />
+<img src="assets/images/chapter4/Android3.png" alt="Android" />
 
 ## 4.2. Information Architecture
 
@@ -1065,9 +1207,19 @@ Además, se grabó un video donde se explican los principales flujos de interacc
 
 ![Mobile User Flow 12](assets/images/chapter4/mobile/mobile-app-prototyping.png)
 
-Mobile Applications Prototyping: https://shorturl.at/DLy8l
+Mobile Applications Prototyping: https://shortlink.uk/1tPwN
 
 ### 4.5.2. iOS Mobile Applications Prototyping
+
+En cuanto a la arquitectura de información, el prototipo móvil de RESTOCK para iOS mantiene una navegación jerárquica coherente con las guías de diseño de la plataforma (Human Interface Guidelines), incorporando flujos secuenciales en procesos clave como el registro de compras y la gestión de recetas. Se definieron etiquetas intuitivas, categorías adaptadas a cada tipo de usuario y herramientas de búsqueda que garantizan una experiencia fluida y consistente con el ecosistema Apple.
+
+Asimismo, se implementaron interacciones nativas de iOS (como gestos de deslizamiento y estados de selección), validaciones visuales en formularios y retroalimentaciones inmediatas ante las acciones del usuario. Estos elementos aseguran que tanto el acceso a la información como la ejecución de tareas se realicen de forma eficiente y alineada al contexto de la plataforma iOS.
+
+Además, se grabó un video donde se explican los principales flujos de interacción del prototipo iOS, mostrando cómo las decisiones de diseño se adaptan a las convenciones y expectativas de los usuarios de esta plataforma.
+
+![iOS Mobile User Flow](assets/images/chapter4/mobile/ios-app-prototyping.png)
+
+iOS Mobile Applications Prototyping: https://shortlink.uk/1osCn
 
 ## 4.6. Web Applications UX/UI Design
 
@@ -2636,7 +2788,7 @@ A continuación, se incluirá un screenshot extraído de un video por cada tipo 
 
 **Web Applications Desktop:**
 
-[https://shorturl.at/Vy2JX](https://shorturl.at/Vy2JX)
+[https://shortlink.uk/1tPuC](https://shortlink.uk/1tPuC)
 
 ![Captura del video](assets/images/chapter4/evidence_prototyping_desktop.png)
 
@@ -2748,6 +2900,21 @@ El contexto **Monitoring** gestiona el seguimiento y registro de las preparacion
 | RecipeIngredient        | Ingrediente específico que forma parte de una receta.                                                                                                     |
 | Recipe                  | Representa la receta de un plato del restaurante.                                                                                                          |
 
-## 4.10. Database Design
+### 4.10. Database Design
 
-### 4.10.1. Non-Relational Database Diagram
+Para el desarrollo de la plataforma **Restock**, se ha optado por un diseño de base de datos no relacional (**NoSQL**) orientada a documentos. Esta decisión arquitectónica permite una alta flexibilidad, escalabilidad y eficiencia para manejar estructuras de datos complejas y dinámicas, propias de la gestión de inventarios y sistemas SaaS. 
+
+El diseño aprovecha las características fundamentales de NoSQL mediante el uso de documentos incrustados (*embedded documents*) y arreglos (*arrays*) para agrupar datos de acceso frecuente (como los ingredientes de las recetas o los ítems de una venta), optimizando así las consultas de lectura y reduciendo la necesidad de operaciones de cruce complejas que afectarían el rendimiento.
+
+### 4.10.1. Relational/Non-Relational Database Diagram
+
+A continuación, se presenta el diagrama del esquema de base de datos no relacional (NoSQL DB Schema) diseñado para el ecosistema de Restock. El modelo organiza la información en diversas colecciones interconectadas lógicamente mediante identificadores únicos (`_id`) y atributos estructurados:
+
+* **Módulo de Autenticación y Suscripciones (SaaS):** Incluye las colecciones `users`, `roles`, `profiles`, `accounts`, `plans`, `subscriptions` y `payments`. Estas entidades estructuran el acceso al sistema, la vinculación de cuentas y la gestión del ciclo de facturación de los clientes.
+* **Módulo Organizacional:** Conformado por `businesses` y `branches`, permitiendo que una misma cuenta administre múltiples sucursales con su respectiva información de ubicación y configuración.
+* **Módulo de Inventario (Core):** Utiliza un catálogo base (`supplies` y `unit_measure`) que se extiende mediante `custom_supplies` (insumos personalizados por negocio con umbrales de stock). El stock físico y sus fechas de caducidad se controlan a través de la colección `batches`.
+* **Módulo de Operaciones:** Compuesto por `recipes` (formulaciones con arreglos de ingredientes integrados) y `sales` (registro histórico de ventas con el detalle de ítems consumidos y costos embebidos).
+* **Módulo de Comunicación:** La colección `notifications` gestiona el historial de alertas y avisos relevantes para los usuarios de cada sucursal.
+
+![Restock - NoSQL DB Schema](assets/images/chapter4/db/nosql-db-schema.png)
+*Diagrama del esquema de la base de datos no relacional (NoSQL) de la plataforma Restock.*
