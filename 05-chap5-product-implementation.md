@@ -545,21 +545,16 @@ El frontend se comunica con el backend a través de HTTP consumiendo la API REST
 
 #### Sprint 1
 
-| Sprint # | User Story Id | User Story Title | Work-item / Task Id | Work-item / Task Title | Description | Estimation (Hours) | Assigned To | Status |
-|---|---|---|---|---|---|---:|---|---|
-| Sprint 1 | US-01 | Acceso a la plataforma | T01 | Definir casos de prueba de autenticación | Elaborar casos de prueba para registro, inicio de sesión, credenciales inválidas y recuperación de contraseña. | 3 | Julio Castro | To-do |
-| Sprint 1 | US-01 | Acceso a la plataforma | T02 | Ejecutar pruebas funcionales de acceso | Validar manualmente el flujo de registro e inicio de sesión desde la interfaz de usuario. | 4 | Gabriela Shapiama | To-do |
-| Sprint 1 | TS-01 | Registro y autenticación de usuarios mediante API RESTful | T03 | Probar endpoints de autenticación | Ejecutar pruebas de API para registro, login y recuperación de contraseña, validando códigos de estado y respuestas. | 5 | Jahaziel Guerra | To-do |
-| Sprint 1 | US-03 | Soporte de acceso según estado de suscripción | T04 | Diseñar casos de prueba de suscripción | Definir escenarios para usuario con suscripción activa, vencida o inexistente. | 3 | Ario Chavez | To-do |
-| Sprint 1 | TS-02 | Gestión del estado de suscripción mediante API RESTful | T05 | Validar API de estado de suscripción | Probar que la API retorne correctamente el estado de suscripción y restrinja el acceso según corresponda. | 4 | Ivan Sanchez | To-do |
-| Sprint 1 | US-04 | Gestión manual de stock e insumos | T06 | Definir casos de prueba de inventario | Elaborar casos para crear, editar, eliminar y consultar insumos, incluyendo validaciones de datos inválidos. | 4 | Gabriela Shapiama | To-do |
-| Sprint 1 | TS-05 | Gestionar insumos mediante API RESTful | T07 | Probar endpoints de insumos | Validar endpoints para listar, crear, actualizar, eliminar, activar y desactivar insumos. | 6 | Jahaziel Guerra | To-do |
-| Sprint 1 | US-04 | Gestión manual de stock e insumos | T08 | Ejecutar pruebas funcionales de inventario | Verificar desde la interfaz que el administrador pueda gestionar manualmente los insumos del inventario. | 5 | Julio Castro | To-do |
-| Sprint 1 | US-01 / US-03 / US-04 | Flujo base del sistema | T09 | Ejecutar prueba de integración del flujo principal | Validar el flujo completo: login, verificación de suscripción y acceso a gestión de inventario. | 6 | Ario Chavez | To-do |
-| Sprint 1 | US-01 / US-04 | Flujo crítico E2E | T10 | Diseñar prueba E2E inicial | Crear escenario de prueba end-to-end: iniciar sesión, acceder al inventario y registrar un insumo. | 5 | Ivan Sanchez | To-do |
-| Sprint 1 | General | Testing setup | T11 | Configurar entorno de pruebas | Preparar herramientas para pruebas de API, pruebas funcionales y documentación de resultados. | 4 | Jahaziel Guerra | To-do |
-| Sprint 1 | General | Reporte de experimentación | T12 | Registrar resultados y defectos encontrados | Documentar evidencias, errores detectados, estado de pruebas y métricas iniciales de calidad. | 4 | Gabriela Shapiama | To-review |
-
+| Sprint # | User Story Id | User Story Title | Description | Estimation (Hours) | Assigned To | Status |
+|---|---|---|---|---:|---|---|
+| Sprint 1 | US-03 | Soporte de acceso según estado de suscripción | Restricción de acceso a funcionalidades según el estado de suscripción del usuario. | 5 | Ario Chavez | Done |
+| Sprint 1 | TS-02 | Gestión del estado de suscripción mediante API RESTful | Implementación de endpoints para consultar y actualizar el estado de suscripción. | 4 | Ivan Sanchez | Done |
+| Sprint 1 | US-04 | Gestión manual de stock e insumos | Implementación de la gestión básica de inventario por parte del administrador. | 6 | Gabriela Shapiama | Done |
+| Sprint 1 | TS-05 | Gestionar insumos mediante API RESTful | Desarrollo de endpoints para crear, editar, eliminar y consultar insumos. | 6 | Jahaziel Guerra | Done |
+| Sprint 1 | TS-12 | Obtener perfil mediante API RESTful | Implementación del endpoint para recuperar la información del perfil del usuario. | 3 | Julio Castro | Done |
+| Sprint 1 | TS-13 | Actualizar perfil mediante API RESTful | Desarrollo del endpoint para actualizar datos del perfil del usuario. | 3 | Gabriela Shapiama | Done |
+| Sprint 1 | TS-16 | Obtener lista de alertas recientes mediante API RESTful | Implementación del endpoint para visualizar alertas relacionadas a inventario. | 3 | Ivan Sanchez | Done |
+| Sprint 1 | TS-25 | Gestionar ventas e inventario mediante API RESTful | Integración de funcionalidades básicas para registrar ventas y actualizar inventario. | 6 | Ario Chavez | Done |
 
 ### 5.2.2. Implemented Landing Page Evidence
 
