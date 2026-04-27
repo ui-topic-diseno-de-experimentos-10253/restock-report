@@ -2788,7 +2788,7 @@ A continuación, se incluirá un screenshot extraído de un video por cada tipo 
 
 **Web Applications Desktop:**
 
-[https://shorturl.at/Vy2JX](https://shorturl.at/Vy2JX)
+[https://shortlink.uk/1tPuC](https://shortlink.uk/1tPuC)
 
 ![Captura del video](assets/images/chapter4/evidence_prototyping_desktop.png)
 
