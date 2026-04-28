@@ -2807,23 +2807,20 @@ El Context Diagram muestra **Restock** como un recuadro central con dos actores 
 **Container Diagrams**
 Aquí se describen los principales contenedores del sistema (por ejemplo, SPA frontend, backend REST API y base de datos). El diagrama detalla cómo se divide la aplicación en diferentes partes desplegables, sus responsabilidades y cómo se comunican entre sí.
 
-![Container Diagrams](assets/images/chapter4/opensource-container.png)
+![Container Diagrams](https://i.ibb.co/h3R2tnq/Container-View-dark.png)
 
 ### 4.8.3. Software Architecture Components Diagrams
 
-**Component Diagram: Web Service**
-Este diagrama se enfoca en los componentes internos del contenedor backend (Web Service). Muestra los módulos y servicios que lo conforman, como controladores REST, servicios de dominio y repositorios, ilustrando cómo colaboran para cumplir los casos de uso del sistema.
 
-![Container Diagrams](assets/images/chapter4/opensource-component.jpg)
 
-**Component Diagram: SPA UI-Topic**
+**Component Diagram: Frontend Application**
 Este diagrama representa la estructura de componentes dentro del frontend SPA. Describe los módulos visuales y funcionales de la interfaz, como vistas, componentes compartidos y servicios de comunicación con el backend.
 
-![Component diagram SPA](assets/images/chapter4/opensource-component-spa.png)
+![Component diagram SPA](https://i.ibb.co/prG2D7yn/Frontend-Application-Components-dark.png)
 
 **Component Diagram: UI-Topic Platform**
 Este diagrama representa la estructura de componentes del backend de la plataforma Topic Platform. El sistema está dividido en módulos funcionales que encapsulan la lógica de negocio de cada dominio, como autenticación, gestión de perfiles, administración de temas y control de acceso.
-![Component Platform](assets/images/chapter4/opensource-component-platform.png)
+![Component Platform](https://i.ibb.co/W4NqbX7z/Backend-Application-Components-dark.png)
 
 ## 4.9. Software Object-Oriented Design
 
