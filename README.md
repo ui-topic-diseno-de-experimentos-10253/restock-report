@@ -100,7 +100,8 @@ fix(chapter-02): correct user persona descriptions
 
 **Analíticos de colaboración – GitHub Insights:**
 
-![Contributors AV1](./assets/images/readme/collaboration_insights_av1.png)*Figura: Contribuciones por integrante durante el AV1*
+<img src="assets/images/readme/collaboration_insights_av1.png" alt="Contributors-av1" width="600px">
+Figura: Contribuciones por integrante durante el AV1
 
 # Contenido
 
