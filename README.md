@@ -37,7 +37,6 @@
 
 ### u202218181 - Sanchez Guevara, Ivan Fernando
 
-
 &nbsp;
 
 ### Abril 2026
@@ -50,16 +49,15 @@
 
 ## Registro de Versiones
 
-| **Versión** | **Fecha** | **Autor** | **Descripción de modificación** |
-| :---: | :---: | :--- | :--- |
-| 1.0 | 20/04/26 | Gabriela Shapiama | Estructura inicial del informe y configuración de capítulos base (1-5). |
-| 1.1 | 20/04/26 | Jahaziel Guerra | Elaboración de User Stories y actualización de rutas de imágenes en Impact Mapping. |
-| 1.2 | 20/04/26 | Gabriela Shapiama | Adición de información técnica (Kotlin) y correcciones ortográficas y de enlaces. |
-| 1.3 | 21/04/26 | Julio Castro | Refinamiento de descripciones del informe y correcciones menores. |
-| 1.4 | 21/04/26 | Ivan Sanchez | Actualización de perfiles de los integrantes del equipo. |
-| 1.5 | 22/04/26 | Ario Chavez | Adición de información personal y ajustes finales en el Capítulo 1. |
-| 1.6 | 22/04/26 | Ario Chavez | Elaboración de Web Style Guidelines en el Capítulo 4. |
-
+| **Versión** | **Fecha** | **Autor**   | **Descripción de modificación**                                                |
+| :----------------: | :-------------: | :---------------- | :------------------------------------------------------------------------------------- |
+|        1.0        |    20/04/26    | Gabriela Shapiama | Estructura inicial del informe y configuración de capítulos base (1-5).              |
+|        1.1        |    20/04/26    | Jahaziel Guerra   | Elaboración de User Stories y actualización de rutas de imágenes en Impact Mapping. |
+|        1.2        |    20/04/26    | Gabriela Shapiama | Adición de información técnica (Kotlin) y correcciones ortográficas y de enlaces.  |
+|        1.3        |    21/04/26    | Julio Castro      | Refinamiento de descripciones del informe y correcciones menores.                      |
+|        1.4        |    21/04/26    | Ivan Sanchez      | Actualización de perfiles de los integrantes del equipo.                              |
+|        1.5        |    22/04/26    | Ario Chavez       | Adición de información personal y ajustes finales en el Capítulo 1.                 |
+|        1.6        |    22/04/26    | Ario Chavez       | Elaboración de Web Style Guidelines en el Capítulo 4.                                |
 
 # Project Report Collaboration Insights
 
@@ -67,16 +65,16 @@ Para el desarrollo del **Project Report**, el equipo utiliza un repositorio dent
 
 **Repositorio del informe del proyecto:** [https://shortlink.uk/1tQjs](https://shortlink.uk/1tQjs)
 
-**Total de commits:** X 
+**Total de commits:** 39
 
 **Autores contribuyentes:**
 
-| Integrante | Usuario de GitHub |
-|---|---|
-| Julio Castro Alejos | `JulioXC4` |
-| José Jahaziel Guerra Perez | `jahazielgg` |
-| Ario Chavez Uribe | `feg06` |
-| Ivan Fernando Sanchez Guevara | `DonFernando1` |
+| Integrante                      | Usuario de GitHub      |
+| ------------------------------- | ---------------------- |
+| Julio Castro Alejos             | `JulioXC4`           |
+| José Jahaziel Guerra Perez     | `jahazielgg`         |
+| Ario Chavez Uribe               | `feg06`              |
+| Ivan Fernando Sanchez Guevara   | `DonFernando1`       |
 | Gabriela Nicole Shapiama Rivera | `GabrielaShapiama28` |
 
 El equipo adoptó una estrategia de ramas basada en **feature branches** (`feature/<sección>`), donde cada integrante trabajó de forma aislada sobre la sección asignada y luego integró sus cambios a `main` mediante *pull requests* con revisión cruzada. Los mensajes de commit siguen la convención **Conventional Commits**, usando prefijos como `feat:`, `fix:` y `chore:` para mantener un historial claro y trazable.
@@ -102,16 +100,15 @@ fix(chapter-02): correct user persona descriptions
 
 **Analíticos de colaboración – GitHub Insights:**
 
-![Contributors AV1](./assets/images/project-insights/contributors-av1.png)
-*Figura: Contribuciones por integrante durante el AV1*
+![Contributors AV1](./assets/images/readme/collaboration_insights_av1.png)*Figura: Contribuciones por integrante durante el AV1*
 
 # Contenido
 
 ## Tabla de contenidos
 
 - [Student Outcome](README.md#student-outcome)
-
 - [Capítulo I: Introducción](01-chap1-introduction.md)
+
   - [1.1. Startup Profile](01-chap1-introduction.md#11-startup-profile)
     - [1.1.1. Descripción de la Startup](01-chap1-introduction.md#111-descripcion-de-la-startup)
     - [1.1.2. Perfiles de integrantes del equipo](01-chap1-introduction.md#112-perfiles-de-integrantes-del-equipo)
@@ -123,8 +120,8 @@ fix(chapter-02): correct user persona descriptions
       - [1.2.2.3. Lean UX Hypothesis Statements](01-chap1-introduction.md#1223-lean-ux-hypothesis-statements)
       - [1.2.2.4. Lean UX Canvas](01-chap1-introduction.md#1224-lean-ux-canvas)
   - [1.3. Segmentos objetivo](01-chap1-introduction.md#13-segmentos-objetivo)
+- [Capítulo II: Requirements Elicitation &amp; Analysis](02-chap2-requirements-elicitation-and-analysis.md)
 
-- [Capítulo II: Requirements Elicitation & Analysis](02-chap2-requirements-elicitation-and-analysis.md)
   - [2.1. Competidores](02-chap2-requirements-elicitation-and-analysis.md#21-competidores)
     - [2.1.1. Análisis competitivo](02-chap2-requirements-elicitation-and-analysis.md#211-analisis-competitivo)
     - [2.1.2. Estrategias y tácticas](02-chap2-requirements-elicitation-and-analysis.md#212-estrategias-y-tacticas)
@@ -139,14 +136,14 @@ fix(chapter-02): correct user persona descriptions
     - [2.3.4. Empathy Mapping](02-chap2-requirements-elicitation-and-analysis.md#234-empathy-mapping)
     - [2.3.5. As-is Scenario Mapping](02-chap2-requirements-elicitation-and-analysis.md#235-as-is-scenario-mapping)
   - [2.4. Ubiquitous Language](02-chap2-requirements-elicitation-and-analysis.md#24-ubiquitous-language)
-
 - [Capítulo III: Requirements Specification](03-chap3-requirements-specification.md)
+
   - [3.1. To-Be Scenario Mapping](03-chap3-requirements-specification.md#31-to-be-scenario-mapping)
   - [3.2. User Stories](03-chap3-requirements-specification.md#32-user-stories)
   - [3.3. Product Backlog](03-chap3-requirements-specification.md#33-product-backlog)
   - [3.4. Impact Mapping](03-chap3-requirements-specification.md#34-impact-mapping)
-
 - [Capítulo IV: Product Design](04-chap4-product-design.md)
+
   - [4.1. Style Guidelines](04-chap4-product-design.md#41-style-guidelines)
     - [4.1.1. General Style Guidelines](04-chap4-product-design.md#411-general-style-guidelines)
     - [4.1.2. Web Style Guidelines](04-chap4-product-design.md#412-web-style-guidelines)
@@ -185,14 +182,14 @@ fix(chapter-02): correct user persona descriptions
     - [4.9.2. Class Dictionary](04-chap4-product-design.md#492-class-dictionary)
   - [4.10. Database Design](04-chap4-product-design.md#410-database-design)
     - [4.10.1. Relational/Non-Relational Database Diagram](04-chap4-product-design.md#4101-relationalnon-relational-database-diagram)
-
 - [Capítulo V: Product Implementation](05-chap5-product-implementation.md)
+
   - [5.1. Software Configuration Management](05-chap5-product-implementation.md#51-software-configuration-management)
     - [5.1.1. Software Development Environment Configuration](05-chap5-product-implementation.md#511-software-development-environment-configuration)
     - [5.1.2. Source Code Management](05-chap5-product-implementation.md#512-source-code-management)
-    - [5.1.3. Source Code Style Guide & Conventions](05-chap5-product-implementation.md#513-source-code-style-guide--conventions)
+    - [5.1.3. Source Code Style Guide &amp; Conventions](05-chap5-product-implementation.md#513-source-code-style-guide--conventions)
     - [5.1.4. Software Deployment Configuration](05-chap5-product-implementation.md#514-software-deployment-configuration)
-  - [5.2. Product Implementation & Deployment](05-chap5-product-implementation.md#52-product-implementation--deployment)
+  - [5.2. Product Implementation &amp; Deployment](05-chap5-product-implementation.md#52-product-implementation--deployment)
     - [5.2.1. Sprint Backlogs](05-chap5-product-implementation.md#521-sprint-backlogs)
     - [5.2.2. Implemented Landing Page Evidence](05-chap5-product-implementation.md#522-implemented-landing-page-evidence)
     - [5.2.3. Implemented Frontend-Web Application Evidence](05-chap5-product-implementation.md#523-implemented-frontend-web-application-evidence)
@@ -202,17 +199,17 @@ fix(chapter-02): correct user persona descriptions
     - [5.2.7. RESTful API documentation](05-chap5-product-implementation.md#527-restful-api-documentation)
     - [5.2.8. Team Collaboration Insights](05-chap5-product-implementation.md#528-team-collaboration-insights)
   - [5.3. Video About-the-Product](05-chap5-product-implementation.md#53-video-about-the-product)
+- [Capítulo VI: Product Verification &amp; Validation](06-chap6-product-verification-and-validation.md)
 
-- [Capítulo VI: Product Verification & Validation](06-chap6-product-verification-and-validation.md)
-  - [6.1. Testing Suites & Validation](06-chap6-product-verification-and-validation.md#61-testing-suites--validation)
+  - [6.1. Testing Suites &amp; Validation](06-chap6-product-verification-and-validation.md#61-testing-suites--validation)
     - [6.1.1. Core Entities Unit Tests](06-chap6-product-verification-and-validation.md#611-core-entities-unit-tests)
     - [6.1.2. Core Integration Tests](06-chap6-product-verification-and-validation.md#612-core-integration-tests)
     - [6.1.3. Core Behavior-Driven Development](06-chap6-product-verification-and-validation.md#613-core-behavior-driven-development)
     - [6.1.4. Core System Tests](06-chap6-product-verification-and-validation.md#614-core-system-tests)
-  - [6.2. Static testing & Verification](06-chap6-product-verification-and-validation.md#62-static-testing--verification)
+  - [6.2. Static testing &amp; Verification](06-chap6-product-verification-and-validation.md#62-static-testing--verification)
     - [6.2.1. Static Code Analysis](06-chap6-product-verification-and-validation.md#621-static-code-analysis)
-      - [6.2.1.1. Coding standard & Code conventions](06-chap6-product-verification-and-validation.md#6211-coding-standard--code-conventions)
-      - [6.2.1.2. Code Quality & Code Security](06-chap6-product-verification-and-validation.md#6212-code-quality--code-security)
+      - [6.2.1.1. Coding standard &amp; Code conventions](06-chap6-product-verification-and-validation.md#6211-coding-standard--code-conventions)
+      - [6.2.1.2. Code Quality &amp; Code Security](06-chap6-product-verification-and-validation.md#6212-code-quality--code-security)
     - [6.2.2. Reviews](06-chap6-product-verification-and-validation.md#622-reviews)
   - [6.3. Validation Interviews](06-chap6-product-verification-and-validation.md#63-validation-interviews)
     - [6.3.1. Diseño de Entrevistas](06-chap6-product-verification-and-validation.md#631-diseno-de-entrevistas)
@@ -228,11 +225,11 @@ fix(chapter-02): correct user persona descriptions
       - [6.4.2.2. Cronograma de auditoría recibida](06-chap6-product-verification-and-validation.md#6422-cronograma-de-auditoria-recibida)
       - [6.4.2.3. Contenido de auditoría recibida](06-chap6-product-verification-and-validation.md#6423-contenido-de-auditoria-recibida)
       - [6.4.2.4. Resumen de modificaciones](06-chap6-product-verification-and-validation.md#6424-resumen-de-modificaciones)
-
 - [Capítulo VII: DevOps Practices](07-chap7-devops-practices.md)
+
   - [7.1. Continuous Integration](07-chap7-devops-practices.md#71-continuous-integration)
     - [7.1.1. Tools and Practices](07-chap7-devops-practices.md#711-tools-and-practices)
-    - [7.1.2. Build & Test Suite Pipeline Components](07-chap7-devops-practices.md#712-build--test-suite-pipeline-components)
+    - [7.1.2. Build &amp; Test Suite Pipeline Components](07-chap7-devops-practices.md#712-build--test-suite-pipeline-components)
   - [7.2. Continuous Delivery](07-chap7-devops-practices.md#72-continuous-delivery)
     - [7.2.1. Tools and Practices](07-chap7-devops-practices.md#721-tools-and-practices)
     - [7.2.2. Stages Deployment Pipeline Components](07-chap7-devops-practices.md#722-stages-deployment-pipeline-components)
@@ -244,8 +241,8 @@ fix(chapter-02): correct user persona descriptions
     - [7.4.2. Monitoring Pipeline Components](07-chap7-devops-practices.md#742-monitoring-pipeline-components)
     - [7.4.3. Alerting Pipeline Components](07-chap7-devops-practices.md#743-alerting-pipeline-components)
     - [7.4.4. Notification Pipeline Components](07-chap7-devops-practices.md#744-notification-pipeline-components)
-
 - [Capítulo VIII: Experiment-Driven Development](08-chap8-experiment-driven-development.md)
+
   - [8.1. Experiment Planning](08-chap8-experiment-driven-development.md#81-experiment-planning)
     - [8.1.1. As-Is Summary](08-chap8-experiment-driven-development.md#811-as-is-summary)
     - [8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims](08-chap8-experiment-driven-development.md#812-raw-material-assumptions-knowledge-gaps-ideas-claims)
@@ -274,14 +271,13 @@ fix(chapter-02): correct user persona descriptions
     - [8.3.4. To-Be Validation Interviews](08-chap8-experiment-driven-development.md#834-to-be-validation-interviews)
       - [8.3.4.1. Diseño de Entrevistas](08-chap8-experiment-driven-development.md#8341-diseno-de-entrevistas)
       - [8.3.4.2. Registro de Entrevistas](08-chap8-experiment-driven-development.md#8342-registro-de-entrevistas)
-  - [8.4. Experiment Aftermath & Analysis](08-chap8-experiment-driven-development.md#84-experiment-aftermath--analysis)
+  - [8.4. Experiment Aftermath &amp; Analysis](08-chap8-experiment-driven-development.md#84-experiment-aftermath--analysis)
     - [8.4.1. Analysis and Interpretation of Results](08-chap8-experiment-driven-development.md#841-analysis-and-interpretation-of-results)
     - [8.4.2. Re-scored and Re-prioritized Question Backlog](08-chap8-experiment-driven-development.md#842-re-scored-and-re-prioritized-question-backlog)
   - [8.5. Continuous Learning](08-chap8-experiment-driven-development.md#85-continuous-learning)
     - [8.5.1. Shareback Session Artifacts: Learning Workflow](08-chap8-experiment-driven-development.md#851-shareback-session-artifacts-learning-workflow)
   - [8.6. To-Be Software Platform Pre-launch](08-chap8-experiment-driven-development.md#86-to-be-software-platform-pre-launch)
     - [8.6.1. About-the-Product Intro Video](08-chap8-experiment-driven-development.md#861-about-the-product-intro-video)
-
 - [Conclusiones](10-conclusions.md)
 - [Bibliografía](09-bibliography.md)
 - [Anexos](11-annexes.md)
@@ -294,7 +290,7 @@ fix(chapter-02): correct user persona descriptions
 
 En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome 4.
 
-| Criterio específico | Acciones realizadas | Conclusiones |
-| :--- | :--- | :--- |
-| **4.c.1 Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software** | **Julio Castro Alejos**<br>*AV1*<br>Ejerció responsabilidad profesional al documentar las dinámicas del equipo (*Team Collaboration Insights*) y asegurar la integridad de la información mediante el diseño de diagramas de bases de datos relacionales/no relacionales.<br><br>**Ario Chavez Uribe**<br>*AV1*<br>Garantizó la transparencia y trazabilidad del proyecto manteniendo el *Registro de Versiones del Informe* y estableciendo los *Web Style Guidelines* para asegurar estándares profesionales de desarrollo.<br><br>**Fernando Sanchez Guevara**<br>*AV1*<br>Promovió la consistencia técnica y las buenas prácticas profesionales al estandarizar los lineamientos visuales (*iOS & Android Mobile Style Guidelines*) y formalizar la presentación del proyecto (*Carátula*).<br><br>**Jahaziel Guerra**<br>*AV1*<br>Evidenció ética profesional al documentar rigurosamente la API RESTful y elaborar los diagramas de arquitectura de contenedores, garantizando la mantenibilidad y transparencia del sistema para futuros desarrolladores.<br><br>**Gabriela Shapiama**<br>*AV1*<br>Demostró liderazgo ético y profesional al gestionar la propiedad intelectual en GitHub (migración y creación de la organización), distribuir tareas de manera equitativa en Jira y asegurar la calidad del entregable final mediante la revisión del informe y la corrección del backend. | El equipo evidenció un alto grado de profesionalismo al establecer y respetar estándares claros de diseño arquitectónico y de interfaz. Se adoptaron herramientas estándar de la industria (como Jira y GitHub) para garantizar un trabajo colaborativo ético, donde la distribución de tareas fue transparente. Asimismo, la rigurosa documentación de APIs, bases de datos y registros de versiones demuestra un compromiso con la mantenibilidad, la trazabilidad y la responsabilidad técnica inherente a la ingeniería de software. |
-| **4.c.2 Emite juicios informados considerando el impacto de las soluciones de ingeniería de software en contextos globales, económicos, ambientales y sociales** | **Julio Castro Alejos**<br>*AV1*<br>Emitió juicios informados orientados a la experiencia del usuario final mediante el prototipado e implementación de aplicaciones (iOS, Android, Web Frontend) y evaluó el impacto comunicacional del producto mediante la creación del *Video About-the-Product*.<br><br>**Ario Chavez Uribe**<br>*AV1*<br>Implementó la *Landing Page* e integró los anexos considerando el impacto económico y de mercado, garantizando que el valor de la solución sea comunicado de manera efectiva al público objetivo global.<br><br>**Fernando Sanchez Guevara**<br>*AV1*<br>Consolidó el impacto del proyecto mediante la redacción de las *Conclusiones* y el diseño inicial (*Landing Page Mock-up*), evaluando cómo la solución final resuelve el problema social/económico planteado.<br><br>**Jahaziel Guerra**<br>*AV1*<br>Tomó decisiones estratégicas utilizando el *Impact Mapping* y el levantamiento de *User Stories* para asegurar que las funcionalidades del *Sprint/Product Backlog* generen un impacto real y positivo en el flujo de negocio y en los usuarios finales.<br><br>**Gabriela Shapiama**<br>*AV1*<br>Realizó juicios técnicos informados al implementar el backend utilizando arquitecturas *Serverless* y *RESTful API*, considerando factores económicos (reducción de costos de infraestructura) y de impacto global (alta disponibilidad y escalabilidad). | El equipo demostró capacidad para emitir juicios informados al alinear continuamente las decisiones tecnológicas con las necesidades del mercado y del usuario. La aplicación de metodologías como *Impact Mapping* permitió priorizar características de alto valor social y de negocio. Además, la elección de servicios en la nube (*Serverless*) y el desarrollo multiplataforma (Web y Móvil) evidencian una consideración directa sobre la escalabilidad económica, la eficiencia de recursos y el impacto global de la solución implementada. |
+| Criterio específico                                                                                                                                                     | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Conclusiones                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **4.c.1 Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software**                                                                  | **Julio Castro Alejos**`<br>`*AV1*`<br>`Ejerció responsabilidad profesional al documentar las dinámicas del equipo (*Team Collaboration Insights*) y asegurar la integridad de la información mediante el diseño de diagramas de bases de datos relacionales/no relacionales.`<br><br>`**Ario Chavez Uribe**`<br>`*AV1*`<br>`Garantizó la transparencia y trazabilidad del proyecto manteniendo el *Registro de Versiones del Informe* y estableciendo los *Web Style Guidelines* para asegurar estándares profesionales de desarrollo.`<br><br>`**Fernando Sanchez Guevara**`<br>`*AV1*`<br>`Promovió la consistencia técnica y las buenas prácticas profesionales al estandarizar los lineamientos visuales (*iOS & Android Mobile Style Guidelines*) y formalizar la presentación del proyecto (*Carátula*).`<br><br>`**Jahaziel Guerra**`<br>`*AV1*`<br>`Evidenció ética profesional al documentar rigurosamente la API RESTful y elaborar los diagramas de arquitectura de contenedores, garantizando la mantenibilidad y transparencia del sistema para futuros desarrolladores.`<br><br>`**Gabriela Shapiama**`<br>`*AV1*`<br>`Demostró liderazgo ético y profesional al gestionar la propiedad intelectual en GitHub (migración y creación de la organización), distribuir tareas de manera equitativa en Jira y asegurar la calidad del entregable final mediante la revisión del informe y la corrección del backend.                               | El equipo evidenció un alto grado de profesionalismo al establecer y respetar estándares claros de diseño arquitectónico y de interfaz. Se adoptaron herramientas estándar de la industria (como Jira y GitHub) para garantizar un trabajo colaborativo ético, donde la distribución de tareas fue transparente. Asimismo, la rigurosa documentación de APIs, bases de datos y registros de versiones demuestra un compromiso con la mantenibilidad, la trazabilidad y la responsabilidad técnica inherente a la ingeniería de software.                  |
+| **4.c.2 Emite juicios informados considerando el impacto de las soluciones de ingeniería de software en contextos globales, económicos, ambientales y sociales** | **Julio Castro Alejos**`<br>`*AV1*`<br>`Emitió juicios informados orientados a la experiencia del usuario final mediante el prototipado e implementación de aplicaciones (iOS, Android, Web Frontend) y evaluó el impacto comunicacional del producto mediante la creación del *Video About-the-Product*.`<br><br>`**Ario Chavez Uribe**`<br>`*AV1*`<br>`Implementó la *Landing Page* e integró los anexos considerando el impacto económico y de mercado, garantizando que el valor de la solución sea comunicado de manera efectiva al público objetivo global.`<br><br>`**Fernando Sanchez Guevara**`<br>`*AV1*`<br>`Consolidó el impacto del proyecto mediante la redacción de las *Conclusiones* y el diseño inicial (*Landing Page Mock-up*), evaluando cómo la solución final resuelve el problema social/económico planteado.`<br><br>`**Jahaziel Guerra**`<br>`*AV1*`<br>`Tomó decisiones estratégicas utilizando el *Impact Mapping* y el levantamiento de *User Stories* para asegurar que las funcionalidades del *Sprint/Product Backlog* generen un impacto real y positivo en el flujo de negocio y en los usuarios finales.`<br><br>`**Gabriela Shapiama**`<br>`*AV1*`<br>`Realizó juicios técnicos informados al implementar el backend utilizando arquitecturas *Serverless* y *RESTful API*, considerando factores económicos (reducción de costos de infraestructura) y de impacto global (alta disponibilidad y escalabilidad). | El equipo demostró capacidad para emitir juicios informados al alinear continuamente las decisiones tecnológicas con las necesidades del mercado y del usuario. La aplicación de metodologías como*Impact Mapping* permitió priorizar características de alto valor social y de negocio. Además, la elección de servicios en la nube (*Serverless*) y el desarrollo multiplataforma (Web y Móvil) evidencian una consideración directa sobre la escalabilidad económica, la eficiencia de recursos y el impacto global de la solución implementada. |
