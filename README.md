@@ -38,7 +38,6 @@
 ### u202218181 - Sanchez Guevara, Ivan Fernando
 
 
-
 &nbsp;
 
 ### Abril 2026
@@ -53,6 +52,12 @@
 
 | **Versión** | **Fecha** | **Autor** | **Descripción de modificación** |
 | :---: | :---: | :--- | :--- |
+| 1.0 | 20/04/26 | Gabriela Shapiama | Estructura inicial del informe y configuración de capítulos base (1-5). |
+| 1.1 | 20/04/26 | Jahaziel Guerra | Elaboración de User Stories y actualización de rutas de imágenes en Impact Mapping. |
+| 1.2 | 20/04/26 | Gabriela Shapiama | Adición de información técnica (Kotlin) y correcciones ortográficas y de enlaces. |
+| 1.3 | 21/04/26 | Julio Castro | Refinamiento de descripciones del informe y correcciones menores. |
+| 1.4 | 21/04/26 | Ivan Sanchez | Actualización de perfiles de los integrantes del equipo. |
+| 1.5 | 22/04/26 | Ario Chavez | Adición de información personal y ajustes finales en el Capítulo 1. |
 | 1.6 | 22/04/26 | Ario Chavez | Elaboración de Web Style Guidelines en el Capítulo 4. |
 
 
