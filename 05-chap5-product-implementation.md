@@ -545,9 +545,16 @@ El frontend se comunica con el backend a través de HTTP consumiendo la API REST
 
 #### Sprint 1
 
-Sobre correcciones de los productos
-
-[Sprint Planning + Sprint backlog]
+| Sprint # | User Story Id | User Story Title | Description | Estimation (Hours) | Assigned To | Status |
+|---|---|---|---|---:|---|---|
+| Sprint 1 | US-03 | Soporte de acceso según estado de suscripción | Restricción de acceso a funcionalidades según el estado de suscripción del usuario. | 5 | Ario Chavez | Done |
+| Sprint 1 | TS-02 | Gestión del estado de suscripción mediante API RESTful | Implementación de endpoints para consultar y actualizar el estado de suscripción. | 4 | Ivan Sanchez | Done |
+| Sprint 1 | US-04 | Gestión manual de stock e insumos | Implementación de la gestión básica de inventario por parte del administrador. | 6 | Gabriela Shapiama | Done |
+| Sprint 1 | TS-05 | Gestionar insumos mediante API RESTful | Desarrollo de endpoints para crear, editar, eliminar y consultar insumos. | 6 | Jahaziel Guerra | Done |
+| Sprint 1 | TS-12 | Obtener perfil mediante API RESTful | Implementación del endpoint para recuperar la información del perfil del usuario. | 3 | Julio Castro | Done |
+| Sprint 1 | TS-13 | Actualizar perfil mediante API RESTful | Desarrollo del endpoint para actualizar datos del perfil del usuario. | 3 | Gabriela Shapiama | Done |
+| Sprint 1 | TS-16 | Obtener lista de alertas recientes mediante API RESTful | Implementación del endpoint para visualizar alertas relacionadas a inventario. | 3 | Ivan Sanchez | Done |
+| Sprint 1 | TS-25 | Gestionar ventas e inventario mediante API RESTful | Integración de funcionalidades básicas para registrar ventas y actualizar inventario. | 6 | Ario Chavez | Done |
 
 ### 5.2.2. Implemented Landing Page Evidence
 
