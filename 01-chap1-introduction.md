@@ -1,20 +1,3 @@
-# Registro de Versiones
-
-| **Versión** | **Fecha** | **Autor** | **Descripción de modificación** |
-| :---: | :---: | :--- | :--- |
-| 1.0 | 22/04/26 | Ivan Sanchez | Elaboración de carátula, Mockup de Landing Page, Mobile Style Guidelines y conclusiones. |
-| 1.1 | 23/04/26 | Ario Chavez | Evidencia de Landing Page, Web Style Guidelines, Anexos y Registro de Versiones. |
-| 1.2 | 24/04/26 | Julio Castro | Prototipado Móvil/Web, Diagramas de BD, Video del Producto y Team Collaboration Insights. |
-| 1.3 | 25/04/26 | Jahaziel Guerra | User Stories, Backlogs (Product/Sprint), Impact Mapping, API Doc y Software Architecture. |
-| 1.4 | 26/04/26 | Gabriela Shapiama | Evidencia de Backend, Tabla de contenidos, Gestión de Jira/GitHub y revisión final. |
-
-
-<br>
-
----
-
-<br>
-
 # Part I: As-Is Software Project
 
 # Capítulo I: Introducción
@@ -87,7 +70,7 @@ Soy estudiante de la carrera de Ingeniería de Software con un fuerte interés e
 
 **Ivan Fernando Sanchez Guevara (u202218181)**
 
-  <div id="member-fernando" align="center">
+<div id="member-fernando" align="center">
   <img src="assets/images/chapter1/fersho.png" alt="Imagen Fernando Sanchez" style="width: 150px; margin-right: 20px; border-radius: 10%;">
   <div style="flex: 1;">
   <p> 
@@ -109,33 +92,6 @@ Soy estudiante de la carrera de Ingeniería de Software con un fuerte interés e
 </p>
   </div> 
 <br>
-
-**Ivan Fernando Sanchez Guevara (uXXXXXXXXX)**
-
-<div id="member-ivan" align="center">
-  <img src="https://via.placeholder.com/150" alt="Ivan Fernando Sanchez Guevara" style="width: 150px; margin-right: 20px; border-radius: 10%;">
-  <div style="flex: 1;">
-  <p> 
-    [Descripción pendiente de Ivan Fernando Sanchez Guevara]
-  </p>
-  </div> 
-</div>
-
-<br>
-
-**Ario Chavez (uXXXXXXXXX)**
-
-<div id="member-ario" align="center">
-  <img src="https://via.placeholder.com/150" alt="Ario Chavez" style="width: 150px; margin-right: 20px; border-radius: 10%;">
-  <div style="flex: 1;">
-  <p> 
-    [Descripción pendiente de Ario Chavez]
-  </p>
-  </div> 
-</div>
-
-<br>
-
 
 ## 1.2 Solution Profile
 
