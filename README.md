@@ -65,6 +65,50 @@
 
 **Avance 1 - Informe inicial - (Semana 4)**
 
+# Project Report Collaboration Insights
+
+Para el desarrollo del **Project Report**, el equipo utiliza un repositorio dentro de la organización en GitHub. A continuación, se presenta la evidencia de colaboración correspondiente y en coherencia con el registro de versiones del informe.
+
+**Repositorio del informe del proyecto:** [https://shortlink.uk/1tQjs](https://shortlink.uk/1tQjs)
+
+**Total de commits:** X 
+
+**Autores contribuyentes:**
+
+| Integrante | Usuario de GitHub |
+|---|---|
+| Julio Castro Alejos | `JulioXC4` |
+| José Jahaziel Guerra Perez | `jahazielgg` |
+| Ario Chavez Uribe | `feg06` |
+| Ivan Fernando Sanchez Guevara | `DonFernando1` |
+| Gabriela Nicole Shapiama Rivera | `GabrielaShapiama28` |
+
+El equipo adoptó una estrategia de ramas basada en **feature branches** (`feature/<sección>`), donde cada integrante trabajó de forma aislada sobre la sección asignada y luego integró sus cambios a `main` mediante *pull requests* con revisión cruzada. Los mensajes de commit siguen la convención **Conventional Commits**, usando prefijos como `feat:`, `fix:` y `chore:` para mantener un historial claro y trazable.
+
+---
+
+## AV1 – Sprint Review – Semana 4
+
+Durante esta fase, el equipo elaboró el **informe inicial**, abarcando los siguientes entregables:
+
+- **Informe del proyecto** con carátula, registro de versiones y tabla de contenidos.
+- **Capítulos I al IV**, cubriendo introducción, elicitación de requisitos, especificación de requisitos y diseño de la solución de software.
+- **Student Outcomes**, conclusiones preliminares, bibliografía y anexos.
+- **Keynote de exposición** y video de sustentación del avance.
+
+Cada sección fue desarrollada en su propia rama `feature/<sección>` (por ejemplo, `feature/chapter-01`, `feature/chapter-02`) y los commits siguieron la convención establecida, como se muestra a continuación:
+
+```text
+feat(chapter-01): add startup profile and problem statement
+chore(annexes): add supplementary files and bibliography
+fix(chapter-02): correct user persona descriptions
+```
+
+**Analíticos de colaboración – GitHub Insights:**
+
+![Contributors AV1](./assets/images/project-insights/contributors-av1.png)
+*Figura: Contribuciones por integrante durante el AV1*
+
 # Contenido
 
 ## Tabla de contenidos
