@@ -63,10 +63,6 @@
 
 # Project Report Collaboration Insights
 
-**Avance 1 - Informe inicial - (Semana 4)**
-
-# Project Report Collaboration Insights
-
 Para el desarrollo del **Project Report**, el equipo utiliza un repositorio dentro de la organización en GitHub. A continuación, se presenta la evidencia de colaboración correspondiente y en coherencia con el registro de versiones del informe.
 
 **Repositorio del informe del proyecto:** [https://shortlink.uk/1tQjs](https://shortlink.uk/1tQjs)
