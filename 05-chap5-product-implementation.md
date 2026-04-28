@@ -681,7 +681,246 @@ El repositorio fue reinicializado como parte de la transición del proyecto desd
 
 <img src="assets/images/chapter5/backend_evidence.png" width="600px" alt="registered-alerts">
 
-### 5.2.7. RESTful API documentation
+### 5.2.7. RESTful API Documentation
+
+En esta sección se presenta la documentación de la API RESTful del sistema Restock, la cual permite la comunicación entre el frontend y el backend mediante endpoints estructurados bajo el estándar HTTP y siguiendo los principios REST.
+
+La documentación completa de la API se encuentra disponible mediante Swagger/OpenAPI, lo que facilita la exploración, prueba y validación de los endpoints implementados :contentReference[oaicite:0]{index=0}.
+
+#### Base URL
+https://restock-platform-10253.onrender.com
+
+
+#### Authentication
+
+| Method | Endpoint | Description |
+|--------|---------|------------|
+| POST | `/api/v1/authentication/sign-up` | Registro de nuevos usuarios |
+| POST | `/api/v1/authentication/sign-in` | Inicio de sesión |
+
+**Request Body**
+
+Sign-up:  
+  username: string  
+  password: string  
+  roleId: integer  
+
+Sign-in:  
+  username: string  
+  password: string  
+
+#### Users & Profiles
+
+##### Users
+
+| Method | Endpoint | Description |
+|--------|---------|------------|
+| GET | `/api/v1/users` | Obtener todos los usuarios |
+| GET | `/api/v1/users/{userId}` | Obtener usuario por ID |
+| PUT | `/api/v1/users/{userId}/subscription` | Actualizar suscripción |
+
+**Request Body**
+
+Update Subscription:  
+  subscription: integer  
+
+##### Profiles
+
+| Method | Endpoint | Description |
+|--------|---------|------------|
+| GET | `/api/v1/profiles/{userId}` | Obtener perfil |
+| PUT | `/api/v1/profiles/{userId}/personal` | Actualizar información personal |
+| PUT | `/api/v1/profiles/{userId}/business` | Actualizar información empresarial |
+| PUT | `/api/v1/profiles/{userId}/password` | Actualizar contraseña |
+| DELETE | `/api/v1/profiles/{userId}` | Eliminar perfil |
+
+**Request Body**
+
+Update Personal:  
+  firstName: string  
+  lastName: string  
+  email: string  
+  phone: string  
+  address: string  
+  country: string  
+  avatar: string  
+
+Update Business:  
+  businessName: string  
+  businessAddress: string  
+  description: string  
+  businessCategoryIds: array<string>  
+
+Update Password:  
+  currentPassword: string  
+  newPassword: string  
+
+#### Subscriptions
+
+| Method | Endpoint | Description |
+|--------|---------|------------|
+| GET | `/api/v1/subscriptions` | Obtener todas las suscripciones |
+| POST | `/api/v1/subscriptions` | Crear suscripción |
+| GET | `/api/v1/subscriptions/user/{userId}` | Obtener suscripción por usuario |
+| PUT | `/api/v1/subscriptions/user/{userId}` | Actualizar plan |
+
+**Request Body**
+
+Create Subscription:  
+  userId: integer  
+
+Update Subscription Plan:  
+  plan: integer  
+
+#### Supplies & Inventory
+
+##### Custom Supplies
+
+| Method | Endpoint | Description |
+|--------|---------|------------|
+| GET | `/api/v1/custom-supplies` | Listar insumos |
+| POST | `/api/v1/custom-supplies` | Crear insumo |
+| GET | `/api/v1/custom-supplies/{id}` | Obtener insumo |
+| PUT | `/api/v1/custom-supplies/{id}` | Actualizar insumo |
+| DELETE | `/api/v1/custom-supplies/{id}` | Eliminar insumo |
+
+**Request Body**
+
+Create Custom Supply:  
+  supplyId: integer  
+  description: string  
+  minStock: number  
+  maxStock: number  
+  price: number  
+  userId: integer  
+  unitName: string  
+  unitAbbreviation: string  
+
+Update Custom Supply:  
+  supplyId: integer  
+  description: string  
+  minStock: number  
+  maxStock: number  
+  price: number  
+  unitName: string  
+  unitAbbreviation: string  
+
+#### Recipes
+
+| Method | Endpoint | Description |
+|--------|---------|------------|
+| GET | `/api/v1/recipes` | Obtener recetas |
+| POST | `/api/v1/recipes` | Crear receta |
+| GET | `/api/v1/recipes/{id}` | Obtener receta |
+| PUT | `/api/v1/recipes/{id}` | Actualizar receta |
+| DELETE | `/api/v1/recipes/{id}` | Eliminar receta |
+
+**Request Body**
+
+Create Recipe:  
+  name: string  
+  description: string  
+  imageUrl: string  
+  price: number  
+  userId: integer  
+
+Update Recipe:  
+  name: string  
+  description: string  
+  imageUrl: string  
+  price: number  
+
+##### Recipe Supplies
+
+| Method | Endpoint | Description |
+|--------|---------|------------|
+| POST | `/api/v1/recipes/{id}/supplies` | Agregar insumos |
+
+**Request Body**
+
+Add Recipe Supply:  
+  supplyId: integer  
+  quantity: number  
+
+#### Orders
+
+| Method | Endpoint | Description |
+|--------|---------|------------|
+| POST | `/api/v1/orders` | Crear orden |
+| PUT | `/api/v1/orders/{orderId}` | Actualizar orden |
+| PUT | `/api/v1/orders/{id}/state` | Actualizar estado |
+
+**Request Body**
+
+Create Order:  
+  adminRestaurantId: integer  
+  supplierId: integer  
+  batches: array<object>  
+  description: string  
+  estimatedShipDate: string  
+  estimatedShipTime: string  
+
+Update Order:  
+  description: string  
+  estimatedShipDate: string  
+  estimatedShipTime: string  
+  batchItems: array<object>  
+
+Update Order State:  
+  orderId: integer  
+  newState: string  
+  newSituation: string  
+
+#### Sales
+
+| Method | Endpoint | Description |
+|--------|---------|------------|
+| POST | `/api/v1/sales` | Registrar venta |
+
+**Request Body**
+
+Create Sale:  
+  dishSelections: array<object>  
+  supplySelections: array<object>  
+  subtotal: number  
+  taxes: number  
+  totalCost: number  
+  userId: integer  
+
+#### Alerts
+
+| Method | Endpoint | Description |
+|--------|---------|------------|
+| PUT | `/api/v1/alerts/state` | Actualizar estado |
+
+**Request Body**
+
+Update Alert:  
+  alertId: integer  
+  newState: string  
+  newSituation: string  
+
+#### Batches
+
+| Method | Endpoint | Description |
+|--------|---------|------------|
+| POST | `/api/v1/batches` | Crear lote |
+| PUT | `/api/v1/batches/{id}` | Actualizar lote |
+
+**Request Body**
+
+Create Batch:  
+  userId: integer  
+  customSupplyId: integer  
+  stock: number  
+  expirationDate: string  
+
+Update Batch:  
+  userId: integer  
+  customSupplyId: integer  
+  stock: number  
+  expirationDate: string  
+  
 
 ### 5.2.8. Team Collaboration Insights
 
