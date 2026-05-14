@@ -22,89 +22,126 @@ La estrategia de pruebas de sistema se definió según el tipo de producto evalu
 
 | Producto              | Entorno                      | Herramienta               | Tipo de prueba         | Propósito                                                                                       |
 | --------------------- | ---------------------------- | ------------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
-| Landing Page          | GitHub Pages                 | Playwright                | Smoke/System Web Test  | Validar carga, navegación, botones, enlaces y visualización responsive básica.                |
-| Web Application       | GitHub Pages                 | Playwright                | System UI Test         | Validar login, dashboard, navegación, inventario y formularios.                                 |
+| Landing Page          | GitHub Pages                 | Selenium IDE              | Smoke/System Web Test  | Validar carga, navegación, botones, enlaces y visualización responsive básica.                |
+| Web Application       | GitHub Pages                 | Selenium IDE              | System UI Test         | Validar login, dashboard, navegación, inventario y formularios.                                 |
 | Backend API           | Render                       | Apache JMeter             | System API Test        | Validar login, token JWT, endpoints protegidos, creación/consulta de datos y manejo de errores. |
 | Supplier Mobile App   | Emulador/dispositivo Android | Prueba manual documentada | Mobile System Test     | Validar login, catálogo de productos, órdenes recibidas y cambio de estado.                    |
 | Restaurant Mobile App | Emulador/dispositivo Android | Prueba manual documentada | Mobile System Test     | Validar login, inventario, ventas, pedidos y seguimiento de estados.                             |
 | Flujo E2E cruzado     | Web + Mobile + API           | Video de ejecución       | End-to-End System Test | Validar el flujo restaurante → backend → proveedor → restaurante.                             |
 
-> **Evidencia a insertar:**
-> Colocar una captura general de los entornos utilizados: Landing Page en GitHub Pages, Web App en GitHub Pages, backend activo en Render y aplicaciones móviles ejecutándose en emulador o dispositivo.
->
-> **Figura 6.X. Entornos utilizados para las pruebas de sistema.**
-> `![Figura 6.X. Entornos utilizados para las pruebas de sistema](assets/core-system-tests/environments.png)`
-
----
-
 ### System Test Cases
 
-| ID        | Producto              | Escenario                                         | Herramienta        | Resultado esperado                                                                                           | Estado                     |
-| --------- | --------------------- | ------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------ | -------------------------- |
-| ST-LP-01  | Landing Page          | Cargar la página pública                        | Selenium IDE       | El sitio carga correctamente y muestra la sección principal.                                                | Passed / Observed / Failed |
-| ST-LP-02  | Landing Page          | Navegar entre secciones principales               | Selenium IDE       | Las secciones se muestran correctamente y los enlaces funcionan.                                             | Passed / Observed / Failed |
-| ST-LP-03  | Landing Page          | Validar botones principales                       | Selenium IDE       | Los botones redirigen o desplazan al usuario hacia la sección esperada.                                     | Passed / Observed / Failed |
-| ST-WEB-01 | Web Application       | Iniciar sesión como administrador de restaurante | Selenium IDE       | El usuario accede al dashboard correspondiente.                                                              | Passed / Observed / Failed |
-| ST-WEB-02 | Web Application       | Navegar al módulo de inventario                  | Selenium IDE       | El sistema muestra el listado de insumos registrados.                                                        | Passed / Observed / Failed |
-| ST-WEB-03 | Web Application       | Registrar insumo con datos válidos               | Selenium IDE       | El insumo se registra y aparece en el inventario.                                                            | Passed / Observed / Failed |
-| ST-WEB-04 | Web Application       | Registrar insumo con datos inválidos             | Selenium IDE       | El sistema muestra mensajes de validación y evita el registro.                                              | Passed / Observed / Failed |
-| ST-BE-01  | Backend API           | Iniciar sesión mediante API                      | JMeter             | La API retorna estado 200 OK y un token JWT.                                                                 | Passed / Observed / Failed |
-| ST-BE-02  | Backend API           | Consultar recurso protegido con token             | JMeter             | La API retorna la información solicitada.                                                                   | Passed / Observed / Failed |
-| ST-BE-03  | Backend API           | Crear un recurso válido                          | JMeter             | La API retorna 200 OK o 201 Created y persiste la información.                                              | Passed / Observed / Failed |
-| ST-FL-01  | Supplier Mobile App   | Iniciar sesión como proveedor                    | Manual documentada | El proveedor accede a su pantalla principal.                                                                 | Passed / Observed / Failed |
-| ST-FL-02  | Supplier Mobile App   | Gestionar catálogo de productos                  | Manual documentada | El producto se registra o actualiza correctamente.                                                           | Passed / Observed / Failed |
-| ST-FL-03  | Supplier Mobile App   | Actualizar estado de una orden                    | Manual documentada | La orden cambia de estado correctamente.                                                                     | Passed / Observed / Failed |
-| ST-KT-01  | Restaurant Mobile App | Iniciar sesión como usuario restaurante          | Manual documentada | El usuario accede a los módulos correspondientes a su rol.                                                  | Passed / Observed / Failed |
-| ST-KT-02  | Restaurant Mobile App | Consultar inventario                              | Manual documentada | El sistema muestra insumos y niveles de stock.                                                               | Passed / Observed / Failed |
-| ST-KT-03  | Restaurant Mobile App | Registrar venta y actualizar inventario           | Manual documentada | La venta queda registrada y el stock se actualiza correctamente.                                             | Passed / Observed / Failed |
-| ST-E2E-01 | Sistema completo      | Crear y seguir un pedido restaurante-proveedor    | Video E2E          | El restaurante crea el pedido, el proveedor lo visualiza, actualiza su estado y el restaurante ve el cambio. | Passed / Observed / Failed |
+| ID        | Producto              | Escenario                                         | Herramienta        | Resultado esperado                                                                                           | Estado |
+| --------- | --------------------- | ------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------ | ------ |
+| ST-LP-01  | Landing Page          | Cargar la página pública                        | Selenium IDE       | El sitio carga correctamente y muestra la sección principal.                                                | Passed |
+| ST-LP-02  | Landing Page          | Validar botones principales                       | Selenium IDE       | Los botones redirigen o desplazan al usuario hacia la sección esperada.                                     | Passed |
+| ST-WEB-01 | Web Application       | Iniciar sesión como administrador de restaurante | Selenium IDE       | El usuario accede al dashboard correspondiente.                                                              | Passed |
+| ST-WEB-02 | Web Application       | Navegar al módulo de inventario                  | Selenium IDE       | El sistema muestra el listado de insumos registrados.                                                        | Passed |
+| ST-WEB-03 | Web Application       | Registrar insumo con datos válidos               | Selenium IDE       | El insumo se registra y aparece en el inventario.                                                            | Passed |
+| ST-BE-01  | Backend API           | Iniciar sesión mediante API                      | JMeter             | La API retorna estado 200 OK y un token JWT.                                                                 | Passed |
+| ST-BE-02  | Backend API           | Consultar recurso protegido con token             | JMeter             | La API retorna la información solicitada.                                                                   | Passed |
+| ST-BE-03  | Backend API           | Crear un recurso válido                          | JMeter             | La API retorna 200 OK o 201 Created y persiste la información.                                              | Passed |
+| ST-FL-01  | Supplier Mobile App   | Iniciar sesión como proveedor                    | Manual documentada | El proveedor accede a su pantalla principal.                                                                 | Passed |
+| ST-FL-02  | Supplier Mobile App   | Gestionar catálogo de productos                  | Manual documentada | El producto se registra o actualiza correctamente.                                                           | Passed |
+| ST-FL-03  | Supplier Mobile App   | Actualizar estado de una orden                    | Manual documentada | La orden cambia de estado correctamente.                                                                     | Passed |
+| ST-KT-01  | Restaurant Mobile App | Iniciar sesión como usuario restaurante          | Manual documentada | El usuario accede a los módulos correspondientes a su rol.                                                  | Passed |
+| ST-KT-02  | Restaurant Mobile App | Consultar inventario                              | Manual documentada | El sistema muestra insumos y niveles de stock.                                                               | Passed |
+| ST-KT-03  | Restaurant Mobile App | Registrar order                                   | Manual documentada | La venta queda registrada y el stock se actualiza correctamente.                                             | Passed |
+| ST-E2E-01 | Sistema completo      | Crear y seguir un pedido restaurante-proveedor    | Video E2E          | El restaurante crea el pedido, el proveedor lo visualiza, actualiza su estado y el restaurante ve el cambio. | Passed |
 
 ---
 
 ### Evidence
 
-Las evidencias de las pruebas de sistema se organizaron mediante capturas de pantalla y videos cortos. Para Selenium IDE se consideraron capturas de los comandos grabados y de la ejecución exitosa. Para JMeter se consideraron capturas del Test Plan, View Results Tree y Summary Report. Para las aplicaciones móviles se consideraron capturas del emulador o dispositivo físico. Para el flujo E2E se consideró un video corto del flujo completo.
+1. **Selenium IDE tests for Landing Page**
 
-| Evidencia                    | Descripción                                              |
-| ---------------------------- | --------------------------------------------------------- |
-| Landing Page en GitHub Pages | Captura del sitio público cargado correctamente.         |
-| Playwright - Landing Page    | Captura de tests grabados y ejecución exitosa.           |
-| Playwright - Web App        | Captura de tests de login, navegación e inventario.      |
-| JMeter Test Plan             | Captura de los requests configurados para la API.         |
-| JMeter View Results Tree     | Captura de respuestas exitosas y errores controlados.     |
-| JMeter Summary Report        | Captura del resumen de ejecución de las pruebas API.     |
-| Flutter Supplier App         | Capturas de login, catálogo y órdenes.                  |
-| Kotlin Restaurant App        | Capturas de login, inventario, ventas o pedidos.          |
-| Video E2E                    | Grabación del flujo restaurante → proveedor → backend. |
+ST-LP-01: Se evidencia la ejecución del test de carga del Landing Page, validando que la página pública desplegada en GitHub Pages se abra correctamente y muestre el contenido principal del producto.
 
-> **Figura 6.X. Selenium IDE tests for Landing Page and Web Application.**
-> `![Figura 6.X. Selenium IDE tests for Landing Page and Web Application](assets/core-system-tests/selenium-tests.png)`
->
-> **Figura 6.X. JMeter backend system tests.**
-> `![Figura 6.X. JMeter backend system tests](assets/core-system-tests/jmeter-tests.png)`
->
-> **Figura 6.X. Mobile system test evidence.**
-> `![Figura 6.X. Mobile system test evidence](assets/core-system-tests/mobile-tests.png)`
->
-> **Video 6.X. Cross-platform E2E system test.**
-> URL del video: `<insertar enlace del video>`
+<img src="assets/images/chapter6/core-system-tests/landing-page/test1-load.png" width="600px" alt="selenium-landing-load-test">
 
----
+ST-LP-02: Semuestra la ejecución del test sobre el botón principal del Landing Page, validando que el call-to-action funcione correctamente y redirija o desplace al usuario hacia la sección esperada.
 
-### Cross-platform E2E Test
+<img src="assets/images/chapter6/core-system-tests/landing-page/test2-calltoaction.png" width="600px" alt="selenium-landing-call-to-action-test">
 
-La prueba E2E cruzada permitió validar el flujo principal entre restaurante y proveedor. En este escenario, el restaurante genera un pedido de insumos, el backend registra la operación, el proveedor visualiza la orden recibida, actualiza su estado y el restaurante consulta el cambio realizado.
+2. **Selenium IDE tests for Web Application**
 
-| Paso | Producto             | Acción                                            | Resultado esperado                               |
-| ---- | -------------------- | -------------------------------------------------- | ------------------------------------------------ |
-| 1    | Web App o Kotlin App | El administrador de restaurante inicia sesión.    | El sistema muestra el panel del restaurante.     |
-| 2    | Web App o Kotlin App | El administrador crea un pedido de insumos.        | El pedido queda registrado con estado pendiente. |
-| 3    | Backend API          | Se consulta la orden creada.                       | La API retorna la orden registrada.              |
-| 4    | Flutter Supplier App | El proveedor inicia sesión y revisa sus órdenes. | La orden aparece en la lista del proveedor.      |
-| 5    | Flutter Supplier App | El proveedor cambia el estado del pedido.          | El sistema actualiza el estado de la orden.      |
-| 6    | Web App o Kotlin App | El restaurante consulta el pedido.                 | El restaurante visualiza el estado actualizado.  |
+ST-WEB-01: Se evidencia la ejecución del test de inicio de sesión en la Web Application, validando que el usuario pueda autenticarse correctamente y acceder al sistema.
 
----
+<img src="assets/images/chapter6/core-system-tests/app-web/test1-sig-in.png" width="600px" alt="selenium-webapp-sign-in-test">
+
+ST-WEB-02: Se muestra la ejecución del test de navegación dentro de la Web Application, validando que el usuario pueda acceder correctamente a los módulos principales del sistema.
+
+<img src="assets/images/chapter6/core-system-tests/app-web/test2-navigate.png" width="600px" alt="selenium-webapp-navigation-test">
+
+ST-WEB-03: Se evidencia la ejecución del test de registro de insumo desde la Web Application, validando que el sistema permita crear un nuevo recurso y mostrarlo correctamente en la interfaz.
+
+<img src="assets/images/chapter6/core-system-tests/app-web/test3-create.png" width="600px" alt="selenium-webapp-create-supply-test">
+
+3. **JMeter backend system tests**
+
+ST-BE-01: Se evidencia la ejecución del request de login en JMeter, utilizado para validar la autenticación del usuario y la obtención del token JWT desde el backend desplegado en Render.
+
+<img src="assets/images/chapter6/core-system-tests/backend/test1-login.png" width="600px" alt="jmeter-login-test">
+
+ST-BE-02: Se muestra la ejecución del request GET para consultar insumos, validando que la API permita acceder a recursos protegidos cuando se envía un token válido.
+
+<img src="assets/images/chapter6/core-system-tests/backend/test2-get-supplies.png" width="600px" alt="jmeter-get-supplies-test">
+
+ST-BE-03: Se evidencia la ejecución del request POST para registrar un nuevo insumo, verificando que el backend procese correctamente datos válidos enviados desde JMeter.
+
+<img src="assets/images/chapter6/core-system-tests/backend/test3-post.png" width="600px" alt="jmeter-post-supply-test">
+
+Resumen de ejecución de las pruebas de sistema del backend, mostrando los resultados generales de los requests ejecutados, tiempos de respuesta y porcentaje de error.
+
+<img src="assets/images/chapter6/core-system-tests/backend/tests-summary.png" width="600px" alt="jmeter-backend-tests-summary">
+
+4. **Mobile system test evidence - (Kotlin, administradores de restaurantes)**
+
+ST-KT-01: Se evidencia la pantalla inicial de autenticación en la aplicación móvil Kotlin, validando que el administrador de restaurante pueda acceder al flujo de inicio de sesión.
+
+<img src="assets/images/chapter6/core-system-tests/mobile-kotlin-admin/test1-0-login.jpeg" height="350px"  alt="kotlin-restaurant-login-screen">
+
+<img src="assets/images/chapter6/core-system-tests/mobile-kotlin-admin/test1-2-login.jpeg" height="350px" alt="kotlin-restaurant-successful-login">
+
+ST-KT-02: Se evidencia la consulta del módulo de inventario desde la aplicación Kotlin, validando que el administrador pueda visualizar los insumos registrados y sus niveles de stock.
+
+<img src="assets/images/chapter6/core-system-tests/mobile-kotlin-admin/test2-inventory.jpeg" height="350px"  alt="kotlin-restaurant-inventory-test">
+
+ST-KT-03: Se muestra el inicio del flujo de creación de pedido desde la aplicación móvil Kotlin, validando que el administrador pueda seleccionar insumos para generar una orden.
+
+<img src="assets/images/chapter6/core-system-tests/mobile-kotlin-admin/test3-0-create-order.jpeg" height="350px" alt="kotlin-restaurant-create-order-flow">
+
+<img src="assets/images/chapter6/core-system-tests/mobile-kotlin-admin/test3-1-create-order.jpeg" height="350px"  alt="kotlin-restaurant-order-created">
+
+5. **Mobile system test evidence - (Flutter, proveedores de insumos)**
+
+ST-FL-01: Esta prueba valida que el proveedor pueda acceder correctamente a la aplicación móvil Flutter mediante credenciales válidas. El flujo inicia en la pantalla de autenticación y finaliza cuando el usuario ingresa a la interfaz principal del proveedor.
+
+<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test1-login.png" height="350px" alt="flutter-supplier-login-screen">
+
+<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test1-2-login.png" height="350px" alt="flutter-supplier-successful-login">
+
+ST-FL-02: Esta prueba valida que el proveedor pueda acceder al módulo de inventario o catálogo de productos, visualizando correctamente los insumos registrados en la aplicación móvil.
+
+<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test2-inventory.png" height="350px" alt="flutter-supplier-inventory-list">
+
+<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test2-2-inventory.png" height="350px" alt="flutter-supplier-inventory-detail">
+
+ST-FL-03: Esta prueba valida que el proveedor pueda acceder al módulo de órdenes, revisar los pedidos recibidos por parte de los restaurantes y consultar la información asociada a cada orden desde la aplicación móvil Flutter.
+
+<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test3-order.png" height="350px" alt="flutter-supplier-order-list">
+
+<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test3-2-order.png" height="350px" alt="flutter-supplier-order-detail">
+
+<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test3-3-order.png" height="350px" alt="flutter-supplier-order-management">
+
+1. **Cross-platform E2E system test**
+
+ST-E2E-01: Evidencia de flujo para gestion de inventario y pedidos restaurante-proveedor. Interacción entre landing page, aplicacion web, aplicación mobile Flutter, aplicación mobile Kotlin y backend.
+
+<img src="assets/images/chapter6/core-system-tests/test-e2e.png" width="600px" alt="jmeter-backend-tests-summary">
+
+Link del video: https://shorturl.at/btd62
 
 ### Resultados
 
