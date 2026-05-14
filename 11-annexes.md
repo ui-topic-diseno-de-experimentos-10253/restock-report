@@ -64,7 +64,7 @@ Aquí se presenta la organización del dominio mediante subdominios y contextos 
 Se detalla la estructura y organización de la organización en GitHub, donde se gestionan los repositorios del informe, la landing page, la aplicación web y la aplicación móvil.
 
 **Enlace a la Organización de GitHub:**
-[UI-Topic GitHub Organization](https://github.com/ui-topic-diseno-de-experimentos-10253/)
+[https://shortlink.uk/1pCFd](https://shortlink.uk/1pCFd)
 
 ![Organización de GitHub](assets/images/annexes/github-org.png)
 
