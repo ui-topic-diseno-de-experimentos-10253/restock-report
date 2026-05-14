@@ -7,6 +7,26 @@
 
 ### 6.1.1. Core Entities Unit Tests
 
+En esta sección se detallan las pruebas unitarias realizadas sobre las entidades y agregados core del sistema Restock, asegurando la integridad de las reglas de negocio y la consistencia de los datos.
+
+#### IAM (Identity and Access Management) Bounded Context Unit Tests
+
+Se validaron las entidades `User` y `Role`, asegurando la correcta asignación de roles y la integridad de los datos de perfil de usuario.
+
+![IAM Unit Tests Evidence](assets/images/chapter6/unit-test-evidence/iam-unit-tests.png)
+
+#### Subscriptions Bounded Context Unit Tests
+
+Se realizaron pruebas sobre el agregado `Subscription`, verificando la lógica de cambio de planes, estados de suscripción y fechas de vigencia.
+
+![Subscriptions Unit Tests Evidence](assets/images/chapter6/unit-test-evidence/subscriptions-unit-tests.png)
+
+#### Resource Bounded Context Unit Tests
+
+Se validaron las entidades `Order` y `Alert`, incluyendo el cálculo de totales en pedidos, transiciones de estado y la generación correcta de alertas de inventario.
+
+![Resource Unit Tests Evidence](assets/images/chapter6/unit-test-evidence/resource-unit-tests.png)
+
 ### 6.1.2. Core Integration Tests
 
 ### 6.1.3. Core Behavior-Driven Development
