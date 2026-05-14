@@ -212,7 +212,7 @@ ST-FL-03: Esta prueba valida que el proveedor pueda acceder al módulo de órden
 
 <img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test3-3-order.png" height="350px" alt="flutter-supplier-order-management">
 
-1. **Cross-platform E2E system test**
+6. **Cross-platform E2E system test**
 
 ST-E2E-01: Evidencia de flujo para gestion de inventario y pedidos restaurante-proveedor. Interacción entre landing page, aplicacion web, aplicación mobile Flutter, aplicación mobile Kotlin y backend.
 
