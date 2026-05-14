@@ -700,10 +700,10 @@ https://restock-platform-10253.onrender.com
 
 #### Authentication
 
-| Method | Endpoint | Description |
-|--------|---------|------------|
-| POST | `/api/v1/authentication/sign-up` | Registro de nuevos usuarios |
-| POST | `/api/v1/authentication/sign-in` | Inicio de sesión |
+| Method | Endpoint | Description | Example |
+|--------|---------|------------|---------|
+| POST | `/api/v1/authentication/sign-up` | Registro de nuevos usuarios | `{"username":"demo_admin","roleId":1}` |
+| POST | `/api/v1/authentication/sign-in` | Inicio de sesión | `{"username":"demo_admin"}` |
 
 **Request Body**
 
@@ -720,11 +720,11 @@ Sign-in:
 
 ##### Users
 
-| Method | Endpoint | Description |
-|--------|---------|------------|
-| GET | `/api/v1/users` | Obtener todos los usuarios |
-| GET | `/api/v1/users/{userId}` | Obtener usuario por ID |
-| PUT | `/api/v1/users/{userId}/subscription` | Actualizar suscripción |
+| Method | Endpoint | Description | Example |
+|--------|---------|------------|---------|
+| GET | `/api/v1/users` | Obtener todos los usuarios | `/api/v1/users?page=0&size=10` |
+| GET | `/api/v1/users/{userId}` | Obtener usuario por ID | `/api/v1/users/12` |
+| PUT | `/api/v1/users/{userId}/subscription` | Actualizar suscripción | `{"subscription":2}` |
 
 **Request Body**
 
@@ -733,13 +733,13 @@ Update Subscription:
 
 ##### Profiles
 
-| Method | Endpoint | Description |
-|--------|---------|------------|
-| GET | `/api/v1/profiles/{userId}` | Obtener perfil |
-| PUT | `/api/v1/profiles/{userId}/personal` | Actualizar información personal |
-| PUT | `/api/v1/profiles/{userId}/business` | Actualizar información empresarial |
-| PUT | `/api/v1/profiles/{userId}/password` | Actualizar contraseña |
-| DELETE | `/api/v1/profiles/{userId}` | Eliminar perfil |
+| Method | Endpoint | Description | Example |
+|--------|---------|------------|---------|
+| GET | `/api/v1/profiles/{userId}` | Obtener perfil | `/api/v1/profiles/12` |
+| PUT | `/api/v1/profiles/{userId}/personal` | Actualizar información personal | `{"firstName":"Jose","lastName":"Guerra"}` |
+| PUT | `/api/v1/profiles/{userId}/business` | Actualizar información empresarial | `{"businessName":"Restock Kitchen"}` |
+| PUT | `/api/v1/profiles/{userId}/password` | Actualizar contraseña | `{"currentPassword":"***","newPassword":"***"}` |
+| DELETE | `/api/v1/profiles/{userId}` | Eliminar perfil | `/api/v1/profiles/12` |
 
 **Request Body**
 
@@ -764,12 +764,12 @@ Update Password:
 
 #### Subscriptions
 
-| Method | Endpoint | Description |
-|--------|---------|------------|
-| GET | `/api/v1/subscriptions` | Obtener todas las suscripciones |
-| POST | `/api/v1/subscriptions` | Crear suscripción |
-| GET | `/api/v1/subscriptions/user/{userId}` | Obtener suscripción por usuario |
-| PUT | `/api/v1/subscriptions/user/{userId}` | Actualizar plan |
+| Method | Endpoint | Description | Example |
+|--------|---------|------------|---------|
+| GET | `/api/v1/subscriptions` | Obtener todas las suscripciones | `/api/v1/subscriptions` |
+| POST | `/api/v1/subscriptions` | Crear suscripción | `{"userId":12}` |
+| GET | `/api/v1/subscriptions/user/{userId}` | Obtener suscripción por usuario | `/api/v1/subscriptions/user/12` |
+| PUT | `/api/v1/subscriptions/user/{userId}` | Actualizar plan | `{"plan":2}` |
 
 **Request Body**
 
@@ -783,13 +783,13 @@ Update Subscription Plan:
 
 ##### Custom Supplies
 
-| Method | Endpoint | Description |
-|--------|---------|------------|
-| GET | `/api/v1/custom-supplies` | Listar insumos |
-| POST | `/api/v1/custom-supplies` | Crear insumo |
-| GET | `/api/v1/custom-supplies/{id}` | Obtener insumo |
-| PUT | `/api/v1/custom-supplies/{id}` | Actualizar insumo |
-| DELETE | `/api/v1/custom-supplies/{id}` | Eliminar insumo |
+| Method | Endpoint | Description | Example |
+|--------|---------|------------|---------|
+| GET | `/api/v1/custom-supplies` | Listar insumos | `/api/v1/custom-supplies?userId=12` |
+| POST | `/api/v1/custom-supplies` | Crear insumo | `{"description":"Tomate","minStock":10}` |
+| GET | `/api/v1/custom-supplies/{id}` | Obtener insumo | `/api/v1/custom-supplies/45` |
+| PUT | `/api/v1/custom-supplies/{id}` | Actualizar insumo | `{"price":4.5,"maxStock":80}` |
+| DELETE | `/api/v1/custom-supplies/{id}` | Eliminar insumo | `/api/v1/custom-supplies/45` |
 
 **Request Body**
 
@@ -814,13 +814,13 @@ Update Custom Supply:
 
 #### Recipes
 
-| Method | Endpoint | Description |
-|--------|---------|------------|
-| GET | `/api/v1/recipes` | Obtener recetas |
-| POST | `/api/v1/recipes` | Crear receta |
-| GET | `/api/v1/recipes/{id}` | Obtener receta |
-| PUT | `/api/v1/recipes/{id}` | Actualizar receta |
-| DELETE | `/api/v1/recipes/{id}` | Eliminar receta |
+| Method | Endpoint | Description | Example |
+|--------|---------|------------|---------|
+| GET | `/api/v1/recipes` | Obtener recetas | `/api/v1/recipes?userId=12` |
+| POST | `/api/v1/recipes` | Crear receta | `{"name":"Lomo Saltado","price":25.0}` |
+| GET | `/api/v1/recipes/{id}` | Obtener receta | `/api/v1/recipes/7` |
+| PUT | `/api/v1/recipes/{id}` | Actualizar receta | `{"description":"Receta actualizada"}` |
+| DELETE | `/api/v1/recipes/{id}` | Eliminar receta | `/api/v1/recipes/7` |
 
 **Request Body**
 
@@ -839,9 +839,9 @@ Update Recipe:
 
 ##### Recipe Supplies
 
-| Method | Endpoint | Description |
-|--------|---------|------------|
-| POST | `/api/v1/recipes/{id}/supplies` | Agregar insumos |
+| Method | Endpoint | Description | Example |
+|--------|---------|------------|---------|
+| POST | `/api/v1/recipes/{id}/supplies` | Agregar insumos | `{"supplyId":45,"quantity":2}` |
 
 **Request Body**
 
@@ -851,11 +851,11 @@ Add Recipe Supply:
 
 #### Orders
 
-| Method | Endpoint | Description |
-|--------|---------|------------|
-| POST | `/api/v1/orders` | Crear orden |
-| PUT | `/api/v1/orders/{orderId}` | Actualizar orden |
-| PUT | `/api/v1/orders/{id}/state` | Actualizar estado |
+| Method | Endpoint | Description | Example |
+|--------|---------|------------|---------|
+| POST | `/api/v1/orders` | Crear orden | `{"adminRestaurantId":12,"supplierId":3}` |
+| PUT | `/api/v1/orders/{orderId}` | Actualizar orden | `{"description":"Urgente","batchItems":[]}` |
+| PUT | `/api/v1/orders/{id}/state` | Actualizar estado | `{"orderId":101,"newState":"SHIPPED"}` |
 
 **Request Body**
 
@@ -880,9 +880,9 @@ Update Order State:
 
 #### Sales
 
-| Method | Endpoint | Description |
-|--------|---------|------------|
-| POST | `/api/v1/sales` | Registrar venta |
+| Method | Endpoint | Description | Example |
+|--------|---------|------------|---------|
+| POST | `/api/v1/sales` | Registrar venta | `{"userId":12,"totalCost":89.9}` |
 
 **Request Body**
 
@@ -896,9 +896,9 @@ Create Sale:
 
 #### Alerts
 
-| Method | Endpoint | Description |
-|--------|---------|------------|
-| PUT | `/api/v1/alerts/state` | Actualizar estado |
+| Method | Endpoint | Description | Example |
+|--------|---------|------------|---------|
+| PUT | `/api/v1/alerts/state` | Actualizar estado | `{"alertId":55,"newState":"READ"}` |
 
 **Request Body**
 
@@ -909,10 +909,10 @@ Update Alert:
 
 #### Batches
 
-| Method | Endpoint | Description |
-|--------|---------|------------|
-| POST | `/api/v1/batches` | Crear lote |
-| PUT | `/api/v1/batches/{id}` | Actualizar lote |
+| Method | Endpoint | Description | Example |
+|--------|---------|------------|---------|
+| POST | `/api/v1/batches` | Crear lote | `{"userId":12,"customSupplyId":45,"stock":40}` |
+| PUT | `/api/v1/batches/{id}` | Actualizar lote | `{"stock":32,"expirationDate":"2026-06-30"}` |
 
 **Request Body**
 
