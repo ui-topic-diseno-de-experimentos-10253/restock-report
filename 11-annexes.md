@@ -61,12 +61,20 @@ Aquí se presenta la organización del dominio mediante subdominios y contextos 
 
 ## Anexo F: Organización de GitHub
 
-Se detalla la estructura y organización de la organización en GitHub, donde se gestionan los repositorios del informe, la landing page, la aplicación web y la aplicación móvil.
+Se detalla la estructura de la organización en GitHub de UI-Topic. Para cumplir con las buenas prácticas de control de versiones, el código fuente no está centralizado, sino que se gestiona mediante repositorios individuales para cada producto de software.
 
 **Enlace a la Organización de GitHub:**
 [https://shortlink.uk/1pCFd](https://shortlink.uk/1pCFd)
 
 ![Organización de GitHub](assets/images/annexes/github-org.png)
+
+
+* **Informe del Proyecto:** [https://shortlink.uk/1tQjs](https://shortlink.uk/1tQjs)
+* **Landing Page:** [https://shortlink.uk/1uY4v](https://shortlink.uk/1uY4v)
+* **Aplicación Web (Frontend):** [https://shortlink.uk/1uY4J](https://shortlink.uk/1uY4J)
+* **Backend (API RESTful):** [https://shortlink.uk/1pCy0](https://shortlink.uk/1pCy0)
+* **Aplicación Móvil Flutter:** [https://shortlink.uk/1uY4S](https://shortlink.uk/1uY4S)
+* **Aplicación Móvil Nativa:** [https://shortlink.uk/1pCyC](https://shortlink.uk/1pCyC)
 
 <br>
 
