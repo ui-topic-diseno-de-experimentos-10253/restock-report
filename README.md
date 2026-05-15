@@ -10,7 +10,7 @@
 
 ### Ciclo: 202610
 
-### Curso: 1ASI0732
+### Curso: Diseño de Experimentos de Ingeniería de Software - 1ASI0732
 
 ### NRC: 10253
 
@@ -29,15 +29,13 @@
 
 ### u202021885 - Castro Alejos, Julio Daniel
 
-### u202319831 - Guerra Perez, José Jahaziel
-
-### u202319448 - Shapiama Rivera, Gabriela Nicole
-
 ### u202213468 - Chavez Uribe, Ario
+
+### u202319831 - Guerra Perez, José Jahaziel
 
 ### u202218181 - Sanchez Guevara, Ivan Fernando
 
-&nbsp;
+### u202319448 - Shapiama Rivera, Gabriela Nicole
 
 ### Abril 2026
 
