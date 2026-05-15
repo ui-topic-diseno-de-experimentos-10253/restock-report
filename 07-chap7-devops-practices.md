@@ -20,6 +20,43 @@ Para mantener la máxima coherencia del sistema Restock, la arquitectura del pro
 
 ### 7.1.2. Build & Test Suite Pipeline Components
 
+El flujo de Integración Continua para el backend REST de Restock se compone de etapas secuenciales que el orquestador (GitHub Actions) ejecuta de forma automatizada para validar la integridad del software. A continuación, se detalla el proceso de implementación y configuración de los componentes del pipeline:
+
+#### 1. Gestión de Ramas y Entorno (Source & Environment Setup)
+Para mantener la coherencia con el flujo de trabajo establecido (GitFlow), se creó una rama específica para la configuración de la integración continua denominada `feature/ci-pipeline-setup` a partir de la rama `develop`.
+
+![Creación de la rama feature/ci-pipeline-setup en GitHub](assets/images/chapter7/continuous_integration/step1.png)
+
+#### 2. Verificación de Versiones y Creación del Orquestador
+Previo a la configuración del pipeline en la nube, se verificó la versión del Java Development Kit (JDK) utilizada localmente en el archivo `pom.xml`, confirmando el uso de Java 24. Con esta información, se procedió a crear el archivo orquestador `.github/workflows/ci-backend.yml` en la raíz del proyecto.
+
+![Verificación de la versión de Java en el pom.xml](assets/images/chapter7/continuous_integration/step2_1.png)
+
+Este archivo define los *triggers* (disparadores) para que el pipeline se ejecute automáticamente ante eventos de tipo `push` o `pull_request` dirigidos a las ramas principales, y declara los pasos de *Checkout* del código.
+
+![Creación y primer commit del archivo ci-backend.yml](assets/images/chapter7/continuous_integration/step2_2.png)
+
+#### 3. Configuración del Componente de Compilación (Build Component)
+Para evitar discrepancias entre el entorno local y el servidor de CI, se actualizó el paso de configuración del entorno (`setup-java`) en el archivo YAML, forzando al *runner* a descargar e instalar explícitamente el JDK 24 (`java-version: '24'`). Esto garantiza que el `maven-compiler-plugin` compile el código fuente sin arrojar errores de versión no soportada.
+
+![Actualización de la versión de JDK a 24 en el pipeline](assets/images/chapter7/continuous_integration/step4.png)
+
+#### 4. Configuración del Entorno de Pruebas de Integración (Test Suite Component)
+Dado que los *Core Integration Tests* dependen de una base de datos embebida utilizando **Flapdoodle**, se identificó la necesidad de definir explícitamente la versión de MongoDB a descargar en el entorno de pruebas automatizado para evitar fallos de carga en el `ApplicationContext` de Spring Boot.
+
+Se implementó la solución creando el archivo de configuración `application-test.properties` dentro del directorio `src/test/resources/`, asignando la propiedad `de.flapdoodle.mongodb.embedded.version=7.0.2`. Esta acción estabilizó el entorno de ejecución en el servidor Linux de GitHub Actions.
+
+![Configuración de la versión de Flapdoodle en application-test.properties](assets/images/chapter7/continuous_integration/step6.png)
+
+#### 5. Ejecución y Validación del Pipeline
+Una vez consolidados los componentes de construcción, resolución de dependencias (Maven) y el entorno de pruebas, los *commits* fueron integrados al repositorio. El orquestador de GitHub Actions ejecutó el flujo completo exitosamente (`exit code 0`), validando tanto los *Unit Tests* como los *Integration Tests*, y finalizando con el empaquetado del artefacto `.jar` listo para el despliegue continuo
+
+![Ejecución exitosa del pipeline de Integración Continua en Local](assets/images/chapter7/continuous_integration/step8-1.png)
+
+![Ejecución exitosa del pipeline de Integración Continua en GitHub Actions](assets/images/chapter7/continuous_integration/step7.png)
+
+
+
 ## 7.2. Continuous Delivery
 
 ### 7.2.1. Tools and Practices
