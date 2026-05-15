@@ -51,7 +51,7 @@ Se implementó la solución creando el archivo de configuración `application-te
 #### 5. Ejecución y Validación del Pipeline
 Una vez consolidados los componentes de construcción, resolución de dependencias (Maven) y el entorno de pruebas, los *commits* fueron integrados al repositorio. El orquestador de GitHub Actions ejecutó el flujo completo exitosamente (`exit code 0`), validando tanto los *Unit Tests* como los *Integration Tests*, y finalizando con el empaquetado del artefacto `.jar` listo para el despliegue continuo
 
-![Ejecución exitosa del pipeline de Integración Continua en Local](assets/images/chapter7/continuous_integration/step8.png)
+![Ejecución exitosa del pipeline de Integración Continua en Local](assets/images/chapter7/continuous_integration/step8-1.png)
 
 ![Ejecución exitosa del pipeline de Integración Continua en GitHub Actions](assets/images/chapter7/continuous_integration/step7.png)
 
