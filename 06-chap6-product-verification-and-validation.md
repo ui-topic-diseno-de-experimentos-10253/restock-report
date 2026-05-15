@@ -356,7 +356,7 @@ Feature: Sistema de notificaciones en tiempo real
     Given un insumo "Sal" alcanza el stock mínimo
     When el sistema detecta la condición
     Then se envía notificación push al administrador
-    And la notificación muestra "⚠️ Stock crítico: Sal - 2 kg restantes"
+    And la notificación muestra "Stock crítico: Sal - 2 kg restantes"
     And aparece en el centro de notificaciones de la app
     And se marca como "No leída"
 
@@ -364,14 +364,14 @@ Feature: Sistema de notificaciones en tiempo real
     Given un restaurante crea un pedido al proveedor
     When el pedido se confirma en el sistema
     Then el proveedor recibe notificación push
-    And el mensaje indica "📦 Nuevo pedido de Restaurante XYZ - S/. 450.00"
+    And el mensaje indica "Nuevo pedido de Restaurante XYZ - S/. 450.00"
     And puede acceder directamente al detalle del pedido
 
   Scenario: Alerta de producto próximo a vencer
     Given un lote de "Yogurt" vence en 2 días
     When el sistema ejecuta la verificación diaria
     Then se notifica al administrador
-    And el mensaje dice "⏰ Yogurt vence en 2 días - 15 unidades"
+    And el mensaje dice "Yogurt vence en 2 días - 15 unidades"
     And sugiere crear promoción o descuento
 
   Scenario: Confirmar recepción de notificación
