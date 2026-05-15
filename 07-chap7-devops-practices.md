@@ -28,7 +28,7 @@ Para mantener la coherencia con el flujo de trabajo establecido (GitFlow), se cr
 ![Creación de la rama feature/ci-pipeline-setup en GitHub](assets/images/chapter7/continuous_integration/step1.png)
 
 #### 2. Verificación de Versiones y Creación del Orquestador
-Previo a la configuración del pipeline en la nube, se verificó la versión del Java Development Kit (JDK) utilizada localmente en el archivo `pom.xml`, confirmando el uso de Java 24. Con esta información, se procedió a crear el archivo orquestador `.github/workflows/ci-backend.yml` en la raíz del proyecto.
+Previo a la configuración del pipeline en la nube, se verificó la versión del Java Development Kit (JDK) utilizada localmente en el archivo `pom.xml`, confirmando el uso de Java 21. Con esta información, se procedió a crear el archivo orquestador `.github/workflows/ci-backend.yml` en la raíz del proyecto.
 
 ![Verificación de la versión de Java en el pom.xml](assets/images/chapter7/continuous_integration/step2_1.png)
 
@@ -37,9 +37,9 @@ Este archivo define los *triggers* (disparadores) para que el pipeline se ejecut
 ![Creación y primer commit del archivo ci-backend.yml](assets/images/chapter7/continuous_integration/step2_2.png)
 
 #### 3. Configuración del Componente de Compilación (Build Component)
-Para evitar discrepancias entre el entorno local y el servidor de CI, se actualizó el paso de configuración del entorno (`setup-java`) en el archivo YAML, forzando al *runner* a descargar e instalar explícitamente el JDK 24 (`java-version: '24'`). Esto garantiza que el `maven-compiler-plugin` compile el código fuente sin arrojar errores de versión no soportada.
+Para evitar discrepancias entre el entorno local y el servidor de CI, se actualizó el paso de configuración del entorno (`setup-java`) en el archivo YAML, forzando al *runner* a descargar e instalar explícitamente el JDK 21 (`java-version: '21'`). Esto garantiza que el `maven-compiler-plugin` compile el código fuente sin arrojar errores de versión no soportada.
 
-![Actualización de la versión de JDK a 24 en el pipeline](assets/images/chapter7/continuous_integration/step4.png)
+![Actualización de la versión de JDK a 21 en el pipeline](assets/images/chapter7/continuous_integration/step4.png)
 
 #### 4. Configuración del Entorno de Pruebas de Integración (Test Suite Component)
 Dado que los *Core Integration Tests* dependen de una base de datos embebida utilizando **Flapdoodle**, se identificó la necesidad de definir explícitamente la versión de MongoDB a descargar en el entorno de pruebas automatizado para evitar fallos de carga en el `ApplicationContext` de Spring Boot.
