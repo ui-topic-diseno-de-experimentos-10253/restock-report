@@ -940,10 +940,24 @@ La distribución de actividades permitió que todos los integrantes —Julio Dan
 A continuación, se presentan las métricas de colaboración extraídas directamente de la pestaña *Insights* de nuestros repositorios en GitHub.
 
 **1. Contribuciones en el Landing Page:**
+
+**Landing Page:** [https://shortlink.uk/1uY4v](https://shortlink.uk/1uY4v)
+
 ![Commits Landing Page](assets/images/chapter5/team-collaboration/insights_landing_page.png)
+
 *Gráfico de contribuciones (Contributors) del repositorio del Landing Page durante el Sprint.*
 
 **2. Contribuciones en la Web App (Angular) y Móvil:**
+
+**Aplicación Web (Frontend):** [https://shortlink.uk/1uY4J](https://shortlink.uk/1uY4J)
+
+
+**Aplicación Móvil Flutter:** [https://shortlink.uk/1uY4S](https://shortlink.uk/1uY4S)
+
+
+**Aplicación Móvil Nativa:** [https://shortlink.uk/1pCyC](https://shortlink.uk/1pCyC)
+
+
 ![Commits Web ](assets/images/chapter5/team-collaboration/insights_frontend.png)
 
 ![Commits Mobile](assets/images/chapter5/team-collaboration/insights_mobile.png)
@@ -951,7 +965,11 @@ A continuación, se presentan las métricas de colaboración extraídas directam
 *Historial de commits y frecuencia de aportes en el repositorio Frontend.*
 
 **3. Contribuciones en el RESTful API (Backend):**
+
+**Backend (API RESTful):** [https://shortlink.uk/1pCy0](https://shortlink.uk/1pCy0)
+
 ![Commits Backend](assets/images/chapter5/team-collaboration/insights_backend.png)
+
 *Gráfica de actividad y pull requests resueltos en el repositorio del Backend.*
 
 #### Interpretación de los Datos y Dinámica del Equipo
