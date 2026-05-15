@@ -109,6 +109,52 @@ fix(chapter-02): correct user persona descriptions
 <img src="assets/images/readme/collaboration_insights_av1.png" alt="Contributors-av1" width="600px">
 Figura: Contribuciones por integrante durante el AV1
 
+# Project Report Collaboration Insights
+
+Para el desarrollo del **Project Report**, el equipo utiliza un repositorio dentro de la organización en GitHub. A continuación, se presenta la evidencia de colaboración correspondiente y en coherencia con el registro de versiones del informe.
+
+**Repositorio del informe del proyecto:** [https://shortlink.uk/1tQjs](https://shortlink.uk/1tQjs)
+
+**Total de commits:** 39
+
+**Autores contribuyentes:**
+
+| Integrante                      | Usuario de GitHub      |
+| ------------------------------- | ---------------------- |
+| Julio Castro Alejos             | `JulioXC4`           |
+| José Jahaziel Guerra Perez     | `jahazielgg`         |
+| Ario Chavez Uribe               | `feg06`              |
+| Ivan Fernando Sanchez Guevara   | `DonFernando1`       |
+| Gabriela Nicole Shapiama Rivera | `GabrielaShapiama28` |
+
+El equipo adoptó una estrategia de ramas basada en **feature branches** (`feature/<sección>`), donde cada integrante trabajó de forma aislada sobre la sección asignada y luego integró sus cambios a `main` mediante *pull requests* con revisión cruzada. Los mensajes de commit siguen la convención **Conventional Commits**, usando prefijos como `feat:`, `fix:` y `chore:` para mantener un historial claro y trazable.
+
+---
+
+## TB1 – Stage Review – Semana 7
+
+Durante esta fase, el equipo se enfocó en la especificación del estado *To-Be*, la implementación y despliegue de los productos de software, las pruebas de verificación y la configuración de las prácticas DevOps. Los entregables principales abarcaron:
+
+- **Capítulo V:** Implementación y despliegue del Landing Page, Frontend-Web y RESTful API, incluyendo la definición del Acuerdo de Servicio (SaaS).
+- **Capítulo VI:** Verificación y validación del producto de software, abarcando Unit Tests, Integration Tests, Behavior-Driven Development (BDD) y System Tests.
+- **Capítulo VII:** Implementación de prácticas DevOps, detallando las herramientas y componentes de los pipelines para Continuous Integration, Continuous Delivery y Continuous Deployment.
+- **Actualizaciones transversales:** Correcciones del informe anterior, actualización de índices, Student Outcome, Registro de Versiones, conclusiones y bibliografía.
+
+Los commits reflejaron este trabajo colaborativo enfocado en pruebas, integración y correcciones, siguiendo la convención establecida:
+
+``` text
+ci(pipeline): add tools and components for continuous integration and delivery
+test(core): implement core integration, unit, bdd, and system tests
+docs(report): update SaaS agreement, API docs, and restructure chapter 5
+fix(backend): correct sales logic and update documentation indexes
+```
+
+**Analíticos de colaboración – GitHub Insights:**
+
+<img src="assets/images/readme/collaboration_insights_tb1.png" alt="Contributors-tb1" width="600px">
+Figura: Contribuciones por integrante durante el TB1
+
+
 # Contenido
 
 ## Tabla de contenidos
