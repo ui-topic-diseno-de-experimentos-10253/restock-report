@@ -49,7 +49,7 @@ Se implementó la solución creando el archivo de configuración `application-te
 ![Configuración de la versión de Flapdoodle en application-test.properties](assets/images/chapter7/continuous_integration/step6.png)
 
 #### 5. Ejecución y Validación del Pipeline
-Una vez consolidados los componentes de construcción, resolución de dependencias (Maven) y el entorno de pruebas, los *commits* fueron integrados al repositorio. El orquestador de GitHub Actions ejecutó el flujo completo exitosamente (`exit code 0`), validando tanto los *Unit Tests* como los *Integration Tests*, y finalizando con el empaquetado del artefacto `.jar` listo para el despliegue continuo.
+Una vez consolidados los componentes de construcción, resolución de dependencias (Maven) y el entorno de pruebas, los *commits* fueron integrados al repositorio. El orquestador de GitHub Actions ejecutó el flujo completo exitosamente (`exit code 0`), validando tanto los *Unit Tests* como los *Integration Tests*, y finalizando con el empaquetado del artefacto `.jar` listo para el despliegue continuo
 
 ![Ejecución exitosa del pipeline de Integración Continua en Local](assets/images/chapter7/continuous_integration/step8.png)
 
