@@ -4,13 +4,69 @@
 
 ### 7.1.1. Tools and Practices
 
+Para la etapa de Continuous Integration (CI) del proyecto Restock, se han definido herramientas y prácticas que garantizan la calidad y estabilidad del código de las tres plataformas (Backend, Frontend y Móvil) antes de llegar a la fase de despliegue continuo.
+
+GitHub Actions
+Se utiliza como orquestador nativo de integración continua. Evalúa automáticamente el código fuente compilándolo y ejecutando la suite de pruebas cada vez que se detectan cambios, bloqueando cualquier integración defectuosa.
+
+SonarCloud
+Herramienta integrada en el flujo de CI para realizar análisis estático de código. Permite evaluar la calidad estructural del backend desarrollado en Spring Boot y del frontend en Angular, detectando vulnerabilidades de seguridad, code smells y midiendo la cobertura de las pruebas.
+
+JUnit 5 y Mockito
+Son los frameworks elegidos para la automatización de pruebas en el backend Java. JUnit 5 estructura el ciclo de vida de los tests, mientras que Mockito aísla los componentes de negocio (como el procesamiento de datos del ESP32) simulando el comportamiento de las dependencias externas.
+
+Práctica: Single Branch Architecture y Validación Estricta
+Para mantener la máxima coherencia del sistema Restock, la arquitectura del proyecto se enfoca en el uso de una única rama principal (main) por cada sistema, evitando la complejidad de múltiples ramas divergentes. La regla fundamental del equipo dicta que ningún cambio puede permanecer en la rama principal si no ha superado con éxito el 100% de las pruebas automatizadas del pipeline. Además, se exigen Conventional Commits para mantener la trazabilidad del historial.
+
 ### 7.1.2. Build & Test Suite Pipeline Components
 
 ## 7.2. Continuous Delivery
 
 ### 7.2.1. Tools and Practices
 
+Para la etapa de *Continuous Delivery* (Entrega Continua) del proyecto Restock, el objetivo es garantizar que cualquier versión del código del Backend que haya superado la Integración Continua esté empaquetada y lista para ser desplegada en un entorno de pruebas (Staging), exigiendo una validación humana antes de su pase a Producción.
+
+#### Herramientas (Tools)
+* **GitHub Actions:** Actúa como el orquestador principal. Tras un *push* o *merge* en la rama `develop`, desencadena los flujos para construir el artefacto candidato a *release* (Release Candidate).
+* **Docker:** Se utiliza para contenerizar el backend (Spring Boot). Se ha implementado un `Dockerfile` con arquitectura *multi-stage build* usando OpenJDK 21, lo que garantiza que el artefacto del entorno de Staging sea idéntico al que se desplegará en Producción, eliminando discrepancias entre entornos.
+* **Render (Staging Environment):** Plataforma Cloud utilizada para alojar el entorno de pruebas. Mediante integraciones de *Deploy Hooks* (Webhooks) gestionados como *Secrets*, el orquestador notifica a Render para que descargue y levante el contenedor del API REST.
+* **GitHub Environments:** Herramienta de seguridad y control de despliegues utilizada para gestionar reglas de protección y aislar lógicamente los entornos del servidor.
+
+#### Prácticas (Practices)
+* **Separación de Entornos (Environment Promotion):** Se mantiene una estricta separación lógica entre el entorno de Staging y Producción. Ningún artefacto pasa a producción sin haber sido probado primero en el entorno de entrega.
+* **Aprobación Manual (Manual Release Gates):** Es la práctica central del *Continuous Delivery*. El pipeline se detiene en seco antes de tocar el servidor de Staging hasta que el equipo de QA o el Product Owner valide el estado del repositorio y apruebe manualmente la ejecución.
+
 ### 7.2.2. Stages Deployment Pipeline Components
+
+El pipeline de Entrega Continua de Restock está diseñado exclusivamente para el ciclo de vida del **Backend (API REST)**. A continuación, se detalla la configuración secuencial automatizada:
+
+#### 1. Pipeline Definition & Branching
+Para mantener la trazabilidad de GitFlow, se implementó el archivo orquestador `cd-staging.yml` dentro de una rama específica (`feature/cd-staging-pipeline`). Este archivo define los pasos de preparación del JDK 21, empaquetado de Maven, construcción de Docker y notificación a Render.
+
+![Creación de rama y definición del pipeline CD](assets/images/chapter7/continuous_delivery/step1.png)
+
+#### 2. Verification & Manual Approval Gate (Entorno Protegido)
+Para garantizar la intervención humana, se configuró un entorno lógico denominado **"Staging"** utilizando las reglas de protección de *GitHub Environments*. Se designaron revisores obligatorios del equipo central para evitar despliegues no autorizados.
+
+![Configuración del entorno Staging y revisores requeridos](assets/images/chapter7/continuous_delivery/step4.png)
+
+Al dispararse el pipeline, el flujo reconoce la dependencia del entorno y entra en un estado de pausa (`Waiting`). Queda a la espera de que los revisores evalúen la estabilidad del código.
+
+![Pipeline en pausa esperando aprobación manual](assets/images/chapter7/continuous_delivery/step5.png)
+
+Una vez confirmada la integridad del repositorio, el revisor asignado autoriza el despliegue dejando un comentario de conformidad y ejecutando la acción **"Approve and deploy"**.
+
+![Aprobación manual del despliegue por parte del equipo](assets/images/chapter7/continuous_delivery/step6.png)
+
+#### 3. Trigger & Artifact Generation Stage
+Tras la aprobación manual, el servidor virtual retoma la ejecución. Procede con el empaquetado del `.jar` de Spring Boot y ejecuta la directiva `docker build`. Como se evidencia en los *logs* del orquestador, el proceso *multi-stage* descarga las dependencias de Java 21, empaqueta el sistema y genera la imagen candidata (`restock-backend-staging:latest`) de forma exitosa.
+
+![Logs de construcción exitosa de la imagen Docker en la nube](assets/images/chapter7/continuous_delivery/step3.png)
+
+#### 4. Staging Deployment Stage
+Finalmente, mediante el uso de credenciales encriptadas (*GitHub Secrets*), el orquestador dispara un webhook (`curl -X POST`) hacia Render. Render detecta la petición, extrae la imagen generada y la publica en su infraestructura de nube gratuita, finalizando el pipeline de Entrega Continua con éxito.
+
+![Ejecución finalizada y aprobada del pipeline de Entrega Continua](assets/images/chapter7/continuous_delivery/step7.png)
 
 ## 7.3. Continuous deployment
 
