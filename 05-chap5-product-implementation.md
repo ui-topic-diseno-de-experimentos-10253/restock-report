@@ -604,6 +604,206 @@ inventario y los insumos recientemente agregados.
 
 ### 5.2.4. Acuerdo de Servicio - SaaS
 
+## Acuerdo de Nivel de Servicio (SLA) - Restock Platform  
+
+### 5.2.4.1. Descripción del Servicio  
+Restock es una plataforma SaaS diseñada para automatizar la gestión de inventarios y pedidos en restaurantes, ofreciendo servicios de:  
+- Monitoreo en tiempo real  
+- Alertas inteligentes  
+- Gestión de proveedores  
+- Análisis de métricas operativas  
+
+---
+
+### 5.2.4.2. Niveles de Servicio  
+
+#### 5.2.4.2.1. Disponibilidad del Servicio  
+- **Uptime garantizado:** 99.5% mensual  
+- **Tiempo de inactividad máximo permitido:** 3.6 horas/mes  
+- **Ventanas de mantenimiento:** Domingos de 2:00 AM a 4:00 AM (GMT-5), notificadas con 72 horas de anticipación  
+
+#### 5.2.4.2.2. Rendimiento  
+- **Tiempo de respuesta API:** < 500ms para el 95% de las solicitudes  
+- **Tiempo de carga de dashboard:** < 3 segundos  
+- **Sincronización de inventario:** En tiempo real (< 2 segundos)  
+- **Generación de reportes:** < 10 segundos para reportes mensuales  
+
+#### 5.2.4.2.3. Seguridad y Respaldo  
+- **Backup de datos:** Diario automático, retención de 30 días  
+- **Recuperación ante desastres:** RPO de 24 horas  
+- **RTO:** 4 horas  
+- **Encriptación:** SSL/TLS en tránsito, AES-256 en reposo  
+
+---
+
+### 5.2.4.3. Planes de Suscripción  
+
+#### 5.2.4.3.1. Plan Básico  
+- **Precio:** $29 USD/mes  
+- **Usuarios:** Hasta 3  
+- **Sucursales:** 1  
+- **Almacenamiento:** 5 GB  
+- **Soporte:** Email (respuesta en 48 horas)  
+- **Funcionalidades:**  
+  - Gestión básica de inventario  
+  - Registro de ventas  
+  - Alertas de stock bajo  
+  - Reportes mensuales  
+
+#### 5.2.4.3.2. Plan Profesional  
+- **Precio:** $79 USD/mes  
+- **Usuarios:** Hasta 10  
+- **Sucursales:** Hasta 3  
+- **Almacenamiento:** 25 GB  
+- **Soporte:** Email y chat (respuesta en 24 horas)  
+- **Funcionalidades:**  
+  - Todo lo del Plan Básico  
+  - Gestión de proveedores  
+  - Creación de recetas  
+  - Notificaciones push  
+  - Análisis predictivo  
+  - Exportación de reportes (Excel, PDF)  
+
+#### 5.2.4.3.3. Plan Enterprise  
+- **Precio:** Personalizado (desde $199 USD/mes)  
+- **Usuarios:** Ilimitados  
+- **Sucursales:** Ilimitadas  
+- **Almacenamiento:** 100 GB (ampliable)  
+- **Soporte:** Prioritario 24/7, asistencia telefónica  
+- **Funcionalidades:**  
+  - Todo lo del Plan Profesional  
+  - API access ilimitado  
+  - Integración con sistemas ERP  
+  - Capacitación personalizada  
+  - Account manager dedicado  
+  - SLA personalizado  
+
+---
+
+### 5.2.4.4. Responsabilidades del Proveedor  
+
+#### 5.2.4.4.1. UI-Topic se compromete a:  
+- Mantener la plataforma operativa según el uptime garantizado  
+- Proporcionar actualizaciones de seguridad mensuales  
+- Notificar incidentes críticos en menos de 30 minutos  
+- Resolver incidentes críticos en menos de 4 horas  
+- Mantener la confidencialidad de los datos del cliente  
+- Cumplir con regulaciones de protección de datos (GDPR, LGPD)  
+- Proporcionar documentación técnica actualizada  
+
+#### 5.2.4.4.2. Exclusiones de Responsabilidad:  
+- Interrupciones causadas por proveedores externos  
+- Mantenimientos de emergencia no programados  
+- Uso inadecuado de la plataforma  
+- Fallas en la conectividad del cliente  
+
+---
+
+### 5.2.4.5. Responsabilidades del Cliente  
+El usuario suscriptor se compromete a:  
+- Mantener credenciales seguras  
+- Notificar actividades sospechosas inmediatamente  
+- Respetar límites de uso según su plan  
+- Cumplir políticas de uso aceptable  
+- Mantener información de contacto actualizada  
+- Realizar backups adicionales de datos críticos (recomendado)  
+
+---
+
+### 5.2.4.6. Soporte Técnico  
+
+#### 5.2.4.6.1. Canales de Soporte  
+- **Email:** support@restock.com  
+- **Chat en vivo:** Horario laboral (Plan Profesional y Enterprise)  
+- **Teléfono:** Solo Plan Enterprise  
+- **Base de conocimientos:** Disponible 24/7  
+
+#### 5.2.4.6.2. Tiempos de Respuesta  
+
+| Severidad | Plan Básico | Plan Profesional | Plan Enterprise |
+|-----------|-------------|------------------|----------------|
+| Crítica   | 24 horas    | 4 horas          | 1 hora         |
+| Alta      | 48 horas    | 12 horas         | 4 horas        |
+| Media     | 72 horas    | 24 horas         | 8 horas        |
+| Baja      | 5 días      | 48 horas         | 24 horas       |
+
+---
+
+### 5.2.4.7. Garantías y Compensaciones  
+
+#### 5.2.4.7.1. Créditos por Incumplimiento de SLA  
+En caso de no cumplir con el uptime garantizado:  
+
+| Disponibilidad Mensual | Crédito de Servicio |
+|-------------------------|---------------------|
+| < 99.5% pero ≥ 99.0%   | 10% del pago mensual |
+| < 99.0% pero ≥ 95.0%   | 25% del pago mensual |
+| < 95.0%                | 50% del pago mensual |
+
+**Proceso de reclamación:** El cliente debe solicitar el crédito dentro de 30 días posteriores al mes afectado, proporcionando evidencia del tiempo de inactividad.  
+
+---
+
+### 5.2.4.8. Modificaciones del Servicio  
+- Actualizaciones menores: automáticas  
+- Actualizaciones mayores: notificación 15 días antes  
+- Cambios en términos: notificación 30 días antes  
+- Cancelación sin penalización si no acepta cambios significativos  
+
+---
+
+### 5.2.4.9. Terminación del Servicio  
+
+#### 5.2.4.9.1. Terminación por parte del Cliente  
+- Cancelación en cualquier momento  
+- Sin penalización por cancelación anticipada  
+- Datos accesibles por 30 días post-cancelación  
+- Exportación completa de datos bajo solicitud  
+
+#### 5.2.4.9.2. Terminación por parte del Proveedor  
+- Notificación de 30 días en casos de:  
+  - Violación de términos de uso  
+  - Falta de pago después de 15 días  
+  - Uso fraudulento o ilegal  
+
+---
+
+### 5.2.4.10. Protección de Datos y Privacidad  
+- Cumplimiento con GDPR, LGPD y normativas locales  
+- El cliente mantiene la propiedad de sus datos  
+- UI-Topic no compartirá datos sin consentimiento  
+- Derecho al olvido: eliminación completa de datos  
+- Portabilidad de datos garantizada  
+
+---
+
+### 5.2.4.11. Limitación de Responsabilidad  
+- Responsabilidad total limitada al monto pagado en los últimos 12 meses  
+- No responsabilidad por pérdidas indirectas o lucro cesante  
+- Excepciones: violaciones de confidencialidad o negligencia grave  
+
+---
+
+### 5.2.4.12. Resolución de Disputas  
+- **Primer paso:** Contacto directo con soporte  
+- **Segundo paso:** Escalamiento a gerencia (5 días hábiles)  
+- **Tercer paso:** Mediación (si se requiere)  
+- **Jurisdicción:** Leyes del Perú, Lima  
+
+---
+
+### 5.2.4.13. Contacto  
+**UI-Topic**  
+- **Email:** legal@restock.com  
+- **Soporte:** support@restock.com  
+- **Teléfono:** +51 XXX XXX XXX  
+- **Dirección:** [Dirección de la empresa]  
+
+---
+
+**Fecha de última actualización:** 22 de abril de 2026  
+**Versión del documento:** 1.0  
+
 ### 5.2.5. Implemented Native-Mobile Application Evidence
 
 El aplicativo móvil de Restock fue configurado, compilado y distribuido mediante Firebase App Distribution, permitiendo compartir versiones preliminares (APK/AAB) con testers para pruebas controladas antes de su despliegue en producción.
@@ -700,10 +900,10 @@ https://restock-platform-10253.onrender.com
 
 #### Authentication
 
-| Method | Endpoint | Description |
-|--------|---------|------------|
-| POST | `/api/v1/authentication/sign-up` | Registro de nuevos usuarios |
-| POST | `/api/v1/authentication/sign-in` | Inicio de sesión |
+| Method | Endpoint | Description | Example |
+|--------|---------|------------|---------|
+| POST | `/api/v1/authentication/sign-up` | Registro de nuevos usuarios | `{"username":"demo_admin","roleId":1}` |
+| POST | `/api/v1/authentication/sign-in` | Inicio de sesión | `{"username":"demo_admin"}` |
 
 **Request Body**
 
@@ -720,11 +920,11 @@ Sign-in:
 
 ##### Users
 
-| Method | Endpoint | Description |
-|--------|---------|------------|
-| GET | `/api/v1/users` | Obtener todos los usuarios |
-| GET | `/api/v1/users/{userId}` | Obtener usuario por ID |
-| PUT | `/api/v1/users/{userId}/subscription` | Actualizar suscripción |
+| Method | Endpoint | Description | Example |
+|--------|---------|------------|---------|
+| GET | `/api/v1/users` | Obtener todos los usuarios | `/api/v1/users?page=0&size=10` |
+| GET | `/api/v1/users/{userId}` | Obtener usuario por ID | `/api/v1/users/12` |
+| PUT | `/api/v1/users/{userId}/subscription` | Actualizar suscripción | `{"subscription":2}` |
 
 **Request Body**
 
@@ -733,13 +933,13 @@ Update Subscription:
 
 ##### Profiles
 
-| Method | Endpoint | Description |
-|--------|---------|------------|
-| GET | `/api/v1/profiles/{userId}` | Obtener perfil |
-| PUT | `/api/v1/profiles/{userId}/personal` | Actualizar información personal |
-| PUT | `/api/v1/profiles/{userId}/business` | Actualizar información empresarial |
-| PUT | `/api/v1/profiles/{userId}/password` | Actualizar contraseña |
-| DELETE | `/api/v1/profiles/{userId}` | Eliminar perfil |
+| Method | Endpoint | Description | Example |
+|--------|---------|------------|---------|
+| GET | `/api/v1/profiles/{userId}` | Obtener perfil | `/api/v1/profiles/12` |
+| PUT | `/api/v1/profiles/{userId}/personal` | Actualizar información personal | `{"firstName":"Jose","lastName":"Guerra"}` |
+| PUT | `/api/v1/profiles/{userId}/business` | Actualizar información empresarial | `{"businessName":"Restock Kitchen"}` |
+| PUT | `/api/v1/profiles/{userId}/password` | Actualizar contraseña | `{"currentPassword":"***","newPassword":"***"}` |
+| DELETE | `/api/v1/profiles/{userId}` | Eliminar perfil | `/api/v1/profiles/12` |
 
 **Request Body**
 
@@ -764,12 +964,12 @@ Update Password:
 
 #### Subscriptions
 
-| Method | Endpoint | Description |
-|--------|---------|------------|
-| GET | `/api/v1/subscriptions` | Obtener todas las suscripciones |
-| POST | `/api/v1/subscriptions` | Crear suscripción |
-| GET | `/api/v1/subscriptions/user/{userId}` | Obtener suscripción por usuario |
-| PUT | `/api/v1/subscriptions/user/{userId}` | Actualizar plan |
+| Method | Endpoint | Description | Example |
+|--------|---------|------------|---------|
+| GET | `/api/v1/subscriptions` | Obtener todas las suscripciones | `/api/v1/subscriptions` |
+| POST | `/api/v1/subscriptions` | Crear suscripción | `{"userId":12}` |
+| GET | `/api/v1/subscriptions/user/{userId}` | Obtener suscripción por usuario | `/api/v1/subscriptions/user/12` |
+| PUT | `/api/v1/subscriptions/user/{userId}` | Actualizar plan | `{"plan":2}` |
 
 **Request Body**
 
@@ -783,13 +983,13 @@ Update Subscription Plan:
 
 ##### Custom Supplies
 
-| Method | Endpoint | Description |
-|--------|---------|------------|
-| GET | `/api/v1/custom-supplies` | Listar insumos |
-| POST | `/api/v1/custom-supplies` | Crear insumo |
-| GET | `/api/v1/custom-supplies/{id}` | Obtener insumo |
-| PUT | `/api/v1/custom-supplies/{id}` | Actualizar insumo |
-| DELETE | `/api/v1/custom-supplies/{id}` | Eliminar insumo |
+| Method | Endpoint | Description | Example |
+|--------|---------|------------|---------|
+| GET | `/api/v1/custom-supplies` | Listar insumos | `/api/v1/custom-supplies?userId=12` |
+| POST | `/api/v1/custom-supplies` | Crear insumo | `{"description":"Tomate","minStock":10}` |
+| GET | `/api/v1/custom-supplies/{id}` | Obtener insumo | `/api/v1/custom-supplies/45` |
+| PUT | `/api/v1/custom-supplies/{id}` | Actualizar insumo | `{"price":4.5,"maxStock":80}` |
+| DELETE | `/api/v1/custom-supplies/{id}` | Eliminar insumo | `/api/v1/custom-supplies/45` |
 
 **Request Body**
 
@@ -814,13 +1014,13 @@ Update Custom Supply:
 
 #### Recipes
 
-| Method | Endpoint | Description |
-|--------|---------|------------|
-| GET | `/api/v1/recipes` | Obtener recetas |
-| POST | `/api/v1/recipes` | Crear receta |
-| GET | `/api/v1/recipes/{id}` | Obtener receta |
-| PUT | `/api/v1/recipes/{id}` | Actualizar receta |
-| DELETE | `/api/v1/recipes/{id}` | Eliminar receta |
+| Method | Endpoint | Description | Example |
+|--------|---------|------------|---------|
+| GET | `/api/v1/recipes` | Obtener recetas | `/api/v1/recipes?userId=12` |
+| POST | `/api/v1/recipes` | Crear receta | `{"name":"Lomo Saltado","price":25.0}` |
+| GET | `/api/v1/recipes/{id}` | Obtener receta | `/api/v1/recipes/7` |
+| PUT | `/api/v1/recipes/{id}` | Actualizar receta | `{"description":"Receta actualizada"}` |
+| DELETE | `/api/v1/recipes/{id}` | Eliminar receta | `/api/v1/recipes/7` |
 
 **Request Body**
 
@@ -839,9 +1039,9 @@ Update Recipe:
 
 ##### Recipe Supplies
 
-| Method | Endpoint | Description |
-|--------|---------|------------|
-| POST | `/api/v1/recipes/{id}/supplies` | Agregar insumos |
+| Method | Endpoint | Description | Example |
+|--------|---------|------------|---------|
+| POST | `/api/v1/recipes/{id}/supplies` | Agregar insumos | `{"supplyId":45,"quantity":2}` |
 
 **Request Body**
 
@@ -851,11 +1051,11 @@ Add Recipe Supply:
 
 #### Orders
 
-| Method | Endpoint | Description |
-|--------|---------|------------|
-| POST | `/api/v1/orders` | Crear orden |
-| PUT | `/api/v1/orders/{orderId}` | Actualizar orden |
-| PUT | `/api/v1/orders/{id}/state` | Actualizar estado |
+| Method | Endpoint | Description | Example |
+|--------|---------|------------|---------|
+| POST | `/api/v1/orders` | Crear orden | `{"adminRestaurantId":12,"supplierId":3}` |
+| PUT | `/api/v1/orders/{orderId}` | Actualizar orden | `{"description":"Urgente","batchItems":[]}` |
+| PUT | `/api/v1/orders/{id}/state` | Actualizar estado | `{"orderId":101,"newState":"SHIPPED"}` |
 
 **Request Body**
 
@@ -880,9 +1080,9 @@ Update Order State:
 
 #### Sales
 
-| Method | Endpoint | Description |
-|--------|---------|------------|
-| POST | `/api/v1/sales` | Registrar venta |
+| Method | Endpoint | Description | Example |
+|--------|---------|------------|---------|
+| POST | `/api/v1/sales` | Registrar venta | `{"userId":12,"totalCost":89.9}` |
 
 **Request Body**
 
@@ -896,9 +1096,9 @@ Create Sale:
 
 #### Alerts
 
-| Method | Endpoint | Description |
-|--------|---------|------------|
-| PUT | `/api/v1/alerts/state` | Actualizar estado |
+| Method | Endpoint | Description | Example |
+|--------|---------|------------|---------|
+| PUT | `/api/v1/alerts/state` | Actualizar estado | `{"alertId":55,"newState":"READ"}` |
 
 **Request Body**
 
@@ -909,10 +1109,10 @@ Update Alert:
 
 #### Batches
 
-| Method | Endpoint | Description |
-|--------|---------|------------|
-| POST | `/api/v1/batches` | Crear lote |
-| PUT | `/api/v1/batches/{id}` | Actualizar lote |
+| Method | Endpoint | Description | Example |
+|--------|---------|------------|---------|
+| POST | `/api/v1/batches` | Crear lote | `{"userId":12,"customSupplyId":45,"stock":40}` |
+| PUT | `/api/v1/batches/{id}` | Actualizar lote | `{"stock":32,"expirationDate":"2026-06-30"}` |
 
 **Request Body**
 
@@ -940,10 +1140,24 @@ La distribución de actividades permitió que todos los integrantes —Julio Dan
 A continuación, se presentan las métricas de colaboración extraídas directamente de la pestaña *Insights* de nuestros repositorios en GitHub.
 
 **1. Contribuciones en el Landing Page:**
+
+**Landing Page:** [https://shortlink.uk/1uY4v](https://shortlink.uk/1uY4v)
+
 ![Commits Landing Page](assets/images/chapter5/team-collaboration/insights_landing_page.png)
+
 *Gráfico de contribuciones (Contributors) del repositorio del Landing Page durante el Sprint.*
 
 **2. Contribuciones en la Web App (Angular) y Móvil:**
+
+**Aplicación Web (Frontend):** [https://shortlink.uk/1uY4J](https://shortlink.uk/1uY4J)
+
+
+**Aplicación Móvil Flutter:** [https://shortlink.uk/1uY4S](https://shortlink.uk/1uY4S)
+
+
+**Aplicación Móvil Nativa:** [https://shortlink.uk/1pCyC](https://shortlink.uk/1pCyC)
+
+
 ![Commits Web ](assets/images/chapter5/team-collaboration/insights_frontend.png)
 
 ![Commits Mobile](assets/images/chapter5/team-collaboration/insights_mobile.png)
@@ -951,7 +1165,11 @@ A continuación, se presentan las métricas de colaboración extraídas directam
 *Historial de commits y frecuencia de aportes en el repositorio Frontend.*
 
 **3. Contribuciones en el RESTful API (Backend):**
+
+**Backend (API RESTful):** [https://shortlink.uk/1pCy0](https://shortlink.uk/1pCy0)
+
 ![Commits Backend](assets/images/chapter5/team-collaboration/insights_backend.png)
+
 *Gráfica de actividad y pull requests resueltos en el repositorio del Backend.*
 
 #### Interpretación de los Datos y Dinámica del Equipo
