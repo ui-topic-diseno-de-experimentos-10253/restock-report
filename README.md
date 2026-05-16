@@ -71,7 +71,7 @@ Para el desarrollo del **Project Report**, el equipo utiliza un repositorio dent
 
 **Repositorio del informe del proyecto:** [https://shortlink.uk/1tQjs](https://shortlink.uk/1tQjs)
 
-**Total de commits:** 39
+**Total de commits:** 69
 
 **Autores contribuyentes:**
 
@@ -84,8 +84,6 @@ Para el desarrollo del **Project Report**, el equipo utiliza un repositorio dent
 | Gabriela Nicole Shapiama Rivera | `GabrielaShapiama28` |
 
 El equipo adoptó una estrategia de ramas basada en **feature branches** (`feature/<sección>`), donde cada integrante trabajó de forma aislada sobre la sección asignada y luego integró sus cambios a `main` mediante *pull requests* con revisión cruzada. Los mensajes de commit siguen la convención **Conventional Commits**, usando prefijos como `feat:`, `fix:` y `chore:` para mantener un historial claro y trazable.
-
----
 
 ## AV1 – Sprint Review – Semana 4
 
@@ -109,27 +107,6 @@ fix(chapter-02): correct user persona descriptions
 <img src="assets/images/readme/collaboration_insights_av1.png" alt="Contributors-av1" width="600px">
 Figura: Contribuciones por integrante durante el AV1
 
-# Project Report Collaboration Insights
-
-Para el desarrollo del **Project Report**, el equipo utiliza un repositorio dentro de la organización en GitHub. A continuación, se presenta la evidencia de colaboración correspondiente y en coherencia con el registro de versiones del informe.
-
-**Repositorio del informe del proyecto:** [https://shortlink.uk/1tQjs](https://shortlink.uk/1tQjs)
-
-**Total de commits:** 39
-
-**Autores contribuyentes:**
-
-| Integrante                      | Usuario de GitHub      |
-| ------------------------------- | ---------------------- |
-| Julio Castro Alejos             | `JulioXC4`           |
-| José Jahaziel Guerra Perez     | `jahazielgg`         |
-| Ario Chavez Uribe               | `feg06`              |
-| Ivan Fernando Sanchez Guevara   | `DonFernando1`       |
-| Gabriela Nicole Shapiama Rivera | `GabrielaShapiama28` |
-
-El equipo adoptó una estrategia de ramas basada en **feature branches** (`feature/<sección>`), donde cada integrante trabajó de forma aislada sobre la sección asignada y luego integró sus cambios a `main` mediante *pull requests* con revisión cruzada. Los mensajes de commit siguen la convención **Conventional Commits**, usando prefijos como `feat:`, `fix:` y `chore:` para mantener un historial claro y trazable.
-
----
 
 ## TB1 – Stage Review – Semana 7
 
