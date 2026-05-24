@@ -855,7 +855,98 @@ Además, el flujo E2E cruzado permitió comprobar que una operación iniciada po
 
 ## 6.3. Validation Interviews
 
+En esta sección se documentan las entrevistas de validación realizadas para evaluar la experiencia de los usuarios al interactuar con Restock. El proceso considera la participación de los segmentos objetivo (administradores de restaurantes y proveedores), quienes validarán el Landing Page, la aplicación web y las aplicaciones móviles mediante flujos representativos del sistema. Asimismo, los hallazgos obtenidos servirán como base para el registro de entrevistas y la evaluación heurística correspondiente.
+
 ### 6.3.1. Diseño de Entrevistas
+
+Para garantizar que la aplicación cumpla con las necesidades reales de los usuarios finales, se diseñó un proceso de entrevistas de validación centrado en dos segmentos objetivo clave: administradores de restaurantes y proveedores de insumos. Cada sesión de validación incluirá interacción con el Landing Page, la aplicación web y las aplicaciones móviles correspondientes a cada segmento, siguiendo flujos de usuario específicos que cubren funcionalidades críticas del sistema.
+
+### Objetivo General
+
+Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistema a través de sesiones controladas de interacción, aplicando principios de evaluación heurística y recogiendo observaciones cualitativas.
+
+### Segmento 1: Administradores de Restaurantes
+
+#### Elementos a validar
+
+- Claridad del valor ofrecido en el Landing Page.
+- Flujo de suscripción y pago.
+- Registro y gestión de insumos.
+- Gestión de lotes e inventario.
+- Gestión de ventas y recetas.
+- Visualización y selección de proveedores.
+- Realización y seguimiento de pedidos.
+- Panel de alertas y resúmenes.
+- Uso de la aplicación móvil para restaurantes.
+
+#### Flujos de Usuario a evaluar
+
+- Desktop & Mobile User Flow 1: Suscripción y pago con Stripe.
+- Desktop & Mobile User Flow 3: Registro y gestión de insumos.
+- Desktop & Mobile User Flow 4: Resumen e indicadores.
+- Desktop & Mobile User Flow 5: Visualización de proveedores y productos.
+- Desktop & Mobile User Flow 6: Seguimiento de pedidos.
+- Desktop & Mobile User Flow 7: Comentarios a proveedores.
+- Desktop & Mobile User Flow 8: Registro y visualización de ventas.
+- Desktop & Mobile User Flow 9: Creación y gestión de recetas.
+
+#### Actividades durante la sesión
+
+- Navegar el Landing Page y explicar lo que entienden del producto.
+- Simular una suscripción desde un plan.
+- Usar el módulo de inventario: registrar, editar y filtrar insumos.
+- Registrar o revisar lotes asociados a los insumos.
+- Acceder al panel de resumen y describir lo que entienden.
+- Navegar por proveedores, seleccionar uno y simular una orden.
+- Revisar el estado de seguimiento de un pedido.
+- Realizar comentarios sobre proveedores.
+- Registrar una venta.
+- Crear una receta.
+- Usar la aplicación móvil de restaurantes para revisar inventario, alertas o pedidos.
+
+### Segmento 2: Proveedores de Restaurantes
+
+#### Elementos a validar
+
+- Claridad del valor en el Landing Page.
+- Flujo de suscripción y pago.
+- Gestión de catálogo de productos.
+- Registro y edición de productos ofrecidos.
+- Eliminación de insumos o productos no disponibles.
+- Revisión de pedidos realizados por restaurantes.
+- Gestión de órdenes recibidas.
+- Actualización del estado de pedidos.
+- Interacción con comentarios recibidos.
+- Uso de la aplicación móvil para proveedores.
+
+#### Flujos de Usuario a evaluar
+
+- Desktop & Mobile User Flow 1: Suscripción y pago.
+- Desktop & Mobile User Flow 10: Registro y gestión de productos en el catálogo.
+- Desktop & Mobile User Flow 11: Eliminación de insumos.
+- Desktop & Mobile User Flow 12: Gestión de órdenes recibidas.
+- Desktop & Mobile User Flow 13: Panel principal del proveedor.
+
+#### Actividades durante la sesión
+
+- Explorar el Landing Page y describir su comprensión del producto.
+- Simular el proceso de registro y suscripción.
+- Ingresar al sistema y registrar productos en su catálogo.
+- Editar información de productos registrados.
+- Eliminar productos del catálogo.
+- Revisar pedidos recibidos de restaurantes.
+- Consultar el detalle de una orden recibida.
+- Actualizar el estado de una orden.
+- Revisar comentarios o calificaciones recibidas.
+- Usar la aplicación móvil de proveedores para revisar pedidos y actualizar estados.
+- Comentar sobre la utilidad de la interfaz de pedidos y feedback.
+
+### Herramientas y Recursos para Validación
+
+- **Formato de Evaluación Heurística:** Se aplicarán los 10 principios heurísticos de Nielsen en cada sesión, de acuerdo con el formato de evaluación indicado para el proyecto.
+- **Instrumento de observación:** Lista de verificación + sección de notas abiertas.
+- **Grabación de pantalla y voz:** previa autorización, para análisis posterior.
+- **Productos a validar:** Landing Page, aplicación web, aplicación móvil para restaurantes y aplicación móvil para proveedores.
 
 ### 6.3.2. Registro de Entrevistas
 
