@@ -317,7 +317,6 @@ El monitoreo inicia con la recopilación de información desde los principales c
 - **Backend REST API:** desplegada en Render, monitoreada mediante estado del servicio, logs, tiempos de respuesta y health checks.
 - **Mobile Application:** distribuida mediante Firebase App Distribution, permitiendo recibir retroalimentación de testers sobre errores o comportamientos inesperados.
 - **CI/CD Workflows:** ejecutados mediante GitHub Actions, monitoreados a través de sus resultados de build, pruebas, despliegue y verificaciones posteriores.
-- **Alertas internas de la aplicación:** generadas por reglas funcionales del sistema, como bajo stock, exceso de stock, vencimiento próximo o cambios de estado de pedidos.
 
 #### 2. Health Check Component
 
@@ -331,6 +330,10 @@ El health check permite validar:
 - Carga correcta de variables de entorno.
 - Conectividad mínima entre frontend y backend.
 
+**Respuesta exitosa del endpoint health**
+
+<img src="assets/images/chapter7/continuous_monitoring/health-endpoint.png" width="600px" alt="health-check">
+
 #### 3. Frontend Availability Check Component
 
 El componente de verificación del frontend permite confirmar que la aplicación web publicada en GitHub Pages se encuentre disponible para los usuarios.
@@ -343,19 +346,13 @@ Esta verificación considera:
 - Disponibilidad de la aplicación web frontend.
 - Ausencia de errores visibles de publicación.
 
-#### 4. Internal Alerts Review Component
+**Frontend Web Application publicado en GitHub Pages**
 
-El componente de revisión de alertas internas permite verificar que los eventos funcionales del sistema se generen y visualicen correctamente dentro de la aplicación.
+La figura muestra la aplicación web de Restock publicada mediante GitHub Pages. Esta URL es utilizada por el workflow de monitoreo para validar la disponibilidad del frontend después de cada despliegue.
 
-Este componente revisa eventos como:
+<img src="assets/images/chapter7/continuous_monitoring/frontend-gh-pages.png" width="600px" alt="frontend">
 
-- Productos con bajo stock.
-- Productos con exceso de stock.
-- Productos próximos a vencer.
-- Cambios de estado de órdenes.
-- Alertas recientes mostradas en el dashboard.
-
-#### 5. Log Review Component
+#### 4. Log Review Component
 
 El componente de revisión de logs permite analizar los eventos generados durante la ejecución del sistema y los workflows.
 
@@ -376,23 +373,34 @@ Los logs permiten identificar:
 
 Este componente aporta trazabilidad porque cada error puede relacionarse con un commit, workflow, despliegue o versión distribuida.
 
-#### 6. Basic Metrics Component
+**Logs del backend en Render**
+
+La figura muestra los logs del backend REST API desplegado en Render. Esta evidencia permite revisar el estado del servicio, eventos de ejecución y posibles errores posteriores al despliegue.
+
+<img src="assets/images/chapter7/continuous_monitoring/render-logs-backend.png" width="600px" alt="render-logs-backend">
+
+**Estado del servicio backend en Render**
+
+La figura muestra el estado activo del servicio backend en Render, confirmando que la API REST de Restock se encuentra desplegada y disponible mediante una URL pública.
+
+<img src="assets/images/chapter7/continuous_monitoring/render-backend.png" width="600px" alt="render-backend">
+
+#### 5. Basic Metrics Component
 
 El componente de métricas básicas permite revisar indicadores simples sobre disponibilidad y estabilidad del sistema.
 
-| Métrica                     | Fuente                    | Propósito                                      |
-| ---------------------------- | ------------------------- | ----------------------------------------------- |
-| Disponibilidad del backend   | Render / Health Check     | Confirmar que la API está activa               |
-| Disponibilidad del frontend  | GitHub Pages              | Confirmar que la web está publicada            |
-| Resultado de workflows       | GitHub Actions            | Identificar builds o despliegues fallidos       |
-| Tiempo de respuesta básico  | Health Check              | Detectar lentitud del backend                   |
-| Errores de ejecución        | Render Logs               | Identificar fallos técnicos                    |
-| Feedback móvil              | Firebase App Distribution | Detectar errores reportados por testers         |
-| Alertas funcionales visibles | Frontend Web Application  | Confirmar que el usuario ve eventos importantes |
+| Métrica                    | Fuente                    | Propósito                                |
+| --------------------------- | ------------------------- | ----------------------------------------- |
+| Disponibilidad del backend  | Render / Health Check     | Confirmar que la API está activa         |
+| Disponibilidad del frontend | GitHub Pages              | Confirmar que la web está publicada      |
+| Resultado de workflows      | GitHub Actions            | Identificar builds o despliegues fallidos |
+| Tiempo de respuesta básico | Health Check              | Detectar lentitud del backend             |
+| Errores de ejecución       | Render Logs               | Identificar fallos técnicos              |
+| Feedback móvil             | Firebase App Distribution | Detectar errores reportados por testers   |
 
 Estas métricas permiten detectar problemas sin requerir una herramienta avanzada de monitoreo, manteniendo coherencia con el alcance académico del proyecto.
 
-#### 7. Post-Deployment Verification Component
+#### 6. Post-Deployment Verification Component
 
 Después de cada despliegue, el equipo ejecuta una verificación posterior para confirmar que la versión publicada funciona correctamente.
 
@@ -409,13 +417,35 @@ La verificación posterior al despliegue incluye:
 
 Este componente es importante porque evita considerar exitoso un despliegue únicamente porque el pipeline terminó, sin verificar el comportamiento real del sistema publicado.
 
-#### 8. Monitoring Workflow Component
+#### 7. Monitoring Workflow Component
 
 Para reforzar el monitoreo a nivel de repositorio, se implementa un workflow de GitHub Actions que verifica periódicamente la disponibilidad del backend y frontend.
 
 Su propósito es consultar las URLs productivas del frontend y backend. Si alguna URL no responde correctamente, el workflow falla y queda registrado como evidencia de alerta técnica dentro de GitHub Actions.
 
-#### 9. Incident Review Component
+**Implementación en backend del workflow Continuous Monitoring**
+
+<img src="assets/images/chapter7/continuous_monitoring/cm-workflow-back.png" width="600px" alt="cm-workflow-backend">
+
+**Secrets configurados para monitoreo en GitHub Actions**
+
+La figura muestra los secrets BACKEND_HEALTH_URL y FRONTEND_URL configurados en GitHub Actions, utilizados por el workflow de monitoreo para validar las URLs productivas sin exponer valores sensibles directamente en el repositorio.
+
+<img src="assets/images/chapter7/continuous_monitoring/config-secrets-github.png" width="600px" alt="config-secrets-github">
+
+**Ejecución exitosa del workflow Continuous Monitoring**
+
+La figura muestra la ejecución exitosa del workflow Continuous Monitoring en GitHub Actions. El resultado evidencia que el backend responde correctamente mediante el endpoint de health check y que el frontend se encuentra disponible desde su URL pública.
+
+<img src="assets/images/chapter7/continuous_monitoring/execution-workflow-cm.png" width="600px" alt="execution-workflow-cm">
+
+**Detalle del job Availability Check**
+
+La figura muestra el detalle del job Availability Check, donde se ejecutan las verificaciones automáticas sobre el backend desplegado en Render y el frontend publicado en GitHub Pages.
+
+<img src="assets/images/chapter7/continuous_monitoring/detail-execution-workflow-cm.png" width="600px" alt="execution-workflow-cm">
+
+#### 8. Incident Review Component
 
 Cuando el monitoreo detecta un error, el equipo revisa el incidente y aplica una corrección controlada.
 
@@ -432,7 +462,7 @@ El flujo de revisión es:
 
 Este proceso permite que el monitoreo sirva como mecanismo de mejora continua y no solo como observación pasiva del sistema.
 
-#### 10. Monitoring Pipeline Summary
+#### 9. Monitoring Pipeline Summary
 
 El pipeline de monitoreo se resume de la siguiente manera:
 
@@ -449,8 +479,6 @@ El pipeline de monitoreo se resume de la siguiente manera:
 
 De esta manera, los componentes del Monitoring Pipeline permiten que Restock mantenga visibilidad sobre el estado de sus servicios desplegados, detecte fallos después de cada release y responda de forma ordenada ante problemas técnicos o funcionales.
 
----
-
 ### 7.4.3. Alerting Pipeline Components
 
 El pipeline de alertas de Restock está compuesto por los componentes encargados de convertir eventos de monitoreo en incidencias accionables.
@@ -466,26 +494,19 @@ Las alertas se originan desde los principales servicios y herramientas utilizada
 - **GitHub Pages:** permite detectar problemas de disponibilidad en la aplicación web publicada.
 - **Firebase App Distribution:** permite recibir reportes de errores o comportamientos inesperados por parte de testers de la aplicación móvil.
 - **Backend REST API:** genera condiciones de alerta cuando los endpoints presentan errores, tiempos de respuesta elevados o falta de disponibilidad.
-- **Módulo de inventario:** genera condiciones funcionales de alerta, como bajo stock, exceso de stock o productos próximos a vencer.
-- **Módulo de pedidos:** genera condiciones funcionales asociadas al seguimiento de órdenes, como cambios de estado o pedidos entregados.
-- **Frontend Web Application:** muestra alertas visuales, mensajes o listados filtrados cuando existen eventos funcionales relevantes.
 
 #### 2. Alert Rules Component
 
 El componente de reglas de alerta define las condiciones bajo las cuales un evento monitoreado debe convertirse en una alerta. Esto evita que cualquier mensaje menor sea tratado como una incidencia crítica.
 
-| Regla                    | Condición                                                   | Tipo de alerta       |
-| ------------------------ | ------------------------------------------------------------ | -------------------- |
-| Fallo de workflow        | GitHub Actions termina con estado failed                     | Técnica             |
-| Backend no disponible    | Render no responde o el health check falla                   | Técnica             |
-| Frontend no disponible   | La URL de GitHub Pages no responde                           | Técnica             |
-| Error de API             | La API responde repetidamente con errores 5xx                | Técnica             |
-| Error de configuración  | Variables de entorno faltantes o inválidas                  | Técnica             |
-| Error móvil reportado   | Tester reporta fallo bloqueante en Firebase App Distribution | Técnica / funcional |
-| Bajo stock               | Stock actual menor o igual al stock mínimo                  | Funcional            |
-| Exceso de stock          | Stock actual mayor o igual al stock máximo                  | Funcional            |
-| Vencimiento próximo     | Producto con vencimiento cercano                             | Funcional            |
-| Cambio crítico de orden | Orden cambia a un estado que requiere atención              | Funcional            |
+| Regla                   | Condición                                                   | Tipo de alerta       |
+| ----------------------- | ------------------------------------------------------------ | -------------------- |
+| Fallo de workflow       | GitHub Actions termina con estado failed                     | Técnica             |
+| Backend no disponible   | Render no responde o el health check falla                   | Técnica             |
+| Frontend no disponible  | La URL de GitHub Pages no responde                           | Técnica             |
+| Error de API            | La API responde repetidamente con errores 5xx                | Técnica             |
+| Error de configuración | Variables de entorno faltantes o inválidas                  | Técnica             |
+| Error móvil reportado  | Tester reporta fallo bloqueante en Firebase App Distribution | Técnica / funcional |
 
 Estas reglas permiten identificar fallos que pueden afectar la disponibilidad, estabilidad o funcionamiento correcto de Restock.
 
@@ -529,7 +550,6 @@ Una alerta debe escalarse cuando:
 - Un endpoint crítico falla de manera repetida.
 - Es necesario revertir un despliegue reciente.
 - Un error móvil bloquea un flujo principal del usuario.
-- Las alertas de inventario no se muestran correctamente en la interfaz del administrador.
 - El mismo error aparece en más de una versión desplegada.
 - El problema afecta directamente la operación de restaurantes o proveedores.
 
@@ -546,20 +566,7 @@ Algunos ejemplos de alertas técnicas en Restock son:
 | GitHub Pages no responde          | Frontend no disponible           | Revisar publicación y configuración del repositorio |
 | Error reportado por tester móvil | Fallo en versión distribuida    | Revisar build móvil y corregir funcionalidad         |
 
-#### 7. Functional Alert Examples
-
-Algunos ejemplos de alertas funcionales en Restock son:
-
-| Evento                     | Alerta generada           | Usuario afectado             |
-| -------------------------- | ------------------------- | ---------------------------- |
-| Stock menor al mínimo     | Alerta de bajo stock      | Administrador de restaurante |
-| Stock mayor al máximo     | Alerta de exceso de stock | Administrador de restaurante |
-| Producto próximo a vencer | Alerta de vencimiento     | Administrador de restaurante |
-| Pedido entregado           | Alerta de cierre de orden | Restaurante                  |
-
-Estas alertas funcionales están alineadas con el propósito de Restock: mejorar la gestión de inventarios, reducir desperdicios y facilitar la coordinación entre restaurantes y proveedores.
-
-#### 8. Alerting Pipeline Summary
+#### 7. Alerting Pipeline Summary
 
 El pipeline de alertas puede resumirse de la siguiente manera:
 
@@ -571,6 +578,12 @@ El pipeline de alertas puede resumirse de la siguiente manera:
 6. Se crea y asigna una tarea de corrección.
 7. La corrección se valida mediante el pipeline de CI/CD.
 8. La alerta se cierra cuando se confirma que el sistema volvió a un estado estable.
+
+**Alerta técnica registrada en GitHub Actions**
+
+La figura muestra el mecanismo de alerta técnica del workflow de monitoreo. Para ello, se configuró una URL incorrecta de manera intencional. Cuando una URL monitoreada no responde correctamente, GitHub Actions marca la ejecución como fallida y registra un resumen indicando que debe revisarse el servicio afectado.
+
+<img src="assets/images/chapter7/continuous_monitoring/execution-alert-cm.png" width="600px" alt="execution-alert-cm">
 
 En conclusión, los componentes del Alerting Pipeline permiten que Restock transforme eventos de monitoreo en incidencias accionables, facilitando una respuesta rápida ante fallos técnicos y eventos funcionales importantes.
 
@@ -589,27 +602,31 @@ Las notificaciones se originan desde distintos componentes del ecosistema de Res
 - **Firebase App Distribution:** notifica a los testers cuando existe una nueva versión móvil disponible para pruebas.
 - **Backend REST API:** genera eventos funcionales a partir de reglas de negocio, como cambios de estado de pedidos o alertas de stock.
 - **Frontend Web Application:** muestra alertas visuales, mensajes o indicadores dentro de la interfaz para informar al usuario sobre eventos importantes.
-- **Módulo de inventario:** genera alertas por bajo stock, exceso de stock o vencimiento próximo.
-- **Módulo de pedidos:** genera eventos por creación o entrega de órdenes.
-- **Tablero de gestión del proyecto:** centraliza tareas asociadas a incidencias, correcciones o mejoras.
+
+**Versión móvil distribuida en Firebase App Distribution**
+
+La figura muestra una versión preliminar de la aplicación móvil de Restock distribuida mediante Firebase App Distribution. Esta herramienta permite compartir builds con testers y recopilar retroalimentación antes de una liberación formal.
+
+<img src="assets/images/chapter7/continuous_monitoring/firebase-distribution.png" width="600px" alt="firebase-distribution">
+
+**Testers registrados en Firebase App Distribution**
+
+La figura muestra los testers o grupos configurados para validar la aplicación móvil. Esta evidencia respalda el uso de Firebase App Distribution como canal de retroalimentación para detectar errores en versiones móviles de prueba.
+
+<img src="assets/images/chapter7/continuous_monitoring/firebase-testers.png" width="600px" alt="firebase-testers">
 
 #### 2. Notification Trigger Component
 
 El componente de activadores define qué eventos generan una notificación. En Restock, estos eventos pueden ser técnicos u operativos.
 
-| Activador                        | Tipo                   | Destinatario                 |
-| -------------------------------- | ---------------------- | ---------------------------- |
-| Fallo de workflow de CI/CD       | Técnico               | Equipo de desarrollo         |
-| Fallo del workflow de monitoreo  | Técnico               | Equipo de desarrollo         |
-| Despliegue exitoso               | Técnico               | Equipo de desarrollo         |
-| Backend no disponible            | Técnico               | Equipo de desarrollo         |
-| Reporte de error móvil          | Técnico               | Equipo de desarrollo         |
-| Nueva versión móvil disponible | Técnico / validación | Testers                      |
-| Producto con bajo stock          | Operativo              | Administrador de restaurante |
-| Producto con exceso de stock     | Operativo              | Administrador de restaurante |
-| Producto próximo a vencer       | Operativo              | Administrador de restaurante |
-| Orden creada                     | Operativo              | Proveedor                    |
-| Pedido entregado                 | Operativo              | Restaurante                  |
+| Activador                        | Tipo                   | Destinatario         |
+| -------------------------------- | ---------------------- | -------------------- |
+| Fallo de workflow de CI/CD       | Técnico               | Equipo de desarrollo |
+| Fallo del workflow de monitoreo  | Técnico               | Equipo de desarrollo |
+| Despliegue exitoso               | Técnico               | Equipo de desarrollo |
+| Backend no disponible            | Técnico               | Equipo de desarrollo |
+| Reporte de error móvil          | Técnico               | Equipo de desarrollo |
+| Nueva versión móvil disponible | Técnico / validación | Testers              |
 
 Estos activadores permiten que la información relevante sea comunicada en el momento adecuado y al destinatario correcto.
 
@@ -617,15 +634,13 @@ Estos activadores permiten que la información relevante sea comunicada en el mo
 
 El componente de canales define por qué medio se entrega cada notificación, según el tipo de evento y el destinatario.
 
-| Tipo de notificación            | Destinatario                 | Canal                                   |
-| -------------------------------- | ---------------------------- | --------------------------------------- |
-| Fallo de workflow                | Equipo de desarrollo         | GitHub Actions                          |
-| Fallo de despliegue backend      | Equipo de desarrollo         | Render                                  |
-| Backend no disponible            | Equipo de desarrollo         | GitHub Actions / Render                 |
-| Nueva versión móvil disponible | Testers                      | Firebase App Distribution               |
-| Error reportado en app móvil    | Equipo de desarrollo         | Feedback de Firebase App Distribution   |
-| Alerta de inventario             | Administrador de restaurante | Notificación interna en la aplicación |
-| Tarea de corrección             | Equipo de desarrollo         | Tablero de gestión del proyecto        |
+| Tipo de notificación            | Destinatario         | Canal                                 |
+| -------------------------------- | -------------------- | ------------------------------------- |
+| Fallo de workflow                | Equipo de desarrollo | GitHub Actions                        |
+| Fallo de despliegue backend      | Equipo de desarrollo | Render                                |
+| Backend no disponible            | Equipo de desarrollo | GitHub Actions / Render               |
+| Nueva versión móvil disponible | Testers              | Firebase App Distribution             |
+| Error reportado en app móvil    | Equipo de desarrollo | Feedback de Firebase App Distribution |
 
 Esta separación evita que todas las notificaciones se envíen por un mismo canal y permite mantener una comunicación más clara y accionable.
 
@@ -650,21 +665,7 @@ Componente afectado: Backend REST API en Render.
 Acción sugerida: revisar logs del servicio y último despliegue ejecutado.
 ```
 
-#### 5. User-Facing Notification Component
-
-Las notificaciones dirigidas a usuarios finales están relacionadas con la operación diaria de Restock. Estas ayudan a que administradores de restaurantes y proveedores reaccionen rápidamente ante eventos importantes.
-
-Las principales notificaciones para usuarios son:
-
-- Alerta de bajo stock.
-- Alerta de exceso de stock.
-- Alerta de vencimiento próximo.
-- Notificación de pedido creado.
-- Notificación de pedido entregado.
-
-Estas notificaciones se muestran dentro de la aplicación mediante alertas visuales, mensajes, badges, indicadores o listados filtrados. Esto permite prevenir desabastecimiento, reducir desperdicios y mantener una mejor coordinación entre restaurantes y proveedores.
-
-#### 6. Team-Facing Notification Component
+#### 5. Team-Facing Notification Component
 
 Las notificaciones dirigidas al equipo de desarrollo tienen como objetivo mantener la estabilidad técnica del sistema. Estas permiten detectar problemas durante o después de un despliegue.
 
@@ -681,7 +682,7 @@ Las principales notificaciones para el equipo son:
 
 Estas notificaciones apoyan la mejora continua porque permiten responder rápidamente ante errores y validar que las correcciones funcionen correctamente.
 
-#### 7. Notification Validation Component
+#### 6. Notification Validation Component
 
 Después de enviar o mostrar una notificación, el equipo debe verificar que esta haya sido generada correctamente y que el destinatario pueda entenderla.
 
