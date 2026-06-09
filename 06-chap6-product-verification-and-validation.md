@@ -851,6 +851,67 @@ Además, el flujo E2E cruzado permitió comprobar que una operación iniciada po
 
 #### 6.2.1.2. Code Quality & Code Security
 
+Para garantizar la mantenibilidad, escalabilidad y seguridad del backend `restock-platform` desarrollado en Spring Boot, el equipo implementó un proceso de análisis de código estático utilizando **SonarQube** como herramienta principal. 
+
+Para llevar a cabo esta evaluación sin comprometer el entorno de producción, el servidor de inspección se desplegó localmente mediante un contenedor de Docker. Posteriormente, se generó un token de autenticación y se ejecutó el escáner directamente desde el IDE (IntelliJ IDEA) a través de Apache Maven (`sonar-maven-plugin`), trabajando sobre la rama correspondiente de GitFlow (`feature/sonarqube-integration`).
+
+A continuación, se detalla la evidencia de la configuración y ejecución del entorno de evaluación:
+
+![Despliegue inicial de SonarQube en Docker](assets/images/chapter6/code-quality-security/e-1.png)
+*Despliegue inicial del contenedor de SonarQube (versión LTS) de forma local utilizando Docker a través de Windows PowerShell, estableciendo la infraestructura base necesaria para ejecutar el análisis estático.*
+
+![Verificación de Docker Desktop](assets/images/chapter6/code-quality-security/e-2.png)
+*Verificación mediante Docker Desktop de la ejecución exitosa del contenedor de SonarQube, asegurando que el servicio, los procesos internos y los registros (logs) operan correctamente en el entorno local.*
+
+![Login SonarQube](assets/images/chapter6/code-quality-security/e-3.png)
+*Acceso a la consola web de administración de SonarQube para la autenticación inicial y configuración del entorno de evaluación de código.*
+
+![Creación manual del proyecto](assets/images/chapter6/code-quality-security/e-4.png)
+*Creación manual del perfil del proyecto en la plataforma, un paso indispensable para definir el espacio de trabajo que alojará las métricas y vulnerabilidades escaneadas del backend.*
+
+![Configuración Local](assets/images/chapter6/code-quality-security/e-5.png)
+*Definición de la estrategia de análisis en modo local ("Locally"), adecuada para certificar la calidad y seguridad del código en el entorno de desarrollo previo a su integración en un entorno CI/CD.*
+
+![Generación de Token](assets/images/chapter6/code-quality-security/e-6.png)
+*Generación de un token de seguridad exclusivo para el proyecto, garantizando que la conexión y el envío de métricas desde el entorno de desarrollo hacia el servidor de SonarQube estén autenticados.*
+
+![Confirmación de Token](assets/images/chapter6/code-quality-security/e-7.png)
+*Confirmación del token de autenticación generado por la plataforma, el cual actuará como credencial obligatoria durante la ejecución del analizador de código fuente.*
+
+![Comando Maven SonarQube](assets/images/chapter6/code-quality-security/e-8.png)
+*Obtención del comando de compilación estructurado por SonarQube, el cual incluye las llaves del proyecto y el token de seguridad, preparado para ser ejecutado a través de Apache Maven.*
+
+![Ejecución en IntelliJ Run Anything](assets/images/chapter6/code-quality-security/e-9.png)
+*Ejecución de la directiva de escaneo estático de SonarQube directamente en el IDE (IntelliJ IDEA) mediante la consola "Run Anything", evidenciando además el uso correcto de GitFlow al trabajar sobre la rama dedicada feature/sonarqube-integration.*
+
+![Proceso de Build en IntelliJ](assets/images/chapter6/code-quality-security/e-10.png)
+*Evidencia del inicio del proceso de construcción (build) en la terminal del IDE, comprobando la descarga de las dependencias del plugin de SonarQube necesarias para la inspección profunda de los paquetes de Spring Boot.*
+
+![Build Success](assets/images/chapter6/code-quality-security/e-11.png)
+*Validación de la culminación exitosa de la etapa de pruebas y análisis (BUILD SUCCESS), confirmando que el reporte con las métricas de calidad y seguridad fue procesado y transmitido al servidor correctamente.*
+
+---
+
+A continuación, se detallan los resultados de la evaluación técnica arrojados tras la compilación exitosa.
+
+#### 1. Code Quality (Calidad del Código)
+El análisis estructural se enfocó en evaluar la complejidad ciclomática, la duplicación de código y la presencia de deuda técnica. El código fue desarrollado priorizando un diseño limpio y la reutilización de componentes.
+
+* **Deuda Técnica y Complejidad:** El escáner identificó 137 *Code Smells*, lo que representa una deuda técnica estimada de 1 día y 5 horas. Se identificó que la mayoría de estos hallazgos corresponden a prácticas de mantenibilidad, tales como el uso de `System.out` en lugar de *Loggers* formales en la capa de servicios (ej. `UserCommandServiceImpl`), así como importaciones no utilizadas y clases vacías en la capa de dominio. Estos puntos han sido mapeados para futuras refactorizaciones.
+* **Duplicación:** El porcentaje de líneas duplicadas es prácticamente nulo, ubicándose en un excelente **0.2%** sobre más de 6.5k líneas de código analizadas. Esto valida el cumplimiento de las buenas prácticas de diseño orientado a objetos.
+
+![Detalle de Code Smells](assets/images/chapter6/code-quality-security/e-13.png)
+*Desglose detallado de la deuda técnica (Code Smells) identificada por el escáner, visibilizando hallazgos estructurales (como el uso de salidas por consola en lugar de Loggers formales) que guiarán las futuras labores de refactorización.*
+
+#### 2. Code Security (Seguridad del Código)
+Para proteger la integridad de los datos y asegurar la API RESTful frente a vulnerabilidades, el análisis verificó el cumplimiento de las normativas de seguridad aplicables al entorno Java/Spring.
+
+* **Identificación de Vulnerabilidades:** La herramienta confirmó la robustez del sistema otorgando una calificación de nivel 'A', reportando **0 vulnerabilidades** y **0 bugs** funcionales. Esto demuestra que la plataforma está debidamente protegida contra amenazas críticas, como inyecciones SQL en repositorios o ataques XSS.
+* **Security Hotspots:** Se detectaron 3 *Security Hotspots* pendientes de revisión (estado 'E' - Security Review). Estos avisos corresponden a configuraciones sensibles propias del framework (como habilitación de CORS o CSRF), las cuales el equipo revisará y validará manualmente para confirmar que los filtros de seguridad operen de forma estricta y segura.
+
+![Dashboard de SonarQube Quality Gate](assets/images/chapter6/code-quality-security/e-12.png)
+*Dashboard general de métricas demostrando la aprobación del Quality Gate del backend. La evidencia certifica un sistema altamente seguro y confiable al reportar 0 bugs funcionales y 0 vulnerabilidades de seguridad.*
+
 ### 6.2.2. Reviews
 
 ## 6.3. Validation Interviews
