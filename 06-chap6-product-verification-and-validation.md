@@ -845,13 +845,175 @@ Además, el flujo E2E cruzado permitió comprobar que una operación iniciada po
 
 ## 6.2. Static testing & Verification
 
+## 6.2. Static testing & Verification
+
 ### 6.2.1. Static Code Analysis
+
+El análisis estático de código constituye una práctica esencial dentro del proceso de verificación y validación de software, ya que permite identificar defectos, inconsistencias y vulnerabilidades sin necesidad de ejecutar el programa. Este tipo de análisis complementa las pruebas dinámicas al detectar problemas en etapas tempranas del ciclo de vida, reduciendo el costo y el esfuerzo de corrección.
+
+En el proyecto Restock, el equipo de UI-Topic ha definido e implementado estándares de codificación para todos los componentes de la plataforma: el Landing Page (HTML5/CSS3/JavaScript), la aplicación web frontend (Vue.js), el servicio backend RESTful (ASP.NET Core / C#) y los archivos de pruebas de comportamiento (Gherkin). Adicionalmente, se aplican convenciones de control de versiones mediante Conventional Commits y GitFlow en todos los repositorios del proyecto.
+
+La verificación estática se aborda en dos niveles complementarios. En la sección 6.2.1.1 se describen las convenciones de codificación adoptadas por tecnología. En la sección 6.2.1.2 se presentan los resultados del análisis de calidad y seguridad del código mediante herramientas especializadas.
+
+---
 
 #### 6.2.1.1. Coding standard & Code conventions
 
-#### 6.2.1.2. Code Quality & Code Security
+Para garantizar la legibilidad, consistencia y mantenibilidad del código fuente, el equipo de Restock ha adoptado las siguientes convenciones de codificación por tecnología. Todos los nombres de identificadores (variables, métodos, clases, archivos) se escriben en inglés, conforme a los lineamientos del curso.
 
-### 6.2.2. Reviews
+---
+
+##### HTML5 / CSS3 — Landing Page
+
+Se siguen la **Google HTML/CSS Style Guide** y las **HTML Style Guide and Coding Conventions** de W3Schools:
+
+- Se utiliza indentación de **2 espacios** (sin tabs) para HTML y CSS.
+- Los nombres de etiquetas y atributos se escriben en **minúsculas** (`class`, `id`, `src`, `href`).
+- Los valores de atributos siempre se delimitan con **comillas dobles** (`class="container"`).
+- Los selectores CSS se nombran en formato **`kebab-case`** (e.g., `main-header`, `btn-primary`, `hero-section`).
+- Se evita el uso de **estilos en línea** (`style=""`); todo el estilo se centraliza en hojas externas.
+- Todas las etiquetas `<img>` incluyen el atributo `alt` con una descripción significativa para garantizar accesibilidad.
+- Se utilizan **etiquetas semánticas de HTML5**: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`.
+- Cada archivo HTML comienza con la declaración `<!DOCTYPE html>` y el atributo `lang` en la etiqueta `<html>`.
+- Los comentarios CSS se usan para delimitar bloques lógicos, no para explicar reglas individuales evidentes.
+
+**Referencias adoptadas:**
+- Google. (s.f.). *Google HTML/CSS Style Guide*. https://google.github.io/styleguide/htmlcssguide.html
+- W3Schools. (s.f.). *HTML Style Guide and Coding Conventions*. https://www.w3schools.com/html/html5_syntax.asp
+
+---
+
+##### JavaScript — Landing Page
+
+Se sigue la **Google JavaScript Style Guide** y las **MDN JavaScript guidelines**:
+
+- Se utilizan `const` y `let` según el alcance; el uso de `var` está **prohibido**.
+- Variables y funciones siguen formato **`camelCase`** (e.g., `fetchInventoryData`).
+- Clases y constructores siguen **`PascalCase`** (e.g., `InventoryManager`).
+- Las constantes globales se nombran en **`UPPER_SNAKE_CASE`** (e.g., `MAX_STOCK_LEVEL`).
+- Se emplean **template literals** en lugar de concatenación con `+`.
+- Las funciones asíncronas usan **`async/await`**; se evitan cadenas de `.then()` anidadas.
+- Se colocan **punto y coma** al final de cada sentencia.
+- La longitud máxima por línea es de **100 caracteres**.
+- Se documentan las funciones públicas con comentarios **JSDoc**.
+
+**Referencias adoptadas:**
+- Google. (s.f.). *Google JavaScript Style Guide*. https://google.github.io/styleguide/jsguide.html
+- MDN Web Docs. (s.f.). *JavaScript guidelines*. https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines/JavaScript
+- W3Schools. (s.f.). *W3C JavaScript Style Guide*. https://www.w3schools.com/js/js_conventions.asp
+
+---
+
+##### Vue.js — Frontend Web Application
+
+Se sigue la **Vue Style Guide** oficial (reglas de prioridad **A — Esencial** y **B — Muy recomendado**):
+
+- Los nombres de componentes se definen en **`PascalCase`** tanto en la declaración como en su uso en templates (e.g., `InventoryTable.vue`, `OrderCard.vue`).
+- Los componentes de uso único se prefijan con `The` (e.g., `TheHeader.vue`, `TheSidebar.vue`).
+- Las **props** se declaran siempre con `type` y, según corresponda, `required` o `default`.
+- Los eventos emitidos se nombran en **`kebab-case`** (e.g., `@update-supply`, `@order-confirmed`).
+- No se combina `v-if` con `v-for` en el mismo elemento; se usa `<template>` como contenedor cuando es necesario.
+- Los datos del componente se definen siempre mediante la función **`data()`** que retorna un objeto.
+- El bloque `<script>` sigue el orden: `name → components → props → emits → data → computed → watch → methods → lifecycle hooks`.
+- Los estilos del componente usan el atributo **`scoped`** para evitar contaminación del alcance global.
+- Se usa **`key`** único en todos los elementos generados con `v-for`.
+
+**Herramienta de linting:** ESLint con el plugin `eslint-plugin-vue`, configurado con el perfil `vue3-recommended`.
+
+**Referencia adoptada:**
+- Vue.js. (s.f.). *Vue Style Guide*. https://vuejs.org/style-guide/
+
+---
+
+##### C# / ASP.NET Core — Backend RESTful API
+
+Se siguen las **C# Coding Conventions** de Microsoft y los **Microsoft ASP.NET Core Coding Guidelines**:
+
+- Clases, métodos, propiedades e interfaces se nombran en **`PascalCase`** (e.g., `SupplyService`, `GetAllSupplies`).
+- Variables locales y parámetros de método se nombran en **`camelCase`** (e.g., `supplyId`, `restaurantName`).
+- Los campos privados se prefijan con **guion bajo** seguido de `camelCase` (e.g., `_supplyRepository`).
+- Las interfaces se prefijan con **`I`** (e.g., `ISupplyRepository`, `IOrderService`).
+- Cada archivo contiene **una única clase o interfaz pública**.
+- Las clases de controlador heredan de `ControllerBase` y se anotan con **`[ApiController]`** y **`[Route("api/v1/[controller]")]`**.
+- Los métodos de acción se anotan con el verbo HTTP correspondiente: `[HttpGet]`, `[HttpPost]`, `[HttpPut]`, `[HttpDelete]`, `[HttpPatch]`.
+- El manejo de excepciones se centraliza en **middleware global**; no se emplean bloques `try/catch` genéricos en los controladores.
+- Se aplica **inyección de dependencias** a través del constructor en todos los servicios y repositorios.
+- Los DTOs de entrada y salida se nombran con los sufijos **`Request`** / **`Response`** (e.g., `CreateSupplyRequest`, `SupplyResponse`).
+- Se aplica **Domain-Driven Design** para la organización en bounded contexts (Inventory, Orders, Auth, Suppliers, Recipes).
+
+**Herramienta de análisis:** Roslyn Analyzers integrados en el SDK de .NET, complementados con `.editorconfig` en el repositorio.
+
+**Referencias adoptadas:**
+- Microsoft. (s.f.). *C# coding conventions*. https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions
+- Microsoft. (s.f.). *ASP.NET Core contribution guidelines*. https://github.com/dotnet/aspnetcore/blob/main/CONTRIBUTING.md
+
+---
+
+##### Gherkin — Archivos `.feature` (BDD)
+
+Se siguen las **Gherkin Conventions for Readable Specifications** de SpecFlow:
+
+- Cada archivo `.feature` describe un **único flujo de negocio o funcionalidad** claramente delimitado.
+- Los títulos de `Feature` y `Scenario` son descriptivos, redactados en español, en tiempo presente y sin ambigüedad.
+- Se usan las palabras clave correctamente según su rol semántico:
+  - **`Given`**: estado o contexto previo al evento.
+  - **`When`**: acción o evento que desencadena el flujo.
+  - **`Then`**: resultado observable y verificable esperado.
+  - **`And` / `But`**: extensión de cualquiera de los anteriores, nunca como primer paso.
+- Los steps **no hacen referencia a detalles de UI** (nombres de botones, campos específicos de pantalla); describen el comportamiento del sistema en términos de negocio.
+- Se usa **`Scenario Outline`** + `Examples` cuando un mismo flujo debe verificarse con múltiples conjuntos de datos.
+- Los steps se **reutilizan** entre escenarios para evitar duplicación en la definición de pasos.
+- El nombre del archivo `.feature` sigue el formato `kebab-case` en inglés (e.g., `supply-management.feature`, `order-tracking.feature`).
+
+**Referencia adoptada:**
+- SpecFlow. (s.f.). *Gherkin conventions for readable specifications*. https://specflow.org/gherkin/gherkin-conventions-for-readable-specifications/
+
+---
+
+##### Conventional Commits & GitFlow
+
+El equipo aplica **Conventional Commits** para todos los mensajes de commit en los repositorios del proyecto:
+
+**Formato:** `<type>(<scope>): <description>`
+
+| Tipo | Uso |
+|------|-----|
+| `feat` | Nueva funcionalidad |
+| `fix` | Corrección de defecto |
+| `docs` | Cambios en documentación |
+| `style` | Formato sin cambio de lógica |
+| `refactor` | Refactorización sin nueva funcionalidad ni fix |
+| `test` | Adición o corrección de pruebas |
+| `chore` | Tareas de mantenimiento, dependencias |
+| `ci` | Cambios en pipeline de CI/CD |
+
+**Ejemplos aplicados al proyecto:**
+```
+feat(inventory): add low-stock alert endpoint
+fix(auth): correct JWT token expiration handling
+test(recipes): add unit tests for RecipeService
+ci(pipeline): configure GitHub Actions for .NET build
+docs(api): update Swagger annotations for suppliers module
+```
+
+Para el control de versiones se aplica **GitFlow**:
+
+| Rama | Propósito |
+|------|-----------|
+| `main` | Código en producción |
+| `develop` | Integración continua de features |
+| `feature/<nombre>` | Desarrollo de funcionalidad individual |
+| `release/<versión>` | Preparación de liberación (ej. `release/1.2.0`) |
+| `hotfix/<descripción>` | Correcciones urgentes sobre producción |
+
+La nomenclatura de versiones sigue **Semantic Versioning 2.0.0**: `MAJOR.MINOR.PATCH` (e.g., `v1.0.0`, `v1.1.3`).
+
+**Referencias adoptadas:**
+- Conventional Commits. (s.f.). *Conventional commits specification*. https://www.conventionalcommits.org/
+- Driessen, V. (2010). *A successful Git branching model*. https://nvie.com/posts/a-successful-git-branching-model/
+- Preston-Werner, T. (2013). *Semantic versioning 2.0.0*. https://semver.org/
+
+---
 
 ## 6.3. Validation Interviews
 
