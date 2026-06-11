@@ -73,3 +73,21 @@ W3Schools. (s.f.-b). *W3C JavaScript style guide*. https://www.w3schools.com/js/
 Wang, Y. (2017). The impact of information technology on food service operations: A review. *International Journal of Hospitality Management, 65*, 10–20. https://doi.org/10.1016/j.ijhm.2017.06.003
 
 Zamora Saltos, D., & Rodríguez Borges, T. (2024). Automatización y reducción de costos operativos en PyMEs de alimentos: Caso Ecuador. *Revista Científica ECOCIENCIA, 11*(1), 45–62. https://doi.org/10.21855/ecociencia.111.764
+
+- Conventional Commits. (s.f.). *Conventional commits specification*. https://www.conventionalcommits.org/
+- Driessen, V. (2010). *A successful Git branching model*. https://nvie.com/posts/a-successful-git-branching-model/
+- Preston-Werner, T. (2013). *Semantic versioning 2.0.0*. https://semver.org/
+
+- SpecFlow. (s.f.). *Gherkin conventions for readable specifications*. https://specflow.org/gherkin/gherkin-conventions-for-readable-specifications/
+
+- Google. (s.f.). *Google HTML/CSS Style Guide*. https://google.github.io/styleguide/htmlcssguide.html
+- W3Schools. (s.f.). *HTML Style Guide and Coding Conventions*. https://www.w3schools.com/html/html5_syntax.asp
+
+- Google. (s.f.). *Google JavaScript Style Guide*. https://google.github.io/styleguide/jsguide.html
+- MDN Web Docs. (s.f.). *JavaScript guidelines*. https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines/JavaScript
+- W3Schools. (s.f.). *W3C JavaScript Style Guide*. https://www.w3schools.com/js/js_conventions.asp
+
+- Vue.js. (s.f.). *Vue Style Guide*. https://vuejs.org/style-guide/
+
+- Microsoft. (s.f.). *C# coding conventions*. https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions
+- Microsoft. (s.f.). *ASP.NET Core contribution guidelines*. https://github.com/dotnet/aspnetcore/blob/main/CONTRIBUTING.md
