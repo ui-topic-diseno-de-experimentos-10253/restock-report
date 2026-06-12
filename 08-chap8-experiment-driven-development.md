@@ -36,10 +36,63 @@ Cada pregunta ha sido evaluada bajo cuatro criterios en una escala del 1 al 5 (d
 | Q4 | ¿El uso de reportes automáticos reduce el tiempo dedicado a la gestión administrativa en más de 5 horas semanales? | Justificar la eficiencia operativa. Necesitamos saber si la herramienta realmente libera tiempo valioso para el administrador.         | 3 | 3 | 4 | 4   | 14    |
 | Q5 | ¿Influye la visualización de métricas de rotación en la decisión de compra de nuevos insumos?                     | Validar el cambio de comportamiento. Queremos saber si el usuario toma decisiones basadas en datos o sigue usando su intuición.       | 4 | 2 | 3 | 4   | 13    |
 
-
 ### 8.1.5. Experiment Cards
 
+La Tarjeta de Experimento es el artefacto clave que sustenta el proceso XDPD y sirve como contrato de aprendizaje para el equipo. Estas tarjetas permiten capturar la información esencial antes de la ejecución, asegurando que cada intervención en el producto Restock tenga un propósito claro y una forma objetiva de medir el éxito o fracaso.
+
+**Tarjeta de Experimento 01: Validación de Impacto en Mermas** 
+
+Esta tarjeta aborda la premisa principal de negocio: la capacidad de la automatización para generar ahorros reales.
+
+| LADO FRONTAL: Concepto y Motivación                                                                                                                                                                                                                                                         |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Pregunta: **¿Reducen las alertas automáticas de "stock bajo" y "vencimiento" el desperdicio de insumos perecibles en un 35%?                                                                                                                                                           |
+| **Por qué:** Si la automatización no genera una reducción tangible en la merma, la propuesta de valor económica de Restock para el dueño del restaurante desaparece.                                                                                                                   |
+| **Hipótesis:** Creemos que al ofrecer notificaciones push automáticas, los administradores realizarán pedidos preventivos, cuya evidencia se reflejará en una disminución del 35% en los reportes de mermas, bajo la circunstancia de uso diario por dueños de restaurantes medianos. |
+| **Qué (Simplest Useful Thing):** Un prototipo de alta fidelidad en Figma conectado a una base de datos de inventario simulada que envíe notificaciones push reales a los dispositivos de 5 administradores.                                                                               |
+
+| LADO POSTERIOR: Configuración Técnica                                                                                                                                                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Medidas:**<br />• Métrica Principal: Reducción porcentual de mermas registradas por semana.<br />• Métrica Secundaria: Tasa de conversión de alerta (clic en notificación) a creación de orden de compra.                                                                      |
+| **Condiciones:**<br />• Experimental: 5 administradores usando el sistema de alertas activas.<br />• Control: 5 administradores usando su método manual actual (Excel/WhatsApp).                                                                                                      |
+| **Escala:**<br />• Certeza: Nivel de significancia del 5% y potencia estadística del 80%.<br />• MDE (Efecto Mínimo): Se busca detectar una diferencia mínima del 10% en el volumen de desperdicio.<br />• Tiempo: El experimento durará 14 días (dos ciclos de abastecimiento). |
+
+**Tarjeta de Experimento 02: Validación de Adopción Digital** 
+
+Esta tarjeta mitiga el riesgo técnico y de usuario identificado en el segmento de administradores tradicionales.
+
+| LADO FRONTAL: Concepto y Motivación                                                                                                                                                                                                                           |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Pregunta: **¿Son capaces los administradores con baja afinidad digital de completar su primer pedido de insumos de forma autónoma?                                                                                                                       |
+| **Por qué:** El mayor riesgo de abandono de la plataforma es la fricción inicial; si el proceso es complejo, el usuario no regresará.                                                                                                                      |
+| **Hipótesis:** Creemos que con un onboarding guiado simplificado, los usuarios nuevos completarán su pedido en menos de 5 minutos, cuya evidencia se verá en el éxito de la tarea, bajo la circunstancia de uso por primera vez sin capacitación previa. |
+| **Qué (Simplest Useful Thing):** Una sesión de prueba de usuario remota (u observada) utilizando el flujo de "Primer Pedido" implementado actualmente en la aplicación Flutter.                                                                            |
+
+| LADO POSTERIOR: Configuración Técnica                                                                                                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Medidas:**<br />• Métrica Principal: Tasa de éxito de la tarea (Task Success Rate).<br />• Métrica Secundaria: Tiempo promedio en tarea (Time on Task) y número de errores críticos durante el flujo.             |
+| **Condiciones:**<br />• Segmento: Usuarios que declaran usar menos de 2 aplicaciones de gestión en su día a día.                                                                                                       |
+| **Escala:**<br />• Certeza: Basado en el estándar de Nielsen, una muestra de 5 usuarios para detectar hasta el 85% de los problemas de usabilidad.<br />• Tiempo: Una sesión única por usuario de máximo 30 minutos. |
+
+**Tarjeta de Experimento 03: Viabilidad del Ecosistema de Proveedores** 
+
+Esta tarjeta mitiga el riesgo de que el sistema no sea útil si los proveedores no están dispuestos a abandonar sus métodos tradicionales (WhatsApp/Excel).
+
+| LADO FRONTAL: Concepto y Motivación                                                                                                                                                                                                                                        |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Pregunta:** ¿Están los proveedores tradicionales dispuestos a digitalizar sus catálogos para integrarse a Restock a cambio de una mejor gestión de pagos?                                                                                                       |
+| **Por qué:** Asegurar la viabilidad del ecosistema. Restock depende de que el proveedor alimente los datos; si el esfuerzo de carga es mayor al beneficio percibido de cobranza, el sistema colapsará.                                                              |
+| **Hipótesis:** Creemos que al ofrecer una herramienta de carga masiva de catálogos y trazabilidad de pagos, el 60% de los proveedores contactados aceptará integrarse, cuya evidencia se reflejará en el número de catálogos activos creados durante la prueba. |
+| **Qué (Simplest Useful Thing):** Realizar unaPrueba de Conserje(Concierge Test) donde el equipo carga manualmente el catálogo de 3 proveedores reales y les muestra el módulo de "Seguimiento de Pagos" para medir su intención de uso.                           |
+
+| LADO POSTERIOR: Configuración Técnica                                                                                                                                                                                                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Medidas:**<br />• Métrica Principal: Tasa de conversión de interés (número de proveedores que firman la carta de intención de uso).<br />• Métrica Secundaria: Tiempo promedio que el proveedor dedica a revisar el estado de sus facturas en el prototipo.                                                 |
+| **Condiciones:**<br />• Segmento: Proveedores tradicionales de abarrotes y bebidas con más de 10 años en el rubro.                                                                                                                                                                                                 |
+| **Escala:**<br />• Certeza: Nivel de confianza del 90% para validar un mercado B2B pequeño.<br />• MDE (Efecto Mínimo): Interés positivo de al menos el 50% de la muestra para considerar el feature como viable.<br />• Tiempo: Sesiones de validación individuales con proveedores durante 5 días hábiles. |
+
 ## 8.2. Experiment Design
+
 
 ### 8.2.1. Hypotheses
 
