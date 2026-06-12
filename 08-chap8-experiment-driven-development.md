@@ -147,6 +147,37 @@ En esta fase de diseño, se transforman las premisas en declaraciones de creenci
 
 ### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection
 
+En esta sección se define la estrategia de recolección de datos necesaria para responder a las preguntas de investigación. Siguiendo la filosofía XDPD, se seleccionaron un conjunto mínimo de medidas para garantizar la eficiencia operativa y la precisión en la detección de cambios significativos, evitando la acumulación de datos irrelevantes o "vanity metrics".
+
+**1. Metas de Análisis (Goals)**
+
+El objetivo principal de la analítica es transformar las interacciones de los usuarios en el ecosistema Restock en conocimiento validado sobre:
+
+* La efectividad de la automatización en la gestión de inventarios.
+* La autonomía del usuario tradicional en flujos digitales críticos.
+* La intención de migración digital por parte de proveedores tradicionales.
+* La influencia de los analíticos en la precisión de la toma de decisiones.
+
+**2. Selección de KPIs y Métricas**
+
+Para asegurar que las métricas permitan detectar cambios precisos, se estructura la selección en tres niveles:
+
+| Nivel             | Nombre del Indicador               | Métrica Atómica (Data Point)                                                 | Justificación de Selección (Economy of Tracking)                                      |
+| ----------------- | ---------------------------------- | ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- |
+| KPI de Negocio    | Tasa de Reducción de Mermas       | Peso (kg/l) de insumos desechados por semana.                                  | Directamente vinculado a la propuesta de valor core de ahorro del 35%.                  |
+| KPI de Adopción  | Task Success Rate (TSR)            | Booleano (éxito/fallo) en el primer pedido.                                   | Métrica binaria simple que elimina la ambigüedad sobre la usabilidad del onboarding.  |
+| KPI de Ecosistema | Tasa de Conversión de Proveedores | Número de firmas de intención vs. total contactados.                         | Permite validar la viabilidad del mercado B2B con el menor esfuerzo de rastreo posible. |
+| KPI Estratégico  | Precisión de Compra               | % de líneas de pedido corregidas tras ver reportes.                           | Mide si los datos realmente influyen en el usuario.                                     |
+| Métrica de Salud | Latencia de Alerta Push            | Tiempo (ms) desde el evento de stock bajo hasta el envío de la notificación. | Asegura que la tecnología no sea un obstáculo para la experiencia del usuario.        |
+
+**3. Estrategia de Economía de Datos**
+
+En cumplimiento con el requisito de economía en el rastreo, se decide:
+
+* Rastreo Temporal: Las métricas de comportamiento (onboarding) solo se capturarán durante la sesión inicial de los sujetos de prueba.
+* Focalización: No se rastrearán eventos de navegación general (clics en "Acerca de nosotros") para evitar el ruido en el análisis de las hipótesis críticas.
+* Herramientas Seleccionadas: Se usará Firebase Analytics para eventos móviles y Google Data Studio para la consolidación de reportes, permitiendo una visualización limpia sin necesidad de procesar datos crudos masivos.
+
 ### 8.2.8. Web and Mobile Tracking Plan
 
 ## 8.3. Experimentation
