@@ -155,7 +155,7 @@ En esta fase de diseño, se transforman las premisas en declaraciones de creenci
 **Experimento 04: Influencia de Indicadores de Rotación en el Inventario**
 
 * **Hipótesis de Trabajo (H1):** Creemos que la respuesta a nuestra incertidumbre es que **al incluir una columna de nivel de rotación en el módulo de Inventario, los administradores tomarán decisiones de compra más precisas**, cuya evidencia se reflejará en **una reducción del 25% en el volumen de pedidos de insumos de baja rotación**, bajo las circunstancias de **uso durante el cierre de inventario semanal por dueños de restaurantes.**
-* **Hipótesis Nula (H0):** La visualización de la rotación en el inventario no tendrá un efecto medible; los administradores seguirán pidiendo las mismas cantidades basándose en su intuición o hábitos previos, independientemente del dato mostrado por  Restock.
+* **Hipótesis Nula (H0):** La visualización de la rotación en el inventario no tendrá un efecto medible; los administradores seguirán pidiendo las mismas cantidades basándose en su intuición o hábitos previos, independientemente del dato mostrado por Restock.
 
 ### 8.2.2. Domain Business Metrics
 
@@ -182,7 +182,7 @@ El objetivo principal de la analítica es transformar las interacciones de los u
 
 **2. Selección de KPIs y Métricas**
 
-Para asegurar que las métricas permitan detectar cambios precisos, se estructura la selección en tres niveles:
+Para asegurar que las métricas permitan detectar cambios precisos, se estructura la selección en los siguientes niveles:
 
 | Nivel             | Nombre del Indicador               | Métrica Atómica (Data Point)                                                 | Justificación de Selección (Economy of Tracking)                                      |
 | ----------------- | ---------------------------------- | ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- |
@@ -198,7 +198,7 @@ En cumplimiento con el requisito de economía en el rastreo, se decide:
 
 * Rastreo Temporal: Las métricas de comportamiento (onboarding) solo se capturarán durante la sesión inicial de los sujetos de prueba.
 * Focalización: No se rastrearán eventos de navegación general (clics en "Acerca de nosotros") para evitar el ruido en el análisis de las hipótesis críticas.
-* Herramientas Seleccionadas: Se usará Firebase Analytics para eventos móviles y Google Data Studio para la consolidación de reportes, permitiendo una visualización limpia sin necesidad de procesar datos crudos masivos.
+* Herramientas Seleccionadas: Se usará Firebase Analytics para la consolidación de reportes, permitiendo una visualización limpia sin necesidad de procesar datos crudos masivos.
 
 ### 8.2.8. Web and Mobile Tracking Plan
 
