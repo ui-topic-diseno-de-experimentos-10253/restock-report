@@ -200,6 +200,28 @@ En cumplimiento con el requisito de economía en el rastreo, se decide:
 * Focalización: No se rastrearán eventos de navegación general (clics en "Acerca de nosotros") para evitar el ruido en el análisis de las hipótesis críticas.
 * Herramientas Seleccionadas: Se usará Firebase Analytics para la consolidación de reportes, permitiendo una visualización limpia sin necesidad de procesar datos crudos masivos.
 
+**4. Evidencias de preparación analítica**
+
+Habilitación de Google Analytics en Firebase:
+
+<img src="assets/images/chapter8/data-analytics/1-firebase-analytics.png" width="600px" alt="Habilitacion de google analytics">
+
+Integración del archivo google-services.json en Android Studio:
+
+<img src="assets/images/chapter8/data-analytics/2-google-services.png" width="600px" alt="Integracion google services">
+
+Definición de eventos analíticos en Kotlin:
+
+<img src="assets/images/chapter8/data-analytics/3-eventos-kotlin.png" width="600px" alt="Eventos en kotlin">
+
+Ejecución de la app y activación de DebugView:
+
+<img src="assets/images/chapter8/data-analytics/4-ejecucion-app.png" width="600px" alt="Ejecucion app kotlin">
+
+Validación de eventos en Firebase DebugView:
+
+<img src="assets/images/chapter8/data-analytics/5-firebase-debugview.png" width="600px" alt="Firebase debug view">
+
 ### 8.2.8. Web and Mobile Tracking Plan
 
 ## 8.3. Experimentation
