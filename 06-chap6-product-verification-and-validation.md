@@ -873,9 +873,6 @@ Se siguen la **Google HTML/CSS Style Guide** y las **HTML Style Guide and Coding
 - Cada archivo HTML comienza con la declaración `<!DOCTYPE html>` y el atributo `lang` en la etiqueta `<html>`.
 - Los comentarios CSS se usan para delimitar bloques lógicos, no para explicar reglas individuales evidentes.
 
-**Referencias adoptadas:**
-- Google. (s.f.). *Google HTML/CSS Style Guide*. https://google.github.io/styleguide/htmlcssguide.html
-- W3Schools. (s.f.). *HTML Style Guide and Coding Conventions*. https://www.w3schools.com/html/html5_syntax.asp
 
 ---
 
@@ -893,10 +890,6 @@ Se sigue la **Google JavaScript Style Guide** y las **MDN JavaScript guidelines*
 - La longitud máxima por línea es de **100 caracteres**.
 - Se documentan las funciones públicas con comentarios **JSDoc**.
 
-**Referencias adoptadas:**
-- Google. (s.f.). *Google JavaScript Style Guide*. https://google.github.io/styleguide/jsguide.html
-- MDN Web Docs. (s.f.). *JavaScript guidelines*. https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines/JavaScript
-- W3Schools. (s.f.). *W3C JavaScript Style Guide*. https://www.w3schools.com/js/js_conventions.asp
 
 ---
 
@@ -916,8 +909,6 @@ Se sigue la **Vue Style Guide** oficial (reglas de prioridad **A — Esencial** 
 
 **Herramienta de linting:** ESLint con el plugin `eslint-plugin-vue`, configurado con el perfil `vue3-recommended`.
 
-**Referencia adoptada:**
-- Vue.js. (s.f.). *Vue Style Guide*. https://vuejs.org/style-guide/
 
 ---
 
@@ -939,9 +930,7 @@ Se siguen las **C# Coding Conventions** de Microsoft y los **Microsoft ASP.NET C
 
 **Herramienta de análisis:** Roslyn Analyzers integrados en el SDK de .NET, complementados con `.editorconfig` en el repositorio.
 
-**Referencias adoptadas:**
-- Microsoft. (s.f.). *C# coding conventions*. https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions
-- Microsoft. (s.f.). *ASP.NET Core contribution guidelines*. https://github.com/dotnet/aspnetcore/blob/main/CONTRIBUTING.md
+
 
 ---
 
@@ -961,8 +950,6 @@ Se siguen las **Gherkin Conventions for Readable Specifications** de SpecFlow:
 - Los steps se **reutilizan** entre escenarios para evitar duplicación en la definición de pasos.
 - El nombre del archivo `.feature` sigue el formato `kebab-case` en inglés (e.g., `supply-management.feature`, `order-tracking.feature`).
 
-**Referencia adoptada:**
-- SpecFlow. (s.f.). *Gherkin conventions for readable specifications*. https://specflow.org/gherkin/gherkin-conventions-for-readable-specifications/
 
 ---
 
