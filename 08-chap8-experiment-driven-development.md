@@ -190,6 +190,44 @@ En esta fase de diseño, se transforman las premisas en declaraciones de creenci
 
 ### 8.2.3. Measures
 
+En esta sección se definen los criterios específicos seleccionados para recopilar la evidencia que permitirá responder a las preguntas de investigación (*Experiment-Ready Questions*) establecidas. Para asegurar la efectividad del proceso, se ha distinguido entre la evidencia primaria (que responde directamente a la pregunta) y la evidencia secundaria (que proporciona contexto sobre el comportamiento del usuario).
+
+Adicionalmente, el diseño de estas medidas se rige bajo el principio de **economía de rastreo** (*economy of tracking*). Esto significa que el equipo utilizará y recolectará únicamente los datos estrictamente necesarios, activando las herramientas de analítica (como Firebase Analytics) por el tiempo justo que dure cada experimento, con el objetivo de minimizar costos de infraestructura, reducir el ruido en los datos y mitigar riesgos de privacidad.
+
+A continuación, se detallan las medidas estructuradas para cada uno de los experimentos planificados:
+
+#### Experimento 01: Impacto de Alertas en la Reducción de Mermas
+* **Evidencia Principal (Primary Measure):**
+  * Reducción porcentual del volumen (en kg/litros) de mermas reportadas semanalmente en el sistema por el restaurante. (Representativa del *Waste Reduction Rate*).
+* **Evidencia Secundaria (Secondary Measure):**
+  * *Click-Through Rate (CTR)* de las notificaciones push de alerta de stock.
+  * Tiempo de respuesta (en horas/minutos) desde la recepción de la alerta hasta la confirmación de una nueva orden de compra preventiva.
+* **Principio de Economía:** El rastreo de estas métricas se activará exclusivamente durante los 14 días (dos ciclos semanales) que dura la prueba piloto. No se rastrearán clics en notificaciones ajenas al módulo de inventario.
+
+#### Experimento 02: Eficacia del Onboarding en Usuarios no Digitales
+* **Evidencia Principal (Primary Measure):**
+  * Tasa de finalización exitosa (Booleano: Sí/No) en el envío del primer pedido sin intervención de soporte técnico. (Representativa del *Task Success Rate*).
+* **Evidencia Secundaria (Secondary Measure):**
+  * *Time on Task*: Tiempo cronometrado desde el inicio del onboarding hasta la pantalla de confirmación de pedido (buscando que sea < 5 minutos).
+  * Tasa de abandono (Drop-off rate) en pantallas específicas del flujo de onboarding guiado.
+* **Principio de Economía:** La captura de estos eventos se limitará a la primera sesión de inicio de los nuevos usuarios (Cohorte experimental). Una vez completado el primer pedido, el seguimiento detallado de estos eventos se apagará automáticamente.
+
+#### Experimento 03: Disposición de Proveedores a la Integración Digital
+* **Evidencia Principal (Primary Measure):**
+  * Número absoluto de proveedores que firman la carta de intención de uso o agendan oficialmente el despliegue de la herramienta. (Representativa del *Supplier Conversion Rate*).
+* **Evidencia Secundaria (Secondary Measure):**
+  * Número de preguntas, bloqueos o dudas expresadas verbalmente sobre el catálogo digital durante la sesión de *Concierge Test*.
+  * Nivel de fricción técnica observada (escala del 1 al 5) durante la demostración en vivo de los módulos.
+* **Principio de Economía:** Debido a que este experimento evalúa viabilidad B2B temprana, las medidas son predominantemente cualitativas y se recolectarán de forma manual durante las sesiones presenciales o por videollamada, evitando el desarrollo prematuro de telemetría en el portal de proveedores.
+
+#### Experimento 04: Influencia de Indicadores de Rotación en el Inventario
+* **Evidencia Principal (Primary Measure):**
+  * Variación en las cantidades solicitadas en órdenes de compra para aquellos insumos etiquetados visualmente con "Baja Rotación" en el dashboard. (Representativa del *Purchase Precision Index*).
+* **Evidencia Secundaria (Secondary Measure):**
+  * *Dwell Time* (Tiempo de permanencia) del administrador en la columna de métricas de rotación antes de hacer clic en el botón de "Añadir a orden".
+  * Cantidad de insumos de "Baja rotación" que son eliminados del carrito de compras antes del checkout.
+* **Principio de Economía:** El seguimiento de eventos (*Event Tracking*) se implementará a nivel de componente en la tabla de Angular del módulo de Inventario, y los datos se evaluarán únicamente durante el día específico en que cada restaurante suele hacer su cierre y pedido semanal, limitando el procesamiento de logs innecesarios el resto de la semana.
+
 ### 8.2.4. Conditions
 
 Esta sección describe las condiciones definidas para cada experimento planificado en la plataforma Restock, en función de los factores que permiten identificar el motivo subyacente detrás de cada respuesta esperada. Para cada experimento derivado de las hipótesis de negocio (sección 8.2.1), se establece la **condición experimental** —orientada a obtener evidencia a favor de la hipótesis alternativa— y la **condición de control** —que representa el estado base bajo la suposición de que la hipótesis nula es correcta—.
