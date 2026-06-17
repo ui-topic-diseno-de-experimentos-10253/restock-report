@@ -337,6 +337,59 @@ Esta sección describe las condiciones definidas para cada experimento planifica
 
 ### 8.2.5. Scale Calculations and Decisions
 
+Esta sección describe la determinación de la cantidad de evidencia necesaria para la investigación. Expone que la escala se basa en la **Certeza**, entendida como la probabilidad de error aceptable, y la **Precisión**, que corresponde a la granularidad del cambio a detectar. La certeza se define mediante el **Poder Estadístico**, que ayuda a evitar errores Tipo II, y el **Nivel de Significación**, que previene errores Tipo I. La precisión se representa con el **Efecto Mínimo Detectable (MDE)**, que indica el tamaño mínimo de diferencia valiosa para detectar.
+
+Al momento de elegir la escala, se ajustará el nivel de significancia, que normalmente se debe establecer en un 5%, para minimizar los errores atribuibles al azar. Asimismo, se determinará el efecto mínimo detectable (MDE) para establecer la magnitud de la diferencia que debe identificarse, ya sea pequeña o grande. Además, se seleccionará un nivel adecuado de potencia estadística, típicamente entre el 80% y el 95%, con el fin de reducir la probabilidad de cometer errores Tipo II. Finalmente, se utilizarán datos representativos para asegurar que los hallazgos sean aplicables al grupo de interés.
+
+#### Experimento 1 — Validación de Impacto en Mermas
+
+| Parámetro | Valor | Justificación |
+|---|---|---|
+| Nivel de significancia (α) | 5% | Estándar científico para minimizar falsos positivos |
+| Potencia estadística (1-β) | 80% | Balance aceptable entre tamaño de muestra y fiabilidad |
+| MDE | 10% de reducción en mermas | Diferencia mínima con impacto económico real para el restaurante |
+| Duración | 14 días (2 ciclos de abastecimiento) | Cubre al menos dos ciclos operativos completos |
+| Tamaño de muestra | 5 por grupo (experimental + control) | Piloto inicial acotado; suficiente para detectar señal fuerte |
+
+**Decisión:** Se acepta una muestra reducida (n=5 por grupo) dado el carácter exploratorio del piloto. Si la señal inicial supera el MDE del 10%, se escalaría a una muestra mayor en una segunda iteración.
+
+#### Experimento 2 — Validación de Adopción Digital
+
+| Parámetro | Valor | Justificación |
+|---|---|---|
+| Nivel de significancia (α) | N/A (prueba de usabilidad cualitativa) | El método no requiere test de hipótesis estadístico formal |
+| Potencia estadística | N/A | Basado en el estándar de Nielsen para pruebas de usabilidad |
+| MDE | Tasa de éxito de tarea ≥ 80% en ≤ 5 min | Umbral operativo definido por el equipo de producto |
+| Tamaño de muestra | 5 usuarios | Nielsen: detecta hasta el 85% de los problemas de usabilidad |
+| Duración | Sesión única de ≤ 30 min por usuario | Tiempo razonable sin fatiga del participante |
+
+**Decisión:** Para esta prueba de usabilidad, la escala sigue el benchmark de Nielsen (n=5). No se aplica test estadístico formal; el criterio de éxito es cualitativo-cuantitativo: ≥ 4 de 5 usuarios completan el flujo de forma autónoma.
+
+#### Experimento 3 — Validación de Adopción de Proveedores
+
+| Parámetro | Valor | Justificación |
+|---|---|---|
+| Nivel de significancia (α) | N/A (entrevistas cualitativas) | Investigación exploratoria de intención |
+| MDE | Tasa de disposición a digitalizar ≥ 60% | Umbral mínimo para justificar inversión en onboarding de proveedores |
+| Tamaño de muestra | 6 proveedores (3 formales, 3 informales) | Muestra estratificada para detectar diferencias entre perfiles |
+| Duración | 1 semana | Tiempo suficiente para coordinar y ejecutar entrevistas semiestructuradas |
+
+**Decisión:** Se prioriza investigación cualitativa con muestra estratificada. La señal de interés mínima es que al menos 4 de 6 proveedores expresen disposición a digitalizar su catálogo.
+
+#### Experimento 4 — Validación de Decisiones Basadas en Datos
+
+| Parámetro | Valor | Justificación |
+|---|---|---|
+| Nivel de significancia (α) | 5% | Estándar para comparación entre grupos |
+| Potencia estadística (1-β) | 80% | Nivel convencional para estudios de comportamiento |
+| MDE | 20% de aumento en precisión de decisiones de compra | Cambio observable en el patrón de órdenes del administrador |
+| Duración | 14 días | Equivalente a 2 semanas operativas de observación |
+| Tamaño de muestra | 5 por grupo | Piloto inicial; alineado con Experimento 1 |
+
+**Decisión:** Se replica el diseño del Experimento 1 (A/B entre grupo con dashboard y grupo sin dashboard). El MDE del 20% refleja un cambio observable con impacto directo en el volumen de pedidos innecesarios.
+
+---
+
 ### 8.2.6. Methods Selection
 
 En esta sección se describe cómo se llevará a cabo la investigación para la plataforma Restock. El diseño de cada intervención se rige por el principio fundamental de utilizar el **Simplest Useful Thing** (la cosa más simple y útil). Esto garantiza que se alcance el tamaño de muestra requerido y las condiciones necesarias con el menor esfuerzo de ingeniería posible, evitando el desarrollo de soluciones definitivas antes de validar el aprendizaje.
