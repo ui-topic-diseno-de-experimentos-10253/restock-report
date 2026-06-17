@@ -339,6 +339,34 @@ Esta sección describe las condiciones definidas para cada experimento planifica
 
 ### 8.2.6. Methods Selection
 
+En esta sección se describe cómo se llevará a cabo la investigación para la plataforma Restock. El diseño de cada intervención se rige por el principio fundamental de utilizar el **Simplest Useful Thing** (la cosa más simple y útil). Esto garantiza que se alcance el tamaño de muestra requerido y las condiciones necesarias con el menor esfuerzo de ingeniería posible, evitando el desarrollo de soluciones definitivas antes de validar el aprendizaje.
+
+Es vital establecer la diferencia clara entre el **objeto de investigación** (la pregunta de negocio o hipótesis que queremos responder) y el **método** (la técnica o herramienta específica elegida para ejecutar la prueba, como un A/B Test o un Concierge Test).
+
+A continuación, se detallan los métodos seleccionados para cada experimento:
+
+* **Experimento 01 (Impacto de Alertas en Mermas):**
+  * **Objeto:** Evaluar si las notificaciones automáticas previenen el desperdicio de insumos.
+  * **Método (Simplest Useful Thing):** *A/B Testing* mediante un piloto operativo. Se activarán las notificaciones push nativas utilizando Firebase/OneSignal solo para la cohorte experimental, comparando sus niveles de merma contra un grupo de control que no recibirá alertas.
+
+* **Experimento 02 (Eficacia del Onboarding):**
+  * **Objeto:** Validar la autonomía de los administradores con baja afinidad digital al realizar su primer pedido.
+  * **Método (Simplest Useful Thing):** *Prueba de Usabilidad Remota Moderada*. En lugar de programar un complejo sistema de tutoriales dinámicos, se observará a los usuarios interactuar en tiempo real con el flujo de primer pedido, capturando su *Task Success Rate* en la primera sesión.
+
+* **Experimento 03 (Integración de Proveedores):**
+  * **Objeto:** Determinar la disposición de los proveedores tradicionales a digitalizar sus catálogos.
+  * **Método (Simplest Useful Thing):** *Concierge Test (Prueba de Conserje)*. En lugar de desarrollar un portal de autogestión para proveedores, el equipo de Restock subirá manualmente el catálogo de 3 proveedores al sistema y les hará una demostración en vivo de la gestión de pedidos para medir su intención real de adopción.
+
+* **Experimento 04 (Indicadores de Rotación):**
+  * **Objeto:** Analizar si la visualización de métricas históricas influye en la reducción del sobrestock.
+  * **Método (Simplest Useful Thing):** *Feature Flagging (A/B Testing)*. Se añadirá una columna estática básica en la vista de Angular llamada "Rotación" (Alta/Media/Baja), calculada previamente por el equipo. Mediante un *feature flag*, esta columna solo será visible para el grupo experimental durante su cierre semanal.
+
+#### Consideraciones Normativas y Éticas
+Para garantizar la integridad técnica y moral del proceso de experimentación, el equipo aplicará dos directrices inquebrantables:
+
+1. **Prevención de Simultaneidad:** Se prohíbe estrictamente ejecutar dos o más experimentos sobre el mismo tema o módulo al mismo tiempo. Ningún usuario (restaurante o proveedor) será expuesto a múltiples intervenciones superpuestas, evitando así la contaminación cruzada de los datos y asegurando que los cambios de comportamiento sean atribuibles a una única variable.
+2. **Consideración Ética (No causar daño):** Los experimentos se han diseñado para no generar ningún impacto negativo, pérdida de datos críticos o perjuicio económico en las operaciones reales de los restaurantes y proveedores. Las intervenciones se limitan a ofrecer asistencia, enviar alertas preventivas o mostrar información adicional, manteniendo siempre protegida la confidencialidad de la información comercial de ambas partes.
+
 ### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection
 
 En esta sección se define la estrategia de recolección de datos necesaria para responder a las preguntas de investigación. Siguiendo la filosofía XDPD, se seleccionaron un conjunto mínimo de medidas para garantizar la eficiencia operativa y la precisión en la detección de cambios significativos, evitando la acumulación de datos irrelevantes o "vanity metrics".
