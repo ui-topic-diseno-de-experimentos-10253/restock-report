@@ -847,7 +847,155 @@ Además, el flujo E2E cruzado permitió comprobar que una operación iniciada po
 
 ### 6.2.1. Static Code Analysis
 
+El análisis estático de código constituye una práctica esencial dentro del proceso de verificación y validación de software, ya que permite identificar defectos, inconsistencias y vulnerabilidades sin necesidad de ejecutar el programa. Este tipo de análisis complementa las pruebas dinámicas al detectar problemas en etapas tempranas del ciclo de vida, reduciendo el costo y el esfuerzo de corrección.
+
+En el proyecto Restock, el equipo de UI-Topic ha definido e implementado estándares de codificación para todos los componentes de la plataforma: el Landing Page (HTML5/CSS3/JavaScript), la aplicación web frontend (Vue.js), el servicio backend RESTful (ASP.NET Core / C#) y los archivos de pruebas de comportamiento (Gherkin). Adicionalmente, se aplican convenciones de control de versiones mediante Conventional Commits y GitFlow en todos los repositorios del proyecto.
+
+La verificación estática se aborda en dos niveles complementarios. En la sección 6.2.1.1 se describen las convenciones de codificación adoptadas por tecnología. En la sección 6.2.1.2 se presentan los resultados del análisis de calidad y seguridad del código mediante herramientas especializadas.
+
+---
+
 #### 6.2.1.1. Coding standard & Code conventions
+
+Para garantizar la legibilidad, consistencia y mantenibilidad del código fuente, el equipo de Restock ha adoptado las siguientes convenciones de codificación por tecnología. Todos los nombres de identificadores (variables, métodos, clases, archivos) se escriben en inglés, conforme a los lineamientos del curso.
+
+##### HTML5 / CSS3 — Landing Page
+
+Se siguen la **Google HTML/CSS Style Guide** y las **HTML Style Guide and Coding Conventions** de W3Schools:
+
+- Se utiliza indentación de **2 espacios** (sin tabs) para HTML y CSS.
+- Los nombres de etiquetas y atributos se escriben en **minúsculas** (`class`, `id`, `src`, `href`).
+- Los valores de atributos siempre se delimitan con **comillas dobles** (`class="container"`).
+- Los selectores CSS se nombran en formato **`kebab-case`** (e.g., `main-header`, `btn-primary`, `hero-section`).
+- Se evita el uso de **estilos en línea** (`style=""`); todo el estilo se centraliza en hojas externas.
+- Todas las etiquetas `<img>` incluyen el atributo `alt` con una descripción significativa para garantizar accesibilidad.
+- Se utilizan **etiquetas semánticas de HTML5**: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`.
+- Cada archivo HTML comienza con la declaración `<!DOCTYPE html>` y el atributo `lang` en la etiqueta `<html>`.
+- Los comentarios CSS se usan para delimitar bloques lógicos, no para explicar reglas individuales evidentes.
+
+
+---
+
+##### JavaScript — Landing Page
+
+Se sigue la **Google JavaScript Style Guide** y las **MDN JavaScript guidelines**:
+
+- Se utilizan `const` y `let` según el alcance; el uso de `var` está **prohibido**.
+- Variables y funciones siguen formato **`camelCase`** (e.g., `fetchInventoryData`).
+- Clases y constructores siguen **`PascalCase`** (e.g., `InventoryManager`).
+- Las constantes globales se nombran en **`UPPER_SNAKE_CASE`** (e.g., `MAX_STOCK_LEVEL`).
+- Se emplean **template literals** en lugar de concatenación con `+`.
+- Las funciones asíncronas usan **`async/await`**; se evitan cadenas de `.then()` anidadas.
+- Se colocan **punto y coma** al final de cada sentencia.
+- La longitud máxima por línea es de **100 caracteres**.
+- Se documentan las funciones públicas con comentarios **JSDoc**.
+
+
+---
+
+##### Vue.js — Frontend Web Application
+
+Se sigue la **Vue Style Guide** oficial (reglas de prioridad **A — Esencial** y **B — Muy recomendado**):
+
+- Los nombres de componentes se definen en **`PascalCase`** tanto en la declaración como en su uso en templates (e.g., `InventoryTable.vue`, `OrderCard.vue`).
+- Los componentes de uso único se prefijan con `The` (e.g., `TheHeader.vue`, `TheSidebar.vue`).
+- Las **props** se declaran siempre con `type` y, según corresponda, `required` o `default`.
+- Los eventos emitidos se nombran en **`kebab-case`** (e.g., `@update-supply`, `@order-confirmed`).
+- No se combina `v-if` con `v-for` en el mismo elemento; se usa `<template>` como contenedor cuando es necesario.
+- Los datos del componente se definen siempre mediante la función **`data()`** que retorna un objeto.
+- El bloque `<script>` sigue el orden: `name → components → props → emits → data → computed → watch → methods → lifecycle hooks`.
+- Los estilos del componente usan el atributo **`scoped`** para evitar contaminación del alcance global.
+- Se usa **`key`** único en todos los elementos generados con `v-for`.
+
+**Herramienta de linting:** ESLint con el plugin `eslint-plugin-vue`, configurado con el perfil `vue3-recommended`.
+
+
+---
+
+##### C# / ASP.NET Core — Backend RESTful API
+
+Se siguen las **C# Coding Conventions** de Microsoft y los **Microsoft ASP.NET Core Coding Guidelines**:
+
+- Clases, métodos, propiedades e interfaces se nombran en **`PascalCase`** (e.g., `SupplyService`, `GetAllSupplies`).
+- Variables locales y parámetros de método se nombran en **`camelCase`** (e.g., `supplyId`, `restaurantName`).
+- Los campos privados se prefijan con **guion bajo** seguido de `camelCase` (e.g., `_supplyRepository`).
+- Las interfaces se prefijan con **`I`** (e.g., `ISupplyRepository`, `IOrderService`).
+- Cada archivo contiene **una única clase o interfaz pública**.
+- Las clases de controlador heredan de `ControllerBase` y se anotan con **`[ApiController]`** y **`[Route("api/v1/[controller]")]`**.
+- Los métodos de acción se anotan con el verbo HTTP correspondiente: `[HttpGet]`, `[HttpPost]`, `[HttpPut]`, `[HttpDelete]`, `[HttpPatch]`.
+- El manejo de excepciones se centraliza en **middleware global**; no se emplean bloques `try/catch` genéricos en los controladores.
+- Se aplica **inyección de dependencias** a través del constructor en todos los servicios y repositorios.
+- Los DTOs de entrada y salida se nombran con los sufijos **`Request`** / **`Response`** (e.g., `CreateSupplyRequest`, `SupplyResponse`).
+- Se aplica **Domain-Driven Design** para la organización en bounded contexts (Inventory, Orders, Auth, Suppliers, Recipes).
+
+**Herramienta de análisis:** Roslyn Analyzers integrados en el SDK de .NET, complementados con `.editorconfig` en el repositorio.
+
+
+
+---
+
+##### Gherkin — Archivos `.feature` (BDD)
+
+Se siguen las **Gherkin Conventions for Readable Specifications** de SpecFlow:
+
+- Cada archivo `.feature` describe un **único flujo de negocio o funcionalidad** claramente delimitado.
+- Los títulos de `Feature` y `Scenario` son descriptivos, redactados en español, en tiempo presente y sin ambigüedad.
+- Se usan las palabras clave correctamente según su rol semántico:
+  - **`Given`**: estado o contexto previo al evento.
+  - **`When`**: acción o evento que desencadena el flujo.
+  - **`Then`**: resultado observable y verificable esperado.
+  - **`And` / `But`**: extensión de cualquiera de los anteriores, nunca como primer paso.
+- Los steps **no hacen referencia a detalles de UI** (nombres de botones, campos específicos de pantalla); describen el comportamiento del sistema en términos de negocio.
+- Se usa **`Scenario Outline`** + `Examples` cuando un mismo flujo debe verificarse con múltiples conjuntos de datos.
+- Los steps se **reutilizan** entre escenarios para evitar duplicación en la definición de pasos.
+- El nombre del archivo `.feature` sigue el formato `kebab-case` en inglés (e.g., `supply-management.feature`, `order-tracking.feature`).
+
+
+---
+
+##### Conventional Commits & GitFlow
+
+El equipo aplica **Conventional Commits** para todos los mensajes de commit en los repositorios del proyecto:
+
+**Formato:** `<type>(<scope>): <description>`
+
+| Tipo | Uso |
+|------|-----|
+| `feat` | Nueva funcionalidad |
+| `fix` | Corrección de defecto |
+| `docs` | Cambios en documentación |
+| `style` | Formato sin cambio de lógica |
+| `refactor` | Refactorización sin nueva funcionalidad ni fix |
+| `test` | Adición o corrección de pruebas |
+| `chore` | Tareas de mantenimiento, dependencias |
+| `ci` | Cambios en pipeline de CI/CD |
+
+**Ejemplos aplicados al proyecto:**
+```
+feat(inventory): add low-stock alert endpoint
+fix(auth): correct JWT token expiration handling
+test(recipes): add unit tests for RecipeService
+ci(pipeline): configure GitHub Actions for .NET build
+docs(api): update Swagger annotations for suppliers module
+```
+
+Para el control de versiones se aplica **GitFlow**:
+
+| Rama | Propósito |
+|------|-----------|
+| `main` | Código en producción |
+| `develop` | Integración continua de features |
+| `feature/<nombre>` | Desarrollo de funcionalidad individual |
+| `release/<versión>` | Preparación de liberación (ej. `release/1.2.0`) |
+| `hotfix/<descripción>` | Correcciones urgentes sobre producción |
+
+La nomenclatura de versiones sigue **Semantic Versioning 2.0.0**: `MAJOR.MINOR.PATCH` (e.g., `v1.0.0`, `v1.1.3`).
+
+**Referencias adoptadas:**
+- Conventional Commits. (s.f.). *Conventional commits specification*. https://www.conventionalcommits.org/
+- Driessen, V. (2010). *A successful Git branching model*. https://nvie.com/posts/a-successful-git-branching-model/
+- Preston-Werner, T. (2013). *Semantic versioning 2.0.0*. https://semver.org/
+
 
 #### 6.2.1.2. Code Quality & Code Security
 
@@ -913,6 +1061,7 @@ Para proteger la integridad de los datos y asegurar la API RESTful frente a vuln
 *Dashboard general de métricas demostrando la aprobación del Quality Gate del backend. La evidencia certifica un sistema altamente seguro y confiable al reportar 0 bugs funcionales y 0 vulnerabilidades de seguridad.*
 
 ### 6.2.2. Reviews
+
 
 ## 6.3. Validation Interviews
 
@@ -1019,9 +1168,348 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistem
 
 #### 6.4.1.1. Información del grupo auditado
 
+**UX Heuristics & Principles Evaluation**
+**Usability – Inclusive Design – Information Architecture**
+
+| Campo | Detalle |
+|---|---|
+| **Carrera** | Ingeniería de Software |
+| **Curso** | Diseño de Experimentos de Ingeniería de Software |
+| **NRC** | 10253 |
+| **Profesor** | Juan Carlos Tinoco Licas |
+| **Auditor** | Restock Team (UI-Topic) — Castro Alejos Julio Daniel, Chavez Uribe Ario, Guerra Perez José Jahaziel, Sanchez Guevara Ivan Fernando, Shapiama Rivera Gabriela Nicole |
+| **Cliente(s)** | Budgetly |
+
+##### SITE y APP A EVALUAR
+
+**Budgetly** — Plataforma web orientada a dividir y gestionar los gastos del hogar de forma proporcional según el ingreso de cada miembro.
+
+https://equilibriac.github.io/Budgetly-LandingPage/
+
+https://budgetly-exp-app.web.app/
+
+
+##### TAREAS A EVALUAR
+
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
+
+1. Inicio de sesión con correo y contraseña
+2. Registro de una cuenta nueva (rol Representante o Miembro)
+3. Creación y administración de un hogar (Household)
+4. Invitación y gestión de miembros del hogar
+5. Registro y gestión de gastos / facturas (Bills)
+6. Asignación de ingresos y contribuciones proporcionales por hogar
+7. Configuración de la cuenta (idioma, modo oscuro, notificaciones)
+8. Visualización del perfil de usuario
+9. Vista de miembro: seguimiento de "Mis aportes" y "Estado del hogar"
+
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+
+1. Flujo completo de pago / suscripción al plan Premium
+2. Recuperación de contraseña olvidada
+3. Aplicación móvil (no se evidenció su existencia)
+4. Pruebas de carga, seguridad o rendimiento sobre la API
+
+---
+
 #### 6.4.1.2. Cronograma de auditoría realizada
 
+| Actividades de Auditoria realizada |Fecha | Hora | Realizado por|
+|------------------------------------|------|------|--------------|
+| Envío de solicitud de información  | 8/06/2026 | 3:00 pm     |    Fernando Sanchez     |  
+| Recepción de información           | 9/06/2026 |  9:30 pm  |  Fernando Sanchez   |  
+| Ejecución del proceso de auditoría | 10/06/2026 |  4:40 pm   |  Fernando Sanchez   |  
+| Elaboración del informe de auditoría | 12/06/2026 |   3:30 pm   |  Fernando Sanchez   |  
+| Envío del informe de auditoría  |  14/06/2026 |  11:00 am    |  Fernando Sanchez   |  
+
 #### 6.4.1.3. Contenido de auditoría realizada
+
+##### ESCALA DE SEVERIDAD
+
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
+
+| Nivel | Descripción |
+|---|---|
+| 1 | Problema superficial: puede ser fácilmente superado por el usuario o ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| 2 | Problema menor: puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente release. |
+| 3 | Problema mayor: ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta. |
+| 4 | Problema muy grave: un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
+
+---
+
+##### TABLA RESUMEN
+
+| # | Problema | Severidad | Heurística/Principio violado(o) |
+|---|---|---|---|
+| 1 | Inconsistencia de idioma entre pantallas de la plataforma | 2 | Usability: Consistency and standards |
+| 2 | Inconsistencia de marca (logo "Budgetly" vs "MyApp") | 2 | Usability: Consistency and standards |
+| 3 | Bajo contraste en el texto "Forgot Password?" | 1 | Accessibility: Legibility and contrast |
+| 4 | Botón de notificaciones no funcional en la sección Members | 2 | Visibility: Visibility of system status |
+| 5 | Claves de traducción sin resolver visibles en la interfaz | 3 | Usability: Aesthetic and minimalist design |
+| 6 | Miembros invitados se muestran sin nombre visible | 2 | Usability: Recognition over recall |
+| 7 | Falta de validación al crear un Household | 2 | Usability: Error prevention |
+| 8 | Mensaje de error genérico al eliminar un household | 2 | Visibility: Visibility of system status |
+| 9 | Discrepancia entre la fecha seleccionada y la fecha guardada al crear un Bill | 3 | Usability: User freedom and control |
+| 10 | El botón "Save" no guarda si los porcentajes no suman 100%, sin aviso claro | 3 | Visibility: Visibility of system status |
+| 11 | Falta de validación de montos extremos en el campo "Income" | 2 | Usability: Error prevention |
+| 12 | Mensajes de error técnicos (códigos HTTP) expuestos directamente al usuario | 3 | Visibility: Visibility of system status |
+| 13 | Página de Perfil completamente vacía | 3 | Usability: Aesthetic and minimalist design |
+| 14 | Errores de codificación de caracteres (mojibake) en la interfaz y en exportaciones | 2 | Usability: Aesthetic and minimalist design |
+| 15 | El botón "Guardar" en "Ingreso mensual" (Mis aportes) no guarda los datos | 3 | Visibility: Visibility of system status |
+| 16 | Comportamiento inconsistente entre idioma inglés y español al guardar configuración | 3 | Usability: Consistency and standards |
+
+*Nota. Elaboración propia.*
+
+---
+
+##### RECOMENDACIONES
+
+### Problema n°1: Inconsistencia de idioma entre pantallas de la plataforma
+
+**Severidad:** 2
+**Heurística violada:** Usability: Consistency and standards
+
+**Problema:**
+El login y el dashboard ("Welcome Back!", "Sign In", "Welcome", "Total Members") están en inglés, mientras que el landing page y ciertos mensajes del propio dashboard ("¡Bienvenido!", "Se ha creado el ID de su hogar...") están en español. El usuario no tiene certeza de en qué idioma está operando la plataforma en cada momento.
+
+![prob 1](https://i.imgur.com/AJFEnvD.png)
+
+**Recomendación:**
+Definir un idioma por defecto consistente en toda la aplicación y asegurar que el selector de idioma (visto en Configuración) traduzca el 100% de las pantallas, incluidos modales y mensajes del sistema, no solo las etiquetas estáticas.
+
+---
+
+### Problema n°2: Inconsistencia de marca (logo "Budgetly" vs "MyApp")
+
+**Severidad:** 2
+**Heurística violada:** Usability: Consistency and standards
+
+**Problema:**
+En la pantalla de inicio de sesión el logo y nombre mostrado es "Budgetly", pero en la pantalla de registro ("Create Account") el mismo elemento muestra el texto "MyApp". Esto genera dudas sobre si se trata de la misma plataforma.
+
+![prob 2a](https://i.imgur.com/mQWP3qR.png)
+
+![prob 2b](https://i.imgur.com/ADgUyfJ.png)
+
+
+**Recomendación:**
+Unificar el nombre e identidad visual de la marca en todas las pantallas de autenticación y del producto.
+
+---
+
+### Problema n°3: Bajo contraste en el texto "Forgot Password?"
+
+**Severidad:** 1
+**Heurística violada:** Accessibility: Legibility and contrast
+
+**Problema:**
+El enlace "Forgot Password?" en la pantalla de login se muestra en un tono dorado/amarillo claro sobre fondo blanco, dificultando su lectura, en especial para personas con baja visión.
+
+![prob 3](https://i.imgur.com/BikGNRV.png)
+
+**Recomendación:**
+Aumentar el contraste del texto utilizando un tono más oscuro o agregando subrayado, siguiendo las pautas WCAG de accesibilidad.
+
+---
+
+### Problema n°4: Botón de notificaciones no funcional en la sección Members
+
+**Severidad:** 2
+**Heurística violada:** Visibility: Visibility of system status
+
+**Problema:**
+El ícono de campana de notificaciones ubicado en la cabecera de "Household Members" no responde al hacer clic, dejando al usuario sin acceso a las alertas relacionadas con los miembros del hogar.
+
+![Prob 4](https://imgur.com/XWZ3qGX.png)
+
+**Recomendación:**
+Revisar el binding del componente de notificaciones en esta vista y agregar feedback visual (loading, badge, dropdown) al interactuar con él.
+
+---
+
+### Problema n°5: Claves de traducción sin resolver visibles en la interfaz
+
+**Severidad:** 3
+**Heurística violada:** Usability: Aesthetic and minimalist design
+
+**Problema:**
+En la pantalla "Household Members" aparece literalmente el texto "representativeMembers.header.householdSelector" en lugar de una etiqueta legible, evidenciando una clave de internacionalización (i18n) sin traducir. Esto se repite de forma consistente en varias capturas, afectando la percepción de calidad del producto.
+
+![prob 5](https://imgur.com/zYpGHze.png)
+
+**Recomendación:**
+Revisar los archivos de traducción (i18n) para asegurar que todas las claves usadas en el código tengan su valor correspondiente cargado antes de pasar a producción.
+
+---
+
+### Problema n°6: Miembros invitados se muestran sin nombre visible
+
+**Severidad:** 2
+**Heurística violada:** Usability: Recognition over recall
+
+**Problema:**
+En la tabla de "Household Members", los miembros con estado "Pending" se listan con la columna "Name" vacía (solo se muestra un ícono circular sin iniciales ni texto), impidiendo identificar a quién corresponde cada invitación.
+
+![prob 6](https://imgur.com/zYpGHze.png)
+
+**Recomendación:**
+Mostrar al menos el correo electrónico o nombre proporcionado en la invitación mientras el estado sea "Pending", en lugar de dejar el campo vacío.
+
+---
+
+### Problema n°7: Falta de validación al crear un Household
+
+**Severidad:** 2
+**Heurística violada:** Usability: Error prevention
+
+**Problema:**
+El sistema permitió crear un hogar con nombre "xdddd", descripción "1231321xdd%#@%" y 500 miembros, sin ninguna validación de formato ni límites razonables.
+
+![prob 7](https://imgur.com/dexdzMW.png)
+
+**Recomendación:**
+Implementar validaciones de formato y rangos razonables (ej. máximo de miembros, caracteres permitidos en nombre/descripción) tanto en frontend como en backend.
+
+---
+
+### Problema n°8: Mensaje de error genérico al eliminar un household
+
+**Severidad:** 2
+**Heurística violada:** Visibility: Visibility of system status
+
+**Problema:**
+Al intentar eliminar un hogar, el sistema muestra únicamente "Error: Could not delete the household", sin indicar la causa real (por ejemplo, si tiene miembros o gastos asociados) ni una acción sugerida para resolverlo.
+
+![prob 8](https://imgur.com/dexdzMW.png)
+
+**Recomendación:**
+Especificar la causa del error (ej. "No se puede eliminar: el hogar tiene miembros activos") y sugerir el paso a seguir para resolverlo.
+
+---
+
+### Problema n°9: Discrepancia entre la fecha seleccionada y la fecha guardada al crear un Bill
+
+**Severidad:** 3
+**Heurística violada:** Usability: User freedom and control
+
+**Problema:**
+El campo "Payment day" del formulario "Add Bill" permite seleccionar fechas pasadas (por ejemplo, 19/05/2020), pero al confirmar la creación el sistema registra la fecha actual en lugar de la seleccionada, sin advertir al usuario de esta discrepancia.
+
+![prob 9](https://imgur.com/JhNZe95.png)
+
+**Recomendación:**
+Corregir la lógica de guardado para que respete la fecha elegida por el usuario, o en su defecto restringir el selector para que solo permita fechas válidas según la regla de negocio, mostrando un mensaje explicativo.
+
+---
+
+### Problema n°10: El botón "Save" no guarda si los porcentajes no suman 100%, sin aviso claro
+
+**Severidad:** 3
+**Heurística violada:** Visibility: Visibility of system status
+
+**Problema:**
+En el modal "Edit income and allocations", si la suma de porcentajes asignados por hogar no llega a 100% (ej. 76%), el botón "Save" no guarda los cambios, pero la única señal visible es el texto "Total: 76.00%" en rojo, sin un mensaje que indique que se requiere llegar a 100% para guardar.
+
+![prob 10](https://imgur.com/iLQZLwB.png)
+
+**Recomendación:**
+Agregar un mensaje de error explícito (ej. "El total debe ser 100% para guardar los cambios") y deshabilitar visualmente el botón "Save" mientras la condición no se cumpla.
+
+---
+
+### Problema n°11: Falta de validación de montos extremos en el campo "Income"
+
+**Severidad:** 2
+**Heurística violada:** Usability: Error prevention
+
+**Problema:**
+El sistema permitió registrar un ingreso de "39.466.666.666,56 PEN" sin ningún límite superior ni validación de monto razonable, lo que puede distorsionar los cálculos de distribución proporcional.
+
+![prob 11](https://imgur.com/iLQZLwB.png)
+
+
+**Recomendación:**
+Definir un rango máximo razonable para el campo de ingresos y mostrar una advertencia si el valor ingresado lo excede.
+
+---
+
+### Problema n°12: Mensajes de error técnicos (códigos HTTP) expuestos directamente al usuario
+
+**Severidad:** 3
+**Heurística violada:** Visibility: Visibility of system status
+
+**Problema:**
+En varias pantallas (Configuración de Cuenta, Estado del hogar) los errores se muestran como "Request failed with status code 405" o "Request failed with status code 404", textos técnicos pensados para desarrolladores, no para usuarios finales.
+
+![Prob 12](https://imgur.com/d43GjHi.png)
+
+**Recomendación:**
+Interceptar los errores de la API y traducirlos a mensajes en lenguaje natural y orientados a la acción (ej. "No se pudo guardar tu configuración, intenta nuevamente").
+
+---
+
+### Problema n°13: Página de Perfil completamente vacía
+
+**Severidad:** 3
+**Heurística violada:** Usability: Aesthetic and minimalist design
+
+**Problema:**
+Al acceder a la sección "Profile" desde el menú lateral, la pantalla se carga completamente en blanco, sin ningún contenido, campo o mensaje de error, dejando al usuario sin saber si la página está cargando, rota o si simplemente no existe contenido.
+
+![prob 13](https://imgur.com/NPNT2fL.png)
+
+**Recomendación:**
+Implementar el contenido de la vista de Perfil o, en su defecto, mostrar un estado de carga o un mensaje "Próximamente" en lugar de dejar la pantalla vacía.
+
+---
+
+### Problema n°14: Errores de codificación de caracteres (mojibake) en la interfaz y en exportaciones
+
+**Severidad:** 2
+**Heurística violada:** Usability: Aesthetic and minimalist design
+
+**Problema:**
+En la sección "Mis aportes" las columnas de la tabla muestran "Fecha lÃmite" y "Ãšltimo movimiento" en lugar de "Fecha límite" y "Último movimiento". El mismo problema de codificación se replica en el archivo CSV exportado ("estado_hogar"), afectando tanto la interfaz como los reportes descargables.
+
+![prob 14](https://imgur.com/pu8to7g.png)
+
+**Recomendación:**
+Verificar que todos los archivos de origen, respuestas de la API y exportaciones (CSV) utilicen codificación UTF-8 de forma consistente en todo el flujo de datos.
+
+---
+
+### Problema n°15: El botón "Guardar" en "Ingreso mensual" (Mis aportes) no guarda los datos
+
+**Severidad:** 3
+**Heurística violada:** Visibility: Visibility of system status
+
+**Problema:**
+En la vista de Miembro, al ingresar un monto en "Ingreso mensual" y presionar "Guardar", el dato no se persiste y no se muestra ningún mensaje de error ni confirmación, dejando al usuario sin saber si la acción fue exitosa.
+
+![prob 15](https://imgur.com/pu8to7g.png)
+
+**Recomendación:**
+Corregir el guardado en backend/frontend y mostrar siempre una confirmación visual ("Ingreso actualizado") o un mensaje de error si la operación falla.
+
+---
+
+### Problema n°16: Comportamiento inconsistente entre idioma inglés y español al guardar configuración
+
+**Severidad:** 3
+**Heurística violada:** Usability: Consistency and standards
+
+**Problema:**
+En "Account Settings" (inglés), al presionar "Save changes" el sistema muestra "Settings saved successfully". Al repetir la misma acción en español ("Configuración de Cuenta" → "Guardar cambios"), el sistema responde con "Request failed with status code 405", pese a tratarse de la misma funcionalidad.
+
+![Prob 16](https://imgur.com/d43GjHi.png)
+
+
+**Recomendación:**
+Revisar si el endpoint de guardado de configuración envía algún parámetro de idioma o método HTTP distinto según la localización seleccionada, y unificar el comportamiento para ambos idiomas.
+
+
+---
+
 
 ### 6.4.2. Auditoría recibida
 
