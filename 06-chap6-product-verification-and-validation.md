@@ -999,11 +999,12 @@ La nomenclatura de versiones sigue **Semantic Versioning 2.0.0**: `MAJOR.MINOR.P
 
 #### 6.2.1.2. Code Quality & Code Security
 
-Para garantizar la mantenibilidad, escalabilidad y seguridad del backend `restock-platform` desarrollado en Spring Boot, el equipo implementó un proceso de análisis de código estático utilizando **SonarQube** como herramienta principal. 
+Para garantizar la mantenibilidad, escalabilidad y seguridad de los aplicativos de la plataforma (Backend y Frontend), el equipo implementó un proceso de análisis de código estático utilizando **SonarQube** como herramienta principal. 
 
-Para llevar a cabo esta evaluación sin comprometer el entorno de producción, el servidor de inspección se desplegó localmente mediante un contenedor de Docker. Posteriormente, se generó un token de autenticación y se ejecutó el escáner directamente desde el IDE (IntelliJ IDEA) a través de Apache Maven (`sonar-maven-plugin`), trabajando sobre la rama correspondiente de GitFlow (`feature/sonarqube-integration`).
+Para llevar a cabo esta evaluación sin comprometer el entorno de producción, el servidor de inspección se desplegó localmente mediante un contenedor de Docker. Posteriormente, se configuraron los tokens de autenticación y se ejecutaron los respectivos escáneres trabajando sobre las ramas correspondientes de GitFlow (`feature/sonarqube-integration`).
 
-A continuación, se detalla la evidencia de la configuración y ejecución del entorno de evaluación:
+#### 1. Configuración del Entorno de Evaluación (Backend)
+A continuación, se detalla la evidencia de la configuración y ejecución del escáner en el proyecto de Spring Boot (API RESTful) integrado directamente desde el IDE a través de Apache Maven (`sonar-maven-plugin`).
 
 ![Despliegue inicial de SonarQube en Docker](assets/images/chapter6/code-quality-security/e-1.png)
 *Despliegue inicial del contenedor de SonarQube (versión LTS) de forma local utilizando Docker a través de Windows PowerShell, estableciendo la infraestructura base necesaria para ejecutar el análisis estático.*
@@ -1040,25 +1041,48 @@ A continuación, se detalla la evidencia de la configuración y ejecución del e
 
 ---
 
+#### 2. Resultados del Análisis Backend
 A continuación, se detallan los resultados de la evaluación técnica arrojados tras la compilación exitosa.
 
-#### 1. Code Quality (Calidad del Código)
-El análisis estructural se enfocó en evaluar la complejidad ciclomática, la duplicación de código y la presencia de deuda técnica. El código fue desarrollado priorizando un diseño limpio y la reutilización de componentes.
-
-* **Deuda Técnica y Complejidad:** El escáner identificó 137 *Code Smells*, lo que representa una deuda técnica estimada de 1 día y 5 horas. Se identificó que la mayoría de estos hallazgos corresponden a prácticas de mantenibilidad, tales como el uso de `System.out` en lugar de *Loggers* formales en la capa de servicios (ej. `UserCommandServiceImpl`), así como importaciones no utilizadas y clases vacías en la capa de dominio. Estos puntos han sido mapeados para futuras refactorizaciones.
-* **Duplicación:** El porcentaje de líneas duplicadas es prácticamente nulo, ubicándose en un excelente **0.2%** sobre más de 6.5k líneas de código analizadas. Esto valida el cumplimiento de las buenas prácticas de diseño orientado a objetos.
+* **Code Quality (Calidad del Código):** El análisis estructural se enfocó en evaluar la complejidad ciclomática, la duplicación de código y la presencia de deuda técnica. El escáner identificó 137 *Code Smells*, representando una deuda técnica estimada de 1 día y 5 horas. La mayoría de estos hallazgos corresponden a prácticas de mantenibilidad, como el uso de `System.out` en lugar de *Loggers* en la capa de servicios (ej. `UserCommandServiceImpl`) y clases vacías en la capa de dominio. El porcentaje de duplicación es casi nulo (**0.2%** sobre 6.5k líneas), validando el diseño orientado a objetos.
+* **Code Security (Seguridad del Código):** La herramienta confirmó la robustez del sistema otorgando una calificación de nivel 'A', reportando **0 vulnerabilidades** y **0 bugs** funcionales. Esto demuestra que la plataforma está protegida contra inyecciones SQL o ataques severos. Se detectaron 3 *Security Hotspots* vinculados a configuraciones del framework (CORS/CSRF) que han sido programados para revisión manual.
 
 ![Detalle de Code Smells](assets/images/chapter6/code-quality-security/e-13.png)
 *Desglose detallado de la deuda técnica (Code Smells) identificada por el escáner, visibilizando hallazgos estructurales (como el uso de salidas por consola en lugar de Loggers formales) que guiarán las futuras labores de refactorización.*
 
-#### 2. Code Security (Seguridad del Código)
-Para proteger la integridad de los datos y asegurar la API RESTful frente a vulnerabilidades, el análisis verificó el cumplimiento de las normativas de seguridad aplicables al entorno Java/Spring.
-
-* **Identificación de Vulnerabilidades:** La herramienta confirmó la robustez del sistema otorgando una calificación de nivel 'A', reportando **0 vulnerabilidades** y **0 bugs** funcionales. Esto demuestra que la plataforma está debidamente protegida contra amenazas críticas, como inyecciones SQL en repositorios o ataques XSS.
-* **Security Hotspots:** Se detectaron 3 *Security Hotspots* pendientes de revisión (estado 'E' - Security Review). Estos avisos corresponden a configuraciones sensibles propias del framework (como habilitación de CORS o CSRF), las cuales el equipo revisará y validará manualmente para confirmar que los filtros de seguridad operen de forma estricta y segura.
-
 ![Dashboard de SonarQube Quality Gate](assets/images/chapter6/code-quality-security/e-12.png)
 *Dashboard general de métricas demostrando la aprobación del Quality Gate del backend. La evidencia certifica un sistema altamente seguro y confiable al reportar 0 bugs funcionales y 0 vulnerabilidades de seguridad.*
+
+---
+
+#### 3. Configuración y Análisis Estático del Frontend (Web Application)
+De manera complementaria para garantizar la calidad full-stack, se configuró y ejecutó el análisis de código estático para el cliente web desarrollado en Angular, utilizando la herramienta universal `sonar-scanner` a través de Node.js.
+
+![Creación de proyecto frontend](assets/images/chapter6/code-quality-security/evf-1.png)
+*Inicio de la configuración del entorno de evaluación para el frontend, iniciando la creación manual de un nuevo proyecto en el panel de SonarQube.*
+
+![Setup project frontend](assets/images/chapter6/code-quality-security/evf-2.png)
+*Definición del identificador único del proyecto (`restock-web-application`) y la rama principal, estableciendo el espacio de trabajo para el código fuente del cliente.*
+
+![Token frontend](assets/images/chapter6/code-quality-security/evf-3.png)
+*Generación del token de autenticación dedicado para el proyecto frontend, garantizando la seguridad en la transmisión de métricas hacia el servidor.*
+
+![Instrucciones Sonar Scanner](assets/images/chapter6/code-quality-security/evf-4.png)
+*Obtención de las directivas de ejecución proporcionadas por SonarQube para entornos web (JavaScript/TypeScript) mediante el uso del escáner independiente.*
+
+![Configuración Properties](assets/images/chapter6/code-quality-security/evf-5.png)
+*Configuración de los parámetros en el archivo `sonar-project.properties` y ejecución del comando `npx sonarqube-scanner` en la terminal integrada de VS Code.*
+
+![Execution Success Frontend](assets/images/chapter6/code-quality-security/evf-6.png)
+*Validación de la finalización exitosa del escaneo (EXECUTION SUCCESS), confirmando el análisis de los archivos TypeScript, HTML y CSS, y su envío al servidor local.*
+
+**Resultados del Análisis Frontend:**
+Al igual que el backend, la aplicación cliente aprobó exitosamente el *Quality Gate*.
+* **Mantenibilidad y Fiabilidad:** Se mapeó una deuda técnica de 112 *Code Smells* y 26 advertencias de fiabilidad (Bugs) sobre más de 15,000 líneas de código, comúnmente asociados a variables declaradas pero no utilizadas, aserciones faltantes o estilos no optimizados. El índice de duplicación se mantuvo en un controlable 6.4%.
+* **Seguridad Web:** El análisis certificó **0 vulnerabilidades**, garantizando que los formularios, inputs y manejos de eventos de Angular no presentan riesgos de inyección y protegen la integridad de la sesión del usuario en el navegador.
+
+![Dashboard Frontend SonarQube](assets/images/chapter6/code-quality-security/evf-7.png)
+*Dashboard de métricas del frontend demostrando la aprobación del Quality Gate. Destaca la ausencia de vulnerabilidades de seguridad (0) y mapea la deuda técnica actual (112 Code Smells y 26 bugs de fiabilidad) para priorizar su refactorización.*
 
 ### 6.2.2. Reviews
 
