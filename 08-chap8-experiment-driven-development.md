@@ -16,6 +16,35 @@ Este resumen establece que el punto de partida de la fase actual no es la genera
 
 ### 8.1.3. Experiment-Ready Questions
 
+### 8.1.3. Experiment-Ready Questions
+
+Para transformar la materia prima y la incertidumbre operativa descrita en el As-Is Summary en elementos accionables, se han formulado *Experiment-Ready Questions*. Estas preguntas delimitan el alcance de los experimentos para la plataforma Restock y se dividen en dos categorías principales.
+
+Para descubrir las premisas ocultas detrás de los problemas de gestión de inventarios y adopción B2B, y así generar las preguntas adecuadas, el equipo aplicó la técnica de las **"Cinco Ws (y una H)"**:
+
+* **Who (Quién):** Administradores de restaurantes con baja afinidad digital y proveedores de insumos tradicionales en Lima.
+* **What (Qué):** Desperdicio de insumos por falta de control, fricción tecnológica en la adopción de nuevas herramientas, y resistencia para digitalizar catálogos.
+* **Where (Dónde):** En el ecosistema operativo de los restaurantes (almacén, cocina) y en los canales de venta de los proveedores.
+* **When (Cuándo):** Durante el monitoreo diario de caducidad/stock y el proceso de reabastecimiento o creación de órdenes de compra.
+* **Why (Por qué):** Porque la dependencia de procesos manuales, la falta de datos históricos y la intuición generan ineficiencias, sobrestock y mermas que afectan directamente la rentabilidad de ambos actores.
+* **How (Cómo):** Mediante la implementación del ecosistema digital (Web, App Nativa y Flutter) que automatiza alertas, simplifica el flujo de pedidos y ofrece métricas de rotación accionables.
+
+A partir de este análisis, se han definido las siguientes preguntas listas para experimentación, las cuales alimentan directamente el Backlog y las Tarjetas de Experimento del proyecto:
+
+#### A. Preguntas Impulsadas por Creencias (Belief-led Questions)
+Estas preguntas buscan probar una creencia o premisa específica sobre la solución propuesta frente a los problemas críticos de negocio definidos previamente.
+
+* **EQ1:** ¿Reducen las alertas automáticas de "stock bajo" y "vencimiento" en tiempo real el desperdicio de insumos perecibles en un 35%?
+* **EQ2:** ¿Son capaces los administradores con baja afinidad digital de completar un pedido de insumos de forma autónoma sin asistencia externa?
+* **EQ3:** ¿Están los proveedores tradicionales dispuestos a digitalizar sus catálogos para integrarse a Restock a cambio de una gestión de pedidos centralizada?
+* **EQ4:** ¿Influye la visualización de métricas de rotación en el dashboard web en la decisión de compra de nuevos insumos por parte de los administradores?
+
+#### B. Preguntas Exploratorias (Exploratory Questions)
+Estas preguntas buscan recopilar conocimiento cualitativo y explorar áreas del comportamiento de los usuarios donde el equipo aún tiene vacíos de información (*Knowledge Gaps*), sirviendo como complemento a los experimentos principales.
+
+* **EQ5:** ¿Qué canales o métodos de soporte (tutoriales interactivos, tooltips, asistencia humana por WhatsApp) prefieren los administradores de restaurantes para superar la fricción inicial durante su primer pedido en la app?
+* **EQ6:** ¿Cuáles son las principales barreras operativas o temores (inversión de tiempo, privacidad de precios, dificultad técnica) que impiden a los proveedores actualizar su inventario digital de manera frecuente en la plataforma web?
+
 ### 8.1.4. Question Backlog
 
 Siguiendo la metodología XDPD, se transformaron las premisas e incertidumbres en un backlog de preguntas de investigación en lugar de una lista de funcionalidades. Este enfoque permite priorizar el aprendizaje y mitigar los riesgos más altos del proyecto Restock antes de consolidar la solución técnica final.
