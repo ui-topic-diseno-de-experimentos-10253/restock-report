@@ -1168,9 +1168,348 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistem
 
 #### 6.4.1.1. Información del grupo auditado
 
+**UX Heuristics & Principles Evaluation**
+**Usability – Inclusive Design – Information Architecture**
+
+| Campo | Detalle |
+|---|---|
+| **Carrera** | Ingeniería de Software |
+| **Curso** | Diseño de Experimentos de Ingeniería de Software |
+| **NRC** | 10253 |
+| **Profesor** | Juan Carlos Tinoco Licas |
+| **Auditor** | Restock Team (UI-Topic) — Castro Alejos Julio Daniel, Chavez Uribe Ario, Guerra Perez José Jahaziel, Sanchez Guevara Ivan Fernando, Shapiama Rivera Gabriela Nicole |
+| **Cliente(s)** | Budgetly |
+
+##### SITE y APP A EVALUAR
+
+**Budgetly** — Plataforma web orientada a dividir y gestionar los gastos del hogar de forma proporcional según el ingreso de cada miembro.
+
+https://equilibriac.github.io/Budgetly-LandingPage/
+
+https://budgetly-exp-app.web.app/
+
+
+##### TAREAS A EVALUAR
+
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
+
+1. Inicio de sesión con correo y contraseña
+2. Registro de una cuenta nueva (rol Representante o Miembro)
+3. Creación y administración de un hogar (Household)
+4. Invitación y gestión de miembros del hogar
+5. Registro y gestión de gastos / facturas (Bills)
+6. Asignación de ingresos y contribuciones proporcionales por hogar
+7. Configuración de la cuenta (idioma, modo oscuro, notificaciones)
+8. Visualización del perfil de usuario
+9. Vista de miembro: seguimiento de "Mis aportes" y "Estado del hogar"
+
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+
+1. Flujo completo de pago / suscripción al plan Premium
+2. Recuperación de contraseña olvidada
+3. Aplicación móvil (no se evidenció su existencia)
+4. Pruebas de carga, seguridad o rendimiento sobre la API
+
+---
+
 #### 6.4.1.2. Cronograma de auditoría realizada
 
+| Actividades de Auditoria realizada |Fecha | Hora | Realizado por|
+|------------------------------------|------|------|--------------|
+| Envío de solicitud de información  | 8/06/2026 | 3:00 pm     |    Fernando Sanchez     |  
+| Recepción de información           | 9/06/2026 |  9:30 pm  |  Fernando Sanchez   |  
+| Ejecución del proceso de auditoría | 10/06/2026 |  4:40 pm   |  Fernando Sanchez   |  
+| Elaboración del informe de auditoría | 12/06/2026 |   3:30 pm   |  Fernando Sanchez   |  
+| Envío del informe de auditoría  |  14/06/2026 |  11:00 am    |  Fernando Sanchez   |  
+
 #### 6.4.1.3. Contenido de auditoría realizada
+
+##### ESCALA DE SEVERIDAD
+
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
+
+| Nivel | Descripción |
+|---|---|
+| 1 | Problema superficial: puede ser fácilmente superado por el usuario o ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| 2 | Problema menor: puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente release. |
+| 3 | Problema mayor: ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta. |
+| 4 | Problema muy grave: un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
+
+---
+
+##### TABLA RESUMEN
+
+| # | Problema | Severidad | Heurística/Principio violado(o) |
+|---|---|---|---|
+| 1 | Inconsistencia de idioma entre pantallas de la plataforma | 2 | Usability: Consistency and standards |
+| 2 | Inconsistencia de marca (logo "Budgetly" vs "MyApp") | 2 | Usability: Consistency and standards |
+| 3 | Bajo contraste en el texto "Forgot Password?" | 1 | Accessibility: Legibility and contrast |
+| 4 | Botón de notificaciones no funcional en la sección Members | 2 | Visibility: Visibility of system status |
+| 5 | Claves de traducción sin resolver visibles en la interfaz | 3 | Usability: Aesthetic and minimalist design |
+| 6 | Miembros invitados se muestran sin nombre visible | 2 | Usability: Recognition over recall |
+| 7 | Falta de validación al crear un Household | 2 | Usability: Error prevention |
+| 8 | Mensaje de error genérico al eliminar un household | 2 | Visibility: Visibility of system status |
+| 9 | Discrepancia entre la fecha seleccionada y la fecha guardada al crear un Bill | 3 | Usability: User freedom and control |
+| 10 | El botón "Save" no guarda si los porcentajes no suman 100%, sin aviso claro | 3 | Visibility: Visibility of system status |
+| 11 | Falta de validación de montos extremos en el campo "Income" | 2 | Usability: Error prevention |
+| 12 | Mensajes de error técnicos (códigos HTTP) expuestos directamente al usuario | 3 | Visibility: Visibility of system status |
+| 13 | Página de Perfil completamente vacía | 3 | Usability: Aesthetic and minimalist design |
+| 14 | Errores de codificación de caracteres (mojibake) en la interfaz y en exportaciones | 2 | Usability: Aesthetic and minimalist design |
+| 15 | El botón "Guardar" en "Ingreso mensual" (Mis aportes) no guarda los datos | 3 | Visibility: Visibility of system status |
+| 16 | Comportamiento inconsistente entre idioma inglés y español al guardar configuración | 3 | Usability: Consistency and standards |
+
+*Nota. Elaboración propia.*
+
+---
+
+##### RECOMENDACIONES
+
+### Problema n°1: Inconsistencia de idioma entre pantallas de la plataforma
+
+**Severidad:** 2
+**Heurística violada:** Usability: Consistency and standards
+
+**Problema:**
+El login y el dashboard ("Welcome Back!", "Sign In", "Welcome", "Total Members") están en inglés, mientras que el landing page y ciertos mensajes del propio dashboard ("¡Bienvenido!", "Se ha creado el ID de su hogar...") están en español. El usuario no tiene certeza de en qué idioma está operando la plataforma en cada momento.
+
+![prob 1](https://i.imgur.com/AJFEnvD.png)
+
+**Recomendación:**
+Definir un idioma por defecto consistente en toda la aplicación y asegurar que el selector de idioma (visto en Configuración) traduzca el 100% de las pantallas, incluidos modales y mensajes del sistema, no solo las etiquetas estáticas.
+
+---
+
+### Problema n°2: Inconsistencia de marca (logo "Budgetly" vs "MyApp")
+
+**Severidad:** 2
+**Heurística violada:** Usability: Consistency and standards
+
+**Problema:**
+En la pantalla de inicio de sesión el logo y nombre mostrado es "Budgetly", pero en la pantalla de registro ("Create Account") el mismo elemento muestra el texto "MyApp". Esto genera dudas sobre si se trata de la misma plataforma.
+
+![prob 2a](https://i.imgur.com/mQWP3qR.png)
+
+![prob 2b](https://i.imgur.com/ADgUyfJ.png)
+
+
+**Recomendación:**
+Unificar el nombre e identidad visual de la marca en todas las pantallas de autenticación y del producto.
+
+---
+
+### Problema n°3: Bajo contraste en el texto "Forgot Password?"
+
+**Severidad:** 1
+**Heurística violada:** Accessibility: Legibility and contrast
+
+**Problema:**
+El enlace "Forgot Password?" en la pantalla de login se muestra en un tono dorado/amarillo claro sobre fondo blanco, dificultando su lectura, en especial para personas con baja visión.
+
+![prob 3](https://i.imgur.com/BikGNRV.png)
+
+**Recomendación:**
+Aumentar el contraste del texto utilizando un tono más oscuro o agregando subrayado, siguiendo las pautas WCAG de accesibilidad.
+
+---
+
+### Problema n°4: Botón de notificaciones no funcional en la sección Members
+
+**Severidad:** 2
+**Heurística violada:** Visibility: Visibility of system status
+
+**Problema:**
+El ícono de campana de notificaciones ubicado en la cabecera de "Household Members" no responde al hacer clic, dejando al usuario sin acceso a las alertas relacionadas con los miembros del hogar.
+
+![Prob 4](https://imgur.com/XWZ3qGX.png)
+
+**Recomendación:**
+Revisar el binding del componente de notificaciones en esta vista y agregar feedback visual (loading, badge, dropdown) al interactuar con él.
+
+---
+
+### Problema n°5: Claves de traducción sin resolver visibles en la interfaz
+
+**Severidad:** 3
+**Heurística violada:** Usability: Aesthetic and minimalist design
+
+**Problema:**
+En la pantalla "Household Members" aparece literalmente el texto "representativeMembers.header.householdSelector" en lugar de una etiqueta legible, evidenciando una clave de internacionalización (i18n) sin traducir. Esto se repite de forma consistente en varias capturas, afectando la percepción de calidad del producto.
+
+![prob 5](https://imgur.com/zYpGHze.png)
+
+**Recomendación:**
+Revisar los archivos de traducción (i18n) para asegurar que todas las claves usadas en el código tengan su valor correspondiente cargado antes de pasar a producción.
+
+---
+
+### Problema n°6: Miembros invitados se muestran sin nombre visible
+
+**Severidad:** 2
+**Heurística violada:** Usability: Recognition over recall
+
+**Problema:**
+En la tabla de "Household Members", los miembros con estado "Pending" se listan con la columna "Name" vacía (solo se muestra un ícono circular sin iniciales ni texto), impidiendo identificar a quién corresponde cada invitación.
+
+![prob 6](https://imgur.com/zYpGHze.png)
+
+**Recomendación:**
+Mostrar al menos el correo electrónico o nombre proporcionado en la invitación mientras el estado sea "Pending", en lugar de dejar el campo vacío.
+
+---
+
+### Problema n°7: Falta de validación al crear un Household
+
+**Severidad:** 2
+**Heurística violada:** Usability: Error prevention
+
+**Problema:**
+El sistema permitió crear un hogar con nombre "xdddd", descripción "1231321xdd%#@%" y 500 miembros, sin ninguna validación de formato ni límites razonables.
+
+![prob 7](https://imgur.com/dexdzMW.png)
+
+**Recomendación:**
+Implementar validaciones de formato y rangos razonables (ej. máximo de miembros, caracteres permitidos en nombre/descripción) tanto en frontend como en backend.
+
+---
+
+### Problema n°8: Mensaje de error genérico al eliminar un household
+
+**Severidad:** 2
+**Heurística violada:** Visibility: Visibility of system status
+
+**Problema:**
+Al intentar eliminar un hogar, el sistema muestra únicamente "Error: Could not delete the household", sin indicar la causa real (por ejemplo, si tiene miembros o gastos asociados) ni una acción sugerida para resolverlo.
+
+![prob 8](https://imgur.com/dexdzMW.png)
+
+**Recomendación:**
+Especificar la causa del error (ej. "No se puede eliminar: el hogar tiene miembros activos") y sugerir el paso a seguir para resolverlo.
+
+---
+
+### Problema n°9: Discrepancia entre la fecha seleccionada y la fecha guardada al crear un Bill
+
+**Severidad:** 3
+**Heurística violada:** Usability: User freedom and control
+
+**Problema:**
+El campo "Payment day" del formulario "Add Bill" permite seleccionar fechas pasadas (por ejemplo, 19/05/2020), pero al confirmar la creación el sistema registra la fecha actual en lugar de la seleccionada, sin advertir al usuario de esta discrepancia.
+
+![prob 9](https://imgur.com/JhNZe95.png)
+
+**Recomendación:**
+Corregir la lógica de guardado para que respete la fecha elegida por el usuario, o en su defecto restringir el selector para que solo permita fechas válidas según la regla de negocio, mostrando un mensaje explicativo.
+
+---
+
+### Problema n°10: El botón "Save" no guarda si los porcentajes no suman 100%, sin aviso claro
+
+**Severidad:** 3
+**Heurística violada:** Visibility: Visibility of system status
+
+**Problema:**
+En el modal "Edit income and allocations", si la suma de porcentajes asignados por hogar no llega a 100% (ej. 76%), el botón "Save" no guarda los cambios, pero la única señal visible es el texto "Total: 76.00%" en rojo, sin un mensaje que indique que se requiere llegar a 100% para guardar.
+
+![prob 10](https://imgur.com/iLQZLwB.png)
+
+**Recomendación:**
+Agregar un mensaje de error explícito (ej. "El total debe ser 100% para guardar los cambios") y deshabilitar visualmente el botón "Save" mientras la condición no se cumpla.
+
+---
+
+### Problema n°11: Falta de validación de montos extremos en el campo "Income"
+
+**Severidad:** 2
+**Heurística violada:** Usability: Error prevention
+
+**Problema:**
+El sistema permitió registrar un ingreso de "39.466.666.666,56 PEN" sin ningún límite superior ni validación de monto razonable, lo que puede distorsionar los cálculos de distribución proporcional.
+
+![prob 11](https://imgur.com/iLQZLwB.png)
+
+
+**Recomendación:**
+Definir un rango máximo razonable para el campo de ingresos y mostrar una advertencia si el valor ingresado lo excede.
+
+---
+
+### Problema n°12: Mensajes de error técnicos (códigos HTTP) expuestos directamente al usuario
+
+**Severidad:** 3
+**Heurística violada:** Visibility: Visibility of system status
+
+**Problema:**
+En varias pantallas (Configuración de Cuenta, Estado del hogar) los errores se muestran como "Request failed with status code 405" o "Request failed with status code 404", textos técnicos pensados para desarrolladores, no para usuarios finales.
+
+![Prob 12](https://imgur.com/d43GjHi.png)
+
+**Recomendación:**
+Interceptar los errores de la API y traducirlos a mensajes en lenguaje natural y orientados a la acción (ej. "No se pudo guardar tu configuración, intenta nuevamente").
+
+---
+
+### Problema n°13: Página de Perfil completamente vacía
+
+**Severidad:** 3
+**Heurística violada:** Usability: Aesthetic and minimalist design
+
+**Problema:**
+Al acceder a la sección "Profile" desde el menú lateral, la pantalla se carga completamente en blanco, sin ningún contenido, campo o mensaje de error, dejando al usuario sin saber si la página está cargando, rota o si simplemente no existe contenido.
+
+![prob 13](https://imgur.com/NPNT2fL.png)
+
+**Recomendación:**
+Implementar el contenido de la vista de Perfil o, en su defecto, mostrar un estado de carga o un mensaje "Próximamente" en lugar de dejar la pantalla vacía.
+
+---
+
+### Problema n°14: Errores de codificación de caracteres (mojibake) en la interfaz y en exportaciones
+
+**Severidad:** 2
+**Heurística violada:** Usability: Aesthetic and minimalist design
+
+**Problema:**
+En la sección "Mis aportes" las columnas de la tabla muestran "Fecha lÃmite" y "Ãšltimo movimiento" en lugar de "Fecha límite" y "Último movimiento". El mismo problema de codificación se replica en el archivo CSV exportado ("estado_hogar"), afectando tanto la interfaz como los reportes descargables.
+
+![prob 14](https://imgur.com/pu8to7g.png)
+
+**Recomendación:**
+Verificar que todos los archivos de origen, respuestas de la API y exportaciones (CSV) utilicen codificación UTF-8 de forma consistente en todo el flujo de datos.
+
+---
+
+### Problema n°15: El botón "Guardar" en "Ingreso mensual" (Mis aportes) no guarda los datos
+
+**Severidad:** 3
+**Heurística violada:** Visibility: Visibility of system status
+
+**Problema:**
+En la vista de Miembro, al ingresar un monto en "Ingreso mensual" y presionar "Guardar", el dato no se persiste y no se muestra ningún mensaje de error ni confirmación, dejando al usuario sin saber si la acción fue exitosa.
+
+![prob 15](https://imgur.com/pu8to7g.png)
+
+**Recomendación:**
+Corregir el guardado en backend/frontend y mostrar siempre una confirmación visual ("Ingreso actualizado") o un mensaje de error si la operación falla.
+
+---
+
+### Problema n°16: Comportamiento inconsistente entre idioma inglés y español al guardar configuración
+
+**Severidad:** 3
+**Heurística violada:** Usability: Consistency and standards
+
+**Problema:**
+En "Account Settings" (inglés), al presionar "Save changes" el sistema muestra "Settings saved successfully". Al repetir la misma acción en español ("Configuración de Cuenta" → "Guardar cambios"), el sistema responde con "Request failed with status code 405", pese a tratarse de la misma funcionalidad.
+
+![Prob 16](https://imgur.com/d43GjHi.png)
+
+
+**Recomendación:**
+Revisar si el endpoint de guardado de configuración envía algún parámetro de idioma o método HTTP distinto según la localización seleccionada, y unificar el comportamiento para ambos idiomas.
+
+
+---
+
 
 ### 6.4.2. Auditoría recibida
 
