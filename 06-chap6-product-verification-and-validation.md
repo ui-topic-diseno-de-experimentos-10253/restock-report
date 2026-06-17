@@ -356,7 +356,7 @@ Feature: Sistema de notificaciones en tiempo real
     Given un insumo "Sal" alcanza el stock mínimo
     When el sistema detecta la condición
     Then se envía notificación push al administrador
-    And la notificación muestra "⚠️ Stock crítico: Sal - 2 kg restantes"
+    And la notificación muestra "Stock crítico: Sal - 2 kg restantes"
     And aparece en el centro de notificaciones de la app
     And se marca como "No leída"
 
@@ -364,14 +364,14 @@ Feature: Sistema de notificaciones en tiempo real
     Given un restaurante crea un pedido al proveedor
     When el pedido se confirma en el sistema
     Then el proveedor recibe notificación push
-    And el mensaje indica "📦 Nuevo pedido de Restaurante XYZ - S/. 450.00"
+    And el mensaje indica "Nuevo pedido de Restaurante XYZ - S/. 450.00"
     And puede acceder directamente al detalle del pedido
 
   Scenario: Alerta de producto próximo a vencer
     Given un lote de "Yogurt" vence en 2 días
     When el sistema ejecuta la verificación diaria
     Then se notifica al administrador
-    And el mensaje dice "⏰ Yogurt vence en 2 días - 15 unidades"
+    And el mensaje dice "Yogurt vence en 2 días - 15 unidades"
     And sugiere crear promoción o descuento
 
   Scenario: Confirmar recepción de notificación
@@ -751,43 +751,43 @@ La estrategia de pruebas de sistema se definió según el tipo de producto evalu
 
 ST-LP-01: Se evidencia la ejecución del test de carga del Landing Page, validando que la página pública desplegada en GitHub Pages se abra correctamente y muestre el contenido principal del producto.
 
-<img src="assets/images/chapter6/core-system-tests/landing-page/test1-load.png" width="600px" alt="selenium-landing-load-test">
+<img src="assets/images/chapter6/core-system-tests/landing-page/test1-load.png" width="600px" alt="selenium-landing-load-test" width="500px">
 
 ST-LP-02: Semuestra la ejecución del test sobre el botón principal del Landing Page, validando que el call-to-action funcione correctamente y redirija o desplace al usuario hacia la sección esperada.
 
-<img src="assets/images/chapter6/core-system-tests/landing-page/test2-calltoaction.png" width="600px" alt="selenium-landing-call-to-action-test">
+<img src="assets/images/chapter6/core-system-tests/landing-page/test2-calltoaction.png" width="600px" alt="selenium-landing-call-to-action-test" width="500px">
 
 2. **Selenium IDE tests for Web Application**
 
 ST-WEB-01: Se evidencia la ejecución del test de inicio de sesión en la Web Application, validando que el usuario pueda autenticarse correctamente y acceder al sistema.
 
-<img src="assets/images/chapter6/core-system-tests/app-web/test1-sig-in.png" width="600px" alt="selenium-webapp-sign-in-test">
+<img src="assets/images/chapter6/core-system-tests/app-web/test1-sig-in.png" width="600px" alt="selenium-webapp-sign-in-test" width="500px">
 
 ST-WEB-02: Se muestra la ejecución del test de navegación dentro de la Web Application, validando que el usuario pueda acceder correctamente a los módulos principales del sistema.
 
-<img src="assets/images/chapter6/core-system-tests/app-web/test2-navigate.png" width="600px" alt="selenium-webapp-navigation-test">
+<img src="assets/images/chapter6/core-system-tests/app-web/test2-navigate.png" width="600px" alt="selenium-webapp-navigation-test" width="500px">
 
 ST-WEB-03: Se evidencia la ejecución del test de registro de insumo desde la Web Application, validando que el sistema permita crear un nuevo recurso y mostrarlo correctamente en la interfaz.
 
-<img src="assets/images/chapter6/core-system-tests/app-web/test3-create.png" width="600px" alt="selenium-webapp-create-supply-test">
+<img src="assets/images/chapter6/core-system-tests/app-web/test3-create.png" width="600px" alt="selenium-webapp-create-supply-test" width="500px">
 
 3. **JMeter backend system tests**
 
 ST-BE-01: Se evidencia la ejecución del request de login en JMeter, utilizado para validar la autenticación del usuario y la obtención del token JWT desde el backend desplegado en Render.
 
-<img src="assets/images/chapter6/core-system-tests/backend/test1-login.png" width="600px" alt="jmeter-login-test">
+<img src="assets/images/chapter6/core-system-tests/backend/test1-login.png" width="600px" alt="jmeter-login-test" width="500px">
 
 ST-BE-02: Se muestra la ejecución del request GET para consultar insumos, validando que la API permita acceder a recursos protegidos cuando se envía un token válido.
 
-<img src="assets/images/chapter6/core-system-tests/backend/test2-get-supplies.png" width="600px" alt="jmeter-get-supplies-test">
+<img src="assets/images/chapter6/core-system-tests/backend/test2-get-supplies.png" width="600px" alt="jmeter-get-supplies-test" width="500px">
 
 ST-BE-03: Se evidencia la ejecución del request POST para registrar un nuevo insumo, verificando que el backend procese correctamente datos válidos enviados desde JMeter.
 
-<img src="assets/images/chapter6/core-system-tests/backend/test3-post.png" width="600px" alt="jmeter-post-supply-test">
+<img src="assets/images/chapter6/core-system-tests/backend/test3-post.png" width="600px" alt="jmeter-post-supply-test" width="500px">
 
 Resumen de ejecución de las pruebas de sistema del backend, mostrando los resultados generales de los requests ejecutados, tiempos de respuesta y porcentaje de error.
 
-<img src="assets/images/chapter6/core-system-tests/backend/tests-summary.png" width="600px" alt="jmeter-backend-tests-summary">
+<img src="assets/images/chapter6/core-system-tests/backend/tests-summary.png" width="600px" alt="jmeter-backend-tests-summary" width="500px">
 
 4. **Mobile system test evidence - (Kotlin, administradores de restaurantes)**
 
@@ -807,7 +807,7 @@ ST-KT-03: Se muestra el inicio del flujo de creación de pedido desde la aplicac
 
 <img src="assets/images/chapter6/core-system-tests/mobile-kotlin-admin/test3-1-create-order.jpeg" height="350px"  alt="kotlin-restaurant-order-created">
 
-5. **Mobile system test evidence - (Flutter, proveedores de insumos)**
+1. **Mobile system test evidence - (Flutter, proveedores de insumos)**
 
 ST-FL-01: Esta prueba valida que el proveedor pueda acceder correctamente a la aplicación móvil Flutter mediante credenciales válidas. El flujo inicia en la pantalla de autenticación y finaliza cuando el usuario ingresa a la interfaz principal del proveedor.
 
@@ -827,9 +827,9 @@ ST-FL-03: Esta prueba valida que el proveedor pueda acceder al módulo de órden
 
 <img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test3-2-order.png" height="350px" alt="flutter-supplier-order-detail">
 
-<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test3-3-order.png" height="350px" alt="flutter-supplier-order-management">
+<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test3-3-order.png" height="350px" alt="flutter-supplier-order-management" >
 
-6. **Cross-platform E2E system test**
+1. **Cross-platform E2E system test**
 
 ST-E2E-01: Evidencia de flujo para gestion de inventario y pedidos restaurante-proveedor. Interacción entre landing page, aplicacion web, aplicación mobile Flutter, aplicación mobile Kotlin y backend.
 
@@ -842,8 +842,6 @@ Link del video: https://shorturl.at/btd62
 Como resultado de las pruebas de sistema, se verificó que los productos principales de Restock funcionan de manera integrada. La Landing Page y la Web Application publicadas en GitHub Pages fueron evaluadas mediante Selenium IDE; el backend desplegado en Render fue validado mediante Apache JMeter; y las aplicaciones móviles Flutter y Kotlin fueron evaluadas mediante pruebas manuales documentadas.
 
 Además, el flujo E2E cruzado permitió comprobar que una operación iniciada por el restaurante puede ser procesada por el backend, visualizada por el proveedor y actualizada nuevamente para el restaurante. Esto evidencia que Restock funciona como una solución integrada orientada a los principales flujos del negocio.
-
-## 6.2. Static testing & Verification
 
 ## 6.2. Static testing & Verification
 
@@ -860,8 +858,6 @@ La verificación estática se aborda en dos niveles complementarios. En la secci
 #### 6.2.1.1. Coding standard & Code conventions
 
 Para garantizar la legibilidad, consistencia y mantenibilidad del código fuente, el equipo de Restock ha adoptado las siguientes convenciones de codificación por tecnología. Todos los nombres de identificadores (variables, métodos, clases, archivos) se escriben en inglés, conforme a los lineamientos del curso.
-
----
 
 ##### HTML5 / CSS3 — Landing Page
 
@@ -995,11 +991,172 @@ Para el control de versiones se aplica **GitFlow**:
 
 La nomenclatura de versiones sigue **Semantic Versioning 2.0.0**: `MAJOR.MINOR.PATCH` (e.g., `v1.0.0`, `v1.1.3`).
 
+**Referencias adoptadas:**
+- Conventional Commits. (s.f.). *Conventional commits specification*. https://www.conventionalcommits.org/
+- Driessen, V. (2010). *A successful Git branching model*. https://nvie.com/posts/a-successful-git-branching-model/
+- Preston-Werner, T. (2013). *Semantic versioning 2.0.0*. https://semver.org/
+
+
+#### 6.2.1.2. Code Quality & Code Security
+
+Para garantizar la mantenibilidad, escalabilidad y seguridad del backend `restock-platform` desarrollado en Spring Boot, el equipo implementó un proceso de análisis de código estático utilizando **SonarQube** como herramienta principal. 
+
+Para llevar a cabo esta evaluación sin comprometer el entorno de producción, el servidor de inspección se desplegó localmente mediante un contenedor de Docker. Posteriormente, se generó un token de autenticación y se ejecutó el escáner directamente desde el IDE (IntelliJ IDEA) a través de Apache Maven (`sonar-maven-plugin`), trabajando sobre la rama correspondiente de GitFlow (`feature/sonarqube-integration`).
+
+A continuación, se detalla la evidencia de la configuración y ejecución del entorno de evaluación:
+
+![Despliegue inicial de SonarQube en Docker](assets/images/chapter6/code-quality-security/e-1.png)
+*Despliegue inicial del contenedor de SonarQube (versión LTS) de forma local utilizando Docker a través de Windows PowerShell, estableciendo la infraestructura base necesaria para ejecutar el análisis estático.*
+
+![Verificación de Docker Desktop](assets/images/chapter6/code-quality-security/e-2.png)
+*Verificación mediante Docker Desktop de la ejecución exitosa del contenedor de SonarQube, asegurando que el servicio, los procesos internos y los registros (logs) operan correctamente en el entorno local.*
+
+![Login SonarQube](assets/images/chapter6/code-quality-security/e-3.png)
+*Acceso a la consola web de administración de SonarQube para la autenticación inicial y configuración del entorno de evaluación de código.*
+
+![Creación manual del proyecto](assets/images/chapter6/code-quality-security/e-4.png)
+*Creación manual del perfil del proyecto en la plataforma, un paso indispensable para definir el espacio de trabajo que alojará las métricas y vulnerabilidades escaneadas del backend.*
+
+![Configuración Local](assets/images/chapter6/code-quality-security/e-5.png)
+*Definición de la estrategia de análisis en modo local ("Locally"), adecuada para certificar la calidad y seguridad del código en el entorno de desarrollo previo a su integración en un entorno CI/CD.*
+
+![Generación de Token](assets/images/chapter6/code-quality-security/e-6.png)
+*Generación de un token de seguridad exclusivo para el proyecto, garantizando que la conexión y el envío de métricas desde el entorno de desarrollo hacia el servidor de SonarQube estén autenticados.*
+
+![Confirmación de Token](assets/images/chapter6/code-quality-security/e-7.png)
+*Confirmación del token de autenticación generado por la plataforma, el cual actuará como credencial obligatoria durante la ejecución del analizador de código fuente.*
+
+![Comando Maven SonarQube](assets/images/chapter6/code-quality-security/e-8.png)
+*Obtención del comando de compilación estructurado por SonarQube, el cual incluye las llaves del proyecto y el token de seguridad, preparado para ser ejecutado a través de Apache Maven.*
+
+![Ejecución en IntelliJ Run Anything](assets/images/chapter6/code-quality-security/e-9.png)
+*Ejecución de la directiva de escaneo estático de SonarQube directamente en el IDE (IntelliJ IDEA) mediante la consola "Run Anything", evidenciando además el uso correcto de GitFlow al trabajar sobre la rama dedicada feature/sonarqube-integration.*
+
+![Proceso de Build en IntelliJ](assets/images/chapter6/code-quality-security/e-10.png)
+*Evidencia del inicio del proceso de construcción (build) en la terminal del IDE, comprobando la descarga de las dependencias del plugin de SonarQube necesarias para la inspección profunda de los paquetes de Spring Boot.*
+
+![Build Success](assets/images/chapter6/code-quality-security/e-11.png)
+*Validación de la culminación exitosa de la etapa de pruebas y análisis (BUILD SUCCESS), confirmando que el reporte con las métricas de calidad y seguridad fue procesado y transmitido al servidor correctamente.*
+
 ---
+
+A continuación, se detallan los resultados de la evaluación técnica arrojados tras la compilación exitosa.
+
+#### 1. Code Quality (Calidad del Código)
+El análisis estructural se enfocó en evaluar la complejidad ciclomática, la duplicación de código y la presencia de deuda técnica. El código fue desarrollado priorizando un diseño limpio y la reutilización de componentes.
+
+* **Deuda Técnica y Complejidad:** El escáner identificó 137 *Code Smells*, lo que representa una deuda técnica estimada de 1 día y 5 horas. Se identificó que la mayoría de estos hallazgos corresponden a prácticas de mantenibilidad, tales como el uso de `System.out` en lugar de *Loggers* formales en la capa de servicios (ej. `UserCommandServiceImpl`), así como importaciones no utilizadas y clases vacías en la capa de dominio. Estos puntos han sido mapeados para futuras refactorizaciones.
+* **Duplicación:** El porcentaje de líneas duplicadas es prácticamente nulo, ubicándose en un excelente **0.2%** sobre más de 6.5k líneas de código analizadas. Esto valida el cumplimiento de las buenas prácticas de diseño orientado a objetos.
+
+![Detalle de Code Smells](assets/images/chapter6/code-quality-security/e-13.png)
+*Desglose detallado de la deuda técnica (Code Smells) identificada por el escáner, visibilizando hallazgos estructurales (como el uso de salidas por consola en lugar de Loggers formales) que guiarán las futuras labores de refactorización.*
+
+#### 2. Code Security (Seguridad del Código)
+Para proteger la integridad de los datos y asegurar la API RESTful frente a vulnerabilidades, el análisis verificó el cumplimiento de las normativas de seguridad aplicables al entorno Java/Spring.
+
+* **Identificación de Vulnerabilidades:** La herramienta confirmó la robustez del sistema otorgando una calificación de nivel 'A', reportando **0 vulnerabilidades** y **0 bugs** funcionales. Esto demuestra que la plataforma está debidamente protegida contra amenazas críticas, como inyecciones SQL en repositorios o ataques XSS.
+* **Security Hotspots:** Se detectaron 3 *Security Hotspots* pendientes de revisión (estado 'E' - Security Review). Estos avisos corresponden a configuraciones sensibles propias del framework (como habilitación de CORS o CSRF), las cuales el equipo revisará y validará manualmente para confirmar que los filtros de seguridad operen de forma estricta y segura.
+
+![Dashboard de SonarQube Quality Gate](assets/images/chapter6/code-quality-security/e-12.png)
+*Dashboard general de métricas demostrando la aprobación del Quality Gate del backend. La evidencia certifica un sistema altamente seguro y confiable al reportar 0 bugs funcionales y 0 vulnerabilidades de seguridad.*
+
+### 6.2.2. Reviews
+
 
 ## 6.3. Validation Interviews
 
+En esta sección se documentan las entrevistas de validación realizadas para evaluar la experiencia de los usuarios al interactuar con Restock. El proceso considera la participación de los segmentos objetivo (administradores de restaurantes y proveedores), quienes validarán el Landing Page, la aplicación web y las aplicaciones móviles mediante flujos representativos del sistema. Asimismo, los hallazgos obtenidos servirán como base para el registro de entrevistas y la evaluación heurística correspondiente.
+
 ### 6.3.1. Diseño de Entrevistas
+
+Para garantizar que la aplicación cumpla con las necesidades reales de los usuarios finales, se diseñó un proceso de entrevistas de validación centrado en dos segmentos objetivo clave: administradores de restaurantes y proveedores de insumos. Cada sesión de validación incluirá interacción con el Landing Page, la aplicación web y las aplicaciones móviles correspondientes a cada segmento, siguiendo flujos de usuario específicos que cubren funcionalidades críticas del sistema.
+
+### Objetivo General
+
+Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistema a través de sesiones controladas de interacción, aplicando principios de evaluación heurística y recogiendo observaciones cualitativas.
+
+### Segmento 1: Administradores de Restaurantes
+
+#### Elementos a validar
+
+- Claridad del valor ofrecido en el Landing Page.
+- Flujo de suscripción y pago.
+- Registro y gestión de insumos.
+- Gestión de lotes e inventario.
+- Gestión de ventas y recetas.
+- Visualización y selección de proveedores.
+- Realización y seguimiento de pedidos.
+- Panel de alertas y resúmenes.
+- Uso de la aplicación móvil para restaurantes.
+
+#### Flujos de Usuario a evaluar
+
+- Desktop & Mobile User Flow 1: Suscripción y pago con Stripe.
+- Desktop & Mobile User Flow 3: Registro y gestión de insumos.
+- Desktop & Mobile User Flow 4: Resumen e indicadores.
+- Desktop & Mobile User Flow 5: Visualización de proveedores y productos.
+- Desktop & Mobile User Flow 6: Seguimiento de pedidos.
+- Desktop & Mobile User Flow 7: Comentarios a proveedores.
+- Desktop & Mobile User Flow 8: Registro y visualización de ventas.
+- Desktop & Mobile User Flow 9: Creación y gestión de recetas.
+
+#### Actividades durante la sesión
+
+- Navegar el Landing Page y explicar lo que entienden del producto.
+- Simular una suscripción desde un plan.
+- Usar el módulo de inventario: registrar, editar y filtrar insumos.
+- Registrar o revisar lotes asociados a los insumos.
+- Acceder al panel de resumen y describir lo que entienden.
+- Navegar por proveedores, seleccionar uno y simular una orden.
+- Revisar el estado de seguimiento de un pedido.
+- Realizar comentarios sobre proveedores.
+- Registrar una venta.
+- Crear una receta.
+- Usar la aplicación móvil de restaurantes para revisar inventario, alertas o pedidos.
+
+### Segmento 2: Proveedores de Restaurantes
+
+#### Elementos a validar
+
+- Claridad del valor en el Landing Page.
+- Flujo de suscripción y pago.
+- Gestión de catálogo de productos.
+- Registro y edición de productos ofrecidos.
+- Eliminación de insumos o productos no disponibles.
+- Revisión de pedidos realizados por restaurantes.
+- Gestión de órdenes recibidas.
+- Actualización del estado de pedidos.
+- Interacción con comentarios recibidos.
+- Uso de la aplicación móvil para proveedores.
+
+#### Flujos de Usuario a evaluar
+
+- Desktop & Mobile User Flow 1: Suscripción y pago.
+- Desktop & Mobile User Flow 10: Registro y gestión de productos en el catálogo.
+- Desktop & Mobile User Flow 11: Eliminación de insumos.
+- Desktop & Mobile User Flow 12: Gestión de órdenes recibidas.
+- Desktop & Mobile User Flow 13: Panel principal del proveedor.
+
+#### Actividades durante la sesión
+
+- Explorar el Landing Page y describir su comprensión del producto.
+- Simular el proceso de registro y suscripción.
+- Ingresar al sistema y registrar productos en su catálogo.
+- Editar información de productos registrados.
+- Eliminar productos del catálogo.
+- Revisar pedidos recibidos de restaurantes.
+- Consultar el detalle de una orden recibida.
+- Actualizar el estado de una orden.
+- Revisar comentarios o calificaciones recibidas.
+- Usar la aplicación móvil de proveedores para revisar pedidos y actualizar estados.
+- Comentar sobre la utilidad de la interfaz de pedidos y feedback.
+
+### Herramientas y Recursos para Validación
+
+- **Formato de Evaluación Heurística:** Se aplicarán los 10 principios heurísticos de Nielsen en cada sesión, de acuerdo con el formato de evaluación indicado para el proyecto.
+- **Instrumento de observación:** Lista de verificación + sección de notas abiertas.
+- **Grabación de pantalla y voz:** previa autorización, para análisis posterior.
+- **Productos a validar:** Landing Page, aplicación web, aplicación móvil para restaurantes y aplicación móvil para proveedores.
 
 ### 6.3.2. Registro de Entrevistas
 
