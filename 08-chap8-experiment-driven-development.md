@@ -188,6 +188,34 @@ En esta fase de diseño, se transforman las premisas en declaraciones de creenci
 
 ### 8.2.2. Domain Business Metrics
 
+El objetivo fundamental de esta sección es alinear estratégicamente la medición de los experimentos con los objetivos comerciales core de la plataforma Restock. Al definir métricas de negocio concretas, estandarizadas y predefinidas, el equipo mitiga el riesgo de evaluar el éxito de las intervenciones basándose en *vanity metrics* (métricas de vanidad) o datos aislados que no aportan valor real a la toma de decisiones.
+
+Cada una de las métricas detalladas a continuación se vincula directamente con las hipótesis planteadas en la fase de diseño (sección 8.2.1), asegurando que no se utilicen métricas *ad-hoc* durante la ejecución del experimento.
+
+#### 1. Tasa de Reducción de Mermas (Waste Reduction Rate - WRR)
+* **Descripción:** Mide la disminución porcentual en el volumen o costo de los insumos perecibles que se reportan como desperdicio dentro del restaurante, validando la eficacia de las alertas automáticas.
+* **Fórmula de cálculo:** $$\text{WRR} = \left( \frac{\text{Mermas en Período de Control} - \text{Mermas en Período Experimental}}{\text{Mermas en Período de Control}} \right) \times 100$$
+* **Técnica de recolección:** Extracción automatizada de los reportes semanales de mermas registrados en la base de datos de la plataforma por los usuarios del grupo experimental.
+* **Meta deseada:** Una reducción mínima del 35% en el desperdicio de insumos perecibles.
+
+#### 2. Tasa de Éxito de la Tarea (Task Success Rate - TSR)
+* **Descripción:** Evalúa la eficacia del flujo de *onboarding* guiado midiendo el porcentaje de administradores (con baja afinidad digital) que logran enviar su primer pedido de forma completamente autónoma en menos de 5 minutos.
+* **Fórmula de cálculo:** $$\text{TSR} = \left( \frac{\text{Usuarios que completan el pedido sin asistencia en < 5 min}}{\text{Total de usuarios evaluados en la muestra}} \right) \times 100$$
+* **Técnica de recolección:** Pruebas de usabilidad remotas y registro de eventos (Event Tracking) en la herramienta de analítica integrada en la aplicación móvil (Firebase Analytics).
+* **Meta deseada:** 100% de éxito autónomo en la muestra de usuarios evaluada.
+
+#### 3. Tasa de Conversión de Interés del Proveedor (Supplier Conversion Rate - SCR)
+* **Descripción:** Determina la viabilidad comercial de digitalizar a los proveedores midiendo la proporción de negocios tradicionales que muestran una intención firme de integrarse a Restock tras interactuar con la gestión de pedidos centralizada.
+* **Fórmula de cálculo:** $$\text{SCR} = \left( \frac{\text{Número de proveedores que firman la intención de uso}}{\text{Total de proveedores expuestos al experimento}} \right) \times 100$$
+* **Técnica de recolección:** Registro cualitativo y cuantitativo al finalizar las sesiones individuales de capacitación o demostración.
+* **Meta deseada:** Un mínimo de 60% de conversión de interés sobre la muestra evaluada.
+
+#### 4. Índice de Precisión de Compra (Purchase Precision Index - PPI)
+* **Descripción:** Evalúa el impacto de la visualización de métricas de rotación en el comportamiento de compra del administrador, midiendo la disminución en el volumen de pedidos excesivos para insumos catalogados con "Baja Rotación".
+* **Fórmula de cálculo:** $$\text{PPI} = \left( \frac{\text{Volumen de pedido histórico As-Is} - \text{Volumen de pedido con métrica visible To-Be}}{\text{Volumen de pedido histórico As-Is}} \right) \times 100$$
+* **Técnica de recolección:** Comparación de los datos históricos de órdenes previas contra las nuevas órdenes de compra generadas a través del módulo de inventario.
+* **Meta deseada:** Una reducción del 25% en el volumen de pedidos de insumos de baja rotación en un ciclo de cierre semanal.
+
 ### 8.2.3. Measures
 
 En esta sección se definen los criterios específicos seleccionados para recopilar la evidencia que permitirá responder a las preguntas de investigación (*Experiment-Ready Questions*) establecidas. Para asegurar la efectividad del proceso, se ha distinguido entre la evidencia primaria (que responde directamente a la pregunta) y la evidencia secundaria (que proporciona contexto sobre el comportamiento del usuario).
