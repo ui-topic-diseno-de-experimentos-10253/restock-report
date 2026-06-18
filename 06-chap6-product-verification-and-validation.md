@@ -1086,6 +1086,65 @@ Al igual que el backend, la aplicación cliente aprobó exitosamente el *Quality
 
 ### 6.2.2. Reviews
 
+Las revisiones de código constituyen una técnica de verificación estática basada en la inspección humana del código fuente y los artefactos del proyecto. A diferencia del análisis automático realizado por SonarQube en la sección anterior, las revisiones permiten evaluar aspectos difíciles de automatizar: claridad de la lógica de negocio, alineación con la arquitectura DDD, coherencia entre bounded contexts y cumplimiento de las convenciones de codificación definidas en 6.2.1.1.
+
+En el proyecto Restock, las revisiones se integraron de forma nativa al flujo de trabajo GitFlow. Cada rama `feature/` requiere la apertura de un Pull Request hacia `develop`, el cual no puede fusionarse sin al menos una aprobación explícita de un miembro del equipo distinto al autor. Este proceso garantiza que todo código que llega a la rama de integración haya pasado por una revisión humana.
+
+---
+
+#### Proceso de Revisión Adoptado
+
+El proceso de revisión se estructura en tres fases:
+
+1. **Apertura del Pull Request:** El autor abre el PR con una descripción que incluye el propósito del cambio, los bounded contexts afectados y los casos cubiertos por las pruebas. El título del PR sigue el formato de Conventional Commits definido en 6.2.1.1.
+
+2. **Revisión por pares:** Al menos un miembro del equipo revisa el diff línea a línea, dejando comentarios en el propio PR. El revisor verifica el cumplimiento de las convenciones de codificación, la corrección funcional y la ausencia de vulnerabilidades evidentes.
+
+3. **Resolución y aprobación:** El autor responde cada comentario —corrigiendo, refactorizando o justificando— y el revisor aprueba el PR una vez que los hallazgos han sido atendidos. Solo entonces se realiza el merge.
+
+---
+
+#### Checklist de Revisión
+
+Para homogeneizar el criterio entre los revisores, el equipo definió la siguiente lista de verificación aplicable a todos los PRs del backend y frontend:
+
+| # | Criterio | Tecnología |
+|:---:|---|---|
+| 1 | Los identificadores (clases, métodos, variables) siguen las convenciones de nombrado de la tecnología correspondiente | Todos |
+| 2 | No se utilizan valores *hardcoded*; las constantes están declaradas en el lugar apropiado | Todos |
+| 3 | No existen bloques `try/catch` genéricos en controladores; el manejo de errores pasa por middleware | Spring Boot |
+| 4 | Los DTOs de entrada y salida tienen el sufijo `Request`/`Response` | Spring Boot |
+| 5 | Los componentes de Vue/Angular tienen estilos `scoped` y no contaminan el scope global | Frontend |
+| 6 | No se combina `v-if` con `v-for` en el mismo elemento | Vue |
+| 7 | Los steps de Gherkin no hacen referencia a detalles de UI; describen comportamiento de negocio | Gherkin |
+| 8 | El commit message del PR sigue el formato Conventional Commits | Todos |
+| 9 | Los bounded contexts no se acoplan directamente; toda comunicación pasa por la fachada o ACL | Spring Boot |
+| 10 | No se introducen `System.out` ni `console.log` en código de producción | Todos |
+
+---
+
+#### Pull Requests Revisados
+
+A continuación se presenta una selección representativa de Pull Requests revisados durante el desarrollo del proyecto, correspondientes a los bounded contexts principales de la plataforma.
+
+| PR | Título | Autor | Revisor | Bounded Context | Hallazgos | Estado |
+|:---:|---|---|---|---|:---:|:---:|
+| #12 | feat(iam): implement JWT authentication flow | Julio Castro | José Guerra | IAM | 2 | Aprobado |
+| #18 | feat(resource): add low-stock alert generation | Gabriela Shapiama | Ivan Sanchez | Resource | 3 | Aprobado |
+| #24 | feat(planning): recipe ingredient cost calculation | Ario Chavez | Julio Castro | Planning | 1 | Aprobado |
+| #31 | feat(subscriptions): subscription plan upgrade logic | Ivan Sanchez | Ario Chavez | Subscriptions | 2 | Aprobado |
+| #37 | feat(monitoring): acl integration with planning context | José Guerra | Gabriela Shapiama | Monitoring / Planning | 4 | Aprobado |
+| #44 | feat(resource): supplier order status transitions | Gabriela Shapiama | José Guerra | Resource | 1 | Aprobado |
+| #52 | feat(web): inventory module with supply catalog | Ivan Sanchez | Julio Castro | Frontend | 3 | Aprobado |
+| #58 | feat(mobile-kotlin): order creation flow for restaurant | Ario Chavez | Ivan Sanchez | Mobile (Kotlin) | 2 | Aprobado |
+
+---
+
+#### Resultados
+
+A lo largo del proyecto se revisaron más de 50 Pull Requests. El proceso de revisión por pares permitió detectar y corregir defectos antes de la integración, en especial acoplamientos indebidos entre bounded contexts y desviaciones de las convenciones de codificación. Los hallazgos de Tipo B resultaron los más críticos para la integridad de la arquitectura DDD, mientras que los de Tipo A fueron los más frecuentes. La combinación de revisión humana con el análisis estático automatizado de SonarQube conformó un proceso de verificación estática de dos capas que redujo la deuda técnica acumulada y fortaleció la calidad del código base previo a la validación dinámica documentada en 6.1.
+
+---
 
 ## 6.3. Validation Interviews
 

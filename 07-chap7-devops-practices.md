@@ -76,7 +76,7 @@ Para la etapa de *Continuous Delivery* (Entrega Continua) del proyecto Restock, 
 #### Prácticas (Practices)
 
 * **Separación de Entornos (Environment Promotion):** Se mantiene una estricta separación lógica entre el entorno de Staging y Producción. Ningún artefacto pasa a producción sin haber sido probado primero en el entorno de entrega.
-* **Aprobación Manual (Manual Release Gates):** Es la práctica central del *Continuous Delivery*. El pipeline se detiene en seco antes de tocar el servidor de Staging hasta que el equipo de QA o el Product Owner valide el estado del repositorio y apruebe manualmente la ejecución.
+* **Aprobación Manual (Manual Release Gates):** Es la práctica central del *Continuous Delivery*. El pipeline se detiene en seco antes de tocar el servidor de Staging hasta que el equipo de QA o el Product Owner valide el estado del repositorio y apruebe manualmente la ejecución. Este pipeline cubre exclusivamente el ciclo del **Backend**; el frontend web no requiere entorno de Staging porque su artefacto estático se despliega directamente a producción mediante el pipeline de *Continuous Deployment* documentado en 7.3.
 
 ### 7.2.2. Stages Deployment Pipeline Components
 
@@ -114,88 +114,89 @@ Finalmente, mediante el uso de credenciales encriptadas (*GitHub Secrets*), el o
 
 ![Ejecución finalizada y aprobada del pipeline de Entrega Continua](assets/images/chapter7/continuous_delivery/step7.png)
 
+El artefacto Docker aprobado en esta etapa es funcionalmente idéntico al que se despliega en el entorno de producción de Render; la paridad entre entornos se garantiza porque ambos pipelines comparten el mismo `Dockerfile` multi-stage con OpenJDK 21. El proceso de promoción al entorno productivo se documenta en el pipeline de *Continuous Deployment* de la sección 7.3.
+
 ## 7.3. Continuous deployment
 
 ### 7.3.1. Tools and Practices
 
-Para la estrategia de *Continuous Deployment* del proyecto Restock se seleccionaron herramientas que ya forman parte del stack documentado en el Capítulo V, con el objetivo de automatizar la publicación de cada entrega estable y reducir la intervención manual en el proceso de despliegue.
+El pipeline de *Continuous Deployment* (Despliegue Continuo) de Restock automatiza completamente la publicación de versiones aprobadas hacia los entornos de producción. A diferencia del pipeline de *Continuous Delivery* documentado en 7.2, que detiene la ejecución para requerir aprobación humana antes de actuar sobre el entorno de *Staging*, el *Continuous Deployment* elimina dicha intervención: cualquier cambio integrado exitosamente en `main` desencadena el despliegue simultáneo de todos los componentes de la plataforma sin pasos manuales adicionales.
 
-#### GitHub Actions
+#### Herramientas (Tools)
 
-GitHub Actions se utiliza como orquestador de automatización para ejecutar los flujos de build, validación y despliegue a partir de cambios en la rama principal. Esta elección permite centralizar la lógica de entrega continua dentro del mismo repositorio del proyecto, mantener trazabilidad sobre cada versión publicada y asegurar que el proceso sea repetible.
+**GitHub Actions**
+Actúa como orquestador central del pipeline multi-plataforma de producción. Define *jobs* paralelos para construir y publicar cada componente (frontend, backend y móvil) a partir de un único evento de `push` en `main` o de una ejecución manual (*workflow_dispatch*).
 
-#### GitHub Pages
+**GitHub Pages**
+Plataforma de hosting estático utilizada para publicar la *Landing Page* y la *Web Application*. Tras la compilación de Angular CLI en modo producción (`ng build --configuration production`), los artefactos se despliegan automáticamente mediante la acción `JamesIves/github-pages-deploy-action`, sin intervención manual.
 
-GitHub Pages se emplea para alojar el frontend web de Restock. Es una opción adecuada para la Landing Page y la interfaz web porque permite publicar contenido estático de manera directa desde GitHub, con despliegue automático luego de cada actualización aprobada en el repositorio. Además, simplifica la distribución del frontend al no requerir infraestructura adicional para el hosting estático.
+**Render**
+Servicio de hosting en la nube para el *Backend REST API* en producción. El pipeline activa la reconstrucción del servicio mediante un *Deploy Hook* (webhook) gestionado como *Secret*. Render descarga la imagen Docker y actualiza la API en la URL pública de producción.
 
-#### Render
+**Docker**
+Encapsula el backend (Spring Boot / Java 21) en una imagen reproducible mediante arquitectura *multi-stage build*. El mismo `Dockerfile` definido para el entorno de *Staging* en 7.2 se reutiliza en producción, garantizando paridad de artefactos entre entornos.
 
-Render se utiliza como servicio de hosting para el backend RESTful desarrollado con Java y Spring Boot. En este caso, la plataforma resulta conveniente porque detecta el repositorio conectado, construye la aplicación de forma automática a partir del `Dockerfile` y expone una URL pública para consumir la API. Esto facilita desplegar una versión funcional del backend sin administrar servidores manualmente.
+**Firebase App Distribution**
+Gestiona la distribución de versiones de prueba de las aplicaciones móviles (Flutter y Kotlin) hacia testers internos. Su integración en el pipeline de producción permite validar cada *release* antes de una publicación formal en tiendas, completando el ciclo de entrega multi-plataforma.
 
-#### Firebase App Distribution
+#### Prácticas (Practices)
 
-Firebase App Distribution se usa para compartir versiones preliminares de la aplicación móvil Android con testers internos y externos. Esta herramienta es útil porque permite distribuir APKs de prueba de forma controlada, recopilar retroalimentación temprana y mantener un ciclo de validación ágil antes de una publicación formal.
+* **Despliegue Automático a Producción:** La rama `main` representa directamente el estado de producción. Toda integración proveniente de `develop` —tras pasar CI en 7.1 y CD de *Staging* en 7.2— se despliega de forma automática, sin pasos manuales adicionales.
+* **Estrategia de *Release* Multi-Plataforma:** Un único evento de integración en `main` activa despliegues coordinados del frontend estático (GitHub Pages), el backend (Render) y la distribución móvil (Firebase App Distribution), garantizando que todas las superficies de la plataforma se actualicen de forma coherente y versionada.
+* **Gestión de Secretos (*Secret Management*):** Las credenciales, webhooks de Render y URLs de producción se administran como *GitHub Secrets*. Ningún valor sensible se incluye en el código del *workflow* ni en el repositorio.
+* **Verificación Posterior al Despliegue:** Tras completar el despliegue, el pipeline ejecuta verificaciones HTTP automáticas sobre las URLs de producción del frontend y el endpoint `/health` del backend, integrando *Continuous Deployment* con el *Continuous Monitoring* documentado en 7.4.
 
-#### Docker
-
-Docker complementa el despliegue del backend al encapsular la aplicación y sus dependencias en una imagen reproducible. Con ello, se reducen diferencias entre entornos, se estandariza la ejecución y se facilita que Render construya y publique la API con consistencia en cada actualización.
-
-En conjunto, estas herramientas permiten que el flujo de despliegue del proyecto sea coherente con su arquitectura real: frontend estático en GitHub Pages, backend REST en Render y distribución móvil de pruebas mediante Firebase App Distribution, todo coordinado desde GitHub.
+---
 
 ### 7.3.2. Production Deployment Pipeline Components
 
-El pipeline de despliegue en producción de Restock se compone de etapas automatizadas y componentes de infraestructura que permiten publicar cambios de forma segura, trazable y consistente para frontend web y backend REST, además de una etapa controlada para distribución móvil.
+El pipeline de despliegue a producción de Restock cubre los tres componentes principales de la plataforma: frontend web (Landing Page y Web Application), backend REST y distribución móvil. A continuación, se detalla cada etapa con su evidencia correspondiente.
 
-#### 1. Source Stage (Control de código fuente)
+#### 1. Pipeline Definition & Branching
 
-- Repositorios en GitHub para frontend, backend y móvil.
-- Estrategia de integración sobre la rama principal (`main`) luego de revisión y aprobación de cambios.
-- Commits versionados que funcionan como punto de trazabilidad para cada despliegue.
+Para mantener la trazabilidad de GitFlow, el pipeline de producción se configuró en la rama `feature/cd-production-pipeline`. El archivo orquestador `cd-production.yml` se ubica en `.github/workflows/` y define los disparadores del pipeline: `push` a `main` y `workflow_dispatch` para despliegues controlados. Los *jobs* se organizan de forma que el frontend y el backend se puedan desplegar en paralelo tras superar la etapa de build.
 
-#### 2. Pipeline Orchestrator (Automatización)
+![Definición del workflow de producción y rama feature/cd-production-pipeline](assets/images/chapter7/continuous_deployment/step1.png)
 
-- GitHub Actions como orquestador central del flujo.
-- Disparadores automáticos por `push` en `main` y, cuando corresponde, por ejecución manual para despliegues controlados.
-- Separación por jobs para construir, validar y desplegar cada componente de la plataforma.
+#### 2. Frontend Build Stage
 
-#### 3. Build and Validation Stage
+El *runner* de GitHub Actions instala las dependencias del proyecto Angular y ejecuta la compilación en modo producción (`ng build --configuration production`). Esta etapa aplica *tree-shaking*, minificación de bundles y *AOT compilation*, generando los artefactos estáticos optimizados en el directorio `dist/`.
 
-- Frontend web: compilación con Angular CLI para generar artefactos estáticos de producción.
-- Backend: construcción de imagen Docker a partir del proyecto Java Spring Boot.
-- Validaciones previas de calidad y consistencia antes de liberar artefactos.
+![Compilación exitosa del frontend Angular en modo producción](assets/images/chapter7/continuous_deployment/step2.png)
 
-#### 4. Artifact and Configuration Stage
+#### 3. Frontend Deployment to GitHub Pages
 
-- Artefacto frontend: salida estática lista para publicación en GitHub Pages.
-- Artefacto backend: imagen Docker lista para ejecución en Render.
-- Variables de entorno administradas fuera del código fuente para credenciales, conexiones y URLs de servicios.
+Los artefactos compilados son publicados mediante `JamesIves/github-pages-deploy-action`, que empuja el contenido del directorio `dist/` a la rama `gh-pages` del repositorio correspondiente. El *workflow* actualiza tanto la *Landing Page* como la *Web Application*, dejando ambas interfaces disponibles en sus URLs de producción al finalizar el *job*.
 
-#### 5. Production Deploy Stage
+![Despliegue exitoso del frontend en GitHub Pages desde GitHub Actions](assets/images/chapter7/continuous_deployment/step3.png)
 
-- Frontend web en GitHub Pages con publicación automática de la versión compilada.
-- Backend REST en Render con build y despliegue automático a partir del repositorio conectado.
-- Exposición de endpoints productivos mediante URL pública para consumo desde clientes web y móvil.
+#### 4. Backend Build & Production Deployment Stage
+
+El backend es empaquetado por Maven (`mvn package -DskipTests`) y construido como imagen Docker utilizando el mismo `Dockerfile` multi-stage de OpenJDK 21 descrito en 7.2. Una vez generada la imagen candidata, el orquestador dispara el *Deploy Hook* de producción en Render mediante `curl -X POST`, utilizando el webhook almacenado en *GitHub Secrets*. Render reconstruye el servicio con la nueva imagen y actualiza la API en la URL pública de producción.
+
+![Build Docker y activación del Deploy Hook de producción en Render](assets/images/chapter7/continuous_deployment/step4.png)
+
+#### 5. Mobile Release Distribution Stage
+
+Como etapa final del pipeline, el *runner* genera el APK firmado de la aplicación móvil y lo carga en Firebase App Distribution mediante la acción oficial de Firebase. Los testers registrados reciben una notificación automática con el enlace de descarga de la nueva versión, completando el ciclo de entrega multi-plataforma de Restock.
+
+![Carga del APK y distribución automática en Firebase App Distribution](assets/images/chapter7/continuous_deployment/step5.png)
 
 #### 6. Post-Deployment Verification Stage
 
-- Verificación funcional de disponibilidad del frontend publicado.
-- Verificación de salud de la API REST y consulta de documentación Swagger/OpenAPI.
-- Validación de conectividad frontend-backend y de variables de entorno en producción.
+Tras completar los *jobs* de despliegue, el pipeline ejecuta verificaciones HTTP automáticas: una consulta al frontend para confirmar que GitHub Pages responde con `HTTP 200`, y una consulta al endpoint `/health` del backend para validar que la API esté activa en producción. Si alguna verificación falla, el *workflow* termina con estado `failed`, activando el mecanismo de alerta del pipeline de monitoreo descrito en 7.4.
 
-#### 7. Mobile Release Distribution (Controlado)
+![Verificación automática de disponibilidad del frontend y backend tras el despliegue](assets/images/chapter7/continuous_deployment/step6.png)
 
-- Generación de APK firmado de la aplicación móvil.
-- Distribución mediante Firebase App Distribution para validación con testers.
-- Retroalimentación previa a una liberación formal en tiendas, manteniendo control de calidad sobre cada versión.
+#### Flujo Resumido del Pipeline de Producción
 
-#### Flujo resumido del pipeline
-
-1. Un cambio aprobado se integra a `main`.
-2. GitHub Actions inicia el pipeline y ejecuta build y validaciones.
-3. Se generan artefactos de frontend y backend.
-4. GitHub Pages publica el frontend y Render actualiza la API REST.
-5. Se ejecutan verificaciones posteriores de disponibilidad e integración.
-6. Para móvil, la versión se distribuye en Firebase App Distribution para validación controlada.
+1. Un Pull Request de `develop` hacia `main` es aprobado y fusionado.
+2. GitHub Actions detecta el `push` en `main` e inicia el pipeline `cd-production.yml`.
+3. El frontend Angular se compila en modo producción y se publica en GitHub Pages.
+4. La imagen Docker del backend se construye y se despliega en el servicio productivo de Render.
+5. El APK móvil se genera y se distribuye a testers mediante Firebase App Distribution.
+6. El pipeline ejecuta verificaciones automáticas de disponibilidad del frontend y del backend.
+7. Si todas las verificaciones pasan, el *workflow* finaliza exitosamente y la versión queda publicada en producción.
 
 ## 7.4. Continuous Monitoring
 
