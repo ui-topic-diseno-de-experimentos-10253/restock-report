@@ -859,6 +859,47 @@ Además, el flujo E2E cruzado permitió comprobar que una operación iniciada po
 
 ### 6.3.2. Registro de Entrevistas
 
+#### Segmento 1: Administradores de Restaurantes
+
+
+#### Segmento 2: Proveedores de Restaurantes
+
+## Entrevista N°1:
+- Nombre: Miguel Angel Leal
+- Sexo: Masculino
+- Edad:28
+- tiempo de duracion: 10:50
+- Ubicación: Lima, Santo Domingo
+
+
+### Entrevista
+![entevistaS2_1.png](../restock-report/assets/images/chapter6/interview/interviewSegment2_1.png)
+
+link: https://youtu.be/GZVfKIVKNkA
+
+**Resumen**
+
+Miguel Angel Leal es un proveedor que actualmente se encarga de gestionar su restaurante. El comenta que su experiencia con la pagina fue bastante grata, aunque igualmente nos da su opinion respecto a la estructura de algunos aspectos que puede ser plan de pagos, la implementacion de un numero telefonico en el apartado de registro y finalmente agregar mas funciones como calidad de distribuidor entre otras, pero en sus opiniones generales dice que nuestra webb esta en buen camino
+
+## Entrevista N°2:
+- Nombre: Andrea Roncal Vargas
+- Sexo: femenino
+- Edad:25
+- tiempo de duracion: 10:00
+- Ubicación: Lima, Independencia
+
+
+
+#### Entrevista: 
+
+![entevistaS2_2.png](../restock-report/assets/images/chapter6/interview/interviewSegment2_2.png)
+
+link: https://youtu.be/iEu1wEoSrv0
+
+**Resumen**
+
+Andrea Roncal trabaja en un restaurante, donde ayuda en la gestion con sus compañeros de trabajo, ya que igual que es es un proveedora, a diferencia del entrevistado anterior, ella nos dios su pespectiva respecto a la implementeacion de guias visuales para ayudar en la navecacion ya sea de registro, como hacer insumos entro otras cosas pequeñas, igual que el entrevistado piensa en el plan de pagos deberia ser ampliados agregando mas planes para adecuarse al presupuesto de restaurante, sin olvidar que nos pidio pulir el apartado de reseña, luego de eso nos dijo que ibamos por buen camino con la horientacion del proyecto.
+
 ### 6.3.3. Evaluaciones según heurísticas
 
 ## 6.4. Auditoría de Experiencias de Usuario
