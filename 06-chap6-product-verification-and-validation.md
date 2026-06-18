@@ -1243,45 +1243,73 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistem
 
 ### 6.3.2. Registro de Entrevistas
 
-#### Segmento 1: Administradores de Restaurantes
+Segmento 1: Dueños o administradores de Restaurantes
 
+**Entrevista 1:**
+
+**Nombre:** Alfredo Bernuy
+**Edad:** 52 años
+**Distrito:** Chorrillos
+**Timing:** (00:00- 05:18 min)
+
+![Foto de Entrevista](https://i.ibb.co/S4tpKKYz/image.png)
+ 
+Ver entrevista: https://shorturl.at/YDftM
+
+**Resumen:**
+Alfredo Bernuy, administrador de restaurantes con 4 años de experiencia, tiene 52 años, es casado y vive en el distrito de Chorrillos, Lima. Es una persona comprometida y orientada a la mejora continua.
+
+Alfredo Bernuy destaca que la plataforma le resulta muy intuitiva desde el primer acceso: los menús están organizados de forma clara, los botones de acción son fácilmente reconocibles y el flujo para crear o modificar pedidos se siente natural y ágil. Valora especialmente la sección de gestión de stock, que le permite visualizar en tiempo real los niveles de inventario, recibir alertas automáticas al alcanzar el mínimo definido y filtrar por categorías o fechas para detectar tendencias.
+
+Por otro lado, subraya que el diseño es moderno y atractivo: la paleta de colores es sobria pero actual, la tipografía resulta legible y los iconos comunican su función de un vistazo. Considera que la herramienta le brinda un control total sobre pedidos y stock, le ahorra tiempo y le transmite la confianza necesaria para optimizar sus operaciones diarias.
+
+**Entrevista 2:**
+
+**Nombre:** Mery Pilar
+**Edad:** 49 años
+**Distrito:** Chorrillos
+**Timing:** (05:19 - 10:50 min)
+
+![Foto de Entrevista](https://i.ibb.co/hx5tPWtx/image.png)
+
+Ver entrevista: https://shorturl.at/YDftM
+
+**Resumen:**
+
+Mery Pilar, administradora de restaurantes con 6 años de experiencia, tiene 49 años, es casada y vive en el distrito de Chorrillos, Lima. Es una persona responsable y orientada a la mejora continua e innovación.
+
+Mery Pilar resalta que la herramienta es sumamente sencilla de usar desde el primer contacto: los apartados están dispuestos de manera ordenada, los elementos interactivos resultan intuitivos y el proceso para generar o actualizar pedidos fluye de forma muy eficiente. Aprecia de forma especial el módulo de control de inventario, que le permite monitorear al instante las existencias, recibir notificaciones automáticas cuando un artículo llega al stock mínimo y aplicar filtros por categoría o periodo para identificar patrones de consumo.
+
+Además, enfatiza que la apariencia es fresca y profesional: los tonos empleados son elegantes sin dejar de ser actuales, la tipografía se lee con total nitidez y los iconos transmiten claramente su función. En su opinión, esta solución le proporciona el dominio completo sobre pedidos e inventario, optimiza su tiempo y le infunde la seguridad necesaria para mejorar sus operaciones diarias.
 
 #### Segmento 2: Proveedores de Restaurantes
 
-## Entrevista N°1:
-- Nombre: Miguel Angel Leal
-- Sexo: Masculino
-- Edad:28
-- tiempo de duracion: 10:50
-- Ubicación: Lima, Santo Domingo
+**Entrevista 1:**
 
+**Nombre:** Miguel Angel Leal
+**Edad:** 28 años
+**Ubicación:** Lima, Santo Domingo
+**Timing:** (10:50 min)
 
-### Entrevista
-![entevistaS2_1.png](../restock-report/assets/images/chapter6/interview/interviewSegment2_1.png)
+![Foto de Entrevista](../restock-report/assets/images/chapter6/interview/interviewSegment2_1.png)
 
-link: https://youtu.be/GZVfKIVKNkA
+Ver entrevista: https://youtu.be/GZVfKIVKNkA
 
-**Resumen**
+**Resumen:**
+Miguel Angel Leal es un proveedor que actualmente se encarga de gestionar su restaurante. El comenta que su experiencia con la pagina fue bastante grata, aunque igualmente nos da su opinion respecto a la estructura de algunos aspectos que puede ser plan de pagos, la implementacion de un numero telefonico en el apartado de registro y finalmente agregar mas funciones como calidad de distribuidor entre otras, pero en sus opiniones generales dice que nuestra webb esta en buen camino.
 
-Miguel Angel Leal es un proveedor que actualmente se encarga de gestionar su restaurante. El comenta que su experiencia con la pagina fue bastante grata, aunque igualmente nos da su opinion respecto a la estructura de algunos aspectos que puede ser plan de pagos, la implementacion de un numero telefonico en el apartado de registro y finalmente agregar mas funciones como calidad de distribuidor entre otras, pero en sus opiniones generales dice que nuestra webb esta en buen camino
+**Entrevista 2:**
 
-## Entrevista N°2:
-- Nombre: Andrea Roncal Vargas
-- Sexo: femenino
-- Edad:25
-- tiempo de duracion: 10:00
-- Ubicación: Lima, Independencia
+**Nombre:** Andrea Roncal Vargas
+**Edad:** 25 años
+**Ubicación:** Lima, Independencia
+**Timing:** (10:00 min)
 
+![Foto de Entrevista](../restock-report/assets/images/chapter6/interview/interviewSegment2_2.png)
 
+Ver entrevista: https://youtu.be/iEu1wEoSrv0
 
-#### Entrevista: 
-
-![entevistaS2_2.png](../restock-report/assets/images/chapter6/interview/interviewSegment2_2.png)
-
-link: https://youtu.be/iEu1wEoSrv0
-
-**Resumen**
-
+**Resumen:**
 Andrea Roncal trabaja en un restaurante, donde ayuda en la gestion con sus compañeros de trabajo, ya que igual que es es un proveedora, a diferencia del entrevistado anterior, ella nos dios su pespectiva respecto a la implementeacion de guias visuales para ayudar en la navecacion ya sea de registro, como hacer insumos entro otras cosas pequeñas, igual que el entrevistado piensa en el plan de pagos deberia ser ampliados agregando mas planes para adecuarse al presupuesto de restaurante, sin olvidar que nos pidio pulir el apartado de reseña, luego de eso nos dijo que ibamos por buen camino con la horientacion del proyecto.
 
 ### 6.3.3. Evaluaciones según heurísticas
