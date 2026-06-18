@@ -14,7 +14,64 @@ A pesar de contar con una solución "To-Be" ya construida, el estado actual de n
 
 Este resumen establece que el punto de partida de la fase actual no es la generación de nuevas soluciones técnicas, sino la recolección de material bruto (suposiciones, vacíos de conocimiento, ideas y afirmaciones) para transformar nuestras creencias en preguntas de investigación. El objetivo primordial es validar si las funcionalidades ya implementadas realmente generan el impacto social y económico previsto para los administradores y proveedores de restaurantes en Lima, antes de proceder con el lanzamiento final.
 
-### 8.1.3. Experiment-Ready Questions
+### 8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims
+
+Esta sección presenta las fuentes de inspiración que dieron origen a las preguntas de investigación del proyecto Restock. El material bruto recopilado aquí fue el insumo principal para construir las *Experiment-Ready Questions* de 8.1.3 y el Question Backlog de 8.1.4. Se organiza en cuatro categorías: **Ideas**, **Claims**, **Assumptions** y **Knowledge Gaps**.
+
+---
+
+#### Ideas
+
+Las ideas son propuestas para resolver un problema o alcanzar un objetivo del producto. La premisa central de esta sección es que el equipo **no experimenta directamente con la idea**, sino con las suposiciones subyacentes que harían que la idea funcione o fracase.
+
+| ID | Idea | Premisa subyacente a probar |
+|:---:|---|---|
+| I-01 | Sistema de alertas automáticas de stock bajo y vencimiento próximo enviadas por notificaciones push | Los administradores actuarán sobre una alerta automática de la misma forma que actuarían si hubieran detectado el problema manualmente, reduciendo la merma en al menos un 35%. |
+| I-02 | Flujo de onboarding guiado paso a paso para administradores que nunca han usado software de gestión | El diseño guiado es suficiente para que un usuario con baja afinidad digital complete su primer pedido de forma autónoma en menos de 5 minutos, sin necesitar soporte externo. |
+| I-03 | Dashboard web con columna de indicador de rotación (Alta / Media / Baja) en el módulo de Inventario | Ver el nivel de rotación de un insumo antes de generar una orden cambiará el comportamiento de compra del administrador, reduciendo el volumen de pedidos de insumos de baja rotación. |
+| I-04 | Portal de gestión de catálogo para proveedores, integrado con el flujo de pedidos de los restaurantes | La eficiencia de tener todos los pedidos centralizados en un solo panel es un incentivo suficiente para que el proveedor tradicional abandone WhatsApp/Excel y digitalice su catálogo. |
+
+---
+
+#### Claims
+
+Los claims son afirmaciones realizadas sobre el producto, ya sea por el equipo, stakeholders o por los propios usuarios durante sesiones de descubrimiento previas.
+
+| ID | Afirmación (Claim) | Fuente | Vinculada a |
+|:---:|---|---|---|
+| C-01 | "Las alertas automáticas de Restock permitirán reducir el desperdicio de insumos perecibles en un 35%." | Equipo de producto (basado en benchmarks del sector restaurantero). | EQ1, Q1 |
+| C-02 | "Los administradores de restaurantes medianos en Lima no están dispuestos a aprender una nueva aplicación si el proceso inicial es complejo." | Retroalimentación cualitativa de entrevistas de usuario en fases previas del proyecto. | EQ2, Q2 |
+| C-03 | "Los proveedores tradicionales se integrarán a Restock si perciben que el volumen de pedidos que gestionan aumentará." | Hipótesis del equipo fundada en la lógica de incentivos B2B del mercado local. | EQ3, Q3 |
+| C-04 | "Mostrar datos de rotación en el inventario no cambia la conducta de compra de los administradores; siguen confiando en su intuición." | Observación del equipo durante sesiones de prueba de usabilidad internas. | EQ4, Q4 |
+| C-05 | "El onboarding guiado reduce el tiempo de activación del usuario de 15 minutos a menos de 5 minutos." | Estimación del equipo de diseño basada en el análisis del flujo actual de la app móvil. | EQ2, Q2 |
+
+
+#### Assumptions
+
+Las suposiciones son creencias preexistentes sobre el producto o la audiencia —frecuentemente basadas en la sabiduría del sector o en conocimiento previo— que deben ser probadas mediante experimentación antes de convertirse en decisiones de producto definitivas.
+
+| ID | Suposición (Assumption) | Categoría | Riesgo si resulta falsa | Vinculada a |
+|:---:|---|---|---|---|
+| A-01 | Los administradores de restaurantes medianos en Lima gestionan hoy su inventario de forma manual (Excel, cuadernos, WhatsApp) y no mediante un sistema digital. | Audiencia | Alto: si ya usan software, la propuesta de valor de Restock pierde diferenciación. | EQ1, EQ2 |
+| A-02 | La principal causa de mermas en restaurantes medianos es la falta de visibilidad oportuna del nivel de stock, no el desperdicio en cocina ni el sobrestock deliberado. | Producto | Alto: si la causa raíz es otra, las alertas automáticas no reducirán la merma. | EQ1, Q1 |
+| A-03 | Un usuario con baja afinidad digital puede aprender a usar una aplicación móvil de gestión si el flujo es lo suficientemente sencillo y guiado. | Audiencia | Medio: si la barrera cognitiva es mayor a la esperada, ningún onboarding resolverá el problema de adopción. | EQ2, Q2 |
+| A-04 | Los proveedores de insumos en Lima que operan informalmente (menos de 10 empleados, sin sistema propio) están en búsqueda activa de herramientas que centralicen sus pedidos. | Ecosistema | Alto: si no existe demanda latente, la estrategia de adquisición de proveedores requiere ser rediseñada. | EQ3, Q3 |
+| A-05 | La visualización de una métrica de rotación histórica es suficiente señal para que el administrador tome una decisión de compra diferente a la habitual. | Producto | Medio: si el usuario ignora el dato o no confía en él, el desarrollo del módulo de reportes no generará retorno. | EQ4, Q4 |
+| A-06 | El canal preferido por los administradores para recibir soporte inicial es el tutorial in-app o el tooltip contextual, por encima de WhatsApp o soporte humano. | Audiencia | Bajo: impacta el diseño del canal de soporte, no la propuesta de valor central. | EQ5 |
+
+
+#### Knowledge Gaps
+
+Las brechas de conocimiento son áreas donde el equipo reconoce explícitamente que carece de información. A diferencia de las suposiciones (donde existe una creencia, aunque no confirmada), los Knowledge Gaps son preguntas abiertas sin respuesta inicial, que frecuentemente dan lugar a preguntas exploratorias.
+
+| ID | Brecha de Conocimiento | Impacto en el producto | Vinculada a |
+|:---:|---|---|---|
+| KG-01 | Se desconoce el volumen real de mermas semanales (en kg o costo) que registran los restaurantes objetivo *antes* de usar Restock. Sin esta línea base, es imposible medir la reducción del 35%. | Crítico: sin baseline, el KPI principal (WRR) no es calculable. | Q1, EQ1 |
+| KG-02 | No se sabe cuánto tiempo tardan actualmente los administradores en realizar un pedido de insumos por sus canales habituales (llamada, WhatsApp, visita presencial). | Moderado: impide establecer el umbral realista de "menos de 5 minutos" como mejora significativa. | Q2, EQ2 |
+| KG-03 | Se ignora qué porcentaje de los proveedores de insumos en Lima ya cuenta con alguna herramienta digital propia (aunque sea básica), lo que afecta la segmentación del experimento de adopción. | Moderado: podría sesgar la muestra del Experimento 03 si se incluyen proveedores ya digitalizados. | Q3, EQ3 |
+| KG-04 | No se conocen las principales barreras operativas que impiden a los proveedores actualizar su inventario digital con frecuencia (tiempo, privacidad de precios, dificultad técnica, desconfianza). | Alto: sin entender la barrera real, el diseño del portal de proveedores puede atacar el problema equivocado. | EQ6 |
+| KG-05 | No existe evidencia interna sobre si los administradores realmente leen los reportes de métricas generados por el sistema, o si los ignoran al tomar decisiones de compra. | Moderado: determina si vale la pena invertir en el módulo de reportes avanzados antes de validar su uso. | Q4, EQ4 |
+
 
 ### 8.1.3. Experiment-Ready Questions
 
@@ -477,11 +534,312 @@ Validación de eventos en Firebase DebugView:
 
 ### 8.2.8. Web and Mobile Tracking Plan
 
+El Plan de Rastreo define qué eventos se capturarán, en qué plataforma y durante qué ventana de tiempo, en cumplimiento con el principio de **economía de rastreo** establecido en 8.2.3. El objetivo es instrumentar únicamente los eventos que responden directamente a las hipótesis definidas en 8.2.1, evitando acumular datos de navegación general que generen ruido o costos innecesarios de infraestructura.
+
+La herramienta central es **Firebase Analytics**, cuya integración con la aplicación móvil Kotlin ya fue verificada en 8.2.7. Para el frontend web Angular, los eventos se emiten desde los componentes afectados por los experimentos y se envían al mismo proyecto de Firebase mediante el SDK web.
+
+---
+
+#### Catálogo de Eventos — Aplicación Móvil (Kotlin / Android)
+
+Los eventos móviles cubren los Experimentos 01 y 02, ya que ambos ocurren sobre la app nativa Kotlin donde ya está integrado Firebase Analytics.
+
+| Evento | Experimento | Disparador | Parámetros clave | Ventana activa |
+|---|:---:|---|---|---|
+| `notification_received` | Exp 01 | El sistema operativo Android entrega la notificación push de alerta de stock | `notification_type` (stock_low / expiry), `supply_id` | 14 días (Exp 01) |
+| `notification_clicked` | Exp 01 | El usuario toca la notificación push recibida | `notification_type`, `supply_id`, `timestamp_ms` | 14 días (Exp 01) |
+| `order_created_after_alert` | Exp 01 | El usuario confirma una orden dentro de las 2 horas siguientes a recibir una alerta | `supply_id`, `alert_type`, `time_delta_minutes` | 14 días (Exp 01) |
+| `onboarding_step_viewed` | Exp 02 | El usuario llega a un paso del flujo de onboarding guiado | `step_number` (1–5), `step_name` | Primera sesión del usuario |
+| `onboarding_step_completed` | Exp 02 | El usuario avanza al siguiente paso del onboarding | `step_number`, `time_on_step_seconds` | Primera sesión del usuario |
+| `onboarding_abandoned` | Exp 02 | La app pasa a segundo plano o se cierra sin completar el onboarding | `last_step_number`, `total_time_seconds` | Primera sesión del usuario |
+| `first_order_submitted` | Exp 02 | El usuario envía su primer pedido (botón de confirmación) | `total_time_seconds`, `assisted` (boolean), `error_count` | Primera sesión del usuario |
+
+#### Catálogo de Eventos — Aplicación Web (Angular)
+
+Los eventos web cubren el Experimento 04. Se instrumentan en el componente de la tabla de inventario del módulo *Overview*, activados únicamente para el grupo experimental mediante *feature flag*.
+
+| Evento | Experimento | Disparador | Parámetros clave | Ventana activa |
+|---|:---:|---|---|---|
+| `rotation_column_viewed` | Exp 04 | El componente de tabla con la columna "Rotación" termina de renderizar | `user_id`, `items_visible` | Día de cierre semanal del restaurante |
+| `rotation_level_hovered` | Exp 04 | El cursor permanece más de 1 segundo sobre una celda de rotación | `supply_id`, `rotation_level` (Alta/Media/Baja), `dwell_time_ms` | Día de cierre semanal |
+| `order_quantity_entered` | Exp 04 | El usuario introduce o modifica una cantidad en el campo de cantidad de pedido | `supply_id`, `rotation_level`, `quantity_entered` | Día de cierre semanal |
+| `low_rotation_item_removed` | Exp 04 | El usuario elimina un ítem de baja rotación del carrito antes del checkout | `supply_id`, `quantity_removed` | Día de cierre semanal |
+| `order_submitted_with_rotation` | Exp 04 | El usuario confirma la orden habiendo tenido la columna de rotación visible | `low_rotation_items_count`, `total_items`, `total_quantity` | Día de cierre semanal |
+
+---
+
+#### Ventanas de Activación por Experimento
+
+| Experimento | Plataforma | Inicio del rastreo | Fin del rastreo | Criterio de apagado |
+|---|---|---|---|---|
+| Exp 01 — Alertas push | Kotlin / Android | Día 1 del piloto (grupo experimental) | Día 14 del piloto | Al completarse los 14 días o al alcanzar n=5 en el grupo |
+| Exp 02 — Onboarding | Kotlin / Android | Primera apertura de la app por el usuario de prueba | Confirmación del primer pedido | Evento `first_order_submitted` recibido (apagado automático por cohorte) |
+| Exp 03 — Concierge | N/A | N/A | N/A | Medición cualitativa manual; no requiere telemetría digital |
+| Exp 04 — Rotación | Angular (Web) | Día del cierre semanal del grupo experimental | Al finalizar la sesión del cierre | Flag apagado automáticamente al terminar la sesión de inventario |
+
+---
+
+#### Reglas de Economía de Rastreo
+
+1. **Sin rastreo cruzado:** Los eventos del Exp 01 no se activan para usuarios del Exp 02, y viceversa. El SDK diferencia usuarios mediante el parámetro `experiment_id` en las propiedades de usuario de Firebase.
+2. **Sin rastreo de navegación general:** No se capturan eventos de tipo *page_view*, *scroll* ni *session_start* fuera de los módulos instrumentados. Solo se activan los eventos del catálogo anterior.
+3. **Apagado automático:** Los eventos del Exp 02 se desactivan al recibir `first_order_submitted`, sin necesidad de intervención manual.
+4. **Feature flag para Exp 04:** La columna de rotación y sus eventos asociados se controlan mediante un *feature flag* booleano en Angular. El flag solo está activo para los usuarios asignados al grupo experimental durante su día de cierre semanal.
+
 ## 8.3. Experimentation
 
 ### 8.3.1. To-Be User Stories
 
+Las siguientes historias de usuario amplían el catálogo establecido en el capítulo 3 (US-01 a US-36). Cada historia representa una funcionalidad específica que debe implementarse como *Simplest Useful Thing* para ejecutar uno de los experimentos definidos en 8.2.6. Los IDs continúan la numeración existente (US-37 en adelante) y se vinculan a las epics del capítulo 3.
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-37</td>
+      <td>Administrador de restaurante</td>
+      <td>High</td>
+      <td>EP-10</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Notificaciones push automáticas de inventario en dispositivo móvil</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como administrador de restaurante, quiero recibir una notificación push en mi dispositivo móvil cuando un insumo alcance su stock mínimo o tenga fecha de vencimiento en los próximos 5 días, para actuar de forma preventiva sin tener que revisar activamente el inventario.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1: Notificación por stock bajo.</strong><br/>
+          Dado que un insumo registrado tiene definido un stock mínimo,<br/>
+          cuando el stock actual cae por debajo de dicho umbral,<br/>
+          entonces el sistema envía una notificación push al dispositivo del administrador indicando el nombre del insumo y el nivel actual de stock.</li>
+          <li><strong>Escenario 2: Notificación por vencimiento próximo.</strong><br/>
+          Dado que un insumo tiene una fecha de vencimiento registrada,<br/>
+          cuando faltan 5 días o menos para su vencimiento,<br/>
+          entonces el sistema envía una notificación push al dispositivo del administrador indicando el nombre del insumo y la fecha de vencimiento.</li>
+          <li><strong>Escenario 3: Navegación desde la notificación.</strong><br/>
+          Dado que el administrador recibe la notificación push,<br/>
+          cuando la toca,<br/>
+          entonces la app abre directamente la vista del insumo afectado dentro del módulo de inventario.</li>
+          <li><strong>Escenario 4: Sin notificación si el stock es suficiente.</strong><br/>
+          Dado que un insumo tiene stock por encima del mínimo y su fecha de vencimiento es mayor a 5 días,<br/>
+          cuando el sistema realiza la verificación periódica,<br/>
+          entonces no se genera ninguna notificación push para ese insumo.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-38</td>
+      <td>Nuevo usuario administrador de restaurante</td>
+      <td>High</td>
+      <td>EP-03</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Flujo de onboarding guiado para el primer pedido</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como nuevo usuario administrador de restaurante, quiero seguir un flujo de onboarding guiado paso a paso al usar la aplicación móvil por primera vez, para poder completar mi primer pedido de forma autónoma en menos de 5 minutos sin necesitar asistencia externa.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1: Inicio automático del onboarding en primera sesión.</strong><br/>
+          Dado que el usuario inicia sesión por primera vez en la aplicación,<br/>
+          cuando accede al módulo principal,<br/>
+          entonces el sistema muestra automáticamente el primer paso del flujo de onboarding guiado sin necesidad de acción adicional.</li>
+          <li><strong>Escenario 2: Progresión paso a paso con indicador de avance.</strong><br/>
+          Dado que el usuario se encuentra en el flujo de onboarding,<br/>
+          cuando completa cada paso (registrar insumo, seleccionar proveedor, confirmar pedido),<br/>
+          entonces el sistema muestra un indicador de progreso y lo lleva automáticamente al siguiente paso.</li>
+          <li><strong>Escenario 3: Confirmación del primer pedido como finalización del onboarding.</strong><br/>
+          Dado que el usuario ha completado todos los pasos del onboarding,<br/>
+          cuando confirma su primer pedido,<br/>
+          entonces el sistema registra la finalización del onboarding y muestra un mensaje de bienvenida.</li>
+          <li><strong>Escenario 4: Omisión del onboarding en sesiones posteriores.</strong><br/>
+          Dado que el usuario ya completó el primer pedido,<br/>
+          cuando vuelve a iniciar sesión en la aplicación,<br/>
+          entonces el sistema no vuelve a mostrar el flujo de onboarding guiado.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-39</td>
+      <td>Proveedor de insumos (sin experiencia digital)</td>
+      <td>Medium</td>
+      <td>EP-13</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Carga asistida del catálogo de productos del proveedor</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como proveedor de insumos sin experiencia en herramientas digitales, quiero que el equipo de Restock cargue mi catálogo de productos en la plataforma durante una sesión de demostración asistida, para comenzar a recibir pedidos digitalmente sin barreras técnicas y evaluar si el sistema se adapta a mi operación.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1: Carga exitosa de productos por parte del equipo Restock.</strong><br/>
+          Dado que el equipo tiene acceso al perfil del proveedor y la lista de productos proporcionada,<br/>
+          cuando registra cada producto con nombre, precio unitario y unidad de medida,<br/>
+          entonces los productos quedan visibles en el catálogo del proveedor dentro de la plataforma.</li>
+          <li><strong>Escenario 2: El proveedor visualiza su catálogo cargado.</strong><br/>
+          Dado que los productos fueron cargados por el equipo,<br/>
+          cuando el proveedor accede a su módulo de gestión de productos,<br/>
+          entonces ve el listado completo con la información ingresada y puede confirmar su exactitud.</li>
+          <li><strong>Escenario 3: Recepción de un pedido de prueba durante la demostración.</strong><br/>
+          Dado que el catálogo está cargado y el equipo simula un pedido desde una cuenta de restaurante,<br/>
+          cuando el proveedor accede al módulo de órdenes,<br/>
+          entonces visualiza el pedido simulado con el detalle de productos, cantidades y restaurante solicitante.</li>
+          <li><strong>Escenario 4: Registro de intención de uso al finalizar la sesión.</strong><br/>
+          Dado que la demostración ha concluido,<br/>
+          cuando el proveedor confirma su disposición a continuar usando la plataforma,<br/>
+          entonces el sistema registra la sesión como una conversión positiva en el módulo de seguimiento del equipo.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-40</td>
+      <td>Administrador de restaurante</td>
+      <td>Medium</td>
+      <td>EP-06</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Indicador de nivel de rotación por insumo en el módulo de inventario</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como administrador de restaurante, quiero ver el nivel de rotación (Alta / Media / Baja) de cada insumo en la tabla del módulo de inventario, para tomar decisiones más precisas al generar mis órdenes de compra y evitar el sobrestock de insumos con baja demanda.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1: Visualización de la columna de rotación.</strong><br/>
+          Dado que el administrador accede al módulo de inventario con el indicador de rotación habilitado,<br/>
+          cuando se carga la tabla de insumos,<br/>
+          entonces cada fila muestra una etiqueta de rotación (Alta / Media / Baja) calculada a partir del historial de consumo.</li>
+          <li><strong>Escenario 2: Etiqueta de rotación consistente con el historial.</strong><br/>
+          Dado que un insumo tiene un bajo volumen de consumo en las últimas 4 semanas,<br/>
+          cuando el administrador consulta la tabla,<br/>
+          entonces la etiqueta del insumo muestra "Baja" y se resalta visualmente para atraer la atención del usuario.</li>
+          <li><strong>Escenario 3: La columna no afecta la funcionalidad existente.</strong><br/>
+          Dado que la columna de rotación está visible,<br/>
+          cuando el administrador realiza acciones sobre el inventario (editar, agregar al pedido, filtrar),<br/>
+          entonces todas las funcionalidades previas operan con normalidad sin interferencias.</li>
+          <li><strong>Escenario 4: Columna invisible para el grupo de control (feature flag).</strong><br/>
+          Dado que un administrador pertenece al grupo de control del experimento,<br/>
+          cuando accede al módulo de inventario,<br/>
+          entonces la columna de rotación no es visible en la tabla y la interfaz es idéntica a la versión previa.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ### 8.3.2. To-Be Product Backlog
+
+El siguiente backlog prioriza las cuatro historias de usuario To-Be derivadas directamente de los experimentos planificados. El orden de prioridad se determina por el puntaje total del Question Backlog (sección 8.1.4): Q1 (17 pts) > Q2 (16 pts) > Q3 (15 pts) > Q4 (13 pts). Las estimaciones de esfuerzo en Story Points siguen la misma escala de Fibonacci utilizada en el backlog del capítulo 3.
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th># Order</th>
+      <th>User Story ID</th>
+      <th>Título</th>
+      <th>Descripción</th>
+      <th>Experimento vinculado</th>
+      <th>Story Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>US-37</td>
+      <td>Notificaciones push automáticas de inventario en dispositivo móvil</td>
+      <td>Como administrador de restaurante, quiero recibir una notificación push en mi dispositivo móvil cuando un insumo alcance su stock mínimo o tenga fecha de vencimiento próxima, para actuar de forma preventiva sin revisar activamente el inventario.</td>
+      <td>Experimento 01 — Validación de Impacto en Mermas (Q1, puntaje 17)</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>US-38</td>
+      <td>Flujo de onboarding guiado para el primer pedido</td>
+      <td>Como nuevo usuario administrador de restaurante, quiero seguir un flujo de onboarding guiado paso a paso al usar la app por primera vez, para completar mi primer pedido de forma autónoma en menos de 5 minutos.</td>
+      <td>Experimento 02 — Validación de Adopción Digital (Q2, puntaje 16)</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>US-39</td>
+      <td>Carga asistida del catálogo de productos del proveedor</td>
+      <td>Como proveedor sin experiencia digital, quiero que el equipo de Restock cargue mi catálogo durante una sesión asistida, para comenzar a recibir pedidos digitalmente sin barreras técnicas.</td>
+      <td>Experimento 03 — Viabilidad del Ecosistema de Proveedores (Q3, puntaje 15)</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>US-40</td>
+      <td>Indicador de nivel de rotación por insumo en el módulo de inventario</td>
+      <td>Como administrador de restaurante, quiero ver el nivel de rotación (Alta / Media / Baja) de cada insumo en la tabla de inventario, para tomar decisiones más precisas al generar mis órdenes de compra.</td>
+      <td>Experimento 04 — Comportamiento Basado en Datos (Q4, puntaje 13)</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 ### 8.3.3. Pipeline-supported, Experiment-Driven To-Be Software Platform  Lifecycle
 
