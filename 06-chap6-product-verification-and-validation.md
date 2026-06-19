@@ -1243,7 +1243,7 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistem
 
 ### 6.3.2. Registro de Entrevistas
 
-Segmento 1: Dueños o administradores de Restaurantes
+#### Segmento 1: Dueños o administradores de Restaurantes
 
 **Entrevista 1:**
 
@@ -1282,6 +1282,22 @@ Mery Pilar resalta que la herramienta es sumamente sencilla de usar desde el pri
 
 Además, enfatiza que la apariencia es fresca y profesional: los tonos empleados son elegantes sin dejar de ser actuales, la tipografía se lee con total nitidez y los iconos transmiten claramente su función. En su opinión, esta solución le proporciona el dominio completo sobre pedidos e inventario, optimiza su tiempo y le infunde la seguridad necesaria para mejorar sus operaciones diarias.
 
+**Entrevista 3:**
+
+**Nombre:** Julián
+**Edad:** 34 años
+**Distrito:** Lima, San Isidro
+**Timing:** (00:00 - 13:00 min)
+
+![Foto de Entrevista](../restock-report/assets/images/chapter6/interview/Dueño_Restaurante_03.png)
+
+Ver entrevista: [Enlace a la entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213468_upc_edu_pe/IQAFxviA7a9cQKs3uzUhPgIKAU1agPonNAaaWMXb2IzJl1c?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=71oZfT)
+
+**Resumen:**
+Julián es el administrador y dueño de un restaurante de hamburguesas en Lima. Durante la validación, navegó por la Landing Page y consideró que las propuestas de valor más pertinentes para su negocio son la gestión de compras, la creación de recetas y el control de mermas/residuos, ya que en el rubro gastronómico el desperdicio impacta directamente en la rentabilidad. Al probar el módulo de Inventario, registró insumos como carne y pan, estableciendo cantidades y precios, pero indicó que el término "Acciones máximas" le resultó confuso y reportó haber obtenido una alerta de error en la interfaz.
+
+En la sección de Órdenes, simuló de manera fluida el envío de un pedido al proveedor. Sin embargo, en el módulo de Ventas, señaló que la estructura actual es demasiado simple para un negocio real, dado que su catálogo tiene más de 60 productos y sus clientes suelen personalizar las órdenes de forma detallada (añadiendo adicionales como tocino, piña o salsas), lo cual el sistema no permite registrar de forma flexible. Finalmente, recomendó aclarar la procedencia del stock en órdenes (si es de almacén propio o de proveedor) y agregar avisos claros que confirmen cuando una acción se guarda con éxito.
+
 #### Segmento 2: Proveedores de Restaurantes
 
 **Entrevista 1:**
@@ -1311,6 +1327,22 @@ Ver entrevista: https://youtu.be/iEu1wEoSrv0
 
 **Resumen:**
 Andrea Roncal trabaja en un restaurante, donde ayuda en la gestion con sus compañeros de trabajo, ya que igual que es es un proveedora, a diferencia del entrevistado anterior, ella nos dios su pespectiva respecto a la implementeacion de guias visuales para ayudar en la navecacion ya sea de registro, como hacer insumos entro otras cosas pequeñas, igual que el entrevistado piensa en el plan de pagos deberia ser ampliados agregando mas planes para adecuarse al presupuesto de restaurante, sin olvidar que nos pidio pulir el apartado de reseña, luego de eso nos dijo que ibamos por buen camino con la horientacion del proyecto.
+
+**Entrevista 3:**
+
+**Nombre:** Alfonso
+**Edad:** 31 años
+**Ubicación:** Lima, San Miguel
+**Timing:** (00:00 - 09:30 min)
+
+![Foto de Entrevista](../restock-report/assets/images/chapter6/interview/Proveedor_03.png)
+
+Ver entrevista: [Enlace a la entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213468_upc_edu_pe/IQBSyVYnjaaNTqRY4OOmPokhATz7Gnj-NxZnxQIblpJlIBI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=vYC5Ab)
+
+**Resumen:**
+Alfonso es un proveedor comercial con experiencia en gestión de distribución y ventas B2B. Durante su interacción con Restock Suppliers, evaluó positivamente el proceso de registro, catalogándolo como amigable y rápido en comparación con otros sistemas que exigen validaciones redundantes o datos irrelevantes. Asimismo, consideró la interfaz general del panel principal como intuitiva y fácil de navegar.
+
+Al simular el registro de productos en el Inventario (pan gourmet), consideró que el sistema funciona de manera eficiente. Sin embargo, sugirió que la plataforma debería permitir el registro de productos personalizados por campo abierto para aquellos que no se encuentran en las categorías preestablecidas. También recomendó implementar una notificación visual de éxito ("Producto guardado correctamente") tras realizar un registro. Finalmente, valoró positivamente la separación de pedidos en pestañas de estado (Nuevas, En proceso e Historial), ya que ayuda a organizar adecuadamente la logística diaria de entrega.
 
 ### 6.3.3. Evaluaciones según heurísticas
 
