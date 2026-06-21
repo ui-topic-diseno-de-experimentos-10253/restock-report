@@ -1286,6 +1286,101 @@ Andrea Roncal trabaja en un restaurante, donde ayuda en la gestion con sus compa
 
 ### 6.3.3. Evaluaciones según heurísticas
 
+Esta sección contiene el proceso de evaluación de las sesiones de validación basado en heurísticas, considerando heurísticas de usabilidad, arquitectura de información e inclusive design de la experiencia propuesta. Para esto, la sección contiene la estructura del formato para evaluaciones de heurísticas indicado en el Anexo D. Formato para Evaluación de User Experience según Heurísticas.
+
+**SITE o APP A EVALUAR:**
+Restock (Plataforma Web para Administradores de Restaurantes y Aplicación Web Restock Suppliers para Proveedores)
+
+**TAREAS A EVALUAR:**
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
+1. Navegación en el Landing Page de Restock para la comprensión de las propuestas de valor.
+2. Proceso de registro e inicio de sesión de usuario (tanto en la aplicación web para restaurantes como en la web para proveedores).
+3. Registro, edición y gestión de insumos/productos en el inventario del restaurante.
+4. Registro de nuevos productos y actualización de precios en el catálogo de proveedores.
+5. Simulación, creación y envío de pedidos (órdenes de compra) a proveedores asignados.
+6. Registro de ventas diarias en la caja registradora del restaurante para verificar el descuento de insumos en inventario.
+7. Visualización y navegación del historial de pedidos del proveedor organizado por pestañas de estado (Nuevas, En proceso, Historial).
+
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+1. Pasarela de cobros reales y automatizados para el pago de las membresías/suscripciones mensuales.
+2. Sincronización en tiempo real de inventarios locales del restaurante con software POS externo.
+3. Envío y visualización de notificaciones push en tiempo real ante niveles críticos de stock bajo.
+4. Exportación en formatos de hoja de cálculo (Excel, PDF) de análisis avanzados de mermas y balances mensuales.
+
+**ESCALA DE SEVERIDAD:**
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
+
+| Nivel | Descripción |
+|---|---|
+| **1** | **Problema superficial:** puede ser fácilmente superado por el usuario o ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| **2** | **Problema menor:** puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja de cara al siguiente release. |
+| **3** | **Problema mayor:** ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta. |
+| **4** | **Problema muy grave:** un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
+
+**TABLA RESUMEN:**
+
+| # | Problema | Escala de severidad | Heurística/Principio violada(o) |
+|---|---|:---:|---|
+| 1 | Campo rotulado como "Acciones máximas" en el registro de inventario causa confusión | 2 | Usability: Consistencia y estándares / Relación entre el sistema y el mundo real |
+| 2 | Alerta de error genérica e inesperada al intentar guardar un producto en el inventario de restaurantes | 3 | Usability: Prevención de errores / Reconocimiento, diagnóstico y recuperación de errores |
+| 3 | Imposibilidad de agregar adicionales o productos personalizados en el registro de ventas diarias | 3 | Usability: Flexibilidad y eficiencia de uso |
+| 4 | Ambigüedad sobre la propiedad del stock (propio o del proveedor) al generar una orden de compra | 2 | Information Architecture: Is it usable? |
+| 5 | Falta de mensajes de confirmación de éxito ("toast" o banners) al registrar productos en el catálogo de proveedores | 2 | Usability: Visibilidad del estado del sistema |
+| 6 | Ausencia de categorías personalizadas o entrada de texto libre para clasificar nuevos productos en el catálogo de proveedores | 2 | Usability: Flexibilidad y eficiencia de uso |
+| 7 | Falta de planes de pago flexibles o adaptados al presupuesto real de pequeños restaurantes y proveedores | 2 | Information Architecture: Is it findable? / Usabilidad: Relación entre el sistema y el mundo real |
+| 8 | Ausencia de guías visuales o tutoriales de navegación rápida para usuarios nuevos | 1 | Usability: Ayuda y documentación |
+
+**DESCRIPCIÓN DE PROBLEMAS:**
+
+**PROBLEMA #1: Campo rotulado como "Acciones máximas" en el registro de inventario causa confusión**
+* **Severidad:** 2
+* **Heurística violada:** Usabilidad - Consistencia y estándares / Relación entre el sistema y el mundo real
+* **Problema:** Al momento de ingresar o modificar un producto en la sección de inventario, el usuario Julián observó un campo etiquetado como "Acciones máximas", lo que generó confusión ya que en el rubro de restaurantes se acostumbra usar términos como "Stock máximo" o "Capacidad máxima". El término actual no corresponde al lenguaje del negocio y se asocia de forma incorrecta con precios.
+* **Recomendación:** Renombrar el campo a "Stock Máximo" o "Límite de Almacén" para adecuarse al lenguaje y estándares del rubro.
+
+**PROBLEMA #2: Alerta de error genérica e inesperada al intentar guardar un producto en el inventario de restaurantes**
+* **Severidad:** 3
+* **Heurística violada:** Usabilidad - Prevención de errores / Reconocimiento, diagnóstico y recuperación de errores
+* **Problema:** Al intentar guardar los cambios de un producto alimentario en el módulo de Inventario, el sistema arrojó un error técnico en pantalla sin dar explicaciones ni sugerencias de cómo corregirlo. Esto interrumpió el flujo del usuario y requirió cancelar el proceso.
+* **Recomendación:** Diseñar mensajes de error amigables que expliquen detalladamente la causa del fallo (ej. "Falta rellenar campos obligatorios" o "Error de conexión") y provean alternativas de solución.
+
+**PROBLEMA #3: Imposibilidad de agregar adicionales o productos personalizados en el registro de ventas diarias**
+* **Severidad:** 3
+* **Heurística violada:** Usabilidad - Flexibilidad y eficiencia de uso
+* **Problema:** El módulo de ventas presenta una lista rígida de platos base (ej. papa a la huancaína) sin permitir la adición de ingredientes extra o adicionales (ej. tocino, queso, piña) que los clientes reales suelen pedir frecuentemente. Esto obliga a realizar múltiples registros manuales o externos fuera del sistema.
+* **Recomendación:** Rediseñar la sección de registro de ventas para permitir seleccionar modificadores, adicionales y cantidades libres en los platos seleccionados.
+
+**PROBLEMA #4: Ambigüedad sobre la propiedad del stock al generar una orden de compra**
+* **Severidad:** 2
+* **Heurística violada:** Arquitectura de la Información - Is it usable?
+* **Problema:** En el flujo de reabastecimiento (sección Órdenes), el sistema muestra cantidades numéricas bajo la columna de stock, pero el usuario no logra distinguir con claridad si se refiere a las existencias remanentes en el almacén de su restaurante o al stock disponible que tiene el proveedor asignado.
+* **Recomendación:** Clarificar la etiqueta de la columna, renombrándola como "Stock en Almacén del Restaurante" y agregando un indicador del "Stock disponible del Proveedor".
+
+**PROBLEMA #5: Falta de mensajes de confirmación de éxito ("toast" o banners) al registrar productos en el catálogo de proveedores**
+* **Severidad:** 2
+* **Heurística violada:** Usabilidad - Visibilidad del estado del sistema
+* **Problema:** Tras guardar un pan gourmet en el catálogo de la versión web de proveedores, la pantalla vuelve al listado de manera abrupta sin mostrar ninguna confirmación de que el registro fue guardado con éxito. El usuario Alfonso sintió desconfianza de si la operación realmente se había realizado hasta que refrescó la pantalla.
+* **Recomendación:** Añadir un mensaje visual flotante (*toast* o notificación de tipo snackbar) en la esquina superior/inferior de la pantalla con el texto: "Producto registrado exitosamente".
+
+**PROBLEMA #6: Ausencia de categorías personalizadas o entrada de texto libre para clasificar nuevos productos en el catálogo de proveedores**
+* **Severidad:** 2
+* **Heurística violada:** Usabilidad - Flexibilidad y eficiencia de uso
+* **Problema:** En la versión web de proveedores, al registrar un nuevo insumo, el selector de categorías obliga al usuario a elegir entre opciones fijas muy restringidas. Si el proveedor maneja bebidas especializadas u otros insumos no contemplados, no tiene forma de clasificar adecuadamente su oferta.
+* **Recomendación:** Habilitar un campo de texto libre o añadir la opción "Otro / Categoría Personalizada" para que el usuario defina libremente el tipo de producto.
+
+**PROBLEMA #7: Falta de planes de pago flexibles o adaptados al presupuesto real de pequeños restaurantes y proveedores**
+* **Severidad:** 2
+* **Heurística violada:** Arquitectura de la Información - Is it findable? / Usabilidad - Ajuste entre el sistema y el mundo real
+* **Problema:** Tanto el dueño del restaurante como el proveedor identificaron que el selector de planes de membresía/suscripción es muy básico y no ofrece opciones escalonadas o adaptables para pequeños negocios locales, lo que genera dudas sobre la viabilidad financiera de adquirir el servicio de Restock.
+* **Recomendación:** Diseñar una sección de planes con una arquitectura de información más delinear o detallada que exponga planes escalonados (Gratuito, Básico, Premium) ajustados a diferentes tamaños de negocio.
+
+**PROBLEMA #8: Ausencia de guías visuales o tutoriales de navegación rápida para usuarios nuevos**
+* **Severidad:** 1
+* **Heurística violada:** Usabilidad - Ayuda y documentación
+* **Problema:** El sistema no provee una guía rápida de inducción o *onboarding* durante el primer inicio de sesión, lo que obliga al usuario a aprender a navegar en la herramienta por ensayo y error.
+* **Recomendación:** Incorporar un asistente de ayuda visual (*walkthrough* interactivo) que señale brevemente la función de cada módulo del panel principal en el primer ingreso.
+
+
 ## 6.4. Auditoría de Experiencias de Usuario
 
 ### 6.4.1. Auditoría realizada
