@@ -1243,46 +1243,106 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistem
 
 ### 6.3.2. Registro de Entrevistas
 
-#### Segmento 1: Administradores de Restaurantes
+#### Segmento 1: Dueños o administradores de Restaurantes
 
+**Entrevista 1:**
+
+**Nombre:** Alfredo Bernuy
+**Edad:** 52 años
+**Distrito:** Chorrillos
+**Timing:** (00:00- 05:18 min)
+
+![Foto de Entrevista](https://i.ibb.co/S4tpKKYz/image.png)
+ 
+Ver entrevista: https://shorturl.at/YDftM
+
+**Resumen:**
+Alfredo Bernuy, administrador de restaurantes con 4 años de experiencia, tiene 52 años, es casado y vive en el distrito de Chorrillos, Lima. Es una persona comprometida y orientada a la mejora continua.
+
+Alfredo Bernuy destaca que la plataforma le resulta muy intuitiva desde el primer acceso: los menús están organizados de forma clara, los botones de acción son fácilmente reconocibles y el flujo para crear o modificar pedidos se siente natural y ágil. Valora especialmente la sección de gestión de stock, que le permite visualizar en tiempo real los niveles de inventario, recibir alertas automáticas al alcanzar el mínimo definido y filtrar por categorías o fechas para detectar tendencias.
+
+Por otro lado, subraya que el diseño es moderno y atractivo: la paleta de colores es sobria pero actual, la tipografía resulta legible y los iconos comunican su función de un vistazo. Considera que la herramienta le brinda un control total sobre pedidos y stock, le ahorra tiempo y le transmite la confianza necesaria para optimizar sus operaciones diarias.
+
+**Entrevista 2:**
+
+**Nombre:** Mery Pilar
+**Edad:** 49 años
+**Distrito:** Chorrillos
+**Timing:** (05:19 - 10:50 min)
+
+![Foto de Entrevista](https://i.ibb.co/hx5tPWtx/image.png)
+
+Ver entrevista: https://shorturl.at/YDftM
+
+**Resumen:**
+
+Mery Pilar, administradora de restaurantes con 6 años de experiencia, tiene 49 años, es casada y vive en el distrito de Chorrillos, Lima. Es una persona responsable y orientada a la mejora continua e innovación.
+
+Mery Pilar resalta que la herramienta es sumamente sencilla de usar desde el primer contacto: los apartados están dispuestos de manera ordenada, los elementos interactivos resultan intuitivos y el proceso para generar o actualizar pedidos fluye de forma muy eficiente. Aprecia de forma especial el módulo de control de inventario, que le permite monitorear al instante las existencias, recibir notificaciones automáticas cuando un artículo llega al stock mínimo y aplicar filtros por categoría o periodo para identificar patrones de consumo.
+
+Además, enfatiza que la apariencia es fresca y profesional: los tonos empleados son elegantes sin dejar de ser actuales, la tipografía se lee con total nitidez y los iconos transmiten claramente su función. En su opinión, esta solución le proporciona el dominio completo sobre pedidos e inventario, optimiza su tiempo y le infunde la seguridad necesaria para mejorar sus operaciones diarias.
+
+**Entrevista 3:**
+
+**Nombre:** Julián
+**Edad:** 34 años
+**Distrito:** Lima, San Isidro
+**Timing:** (00:00 - 13:00 min)
+
+![Foto de Entrevista](../restock-report/assets/images/chapter6/interview/Dueño_Restaurante_03.png)
+
+Ver entrevista: [Enlace a la entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213468_upc_edu_pe/IQAFxviA7a9cQKs3uzUhPgIKAU1agPonNAaaWMXb2IzJl1c?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=71oZfT)
+
+**Resumen:**
+Julián es el administrador y dueño de un restaurante de hamburguesas en Lima. Durante la validación, navegó por la Landing Page y consideró que las propuestas de valor más pertinentes para su negocio son la gestión de compras, la creación de recetas y el control de mermas/residuos, ya que en el rubro gastronómico el desperdicio impacta directamente en la rentabilidad. Al probar el módulo de Inventario, registró insumos como carne y pan, estableciendo cantidades y precios, pero indicó que el término "Acciones máximas" le resultó confuso y reportó haber obtenido una alerta de error en la interfaz.
+
+En la sección de Órdenes, simuló de manera fluida el envío de un pedido al proveedor. Sin embargo, en el módulo de Ventas, señaló que la estructura actual es demasiado simple para un negocio real, dado que su catálogo tiene más de 60 productos y sus clientes suelen personalizar las órdenes de forma detallada (añadiendo adicionales como tocino, piña o salsas), lo cual el sistema no permite registrar de forma flexible. Finalmente, recomendó aclarar la procedencia del stock en órdenes (si es de almacén propio o de proveedor) y agregar avisos claros que confirmen cuando una acción se guarda con éxito.
 
 #### Segmento 2: Proveedores de Restaurantes
 
-## Entrevista N°1:
-- Nombre: Miguel Angel Leal
-- Sexo: Masculino
-- Edad:28
-- tiempo de duracion: 10:50
-- Ubicación: Lima, Santo Domingo
+**Entrevista 1:**
 
+**Nombre:** Miguel Angel Leal
+**Edad:** 28 años
+**Ubicación:** Lima, Santo Domingo
+**Timing:** (10:50 min)
 
-### Entrevista
-![entevistaS2_1.png](../restock-report/assets/images/chapter6/interview/interviewSegment2_1.png)
+![Foto de Entrevista](../restock-report/assets/images/chapter6/interview/interviewSegment2_1.png)
 
-link: https://youtu.be/GZVfKIVKNkA
+Ver entrevista: https://youtu.be/GZVfKIVKNkA
 
-**Resumen**
+**Resumen:**
+Miguel Angel Leal es un proveedor que actualmente se encarga de gestionar su restaurante. El comenta que su experiencia con la pagina fue bastante grata, aunque igualmente nos da su opinion respecto a la estructura de algunos aspectos que puede ser plan de pagos, la implementacion de un numero telefonico en el apartado de registro y finalmente agregar mas funciones como calidad de distribuidor entre otras, pero en sus opiniones generales dice que nuestra webb esta en buen camino.
 
-Miguel Angel Leal es un proveedor que actualmente se encarga de gestionar su restaurante. El comenta que su experiencia con la pagina fue bastante grata, aunque igualmente nos da su opinion respecto a la estructura de algunos aspectos que puede ser plan de pagos, la implementacion de un numero telefonico en el apartado de registro y finalmente agregar mas funciones como calidad de distribuidor entre otras, pero en sus opiniones generales dice que nuestra webb esta en buen camino
+**Entrevista 2:**
 
-## Entrevista N°2:
-- Nombre: Andrea Roncal Vargas
-- Sexo: femenino
-- Edad:25
-- tiempo de duracion: 10:00
-- Ubicación: Lima, Independencia
+**Nombre:** Andrea Roncal Vargas
+**Edad:** 25 años
+**Ubicación:** Lima, Independencia
+**Timing:** (10:00 min)
 
+![Foto de Entrevista](../restock-report/assets/images/chapter6/interview/interviewSegment2_2.png)
 
+Ver entrevista: https://youtu.be/iEu1wEoSrv0
 
-#### Entrevista: 
-
-![entevistaS2_2.png](../restock-report/assets/images/chapter6/interview/interviewSegment2_2.png)
-
-link: https://youtu.be/iEu1wEoSrv0
-
-**Resumen**
-
+**Resumen:**
 Andrea Roncal trabaja en un restaurante, donde ayuda en la gestion con sus compañeros de trabajo, ya que igual que es es un proveedora, a diferencia del entrevistado anterior, ella nos dios su pespectiva respecto a la implementeacion de guias visuales para ayudar en la navecacion ya sea de registro, como hacer insumos entro otras cosas pequeñas, igual que el entrevistado piensa en el plan de pagos deberia ser ampliados agregando mas planes para adecuarse al presupuesto de restaurante, sin olvidar que nos pidio pulir el apartado de reseña, luego de eso nos dijo que ibamos por buen camino con la horientacion del proyecto.
+
+**Entrevista 3:**
+
+**Nombre:** Alfonso
+**Edad:** 31 años
+**Ubicación:** Lima, San Miguel
+**Timing:** (00:00 - 09:30 min)
+
+![Foto de Entrevista](../restock-report/assets/images/chapter6/interview/Proveedor_03.png)
+
+Ver entrevista: [Enlace a la entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213468_upc_edu_pe/IQBSyVYnjaaNTqRY4OOmPokhATz7Gnj-NxZnxQIblpJlIBI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=vYC5Ab)
+
+**Resumen:**
+Alfonso es un proveedor comercial con experiencia en gestión de distribución y ventas B2B. Durante su interacción con Restock Suppliers, evaluó positivamente el proceso de registro, catalogándolo como amigable y rápido en comparación con otros sistemas que exigen validaciones redundantes o datos irrelevantes. Asimismo, consideró la interfaz general del panel principal como intuitiva y fácil de navegar.
+
+Al simular el registro de productos en el Inventario (pan gourmet), consideró que el sistema funciona de manera eficiente. Sin embargo, sugirió que la plataforma debería permitir el registro de productos personalizados por campo abierto para aquellos que no se encuentran en las categorías preestablecidas. También recomendó implementar una notificación visual de éxito ("Producto guardado correctamente") tras realizar un registro. Finalmente, valoró positivamente la separación de pedidos en pestañas de estado (Nuevas, En proceso e Historial), ya que ayuda a organizar adecuadamente la logística diaria de entrega.
 
 ### 6.3.3. Evaluaciones según heurísticas
 
