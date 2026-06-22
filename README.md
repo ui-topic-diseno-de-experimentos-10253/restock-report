@@ -81,7 +81,7 @@ Para el desarrollo del **Project Report**, el equipo utiliza un repositorio dent
 
 **Repositorio del informe del proyecto:** [https://shortlink.uk/1tQjs](https://shortlink.uk/1tQjs)
 
-**Total de commits:** 69
+**Total de commits:** 105
 
 **Autores contribuyentes:**
 
@@ -139,6 +139,31 @@ fix(backend): correct sales logic and update documentation indexes
 
 <img src="assets/images/readme/collaboration_insights_tb1.png" alt="Contributors-tb1" width="600px">
 Figura: Contribuciones por integrante durante el TB1
+
+## AV2 – Sprint Review – Semana 12
+
+Durante esta fase, el equipo se enfocó en la validación del producto mediante entrevistas, la definición del proceso de experimentación y el fortalecimiento de las prácticas de monitoreo continuo. Los entregables principales abarcaron:
+
+- **Capítulo VI (complemento):** Validación mediante entrevistas (diseño, registro y evaluaciones heurísticas) y auditoría de experiencias de usuario, tanto la auditoría realizada como la recibida, incluyendo el resumen de modificaciones para subsanar hallazgos. Asimismo, se completó la sección de Static Code Analysis con los estándares de código y métricas de calidad y seguridad.
+- **Capítulo VII (complemento):** Documentación de las herramientas y componentes del pipeline de Continuous Monitoring, incluyendo los componentes de Monitoring, Alerting y Notification.
+- **Capítulo VIII:** Desarrollo completo del proceso de Experiment-Driven Development, que abarca el Experiment Planning (As-Is Summary, Raw Material, Experiment-Ready Questions, Question Backlog y Experiment Cards), el Experiment Design (Hypotheses, Domain Business Metrics, Measures, Conditions, Scale Calculations and Decisions, Methods Selection, Data Analytics: Goals KPIs and Metrics Selection, y Web and Mobile Tracking Plan) y la sección de Experimentation con los To-Be User Stories y To-Be Product Backlog.
+- **Actualizaciones transversales:** Actualización del Student Outcome, conclusiones, bibliografía y anexos.
+
+Los commits reflejaron este trabajo colaborativo enfocado en validación, experimentación y monitoreo, siguiendo la convención establecida:
+
+```text
+feat(chapter-08): add experiment planning, design and experimentation sections
+feat(chapter-07): add continuous monitoring pipeline components
+feat(chapter-06): add validation interviews, heuristic evaluations and audit sections
+docs(report): update student outcome, conclusions, bibliography and annexes
+fix(chapter-06): add coding standards and code quality & security analysis
+```
+
+**Analíticos de colaboración – GitHub Insights:**
+
+<img src="assets/images/readme/collaboration_insights_av2.png" alt="Contributors-av2" width="600px">
+
+Contribuciones por integrante durante el AV2
 
 # Contenido
 
