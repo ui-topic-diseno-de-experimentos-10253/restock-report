@@ -1061,12 +1061,12 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades To-Be de R
 
 #### Relación con funcionalidades To-Be
 
-| Funcionalidad To-Be | User Story relacionada | User Flow existente asociado | Propósito dentro de la entrevista |
-| :--- | :--- | :--- | :--- |
-| Notificaciones automáticas de inventario | US-37 | Desktop & Mobile User Flow 3 y User Flow 4 | Validar si el administrador comprende las alertas por stock bajo o vencimiento próximo y si sabe qué acción tomar. |
-| Onboarding guiado para el primer pedido | US-38 | Desktop & Mobile User Flow 5 y User Flow 6 | Validar si el administrador puede seleccionar proveedor y completar su primer pedido con mínima asistencia. |
-| Indicador de rotación por insumo | US-40 | Desktop & Mobile User Flow 3 y User Flow 4 | Validar si el administrador entiende la rotación Alta, Media o Baja y si esta información influye en su decisión de compra. |
-| Relación ventas, recetas e inventario | Validación complementaria | Desktop & Mobile User Flow 8 y User Flow 9 | Validar si el usuario comprende cómo las ventas y recetas se relacionan con el consumo de insumos. |
+| Funcionalidad To-Be                       | User Story relacionada     | User Flow existente asociado               | Propósito dentro de la entrevista                                                                                             |
+| :---------------------------------------- | :------------------------- | :----------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------- |
+| Notificaciones automáticas de inventario | US-37                      | Desktop & Mobile User Flow 3 y User Flow 4 | Validar si el administrador comprende las alertas por stock bajo o vencimiento próximo y si sabe qué acción tomar.          |
+| Onboarding guiado para el primer pedido   | US-38                      | Desktop & Mobile User Flow 5 y User Flow 6 | Validar si el administrador puede seleccionar proveedor y completar su primer pedido con mínima asistencia.                   |
+| Indicador de rotación por insumo         | US-40                      | Desktop & Mobile User Flow 3 y User Flow 4 | Validar si el administrador entiende la rotación Alta, Media o Baja y si esta información influye en su decisión de compra. |
+| Relación ventas, recetas e inventario    | Validación complementaria | Desktop & Mobile User Flow 8 y User Flow 9 | Validar si el usuario comprende cómo las ventas y recetas se relacionan con el consumo de insumos.                            |
 
 #### Actividades durante la sesión
 
@@ -1133,12 +1133,12 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades To-Be de R
 
 #### Relación con funcionalidades To-Be
 
-| Funcionalidad To-Be | User Story relacionada | User Flow existente asociado | Propósito dentro de la entrevista |
-| :--- | :--- | :--- | :--- |
-| Carga asistida del catálogo del proveedor | US-39 | Desktop & Mobile User Flow 10 | Validar si el proveedor comprende cómo sus productos se digitalizan y quedan disponibles para restaurantes. |
-| Revisión y mantenimiento del catálogo | US-39 | Desktop & Mobile User Flow 10 y User Flow 11 | Validar si el proveedor entiende cómo editar, actualizar o eliminar productos de su catálogo. |
-| Recepción de pedido de prueba | US-39 | Desktop & Mobile User Flow 12 | Validar si el proveedor comprende cómo recibiría y gestionaría pedidos desde restaurantes. |
-| Panel principal del proveedor | Validación complementaria | Desktop & Mobile User Flow 13 | Validar si el proveedor entiende la información principal sobre pedidos, productos y feedback recibido. |
+| Funcionalidad To-Be                        | User Story relacionada     | User Flow existente asociado                 | Propósito dentro de la entrevista                                                                           |
+| :----------------------------------------- | :------------------------- | :------------------------------------------- | :----------------------------------------------------------------------------------------------------------- |
+| Carga asistida del catálogo del proveedor | US-39                      | Desktop & Mobile User Flow 10                | Validar si el proveedor comprende cómo sus productos se digitalizan y quedan disponibles para restaurantes. |
+| Revisión y mantenimiento del catálogo    | US-39                      | Desktop & Mobile User Flow 10 y User Flow 11 | Validar si el proveedor entiende cómo editar, actualizar o eliminar productos de su catálogo.              |
+| Recepción de pedido de prueba             | US-39                      | Desktop & Mobile User Flow 12                | Validar si el proveedor comprende cómo recibiría y gestionaría pedidos desde restaurantes.                |
+| Panel principal del proveedor              | Validación complementaria | Desktop & Mobile User Flow 13                | Validar si el proveedor entiende la información principal sobre pedidos, productos y feedback recibido.     |
 
 #### Actividades durante la sesión
 
@@ -1191,19 +1191,18 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades To-Be de R
 
 ### Criterios de Observación
 
-| Criterio | Aspecto a observar | Evidencia esperada |
-| :--- | :--- | :--- |
-| Comprensión | Si el participante entiende el propósito de la funcionalidad sin explicación adicional. | Comentarios verbales, dudas o reformulación del valor percibido. |
-| Facilidad de uso | Si el participante completa la tarea sin bloqueos críticos. | Tiempo de ejecución, errores, retrocesos o abandono de tarea. |
-| Utilidad percibida | Si el participante considera que la funcionalidad resuelve un problema real de su operación. | Opiniones posteriores y comentarios espontáneos. |
-| Confianza | Si el usuario confiaría en alertas, indicadores o información del sistema para tomar decisiones. | Comentarios sobre precisión, seguridad o necesidad de confirmación manual. |
-| Arquitectura de información | Si las secciones, etiquetas y rutas de navegación son claras. | Dudas sobre dónde encontrar funciones o información. |
-| Inclusive design | Si textos, botones, tamaños, contrastes e interacciones permiten una experiencia accesible. | Dificultades visuales, confusión en mensajes o problemas de interacción. |
+| Criterio                     | Aspecto a observar                                                                                 | Evidencia esperada                                                           |
+| :--------------------------- | :------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------- |
+| Comprensión                 | Si el participante entiende el propósito de la funcionalidad sin explicación adicional.          | Comentarios verbales, dudas o reformulación del valor percibido.            |
+| Facilidad de uso             | Si el participante completa la tarea sin bloqueos críticos.                                       | Tiempo de ejecución, errores, retrocesos o abandono de tarea.               |
+| Utilidad percibida           | Si el participante considera que la funcionalidad resuelve un problema real de su operación.      | Opiniones posteriores y comentarios espontáneos.                            |
+| Confianza                    | Si el usuario confiaría en alertas, indicadores o información del sistema para tomar decisiones. | Comentarios sobre precisión, seguridad o necesidad de confirmación manual. |
+| Arquitectura de información | Si las secciones, etiquetas y rutas de navegación son claras.                                     | Dudas sobre dónde encontrar funciones o información.                       |
+| Inclusive design             | Si textos, botones, tamaños, contrastes e interacciones permiten una experiencia accesible.       | Dificultades visuales, confusión en mensajes o problemas de interacción.   |
 
 ### Consideraciones Éticas y de Registro
 
 Antes de iniciar cada entrevista, se explicará al participante que la sesión tiene fines académicos y que se evaluará la solución, no su desempeño personal. Asimismo, se solicitará autorización para grabar pantalla, voz y/o cámara. La información recolectada será utilizada únicamente para documentar la validación del producto y analizar oportunidades de mejora.
-
 
 #### 8.3.4.2. Registro de Entrevistas
 
@@ -1216,6 +1215,98 @@ Antes de iniciar cada entrevista, se explicará al participante que la sesión t
 ## 8.5. Continuous Learning
 
 ### 8.5.1. Shareback Session Artifacts: Learning Workflow
+
+La presente sección documenta los artefactos generados durante la sesión de *shareback* del equipo Restock, realizada después de la ejecución y análisis de los experimentos To-Be. Esta sesión tuvo como finalidad transformar los resultados obtenidos en aprendizajes accionables para el producto, evitando que la evidencia recolectada quede aislada en métricas o entrevistas sin impacto directo en la toma de decisiones.
+
+El *shareback* permitió revisar los hallazgos obtenidos en la fase de experimentación, contrastarlos con las hipótesis planteadas, discutir su impacto en el producto y definir acciones concretas para la siguiente iteración. De esta manera, Restock mantiene un enfoque de aprendizaje continuo, en el cual cada experimento alimenta nuevas decisiones de diseño, desarrollo y priorización del backlog.
+
+#### Objetivo de la sesión
+
+El objetivo principal de la sesión fue compartir los aprendizajes obtenidos a partir de los experimentos ejecutados en Restock y convertirlos en decisiones de producto, aprendizajes consolidados y recomendaciones finales para la evolución futura de Restock.
+
+#### Participantes de la sesión
+
+| Integrante           | Rol dentro de la sesión         | Responsabilidad principal                                                                               |
+| :------------------- | :------------------------------- | :------------------------------------------------------------------------------------------------------ |
+| Julio D. Castro      | Backend / Integración           | Explicar hallazgos técnicos relacionados con endpoints, datos y soporte backend para los experimentos. |
+| Ario Chavez          | Frontend Web                     | Presentar observaciones sobre la interacción web, indicadores de rotación y visualización de datos.  |
+| José J. Guerra      | Validación / QA                 | Compartir hallazgos de entrevistas, errores detectados y criterios de aceptación observados.           |
+| Ivan F. Sanchez      | Mobile / UX                      | Presentar hallazgos sobre experiencia móvil, onboarding y flujo de alertas.                            |
+| Gabriela N. Shapiama | Coordinación / Experimentación | Moderar la sesión, consolidar aprendizajes y vincular resultados con el Question Backlog.              |
+
+#### Insumos revisados durante la sesión
+
+Durante la sesión se revisaron los principales artefactos generados en las fases anteriores del ciclo Experiment-Driven Development:
+
+- Experiment-Ready Questions
+- Question Backlog
+- Experiment Cards
+- Hipótesis, métricas, medidas y condiciones definidas
+- To-Be User Stories y To-Be Product Backlog
+- Evidencias de implementación de Landing Page, Web App, Mobile App y Backend.
+- Resultados de entrevistas de validación To-Be.
+- Resultados analizados
+- Repriorización del Question Backlog
+
+#### Evidencia de la sesión de Shareback
+
+**Meeting Screenshot:**
+
+*Momento donde se evaluaron los Experiment Cards*
+
+<img src="assets/images/chapter8/shareback-session.png" width="600px" alt="shareback session evidence">
+
+**Fecha de la sesión:**
+04/07/2026
+
+**Duración:**
+2 horas
+
+#### Agenda de la sesión
+
+| Etapa | Actividad                                 | Resultado esperado                                                                |
+| :---- | :---------------------------------------- | :-------------------------------------------------------------------------------- |
+| 1     | Revisar los objetivos de los experimentos | Alinear al equipo sobre qué preguntas se buscaba responder.                      |
+| 2     | Presentar resultados por experimento      | Compartir métricas, observaciones y evidencia cualitativa.                       |
+| 3     | Comparar resultados con hipótesis        | Determinar si cada hipótesis fue validada, invalidada o requiere más evidencia. |
+| 4     | Identificar aprendizajes principales      | Convertir hallazgos en conocimiento accionable para el producto.                  |
+| 5     | Definir decisiones de producto            | Establecer qué funcionalidades se mantienen, modifican, eliminan o escalan.      |
+
+#### Learning Workflow
+
+El flujo de aprendizaje seguido por el equipo durante la sesión se estructuró de la siguiente manera: recolección de evidencia, síntesis, interpretación, decisión y comunicación del aprendizaje.
+
+#### Descripción del flujo de aprendizaje
+
+| Etapa                                  | Descripción                                                                                                          | Artefacto generado                   |
+| :------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- | :----------------------------------- |
+| 1. Evidencia recolectada               | Se consolidaron métricas, observaciones de entrevistas, capturas, videos y resultados de los experimentos To-Be.     | Matriz de evidencia por experimento. |
+| 2. Síntesis de hallazgos              | El equipo agrupó los hallazgos por patrón: alertas, onboarding, catálogo de proveedores y rotación de inventario. | Tabla de hallazgos principales.      |
+| 3. Interpretación frente a hipótesis | Cada hallazgo fue comparado con su hipótesis H1 y H0 para determinar el nivel de soporte obtenido.                   | Matriz hipótesis vs. evidencia.     |
+| 4. Decisiones de producto              | Se definió si cada funcionalidad debía mantenerse, ajustarse, escalarse o investigarse nuevamente.                  | Tabla de decisiones de producto.     |
+| 5. Consolidación de aprendizajes finales | Se organizaron las decisiones finales del equipo y las recomendaciones derivadas de los resultados obtenidos. | Matriz de recomendaciones finales. |
+
+#### Matriz de aprendizaje por experimento
+
+| Experimento                                                    | Pregunta asociada                                                                                              | Evidencia revisada                                                                                                               | Aprendizaje obtenido                                                                                                                         | Decisión tomada                                                                                                                          |
+| :------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| Experimento 01 — Alertas automáticas de inventario           | Q1: ¿Reducen las alertas en tiempo real el desperdicio de insumos en un 35%?                                  | Comentarios de administradores, revisión de alertas, candidatos de notificación y comprensión del mensaje de alerta.          | Los administradores comprenden el valor preventivo de las alertas, pero necesitan que el mensaje indique claramente la acción recomendada.  | Mantener la funcionalidad y mejorar el contenido de la alerta, agregando prioridad, recomendación de acción y acceso directo al insumo. |
+| Experimento 02 — Onboarding guiado para primer pedido         | Q2: ¿Son capaces los administradores con baja afinidad digital de completar un pedido sin asistencia externa? | Observación del flujo de primer pedido, dudas del usuario y tiempo estimado de navegación.                                     | El flujo guiado reduce la fricción inicial, pero algunos usuarios requieren mayor claridad al seleccionar proveedor y confirmar cantidades. | Mantener el onboarding y simplificar los pasos de selección de proveedor y confirmación del pedido.                                     |
+| Experimento 03 — Carga asistida de catálogo para proveedores | Q3: ¿Están los proveedores tradicionales dispuestos a digitalizar sus catálogos para integrarse a Restock?  | Comentarios de proveedores, revisión del catálogo cargado y reacción ante el pedido de prueba.                                | La carga asistida reduce la barrera inicial de adopción, especialmente para proveedores que trabajan con WhatsApp o registros manuales.     | Mantener el enfoque de carga asistida como estrategia inicial y agregar una plantilla simple de productos.                                |
+| Experimento 04 — Indicador de rotación por insumo            | Q4: ¿Influye la visualización de métricas de rotación en la decisión de compra de nuevos insumos?         | Observación de decisiones de compra, interpretación de etiquetas Alta / Media / Baja y comentarios sobre confianza en el dato. | El indicador es útil, pero debe acompañarse de una explicación breve para que el usuario entienda cómo se calcula la rotación.          | Mantener la columna de rotación y agregar tooltip o ayuda contextual con una explicación simple del indicador.                          |
+
+#### Recomendaciones finales
+
+| Recomendación                                                         | Sustento                                                                                          |
+| :--------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ |
+| Mantener las alertas automáticas como funcionalidad prioritaria.      | Los administradores entienden su utilidad para actuar frente a stock bajo o vencimiento próximo. |
+| Conservar el onboarding guiado en la aplicación móvil.               | Facilita que usuarios nuevos completen su primer pedido con menor fricción.                      |
+| Usar carga asistida para proveedores en etapas iniciales de adopción. | Reduce la barrera técnica de digitalizar catálogos.                                             |
+| Acompañar el indicador de rotación con una explicación breve.       | Mejora la comprensión y confianza del administrador al tomar decisiones de compra.               |
+
+#### Conclusión del Shareback
+
+El *shareback* permitió revisar los hallazgos obtenidos en la fase de experimentación, contrastarlos con las hipótesis planteadas, discutir su impacto en el producto y consolidar decisiones finales del equipo. De esta manera, Restock mantiene un enfoque de aprendizaje continuo, en el cual cada experimento no solo genera resultados, sino también conocimiento accionable para evaluar la evolución futura del producto.
 
 ## 8.6. To-Be Software Platform Pre-launch
 
