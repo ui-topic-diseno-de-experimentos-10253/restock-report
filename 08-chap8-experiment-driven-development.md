@@ -1013,6 +1013,197 @@ Con estos cambios, el backend RESTful de Restock queda alineado con el Sprint Ba
 
 #### 8.3.4.1. Diseño de Entrevistas
 
+Para garantizar que las funcionalidades To-Be implementadas en Restock respondan a las necesidades reales de los usuarios finales, se diseñó un proceso de entrevistas de validación centrado en los dos segmentos objetivo del proyecto: administradores de restaurantes y proveedores de insumos. Cada sesión incluirá interacción con el Landing Page, la aplicación web y las aplicaciones móviles correspondientes a cada segmento.
+
+A diferencia de la validación anterior, esta etapa se enfoca en evaluar las funcionalidades implementadas para el ciclo de Experiment-Driven Development, especialmente aquellas relacionadas con las To-Be User Stories US-37, US-38, US-39 y US-40. Por ello, las entrevistas buscarán recoger evidencia cualitativa sobre la comprensión, utilidad percibida, facilidad de uso y viabilidad operativa de las funcionalidades experimentales: notificaciones automáticas de inventario, onboarding guiado para el primer pedido, carga asistida del catálogo del proveedor e indicador de rotación por insumo.
+
+### Objetivo General
+
+Validar la usabilidad, comprensión y utilidad de las funcionalidades To-Be de Restock a través de sesiones controladas de interacción con usuarios reales de los segmentos objetivo, aplicando principios de evaluación heurística y recogiendo observaciones cualitativas que permitan complementar el análisis de los experimentos definidos en el ciclo de Experiment-Driven Development.
+
+### Objetivos Específicos
+
+- Evaluar si los administradores de restaurantes comprenden y consideran útiles las notificaciones automáticas por stock bajo o vencimiento próximo.
+- Validar si el flujo guiado permite que un nuevo administrador pueda completar su primer pedido de forma autónoma.
+- Evaluar si el indicador de rotación por insumo es comprendido por los administradores y si influye en sus decisiones de compra.
+- Validar si los proveedores de insumos perciben valor en la carga asistida de su catálogo y en la recepción de pedidos dentro de la plataforma.
+- Identificar problemas de usabilidad, arquitectura de información e inclusive design durante la interacción con las funcionalidades To-Be.
+- Recoger comentarios cualitativos que permitan sustentar la interpretación posterior de los resultados de experimentación.
+
+### Segmento 1: Administradores de Restaurantes
+
+#### Elementos a validar
+
+- Claridad del valor ofrecido en el Landing Page.
+- Comprensión del beneficio de reducción de mermas mediante alertas automáticas.
+- Flujo de suscripción y acceso inicial a la plataforma.
+- Registro, edición y revisión de insumos en el inventario.
+- Visualización de alertas por stock bajo o vencimiento próximo.
+- Uso de la aplicación móvil para recibir o revisar alertas de inventario.
+- Flujo guiado para completar el primer pedido de insumos.
+- Visualización y selección de proveedores.
+- Realización y seguimiento de pedidos.
+- Panel de alertas, resumen e indicadores.
+- Comprensión del indicador de rotación Alta / Media / Baja.
+- Uso del indicador de rotación para tomar decisiones de compra.
+- Gestión complementaria de ventas y recetas, como flujos relacionados al consumo de inventario.
+
+#### Flujos de Usuario a evaluar
+
+- Desktop & Mobile User Flow 1: Suscripción y pago con Stripe.
+- Desktop & Mobile User Flow 3: Registro y gestión de insumos.
+- Desktop & Mobile User Flow 4: Resumen e indicadores.
+- Desktop & Mobile User Flow 5: Visualización de proveedores y productos.
+- Desktop & Mobile User Flow 6: Seguimiento de pedidos.
+- Desktop & Mobile User Flow 7: Comentarios a proveedores.
+- Desktop & Mobile User Flow 8: Registro y visualización de ventas.
+- Desktop & Mobile User Flow 9: Creación y gestión de recetas.
+
+#### Relación con funcionalidades To-Be
+
+| Funcionalidad To-Be                       | User Story relacionada     | User Flow existente asociado               | Propósito dentro de la entrevista                                                                                             |
+| :---------------------------------------- | :------------------------- | :----------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------- |
+| Notificaciones automáticas de inventario | US-37                      | Desktop & Mobile User Flow 3 y User Flow 4 | Validar si el administrador comprende las alertas por stock bajo o vencimiento próximo y si sabe qué acción tomar.          |
+| Onboarding guiado para el primer pedido   | US-38                      | Desktop & Mobile User Flow 5 y User Flow 6 | Validar si el administrador puede seleccionar proveedor y completar su primer pedido con mínima asistencia.                   |
+| Indicador de rotación por insumo         | US-40                      | Desktop & Mobile User Flow 3 y User Flow 4 | Validar si el administrador entiende la rotación Alta, Media o Baja y si esta información influye en su decisión de compra. |
+| Relación ventas, recetas e inventario    | Validación complementaria | Desktop & Mobile User Flow 8 y User Flow 9 | Validar si el usuario comprende cómo las ventas y recetas se relacionan con el consumo de insumos.                            |
+
+#### Actividades durante la sesión
+
+- Navegar el Landing Page y explicar con sus propias palabras qué entiende sobre Restock.
+- Identificar si el mensaje del Landing Page comunica correctamente la reducción de mermas, el control de inventario y la conexión con proveedores.
+- Simular una suscripción desde un plan disponible.
+- Ingresar a la plataforma como administrador de restaurante.
+- Acceder al módulo de inventario siguiendo el Desktop & Mobile User Flow 3.
+- Registrar, editar o revisar insumos registrados en el inventario.
+- Revisar alertas generadas por stock bajo o vencimiento próximo.
+- Explicar qué acción tomaría al recibir una alerta automática de inventario.
+- Acceder al panel de resumen e indicadores siguiendo el Desktop & Mobile User Flow 4.
+- Revisar el indicador de rotación de insumos y explicar qué entiende por rotación Alta, Media o Baja.
+- Modificar o decidir una cantidad de compra considerando el indicador de rotación mostrado.
+- Navegar por proveedores y productos siguiendo el Desktop & Mobile User Flow 5.
+- Simular la creación de un primer pedido a proveedor como parte del flujo guiado.
+- Revisar el seguimiento de un pedido siguiendo el Desktop & Mobile User Flow 6.
+- Realizar un comentario o calificación sobre un proveedor siguiendo el Desktop & Mobile User Flow 7.
+- Registrar o revisar una venta siguiendo el Desktop & Mobile User Flow 8.
+- Crear o revisar una receta siguiendo el Desktop & Mobile User Flow 9.
+- Usar la aplicación móvil de restaurantes para revisar inventario, alertas o pedidos.
+
+#### Preguntas guía para administradores
+
+- ¿Qué problema crees que busca resolver Restock para tu restaurante?
+- ¿La alerta de stock bajo o vencimiento próximo fue clara para ti?
+- Después de ver la alerta, ¿supiste qué acción tomar?
+- ¿El flujo para realizar el primer pedido te pareció fácil de seguir?
+- ¿En qué parte del pedido necesitaste más ayuda o explicación?
+- ¿Entendiste qué significa que un insumo tenga rotación Alta, Media o Baja?
+- ¿Cambiarías la cantidad de compra de un insumo si el sistema indica que tiene baja rotación?
+- ¿Confiarías en estos indicadores para tomar decisiones reales de compra?
+- ¿Qué información adicional necesitarías para sentirte seguro usando la plataforma?
+- ¿Usarías Restock en la operación diaria de tu restaurante? ¿Por qué?
+
+---
+
+### Segmento 2: Proveedores de Restaurantes
+
+#### Elementos a validar
+
+- Claridad del valor ofrecido en el Landing Page para proveedores.
+- Comprensión del beneficio de centralizar catálogo, pedidos y comunicación.
+- Flujo de suscripción y acceso inicial a la plataforma.
+- Gestión de catálogo de productos.
+- Carga asistida de productos ofrecidos.
+- Registro y edición de productos del catálogo.
+- Eliminación o desactivación de insumos o productos no disponibles.
+- Revisión de pedidos realizados por restaurantes.
+- Gestión de órdenes recibidas.
+- Consulta del detalle de una orden recibida.
+- Actualización del estado de pedidos.
+- Interacción con comentarios o calificaciones recibidas.
+- Uso de la aplicación móvil para proveedores.
+- Disposición del proveedor a continuar usando Restock después de la demostración asistida.
+
+#### Flujos de Usuario a evaluar
+
+- Desktop & Mobile User Flow 1: Suscripción y pago.
+- Desktop & Mobile User Flow 10: Registro y gestión de productos en el catálogo.
+- Desktop & Mobile User Flow 11: Eliminación de insumos.
+- Desktop & Mobile User Flow 12: Gestión de órdenes recibidas.
+- Desktop & Mobile User Flow 13: Panel principal del proveedor.
+
+#### Relación con funcionalidades To-Be
+
+| Funcionalidad To-Be                        | User Story relacionada     | User Flow existente asociado                 | Propósito dentro de la entrevista                                                                           |
+| :----------------------------------------- | :------------------------- | :------------------------------------------- | :----------------------------------------------------------------------------------------------------------- |
+| Carga asistida del catálogo del proveedor | US-39                      | Desktop & Mobile User Flow 10                | Validar si el proveedor comprende cómo sus productos se digitalizan y quedan disponibles para restaurantes. |
+| Revisión y mantenimiento del catálogo    | US-39                      | Desktop & Mobile User Flow 10 y User Flow 11 | Validar si el proveedor entiende cómo editar, actualizar o eliminar productos de su catálogo.              |
+| Recepción de pedido de prueba             | US-39                      | Desktop & Mobile User Flow 12                | Validar si el proveedor comprende cómo recibiría y gestionaría pedidos desde restaurantes.                |
+| Panel principal del proveedor              | Validación complementaria | Desktop & Mobile User Flow 13                | Validar si el proveedor entiende la información principal sobre pedidos, productos y feedback recibido.     |
+
+#### Actividades durante la sesión
+
+- Explorar el Landing Page y describir qué entiende sobre Restock desde el punto de vista de un proveedor.
+- Identificar si el mensaje del Landing Page comunica correctamente el valor de centralizar catálogo y pedidos.
+- Simular el proceso de registro y suscripción.
+- Ingresar al sistema como proveedor.
+- Acceder al flujo de gestión de cuenta siguiendo el Desktop & Mobile User Flow 1.
+- Entregar o simular una lista de productos para realizar la carga asistida del catálogo.
+- Registrar productos en el catálogo siguiendo el Desktop & Mobile User Flow 10.
+- Revisar si los productos cargados muestran correctamente nombre, precio, unidad de medida y disponibilidad.
+- Editar información de productos registrados.
+- Eliminar o desactivar productos no disponibles siguiendo el Desktop & Mobile User Flow 11.
+- Revisar pedidos recibidos de restaurantes siguiendo el Desktop & Mobile User Flow 12.
+- Consultar el detalle de una orden recibida.
+- Actualizar el estado de una orden.
+- Revisar comentarios o calificaciones recibidas.
+- Acceder al panel principal del proveedor siguiendo el Desktop & Mobile User Flow 13.
+- Usar la aplicación móvil de proveedores para revisar pedidos y actualizar estados.
+- Comentar sobre la utilidad de la interfaz de pedidos, catálogo y feedback.
+- Indicar si estaría dispuesto a continuar usando Restock después de la sesión asistida.
+
+#### Preguntas guía para proveedores
+
+- ¿Qué problema crees que Restock busca resolver para proveedores como tú?
+- ¿El Landing Page explica claramente cómo te ayudaría la plataforma?
+- ¿La carga asistida del catálogo te pareció clara y útil?
+- ¿El catálogo cargado representa correctamente los productos que ofreces?
+- ¿Qué información agregarías o cambiarías en la ficha de producto?
+- ¿Te resultó claro cómo editar o eliminar productos no disponibles?
+- ¿El pedido de prueba fue fácil de entender?
+- ¿Qué harías al recibir una orden dentro de la plataforma?
+- ¿Consideras que gestionar pedidos desde Restock sería mejor que hacerlo por WhatsApp, llamadas o visitas?
+- ¿Qué barreras tendrías para actualizar tu catálogo frecuentemente?
+- ¿Estarías dispuesto a continuar usando Restock después de esta demostración? ¿Por qué?
+- ¿Qué condición tendría que cumplirse para que uses la plataforma en tu operación real?
+
+---
+
+### Herramientas y Recursos para Validación
+
+- **Formato de Evaluación Heurística:** Se aplicarán los 10 principios heurísticos de Nielsen en cada sesión, de acuerdo con el formato de evaluación indicado para el proyecto.
+- **Instrumento de observación:** Se utilizará una lista de verificación con sección de notas abiertas para registrar errores, dudas, bloqueos, comentarios espontáneos y oportunidades de mejora.
+- **Grabación de pantalla y voz:** Se solicitará autorización previa al participante para grabar la interacción y utilizarla como evidencia académica y material de análisis posterior.
+- **Productos a validar:** Landing Page, aplicación web, aplicación móvil para restaurantes y aplicación móvil para proveedores.
+- **Cuentas de prueba:** Se utilizarán cuentas preconfiguradas para administrador de restaurante y proveedor, con datos de inventario, productos, pedidos, alertas y rotación.
+- **Datos de prueba:** Se utilizarán insumos con stock bajo, insumos con vencimiento próximo, productos de catálogo, pedidos de prueba y registros de rotación para simular escenarios operativos.
+- **Herramienta de registro:** Se utilizará una matriz de observación para vincular cada hallazgo con el flujo evaluado, segmento, tarea realizada y severidad del problema detectado.
+- **Repositorio de evidencia:** Los videos de entrevista se subirán a Microsoft Stream y se referenciarán posteriormente en la sección 8.3.4.2 Registro de Entrevistas.
+
+### Criterios de Observación
+
+| Criterio                     | Aspecto a observar                                                                                 | Evidencia esperada                                                           |
+| :--------------------------- | :------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------- |
+| Comprensión                 | Si el participante entiende el propósito de la funcionalidad sin explicación adicional.          | Comentarios verbales, dudas o reformulación del valor percibido.            |
+| Facilidad de uso             | Si el participante completa la tarea sin bloqueos críticos.                                       | Tiempo de ejecución, errores, retrocesos o abandono de tarea.               |
+| Utilidad percibida           | Si el participante considera que la funcionalidad resuelve un problema real de su operación.      | Opiniones posteriores y comentarios espontáneos.                            |
+| Confianza                    | Si el usuario confiaría en alertas, indicadores o información del sistema para tomar decisiones. | Comentarios sobre precisión, seguridad o necesidad de confirmación manual. |
+| Arquitectura de información | Si las secciones, etiquetas y rutas de navegación son claras.                                     | Dudas sobre dónde encontrar funciones o información.                       |
+| Inclusive design             | Si textos, botones, tamaños, contrastes e interacciones permiten una experiencia accesible.       | Dificultades visuales, confusión en mensajes o problemas de interacción.   |
+
+### Consideraciones Éticas y de Registro
+
+Antes de iniciar cada entrevista, se explicará al participante que la sesión tiene fines académicos y que se evaluará la solución, no su desempeño personal. Asimismo, se solicitará autorización para grabar pantalla, voz y/o cámara. La información recolectada será utilizada únicamente para documentar la validación del producto y analizar oportunidades de mejora.
+
 #### 8.3.4.2. Registro de Entrevistas
 
 ## 8.4. Experiment Aftermath & Analysis
@@ -1024,6 +1215,98 @@ Con estos cambios, el backend RESTful de Restock queda alineado con el Sprint Ba
 ## 8.5. Continuous Learning
 
 ### 8.5.1. Shareback Session Artifacts: Learning Workflow
+
+La presente sección documenta los artefactos generados durante la sesión de *shareback* del equipo Restock, realizada después de la ejecución y análisis de los experimentos To-Be. Esta sesión tuvo como finalidad transformar los resultados obtenidos en aprendizajes accionables para el producto, evitando que la evidencia recolectada quede aislada en métricas o entrevistas sin impacto directo en la toma de decisiones.
+
+El *shareback* permitió revisar los hallazgos obtenidos en la fase de experimentación, contrastarlos con las hipótesis planteadas, discutir su impacto en el producto y definir acciones concretas para la siguiente iteración. De esta manera, Restock mantiene un enfoque de aprendizaje continuo, en el cual cada experimento alimenta nuevas decisiones de diseño, desarrollo y priorización del backlog.
+
+#### Objetivo de la sesión
+
+El objetivo principal de la sesión fue compartir los aprendizajes obtenidos a partir de los experimentos ejecutados en Restock y convertirlos en decisiones de producto, aprendizajes consolidados y recomendaciones finales para la evolución futura de Restock.
+
+#### Participantes de la sesión
+
+| Integrante           | Rol dentro de la sesión         | Responsabilidad principal                                                                               |
+| :------------------- | :------------------------------- | :------------------------------------------------------------------------------------------------------ |
+| Julio D. Castro      | Backend / Integración           | Explicar hallazgos técnicos relacionados con endpoints, datos y soporte backend para los experimentos. |
+| Ario Chavez          | Frontend Web                     | Presentar observaciones sobre la interacción web, indicadores de rotación y visualización de datos.  |
+| José J. Guerra      | Validación / QA                 | Compartir hallazgos de entrevistas, errores detectados y criterios de aceptación observados.           |
+| Ivan F. Sanchez      | Mobile / UX                      | Presentar hallazgos sobre experiencia móvil, onboarding y flujo de alertas.                            |
+| Gabriela N. Shapiama | Coordinación / Experimentación | Moderar la sesión, consolidar aprendizajes y vincular resultados con el Question Backlog.              |
+
+#### Insumos revisados durante la sesión
+
+Durante la sesión se revisaron los principales artefactos generados en las fases anteriores del ciclo Experiment-Driven Development:
+
+- Experiment-Ready Questions
+- Question Backlog
+- Experiment Cards
+- Hipótesis, métricas, medidas y condiciones definidas
+- To-Be User Stories y To-Be Product Backlog
+- Evidencias de implementación de Landing Page, Web App, Mobile App y Backend.
+- Resultados de entrevistas de validación To-Be.
+- Resultados analizados
+- Repriorización del Question Backlog
+
+#### Evidencia de la sesión de Shareback
+
+**Meeting Screenshot:**
+
+*Momento donde se evaluaron los Experiment Cards*
+
+<img src="assets/images/chapter8/shareback-session.png" width="600px" alt="shareback session evidence">
+
+**Fecha de la sesión:**
+04/07/2026
+
+**Duración:**
+2 horas
+
+#### Agenda de la sesión
+
+| Etapa | Actividad                                 | Resultado esperado                                                                |
+| :---- | :---------------------------------------- | :-------------------------------------------------------------------------------- |
+| 1     | Revisar los objetivos de los experimentos | Alinear al equipo sobre qué preguntas se buscaba responder.                      |
+| 2     | Presentar resultados por experimento      | Compartir métricas, observaciones y evidencia cualitativa.                       |
+| 3     | Comparar resultados con hipótesis        | Determinar si cada hipótesis fue validada, invalidada o requiere más evidencia. |
+| 4     | Identificar aprendizajes principales      | Convertir hallazgos en conocimiento accionable para el producto.                  |
+| 5     | Definir decisiones de producto            | Establecer qué funcionalidades se mantienen, modifican, eliminan o escalan.      |
+
+#### Learning Workflow
+
+El flujo de aprendizaje seguido por el equipo durante la sesión se estructuró de la siguiente manera: recolección de evidencia, síntesis, interpretación, decisión y comunicación del aprendizaje.
+
+#### Descripción del flujo de aprendizaje
+
+| Etapa                                  | Descripción                                                                                                          | Artefacto generado                   |
+| :------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- | :----------------------------------- |
+| 1. Evidencia recolectada               | Se consolidaron métricas, observaciones de entrevistas, capturas, videos y resultados de los experimentos To-Be.     | Matriz de evidencia por experimento. |
+| 2. Síntesis de hallazgos              | El equipo agrupó los hallazgos por patrón: alertas, onboarding, catálogo de proveedores y rotación de inventario. | Tabla de hallazgos principales.      |
+| 3. Interpretación frente a hipótesis | Cada hallazgo fue comparado con su hipótesis H1 y H0 para determinar el nivel de soporte obtenido.                   | Matriz hipótesis vs. evidencia.     |
+| 4. Decisiones de producto              | Se definió si cada funcionalidad debía mantenerse, ajustarse, escalarse o investigarse nuevamente.                  | Tabla de decisiones de producto.     |
+| 5. Consolidación de aprendizajes finales | Se organizaron las decisiones finales del equipo y las recomendaciones derivadas de los resultados obtenidos. | Matriz de recomendaciones finales. |
+
+#### Matriz de aprendizaje por experimento
+
+| Experimento                                                    | Pregunta asociada                                                                                              | Evidencia revisada                                                                                                               | Aprendizaje obtenido                                                                                                                         | Decisión tomada                                                                                                                          |
+| :------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| Experimento 01 — Alertas automáticas de inventario           | Q1: ¿Reducen las alertas en tiempo real el desperdicio de insumos en un 35%?                                  | Comentarios de administradores, revisión de alertas, candidatos de notificación y comprensión del mensaje de alerta.          | Los administradores comprenden el valor preventivo de las alertas, pero necesitan que el mensaje indique claramente la acción recomendada.  | Mantener la funcionalidad y mejorar el contenido de la alerta, agregando prioridad, recomendación de acción y acceso directo al insumo. |
+| Experimento 02 — Onboarding guiado para primer pedido         | Q2: ¿Son capaces los administradores con baja afinidad digital de completar un pedido sin asistencia externa? | Observación del flujo de primer pedido, dudas del usuario y tiempo estimado de navegación.                                     | El flujo guiado reduce la fricción inicial, pero algunos usuarios requieren mayor claridad al seleccionar proveedor y confirmar cantidades. | Mantener el onboarding y simplificar los pasos de selección de proveedor y confirmación del pedido.                                     |
+| Experimento 03 — Carga asistida de catálogo para proveedores | Q3: ¿Están los proveedores tradicionales dispuestos a digitalizar sus catálogos para integrarse a Restock?  | Comentarios de proveedores, revisión del catálogo cargado y reacción ante el pedido de prueba.                                | La carga asistida reduce la barrera inicial de adopción, especialmente para proveedores que trabajan con WhatsApp o registros manuales.     | Mantener el enfoque de carga asistida como estrategia inicial y agregar una plantilla simple de productos.                                |
+| Experimento 04 — Indicador de rotación por insumo            | Q4: ¿Influye la visualización de métricas de rotación en la decisión de compra de nuevos insumos?         | Observación de decisiones de compra, interpretación de etiquetas Alta / Media / Baja y comentarios sobre confianza en el dato. | El indicador es útil, pero debe acompañarse de una explicación breve para que el usuario entienda cómo se calcula la rotación.          | Mantener la columna de rotación y agregar tooltip o ayuda contextual con una explicación simple del indicador.                          |
+
+#### Recomendaciones finales
+
+| Recomendación                                                         | Sustento                                                                                          |
+| :--------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ |
+| Mantener las alertas automáticas como funcionalidad prioritaria.      | Los administradores entienden su utilidad para actuar frente a stock bajo o vencimiento próximo. |
+| Conservar el onboarding guiado en la aplicación móvil.               | Facilita que usuarios nuevos completen su primer pedido con menor fricción.                      |
+| Usar carga asistida para proveedores en etapas iniciales de adopción. | Reduce la barrera técnica de digitalizar catálogos.                                             |
+| Acompañar el indicador de rotación con una explicación breve.       | Mejora la comprensión y confianza del administrador al tomar decisiones de compra.               |
+
+#### Conclusión del Shareback
+
+El *shareback* permitió revisar los hallazgos obtenidos en la fase de experimentación, contrastarlos con las hipótesis planteadas, discutir su impacto en el producto y consolidar decisiones finales del equipo. De esta manera, Restock mantiene un enfoque de aprendizaje continuo, en el cual cada experimento no solo genera resultados, sino también conocimiento accionable para evaluar la evolución futura del producto.
 
 ## 8.6. To-Be Software Platform Pre-launch
 
