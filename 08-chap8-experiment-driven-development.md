@@ -978,12 +978,12 @@ Este endpoint permite que la aplicación web muestre información de rotación e
 
 La documentación de los nuevos endpoints fue expuesta mediante Swagger UI, permitiendo validar las rutas implementadas y su disponibilidad para consumo desde las aplicaciones cliente. En la categoría **Inventory Insights**, se evidencian los endpoints asociados a rotación de inventario y candidatos de notificaciones push.
 
-| Swagger Section           | Endpoint                                                               | Purpose                                                                 |
-| :------------------------ | :--------------------------------------------------------------------- | :---------------------------------------------------------------------- |
-| Inventory Insights        | `GET /api/v1/inventory/users/{userId}/rotation`                      | Consultar el nivel de rotación de inventario por insumo.               |
-| Inventory Insights        | `GET /api/v1/inventory/users/{userId}/push-notifications-candidates` | Consultar candidatos de notificación automática de inventario.        |
-| Custom Supplies / Catalog | `POST /api/v1/custom-supplies/catalog/upload`                        | Cargar productos del catálogo del proveedor de forma asistida.         |
-| IAM / Users               | `GET /api/v1/users/{userId}/activation-state`                        | Exponer estado de activación relacionado al primer pedido del usuario. |
+| Swagger Section    | Endpoint                                                               | Purpose                                                                 |
+| :----------------- | :--------------------------------------------------------------------- | :---------------------------------------------------------------------- |
+| Inventory Insights | `GET /api/v1/inventory/users/{userId}/rotation`                      | Consultar el nivel de rotación de inventario por insumo.               |
+| Inventory Insights | `GET /api/v1/inventory/users/{userId}/push-notifications-candidates` | Consultar candidatos de notificación automática de inventario.        |
+| Custom Supplies    | `POST /api/v1/custom-supplies/catalog/upload`                        | Cargar productos del catálogo del proveedor de forma asistida.         |
+| Users              | `GET /api/v1/users/{userId}/activation-state`                        | Exponer estado de activación relacionado al primer pedido del usuario. |
 
 <img src="assets/images/chapter8/to-be-backend/inventory_insights_swagger.png" width="600px" alt="swagger evidence for inventory insights endpoints">
 
