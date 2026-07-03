@@ -911,6 +911,102 @@ El presente Sprint Backlog corresponde al sprint de experimentación To-Be de Re
 
 #### 8.3.3.5. Implemented To-Be RESTful API and/or Serverless Backend Evidence
 
+En esta sección se presenta la evidencia de implementación del backend RESTful correspondiente al Sprint Backlog 4 de experimentación To-Be. Los cambios realizados en el backend permiten dar soporte a las historias de usuario experimentales definidas anteriormente: notificaciones automáticas de inventario, estado de activación para el primer pedido, carga asistida del catálogo de proveedores e indicador de rotación por insumo.
+
+El objetivo de esta implementación no fue construir módulos finales de alta complejidad, sino habilitar los endpoints necesarios para ejecutar y evidenciar los experimentos definidos en el ciclo Experiment-Driven Development. Por ello, los endpoints implementados se enfocan en exponer datos accionables para la aplicación web y móvil, permitiendo validar hipótesis asociadas a reducción de mermas, adopción digital, digitalización de proveedores y toma de decisiones basada en datos.
+
+##### Backend Repository Evidence
+
+| Repository       | Branch            | Commit Id | Commit Message                                                       | Committed on (Date) |
+| :--------------- | :---------------- | :-------- | :------------------------------------------------------------------- | :------------------ |
+| restock-platform | feature/orders    | 987a2be   | feat(iam): add parameter activation state for first order onboarding | 03/07/2026          |
+| restock-platform | feature/inventory | 62b92c0   | feat(resource): add endpoint for upload custom supplies catalog      | 03/07/2026          |
+| restock-platform | feature/inventory | 4ea56cf   | feat(resource): add push notification resource                       | 03/07/2026          |
+| restock-platform | feature/inventory | c6d35d1   | feat(resource): add inventory rotation resource and endpoint         | 03/07/2026          |
+
+<img src="assets/images/chapter8/to-be-backend/backend_repository_commits.png" width="700px" alt="backend repository commits for to-be experiment sprint">
+
+##### Implemented Backend Features by To-Be User Story
+
+###### US-37 — Notificaciones push automáticas de inventario en dispositivo móvil
+
+Para la historia US-37, se implementó un recurso orientado a identificar insumos candidatos a generar alertas automáticas de inventario. Esta funcionalidad permite detectar situaciones relevantes para el experimento de reducción de mermas, principalmente insumos con riesgo operativo por stock bajo o vencimiento próximo.
+
+El endpoint implementado expone los candidatos a notificación para que la aplicación móvil o el servicio de notificaciones pueda utilizarlos como base.
+
+| Method | Endpoint                                                           | Description                                                                                                                                                           | Related User Story |
+| :----- | :----------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------- |
+| GET    | `/api/v1/inventory/users/{userId}/push-notifications-candidates` | Obtiene los candidatos a notificación automática de inventario para un usuario, considerando insumos que requieren atención por stock bajo o vencimiento próximo. | US-37              |
+
+Este endpoint contribuye al experimento porque permite obtener la evidencia base para validar si las alertas automáticas pueden ayudar al administrador a actuar preventivamente sobre insumos en riesgo. Además, permite sustentar técnicamente la existencia de una fuente backend para generar alertas de inventario.
+
+###### US-38 — Flujo de onboarding guiado para el primer pedido
+
+Para la historia US-38, el backend no implementa el flujo visual del onboarding, ya que este pertenece a la experiencia de usuario en el frontend. Sin embargo, se incorporó soporte en el contexto de IAM para exponer un parámetro relacionado con el estado de activación del usuario frente a su primer pedido.
+
+Este cambio permite identificar si el usuario ya realizó la acción clave del negocio, es decir, completar o iniciar su primer pedido. De esta manera, la aplicación puede decidir si debe mostrar nuevamente el flujo guiado.
+
+| Method | Endpoint                                    | Description                                                                                                                                                                | Related User Story |
+| :----- | :------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------- |
+| GET    | `/api/v1/users/{userId}/activation-state` | Se agregó un parámetro de estado de activación asociado al primer pedido, permitiendo que el frontend o mobile determine si corresponde mostrar el flujo de onboarding. | US-38              |
+
+###### US-39 — Carga asistida del catálogo de productos del proveedor
+
+Para la historia US-39, se implementó un endpoint que permite cargar insumos personalizados al catálogo del proveedor. Esta funcionalidad da soporte al experimento de viabilidad del ecosistema de proveedores, en el cual el equipo de Restock puede asistir al proveedor durante la digitalización inicial de su catálogo.
+
+La carga asistida permite registrar productos con información relevante para que luego puedan ser visualizados y utilizados dentro del flujo de pedidos. Esto reduce la fricción inicial del proveedor tradicional, ya que no necesita realizar toda la configuración por sí mismo durante la primera sesión de demostración.
+
+| Method | Endpoint                                   | Description                                                                                                                          | Related User Story |
+| :----- | :----------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- | :----------------- |
+| POST   | `/api/v1/custom-supplies/catalog/upload` | Permite cargar productos o insumos personalizados al catálogo, facilitando la digitalización asistida del catálogo del proveedor. | US-39              |
+
+Este endpoint contribuye directamente al Concierge Test definido para proveedores, ya que permite preparar o registrar un catálogo digital mínimo para demostrar cómo el proveedor podría recibir pedidos desde la plataforma.
+
+###### US-40 — Indicador de nivel de rotación por insumo en el módulo de inventario
+
+Para la historia US-40, se implementó un recurso backend de rotación de inventario. Este endpoint permite obtener el nivel de rotación de los insumos asociados a un usuario, información que será consumida por la aplicación web para mostrar una columna de rotación en el módulo de inventario.
+
+La funcionalidad permite clasificar los insumos según su comportamiento de consumo o movimiento, devolviendo información útil para que el administrador tome decisiones de compra más precisas. Esto soporta el experimento de comportamiento basado en datos, orientado a validar si mostrar indicadores de rotación influye en la reducción de sobrestock.
+
+| Method | Endpoint                                      | Description                                                                                            | Related User Story |
+| :----- | :-------------------------------------------- | :----------------------------------------------------------------------------------------------------- | :----------------- |
+| GET    | `/api/v1/inventory/users/{userId}/rotation` | Obtiene el nivel de rotación de inventario por insumo para apoyar decisiones de compra y reposición. | US-40              |
+
+Este endpoint permite que la aplicación web muestre información de rotación en el inventario y sustenta la hipótesis de que los administradores pueden tomar mejores decisiones cuando reciben datos operativos claros antes de generar una orden de compra.
+
+##### Swagger / OpenAPI Evidence
+
+La documentación de los nuevos endpoints fue expuesta mediante Swagger UI, permitiendo validar las rutas implementadas y su disponibilidad para consumo desde las aplicaciones cliente. En la categoría **Inventory Insights**, se evidencian los endpoints asociados a rotación de inventario y candidatos de notificaciones push.
+
+| Swagger Section           | Endpoint                                                               | Purpose                                                                 |
+| :------------------------ | :--------------------------------------------------------------------- | :---------------------------------------------------------------------- |
+| Inventory Insights        | `GET /api/v1/inventory/users/{userId}/rotation`                      | Consultar el nivel de rotación de inventario por insumo.               |
+| Inventory Insights        | `GET /api/v1/inventory/users/{userId}/push-notifications-candidates` | Consultar candidatos de notificación automática de inventario.        |
+| Custom Supplies / Catalog | `POST /api/v1/custom-supplies/catalog/upload`                        | Cargar productos del catálogo del proveedor de forma asistida.         |
+| IAM / Users               | `GET /api/v1/users/{userId}/activation-state`                        | Exponer estado de activación relacionado al primer pedido del usuario. |
+
+<img src="assets/images/chapter8/to-be-backend/inventory_insights_swagger.png" width="600px" alt="swagger evidence for inventory insights endpoints">
+
+##### Backend Deployment Evidence
+
+El backend se mantiene desplegado en Render, permitiendo el acceso público a la documentación Swagger y la validación de los endpoints implementados para el Sprint Backlog 4. El despliegue permite que los servicios RESTful puedan ser consumidos por la aplicación web y móvil durante la ejecución de los experimentos To-Be.
+
+**Link de despliegue del backend:**
+[https://restock-platform-10253.onrender.com/swagger-ui/index.html](https://restock-platform-10253.onrender.com/swagger-ui/index.html)
+
+<img src="assets/images/chapter8/to-be-backend/backend_swagger_deployment.png" width="600px" alt="to-be backend swagger deployment evidence">
+
+##### Summary of Implemented To-Be RESTful API Support
+
+| To-Be User Story                                                 | Backend Evidence                                                             | Experiment Supported                                        |
+| :--------------------------------------------------------------- | :--------------------------------------------------------------------------- | :---------------------------------------------------------- |
+| US-37 — Notificaciones push automáticas de inventario          | Endpoint para obtener candidatos de notificación de inventario por usuario. | Experimento 01 — Validación de impacto en mermas.         |
+| US-38 — Flujo de onboarding guiado para el primer pedido        | Parámetro de estado de activación relacionado con el primer pedido.        | Experimento 02 — Validación de adopción digital.         |
+| US-39 — Carga asistida del catálogo de productos del proveedor | Endpoint para carga asistida de insumos personalizados al catálogo.         | Experimento 03 — Viabilidad del ecosistema de proveedores. |
+| US-40 — Indicador de nivel de rotación por insumo              | Endpoint para consultar rotación de inventario por insumo.                  | Experimento 04 — Comportamiento basado en datos.           |
+
+Con estos cambios, el backend RESTful de Restock queda alineado con el Sprint Backlog 4 y proporciona soporte técnico suficiente para ejecutar los experimentos To-Be. Las funcionalidades implementadas permiten recolectar evidencia operativa sobre alertas, activación del usuario, digitalización de proveedores y decisiones de compra basadas en indicadores de inventario.
+
 #### 8.3.3.6. Team Collaboration Insights
 
 ### 8.3.4. To-Be Validation Interviews
