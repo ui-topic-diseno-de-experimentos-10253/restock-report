@@ -892,7 +892,7 @@ El repositorio fue reinicializado como parte de la transición del proyecto desd
 
 En esta sección se presenta la documentación de la API RESTful del sistema Restock, la cual permite la comunicación entre el frontend y el backend mediante endpoints estructurados bajo el estándar HTTP y siguiendo los principios REST.
 
-La documentación completa de la API se encuentra disponible mediante Swagger/OpenAPI, lo que facilita la exploración, prueba y validación de los endpoints implementados :contentReference[oaicite:0]{index=0}.
+La documentación completa de la API se encuentra disponible mediante Swagger/OpenAPI, lo que facilita la exploración, prueba y validación de los endpoints implementados:
 
 #### Base URL
 https://restock-platform-10253.onrender.com
