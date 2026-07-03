@@ -845,6 +845,46 @@ El siguiente backlog prioriza las cuatro historias de usuario To-Be derivadas di
 
 #### 8.3.3.1. To-Be Sprint Backlogs
 
+##### Sprint Backlog 4
+
+El presente Sprint Backlog corresponde al sprint de experimentación To-Be de Restock. El objetivo principal del sprint es implementar las funcionalidades mínimas necesarias para ejecutar los experimentos definidos en la fase de Experiment-Driven Development: notificaciones push de inventario, onboarding guiado para el primer pedido, carga asistida de catálogo de proveedores e indicador de rotación en el módulo de inventario.
+
+**Board Screenshot:**  
+[Insertar captura del board del Sprint en Trello / Jira / YouTrack]
+
+**Board URL:**  
+[Insertar URL pública del board del Sprint]
+
+| Sprint # | Sprint 4 |
+|---|---|
+
+| User Story Id | User Story Title | Work-Item / Task Id | Work-Item / Task Title | Description | Estimation (Hours) | Assigned To | Status |
+|---|---|---|---|---|---:|---|---|
+| US-37 | Notificaciones push automáticas de inventario en dispositivo móvil | T-37-01 | Configurar servicio de notificaciones push | Configurar Firebase Cloud Messaging / OneSignal en la aplicación móvil para permitir el envío de alertas de stock bajo y vencimiento próximo. | 4 | Gabriela N. Shapiama | Done |
+| US-37 | Notificaciones push automáticas de inventario en dispositivo móvil | T-37-02 | Definir reglas de alerta de inventario | Implementar la lógica que identifica insumos con stock por debajo del mínimo o con fecha de vencimiento dentro de los próximos 5 días. | 5 | Julio D. Castro | Done |
+| US-37 | Notificaciones push automáticas de inventario en dispositivo móvil | T-37-03 | Construir payload de notificación | Definir el contenido de la notificación, incluyendo nombre del insumo, tipo de alerta, stock actual o fecha de vencimiento. | 3 | José J. Guerra | Done |
+| US-37 | Notificaciones push automáticas de inventario en dispositivo móvil | T-37-04 | Implementar navegación desde la notificación | Habilitar que, al tocar la notificación, la aplicación móvil abra directamente la vista del insumo afectado. | 4 | Gabriela N. Shapiama | Done |
+| US-37 | Notificaciones push automáticas de inventario en dispositivo móvil | T-37-05 | Registrar eventos analíticos de alertas | Registrar eventos `notification_received`, `notification_clicked` y `order_created_after_alert` para medir la conversión de alerta a orden. | 3 | Antonio J. Navarro | Done |
+| US-37 | Notificaciones push automáticas de inventario en dispositivo móvil | T-37-06 | Probar flujo de alerta de inventario | Ejecutar pruebas funcionales para verificar que no se envían alertas cuando el stock es suficiente o el vencimiento no es próximo. | 3 | José J. Guerra | Done |
+| US-38 | Flujo de onboarding guiado para el primer pedido | T-38-01 | Diseñar pasos del onboarding | Definir los pasos del flujo guiado: registro de insumo, selección de proveedor, creación y confirmación del primer pedido. | 4 | Matías S. Díaz | Done |
+| US-38 | Flujo de onboarding guiado para el primer pedido | T-38-02 | Detectar primera sesión del usuario | Implementar la validación que identifica si el administrador inicia sesión por primera vez en la aplicación móvil. | 3 | Gabriela N. Shapiama | Done |
+| US-38 | Flujo de onboarding guiado para el primer pedido | T-38-03 | Implementar avance paso a paso | Desarrollar la navegación guiada entre los pasos del onboarding, mostrando el progreso hasta la confirmación del pedido. | 6 | Gabriela N. Shapiama | Done |
+| US-38 | Flujo de onboarding guiado para el primer pedido | T-38-04 | Persistir finalización del onboarding | Registrar que el usuario completó su primer pedido para evitar que el onboarding vuelva a mostrarse en sesiones posteriores. | 4 | Julio D. Castro | Done |
+| US-38 | Flujo de onboarding guiado para el primer pedido | T-38-05 | Registrar eventos del onboarding | Implementar los eventos `onboarding_step_viewed`, `onboarding_step_completed`, `onboarding_abandoned` y `first_order_submitted`. | 4 | Antonio J. Navarro | Done |
+| US-38 | Flujo de onboarding guiado para el primer pedido | T-38-06 | Preparar prueba de usabilidad | Elaborar el guion de prueba, criterios de observación y matriz para registrar tiempo en tarea, errores y éxito del primer pedido. | 3 | Matías S. Díaz | Done |
+| US-38 | Flujo de onboarding guiado para el primer pedido | T-38-07 | Validar flujo móvil completo | Ejecutar pruebas del flujo de primer pedido verificando autonomía, continuidad del onboarding y ausencia de bloqueos críticos. | 4 | José J. Guerra | Done |
+| US-39 | Carga asistida del catálogo de productos del proveedor | T-39-01 | Definir plantilla de catálogo del proveedor | Elaborar una plantilla con nombre de producto, precio unitario, unidad de medida y disponibilidad para cargar productos del proveedor. | 2 | Nicolás E. Walter | Done |
+| US-39 | Carga asistida del catálogo de productos del proveedor | T-39-02 | Cargar productos de prueba en catálogo | Registrar manualmente productos de proveedores seleccionados para simular la carga asistida durante el Concierge Test. | 3 | Nicolás E. Walter | Done |
+| US-39 | Carga asistida del catálogo de productos del proveedor | T-39-03 | Validar visualización del catálogo | Verificar que el proveedor pueda visualizar el listado de productos cargados con información correcta en su módulo web. | 3 | Farid S. Coronel | Done |
+| US-39 | Carga asistida del catálogo de productos del proveedor | T-39-04 | Simular pedido desde cuenta de restaurante | Crear un pedido de prueba desde una cuenta de restaurante para que el proveedor visualice productos, cantidades y solicitante. | 3 | Julio D. Castro | Done |
+| US-39 | Carga asistida del catálogo de productos del proveedor | T-39-05 | Registrar intención de uso del proveedor | Preparar el formulario o registro manual para documentar si el proveedor acepta continuar usando la plataforma después de la demostración. | 2 | Antonio J. Navarro | Done |
+| US-40 | Indicador de nivel de rotación por insumo en el módulo de inventario | T-40-01 | Definir cálculo de rotación de insumos | Establecer la regla de clasificación Alta, Media o Baja según el historial de consumo de las últimas semanas. | 3 | Antonio J. Navarro | Done |
+| US-40 | Indicador de nivel de rotación por insumo en el módulo de inventario | T-40-02 | Agregar columna de rotación en inventario | Implementar la columna Rotation en la tabla del módulo de inventario de la aplicación web. | 4 | Farid S. Coronel | Done |
+| US-40 | Indicador de nivel de rotación por insumo en el módulo de inventario | T-40-03 | Implementar feature flag para grupo experimental | Configurar que la columna de rotación sea visible únicamente para administradores asignados al grupo experimental. | 4 | Farid S. Coronel | Done |
+| US-40 | Indicador de nivel de rotación por insumo en el módulo de inventario | T-40-04 | Mantener interfaz sin cambios para grupo de control | Verificar que los administradores del grupo de control visualicen la versión previa del inventario sin la columna de rotación. | 2 | José J. Guerra | Done |
+| US-40 | Indicador de nivel de rotación por insumo en el módulo de inventario | T-40-05 | Registrar eventos de interacción con rotación | Implementar eventos `rotation_column_viewed`, `rotation_level_hovered`, `order_quantity_entered`, `low_rotation_item_removed` y `order_submitted_with_rotation`. | 4 | Antonio J. Navarro | Done |
+| US-40 | Indicador de nivel de rotación por insumo en el módulo de inventario | T-40-06 | Probar comportamiento del indicador de rotación | Validar que la columna no interfiera con acciones existentes como edición, filtrado, agregado al pedido y confirmación de orden. | 3 | José J. Guerra | Done |
+
 #### 8.3.3.2. Implemented To-Be Landing Page Evidence
 
 #### 8.3.3.3. Implemented To-Be Frontend-Web Application Evidence
