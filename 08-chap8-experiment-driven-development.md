@@ -907,6 +907,52 @@ El presente Sprint Backlog corresponde al sprint de experimentación To-Be de Re
 
 #### 8.3.3.3. Implemented To-Be Frontend-Web Application Evidence
 
+En esta sección se presenta la evidencia de implementación del frontend web correspondiente al Sprint Backlog 4 de experimentación To-Be. De las cuatro historias de usuario definidas en 8.3.1, únicamente **US-40 (Indicador de nivel de rotación por insumo)** tiene alcance en la aplicación web Angular: US-37 y US-38 pertenecen a la aplicación móvil Kotlin, y US-39 se ejecuta mediante un Concierge Test manual (sección 8.2.6), sin cambios de interfaz web.
+
+El objetivo de esta implementación fue habilitar, en el módulo de inventario de la aplicación web, la columna de rotación consumida desde el endpoint `GET /api/v1/inventory/users/{userId}/rotation` (documentado en 8.3.3.5), visible únicamente para el grupo experimental del Experimento 04, manteniendo la tabla original sin cambios para el grupo de control (Escenario 4 de la historia US-40).
+
+##### Frontend Repository Evidence
+
+| Repository     | Branch                                | Commit Id | Commit Message                                                                        | Committed on (Date) |
+| :-------------- | :------------------------------------- | :-------- | :-------------------------------------------------------------------------------------- | :------------------- |
+| restock-webapp | feature/inventory-rotation-indicator | 14fcabc   | feat(inventory): add rotation indicator column for To-Be Experiment 04 (US-40) | 04/07/2026           |
+
+##### Implemented Frontend Feature by To-Be User Story
+
+###### US-40 — Indicador de nivel de rotación por insumo en el módulo de inventario
+
+Para dar soporte a US-40 en la aplicación web, se implementaron los siguientes componentes en Angular:
+
+| Componente                          | Descripción                                                                                                                                                                          |
+| :------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `RotationService`                   | Servicio que consume `GET /api/v1/inventory/users/{userId}/rotation` y devuelve el nivel de rotación (Alta/Media/Baja) por insumo.                                                    |
+| `SessionService.isInRotationExperimentGroup()` | Feature flag que asigna al usuario al grupo experimental o de control de forma determinística (por `userId`), con posibilidad de forzar el valor vía `localStorage` para pruebas manuales. |
+| `InventoryTableComponent`            | Se agregó la columna condicional `rotation` (desktop) y su equivalente en la vista de tarjetas (móvil), con un badge de color según el nivel de rotación.                             |
+| `RotationAnalyticsService`           | Emite los eventos definidos en el Tracking Plan (8.2.8): `rotation_column_viewed`, `rotation_level_hovered`, `order_quantity_entered`, `low_rotation_item_removed`, `order_submitted_with_rotation`. |
+| `Batch` (entidad)                    | Se agregó el campo opcional `rotationLevel`, poblado en `RestaurantInventoryComponent` al cruzar los batches cargados con la respuesta del endpoint de rotación por `customSupplyId`.  |
+
+Estos cambios permiten validar la hipótesis del Experimento 04: que mostrar un indicador de rotación ayuda al administrador a evitar sobrestock de insumos de baja rotación al momento de generar sus órdenes de compra.
+
+##### Evidencia Funcional
+
+La funcionalidad fue validada localmente (`ng serve`) consumiendo respuestas con el mismo contrato expuesto por el backend (sección 8.3.3.5), dado que el entorno de esta sesión de desarrollo no tiene salida a internet hacia el backend desplegado en Render. Se comprobó el comportamiento de ambos grupos del experimento:
+
+**Grupo experimental** — columna "Rotación" visible con las etiquetas Alta (verde), Media (ámbar) y Baja (rojo):
+
+<img src="assets/images/chapter8/to-be-frontend-web/rotation_column_experimental_group.png" width="700px" alt="tabla de inventario con columna de rotacion para el grupo experimental">
+
+**Grupo de control** — la tabla se mantiene idéntica a la versión previa, sin la columna de rotación:
+
+<img src="assets/images/chapter8/to-be-frontend-web/inventory_table_control_group.png" width="700px" alt="tabla de inventario sin columna de rotacion para el grupo de control">
+
+El despliegue a producción (GitHub Pages, mismo mecanismo documentado en el capítulo 5) queda pendiente de la fusión de la rama `feature/inventory-rotation-indicator` a `develop` a través del pipeline de CI/CD descrito en el capítulo 7.
+
+##### Summary of Implemented To-Be Frontend-Web Support
+
+| To-Be User Story                                    | Frontend Evidence                                                                    | Experiment Supported                                |
+| :----------------------------------------------------- | :--------------------------------------------------------------------------------------- | :------------------------------------------------------ |
+| US-40 — Indicador de nivel de rotación por insumo | Columna de rotación en la tabla de inventario, controlada por feature flag de experimento. | Experimento 04 — Comportamiento basado en datos. |
+
 #### 8.3.3.4. Implemented To-Be Native-Mobile Application Evidence
 
 #### 8.3.3.5. Implemented To-Be RESTful API and/or Serverless Backend Evidence
