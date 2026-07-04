@@ -913,7 +913,7 @@ El presente Sprint Backlog corresponde al sprint de experimentación To-Be de Re
 
 En esta sección se presenta la evidencia de implementación del backend RESTful correspondiente al Sprint Backlog 4 de experimentación To-Be. Los cambios realizados en el backend permiten dar soporte a las historias de usuario experimentales definidas anteriormente: notificaciones automáticas de inventario, estado de activación para el primer pedido, carga asistida del catálogo de proveedores e indicador de rotación por insumo.
 
-El objetivo de esta implementación no fue construir módulos finales de alta complejidad, sino habilitar los endpoints necesarios para ejecutar y evidenciar los experimentos definidos en el ciclo Experiment-Driven Development. Por ello, los endpoints implementados se enfocan en exponer datos accionables para la aplicación web y móvil, permitiendo validar hipótesis asociadas a reducción de mermas, adopción digital, digitalización de proveedores y toma de decisiones basada en datos.
+El objetivo de esta implementación fue habilitar los endpoints necesarios para ejecutar y evidenciar los experimentos definidos en el ciclo Experiment-Driven Development. Por ello, los endpoints implementados se enfocan en exponer datos accionables para la aplicación web y móvil, permitiendo validar hipótesis asociadas a reducción de mermas, adopción digital, digitalización de proveedores y toma de decisiones basada en datos.
 
 ##### Backend Repository Evidence
 
@@ -923,42 +923,48 @@ El objetivo de esta implementación no fue construir módulos finales de alta co
 | restock-platform | feature/inventory | 62b92c0   | feat(resource): add endpoint for upload custom supplies catalog      | 03/07/2026          |
 | restock-platform | feature/inventory | 4ea56cf   | feat(resource): add push notification resource                       | 03/07/2026          |
 | restock-platform | feature/inventory | c6d35d1   | feat(resource): add inventory rotation resource and endpoint         | 03/07/2026          |
-
-<img src="assets/images/chapter8/to-be-backend/backend_repository_commits.png" width="700px" alt="backend repository commits for to-be experiment sprint">
+| restock-platform | feature/iam       | 7dc60fe   | feat(notifications): add firebase connection                         | 03/07/2026          |
+| restock-platform | feature/iam       | 03d2865   | feat(notifications): add firebase configuration                      | 03/07/2026          |
 
 ##### Implemented Backend Features by To-Be User Story
 
 ###### US-37 — Notificaciones push automáticas de inventario en dispositivo móvil
 
-Para la historia US-37, se implementó un recurso orientado a identificar insumos candidatos a generar alertas automáticas de inventario. Esta funcionalidad permite detectar situaciones relevantes para el experimento de reducción de mermas, principalmente insumos con riesgo operativo por stock bajo o vencimiento próximo.
+Para la historia US-37, se implementó soporte backend para el flujo de notificaciones automáticas de inventario mediante Firebase Cloud Messaging. Esta implementación permite cubrir tres responsabilidades principales: registrar el token FCM generado por la aplicación móvil, identificar insumos candidatos a alerta por stock bajo o vencimiento próximo, y despachar notificaciones push hacia el dispositivo móvil del administrador.
 
-El endpoint implementado expone los candidatos a notificación para que la aplicación móvil o el servicio de notificaciones pueda utilizarlos como base.
+El flujo implementado mantiene una separación adecuada de responsabilidades. La aplicación móvil obtiene el token FCM desde Firebase y lo registra en el backend. Luego, el backend detecta las condiciones críticas de inventario y, cuando corresponde, envía la notificación mediante Firebase Cloud Messaging. De esta forma, el backend conserva la lógica de negocio relacionada con inventario y la aplicación móvil se encarga de recibir la notificación y redirigir al usuario a la pantalla correspondiente.
 
-| Method | Endpoint                                                           | Description                                                                                                                                                           | Related User Story |
-| :----- | :----------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------- |
-| GET    | `/api/v1/inventory/users/{userId}/push-notifications-candidates` | Obtiene los candidatos a notificación automática de inventario para un usuario, considerando insumos que requieren atención por stock bajo o vencimiento próximo. | US-37              |
+| Method | Endpoint                                                           | Description                                                                                                                                          | Related User Story |
+| :----- | :----------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------- |
+| PUT    | `/api/v1/mobile/push-token`                                      | Registra o actualiza el FCM token del dispositivo móvil para que el backend pueda enviar notificaciones push al usuario autenticado o identificado. | US-37              |
+| GET    | `/api/v1/inventory/users/{userId}/push-notifications-candidates` | Obtiene los insumos candidatos a notificación automática de inventario, considerando condiciones como stock bajo o vencimiento próximo.           | US-37              |
+| POST   | `/api/v1/inventory/users/{userId}/push-notifications/dispatch`   | Despacha las notificaciones push de inventario hacia los dispositivos móviles registrados mediante Firebase Cloud Messaging.                        | US-37              |
 
-Este endpoint contribuye al experimento porque permite obtener la evidencia base para validar si las alertas automáticas pueden ayudar al administrador a actuar preventivamente sobre insumos en riesgo. Además, permite sustentar técnicamente la existencia de una fuente backend para generar alertas de inventario.
+El endpoint `PUT /api/v1/mobile/push-token` es necesario porque el token FCM es generado por la aplicación móvil y puede cambiar si el usuario reinstala la aplicación, cambia de dispositivo o Firebase refresca el token. Por ello, el backend lo recibe y lo guarda de forma actualizable para asociarlo al usuario correspondiente.
+
+El endpoint `GET /api/v1/inventory/users/{userId}/push-notifications-candidates` permite validar qué insumos cumplen condiciones de alerta antes de enviar una notificación. Este endpoint es útil para evidenciar la lógica de detección de riesgos de inventario desde Swagger UI.
+
+El endpoint `POST /api/v1/inventory/users/{userId}/push-notifications/dispatch` ejecuta el envío real de las notificaciones. Para ello, reutiliza los candidatos detectados, busca los tokens FCM activos del usuario y envía el mensaje mediante Firebase Cloud Messaging. La notificación enviada incluye datos como el tipo de alerta, el identificador del insumo personalizado y el identificador del lote, permitiendo que la aplicación móvil abra la pantalla de inventario, detalle del insumo o alertas cuando el usuario toca la notificación.
 
 ###### US-38 — Flujo de onboarding guiado para el primer pedido
 
-Para la historia US-38, el backend no implementa el flujo visual del onboarding, ya que este pertenece a la experiencia de usuario en el frontend. Sin embargo, se incorporó soporte en el contexto de IAM para exponer un parámetro relacionado con el estado de activación del usuario frente a su primer pedido.
+Para la historia US-38, el backend no implementa el flujo visual del onboarding, ya que este pertenece a la experiencia de usuario de la aplicación móvil. Sin embargo, se incorporó soporte en el contexto de usuarios para exponer un parámetro relacionado con el estado de activación del usuario frente a su primer pedido.
 
-Este cambio permite identificar si el usuario ya realizó la acción clave del negocio, es decir, completar o iniciar su primer pedido. De esta manera, la aplicación puede decidir si debe mostrar nuevamente el flujo guiado.
+Este cambio permite identificar si el usuario ya realizó la acción clave del negocio, es decir, completar o iniciar su primer pedido. De esta manera, la aplicación móvil puede decidir si corresponde mostrar nuevamente el flujo guiado sin que el backend tenga que conocer pantallas, pasos o lógica propia de interfaz.
 
-| Method | Endpoint                                    | Description                                                                                                                                                                | Related User Story |
-| :----- | :------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------- |
-| GET    | `/api/v1/users/{userId}/activation-state` | Se agregó un parámetro de estado de activación asociado al primer pedido, permitiendo que el frontend o mobile determine si corresponde mostrar el flujo de onboarding. | US-38              |
+| Method | Endpoint                                    | Description                                                                                                                                                          | Related User Story |
+| :----- | :------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------- |
+| GET    | `/api/v1/users/{userId}/activation-state` | Obtiene el estado de activación del usuario relacionado con su primer pedido, permitiendo que la aplicación móvil determine si debe mostrar el onboarding guiado. | US-38              |
 
 ###### US-39 — Carga asistida del catálogo de productos del proveedor
 
-Para la historia US-39, se implementó un endpoint que permite cargar insumos personalizados al catálogo del proveedor. Esta funcionalidad da soporte al experimento de viabilidad del ecosistema de proveedores, en el cual el equipo de Restock puede asistir al proveedor durante la digitalización inicial de su catálogo.
+Para la historia US-39, se implementó un endpoint que permite cargar insumos personalizados al catálogo del proveedor mediante un flujo asistido por el equipo de Restock. Esta funcionalidad da soporte al experimento de viabilidad del ecosistema de proveedores, en el cual se busca validar si proveedores tradicionales están dispuestos a digitalizar su catálogo con acompañamiento inicial.
 
 La carga asistida permite registrar productos con información relevante para que luego puedan ser visualizados y utilizados dentro del flujo de pedidos. Esto reduce la fricción inicial del proveedor tradicional, ya que no necesita realizar toda la configuración por sí mismo durante la primera sesión de demostración.
 
-| Method | Endpoint                                   | Description                                                                                                                          | Related User Story |
-| :----- | :----------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- | :----------------- |
-| POST   | `/api/v1/custom-supplies/catalog/upload` | Permite cargar productos o insumos personalizados al catálogo, facilitando la digitalización asistida del catálogo del proveedor. | US-39              |
+| Method | Endpoint                                            | Description                                                                                                         | Related User Story |
+| :----- | :-------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------ | :----------------- |
+| POST   | `/api/v1/custom-supplies/assisted-catalog-upload` | Permite cargar productos o insumos personalizados al catálogo mediante un flujo asistido por el equipo de Restock. | US-39              |
 
 Este endpoint contribuye directamente al Concierge Test definido para proveedores, ya que permite preparar o registrar un catálogo digital mínimo para demostrar cómo el proveedor podría recibir pedidos desde la plataforma.
 
@@ -974,38 +980,42 @@ La funcionalidad permite clasificar los insumos según su comportamiento de cons
 
 Este endpoint permite que la aplicación web muestre información de rotación en el inventario y sustenta la hipótesis de que los administradores pueden tomar mejores decisiones cuando reciben datos operativos claros antes de generar una orden de compra.
 
-##### Swagger / OpenAPI Evidence
+##### OpenAPI / Swagger UI Evidence
 
-La documentación de los nuevos endpoints fue expuesta mediante Swagger UI, permitiendo validar las rutas implementadas y su disponibilidad para consumo desde las aplicaciones cliente. En la categoría **Inventory Insights**, se evidencian los endpoints asociados a rotación de inventario y candidatos de notificaciones push.
+La documentación de los nuevos endpoints fue generada bajo la especificación OpenAPI y expuesta mediante Swagger UI. Esto permite validar las rutas implementadas, los métodos HTTP disponibles y su disponibilidad para consumo desde las aplicaciones cliente.
 
-| Swagger Section    | Endpoint                                                               | Purpose                                                                 |
-| :----------------- | :--------------------------------------------------------------------- | :---------------------------------------------------------------------- |
-| Inventory Insights | `GET /api/v1/inventory/users/{userId}/rotation`                      | Consultar el nivel de rotación de inventario por insumo.               |
-| Inventory Insights | `GET /api/v1/inventory/users/{userId}/push-notifications-candidates` | Consultar candidatos de notificación automática de inventario.        |
-| Custom Supplies    | `POST /api/v1/custom-supplies/catalog/upload`                        | Cargar productos del catálogo del proveedor de forma asistida.         |
-| Users              | `GET /api/v1/users/{userId}/activation-state`                        | Exponer estado de activación relacionado al primer pedido del usuario. |
+En la evidencia de Swagger UI se observan los endpoints relacionados con las funcionalidades To-Be implementadas: carga asistida de catálogo, dispatch de notificaciones push, rotación de inventario, candidatos de notificación, estado de activación del usuario y registro de tokens FCM para mobile.
 
-<img src="assets/images/chapter8/to-be-backend/inventory_insights_swagger.png" width="600px" alt="swagger evidence for inventory insights endpoints">
+| Swagger Section    | Endpoint                                                               | Purpose                                                                     |
+| :----------------- | :--------------------------------------------------------------------- | :-------------------------------------------------------------------------- |
+| Custom Supplies    | `POST /api/v1/custom-supplies/assisted-catalog-upload`               | Cargar productos del catálogo del proveedor de forma asistida.             |
+| Inventory Insights | `POST /api/v1/inventory/users/{userId}/push-notifications/dispatch`  | Enviar notificaciones push de inventario mediante Firebase Cloud Messaging. |
+| Inventory Insights | `GET /api/v1/inventory/users/{userId}/rotation`                      | Consultar el nivel de rotación de inventario por insumo.                   |
+| Inventory Insights | `GET /api/v1/inventory/users/{userId}/push-notifications-candidates` | Consultar candidatos de notificación automática de inventario.            |
+| Users              | `GET /api/v1/users/{userId}/activation-state`                        | Exponer el estado de activación relacionado al primer pedido del usuario.  |
+| Mobile Push Tokens | `PUT /api/v1/mobile/push-token`                                      | Registrar o actualizar el FCM token de la aplicación móvil.               |
+
+<img src="assets/images/chapter8/to-be-backend/inventory_insights_swagger.png" width="800px" alt="swagger evidence for to-be backend endpoints including inventory insights and mobile push tokens">
 
 ##### Backend Deployment Evidence
 
-El backend se mantiene desplegado en Render, permitiendo el acceso público a la documentación Swagger y la validación de los endpoints implementados para el Sprint Backlog 4. El despliegue permite que los servicios RESTful puedan ser consumidos por la aplicación web y móvil durante la ejecución de los experimentos To-Be.
+El backend se mantiene desplegado en Render, permitiendo el acceso público a la documentación Swagger UI y la validación de los endpoints implementados para el Sprint Backlog 4. El despliegue permite que los servicios RESTful puedan ser consumidos por la aplicación web y móvil durante la ejecución de los experimentos To-Be.
 
 **Link de despliegue del backend:**
 [https://restock-platform-10253.onrender.com/swagger-ui/index.html](https://restock-platform-10253.onrender.com/swagger-ui/index.html)
 
-<img src="assets/images/chapter8/to-be-backend/backend_swagger_deployment.png" width="600px" alt="to-be backend swagger deployment evidence">
+<img src="assets/images/chapter8/to-be-backend/backend_swagger_deployment.png" width="700px" alt="to-be backend swagger deployment evidence">
 
 ##### Summary of Implemented To-Be RESTful API Support
 
-| To-Be User Story                                                 | Backend Evidence                                                             | Experiment Supported                                        |
-| :--------------------------------------------------------------- | :--------------------------------------------------------------------------- | :---------------------------------------------------------- |
-| US-37 — Notificaciones push automáticas de inventario          | Endpoint para obtener candidatos de notificación de inventario por usuario. | Experimento 01 — Validación de impacto en mermas.         |
-| US-38 — Flujo de onboarding guiado para el primer pedido        | Parámetro de estado de activación relacionado con el primer pedido.        | Experimento 02 — Validación de adopción digital.         |
-| US-39 — Carga asistida del catálogo de productos del proveedor | Endpoint para carga asistida de insumos personalizados al catálogo.         | Experimento 03 — Viabilidad del ecosistema de proveedores. |
-| US-40 — Indicador de nivel de rotación por insumo              | Endpoint para consultar rotación de inventario por insumo.                  | Experimento 04 — Comportamiento basado en datos.           |
+| To-Be User Story                                                 | Backend Evidence                                                                                                                          | Experiment Supported                                        |
+| :--------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------- |
+| US-37 — Notificaciones push automáticas de inventario          | Registro de FCM token móvil, consulta de candidatos a notificación y dispatch de notificaciones push mediante Firebase Cloud Messaging. | Experimento 01 — Validación de impacto en mermas.         |
+| US-38 — Flujo de onboarding guiado para el primer pedido        | Endpoint para consultar el estado de activación del usuario relacionado con el primer pedido.                                            | Experimento 02 — Validación de adopción digital.         |
+| US-39 — Carga asistida del catálogo de productos del proveedor | Endpoint para carga asistida de insumos personalizados al catálogo del proveedor.                                                        | Experimento 03 — Viabilidad del ecosistema de proveedores. |
+| US-40 — Indicador de nivel de rotación por insumo              | Endpoint para consultar rotación de inventario por insumo.                                                                               | Experimento 04 — Comportamiento basado en datos.           |
 
-Con estos cambios, el backend RESTful de Restock queda alineado con el Sprint Backlog 4 y proporciona soporte técnico suficiente para ejecutar los experimentos To-Be. Las funcionalidades implementadas permiten recolectar evidencia operativa sobre alertas, activación del usuario, digitalización de proveedores y decisiones de compra basadas en indicadores de inventario.
+Con estos cambios, el backend RESTful de Restock queda alineado con el Sprint Backlog 4 y proporciona soporte técnico suficiente para ejecutar los experimentos To-Be. Las funcionalidades implementadas permiten recolectar evidencia operativa sobre alertas, activación del usuario, digitalización de proveedores y decisiones de compra basadas en indicadores de inventario. Además, la integración con Firebase Cloud Messaging permite completar el flujo real de notificaciones push desde el backend hacia la aplicación móvil.
 
 #### 8.3.3.6. Team Collaboration Insights
 
@@ -1278,13 +1288,13 @@ El flujo de aprendizaje seguido por el equipo durante la sesión se estructuró 
 
 #### Descripción del flujo de aprendizaje
 
-| Etapa                                  | Descripción                                                                                                          | Artefacto generado                   |
-| :------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- | :----------------------------------- |
-| 1. Evidencia recolectada               | Se consolidaron métricas, observaciones de entrevistas, capturas, videos y resultados de los experimentos To-Be.     | Matriz de evidencia por experimento. |
-| 2. Síntesis de hallazgos              | El equipo agrupó los hallazgos por patrón: alertas, onboarding, catálogo de proveedores y rotación de inventario. | Tabla de hallazgos principales.      |
-| 3. Interpretación frente a hipótesis | Cada hallazgo fue comparado con su hipótesis H1 y H0 para determinar el nivel de soporte obtenido.                   | Matriz hipótesis vs. evidencia.     |
-| 4. Decisiones de producto              | Se definió si cada funcionalidad debía mantenerse, ajustarse, escalarse o investigarse nuevamente.                  | Tabla de decisiones de producto.     |
-| 5. Consolidación de aprendizajes finales | Se organizaron las decisiones finales del equipo y las recomendaciones derivadas de los resultados obtenidos. | Matriz de recomendaciones finales. |
+| Etapa                                     | Descripción                                                                                                          | Artefacto generado                   |
+| :---------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- | :----------------------------------- |
+| 1. Evidencia recolectada                  | Se consolidaron métricas, observaciones de entrevistas, capturas, videos y resultados de los experimentos To-Be.     | Matriz de evidencia por experimento. |
+| 2. Síntesis de hallazgos                 | El equipo agrupó los hallazgos por patrón: alertas, onboarding, catálogo de proveedores y rotación de inventario. | Tabla de hallazgos principales.      |
+| 3. Interpretación frente a hipótesis    | Cada hallazgo fue comparado con su hipótesis H1 y H0 para determinar el nivel de soporte obtenido.                   | Matriz hipótesis vs. evidencia.     |
+| 4. Decisiones de producto                 | Se definió si cada funcionalidad debía mantenerse, ajustarse, escalarse o investigarse nuevamente.                  | Tabla de decisiones de producto.     |
+| 5. Consolidación de aprendizajes finales | Se organizaron las decisiones finales del equipo y las recomendaciones derivadas de los resultados obtenidos.         | Matriz de recomendaciones finales.   |
 
 #### Matriz de aprendizaje por experimento
 
