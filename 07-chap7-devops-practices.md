@@ -156,7 +156,7 @@ El pipeline de despliegue a producción de Restock cubre los tres componentes pr
 
 Para mantener la trazabilidad de GitFlow, el pipeline de producción se configuró en la rama `feature/cd-production-pipeline`. El archivo orquestador `cd-production.yml` se ubica en `.github/workflows/` y define los disparadores del pipeline: `push` a `main` y `workflow_dispatch` para despliegues controlados. Los *jobs* se organizan de forma que el frontend y el backend se puedan desplegar en paralelo tras superar la etapa de build.
 
-![Definición del workflow de producción y rama feature/cd-production-pipeline](assets/images/chapter7/continuous_deployment/step1.png)
+![Definición del workflow de producción y rama feature/cd-production-pipeline](assets/images/chapter7/continuous_deployment/step1.png)  
 
 #### 2. Frontend Build Stage
 

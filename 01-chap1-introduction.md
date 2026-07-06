@@ -28,7 +28,7 @@ Visualizamos un futuro donde todos los restaurantes, sin importar su tamaño, cu
 
 <div id="member-julio" align="center"> 
   <img src="https://i.ibb.co/TxBt9xhF/julio.png" alt="Julio Castro Alejos" style="width: 150px; margin-right: 20px; border-radius: 10%;"> 
-  <div style="flex: 1;"> 
+  <div style="flex: 1; margin-left: 20px;"> 
   <p> 
     Soy estudiante de Ingeniería de Software, actualmente cursando el séptimo ciclo de la carrera. Me interesa comprender el desarrollo de software de forma integral, desde la concepción de una idea hasta su implementación y uso por parte de los usuarios. <br>
     Tengo experiencia en desarrollo full stack, incluyendo backend, diseño de   APIs, bases de datos y construcción de aplicaciones web. Me enfoco en   entender cómo las decisiones tecnicas influyen en la escalabilidad,   mantenibilidad y desempeño de los sistemas. <br>
@@ -42,7 +42,7 @@ Visualizamos un futuro donde todos los restaurantes, sin importar su tamaño, cu
 **Ario Chavez Uribe (u202213468)**
 
 <div id="member-ario" align="center">
-<img src="https://i.ibb.co/vCmXgjM5/ario.png" alt="Imagen Ario Chavez" style="width: 150px; margin-right: 20px; border-radius: 10%;">
+<img src="https://i.ibb.co/vCmXgjM5/ario.png" alt="Imagen Ario Chavez" style="width: 150px; margin-center: 20px; border-radius: 10%;">
 <div style="flex: 1;">
 <p> 
 Soy estudiante de la carrera de Ingeniería de Software con un fuerte interés en el aprendizaje de nuevas tecnologías y el desarrollo de aplicaciones móviles. Poseo conocimientos en lenguajes como C++, Java, Python y GDScript, así como experiencia en el manejo de bases de datos utilizando herramientas como pgAdmin. Además, cuento con conocimientos en frameworks como Angular y Vue, y en desarrollo web (HTML, CSS y Javascript). Me considero un integrante con una participación activa dentro del equipo, siempre dispuesto a colaborar y aportar soluciones técnicas que impulsen el éxito del proyecto.
@@ -55,7 +55,7 @@ Soy estudiante de la carrera de Ingeniería de Software con un fuerte interés e
 **José Jahaziel Guerra Perez (u202319831)**
 
 <div id="member-jahaziel" align="center">
-  <img src="https://i.ibb.co/LssNdfh/IMG-8966.jpg" alt="Imagen Jahaziel Guerra" style="width: 150px; margin-right: 20px; border-radius: 10%;">
+  <img src="https://i.ibb.co/LssNdfh/IMG-8966.jpg" alt="Imagen Jahaziel Guerra" style="width: 150px; margin-center: 20px; border-radius: 10%;">
   <div style="flex: 1;">
   <p> 
     Soy estudiante de Ingeniería de Software, actualmente en el séptimo ciclo de la carrera. Me apasiona el aprendizaje continuo, la planificación detallada y la búsqueda de soluciones eficientes a problemas reales. <br>
@@ -71,7 +71,7 @@ Soy estudiante de la carrera de Ingeniería de Software con un fuerte interés e
 **Ivan Fernando Sanchez Guevara (u202218181)**
 
 <div id="member-fernando" align="center">
-  <img src="assets/images/chapter1/fersho.png" alt="Imagen Fernando Sanchez" style="width: 150px; margin-right: 20px; border-radius: 10%;">
+  <img src="assets/images/chapter1/fersho.png" alt="Imagen Fernando Sanchez" style="width: 150px; margin-center: 20px; border-radius: 10%;">
   <div style="flex: 1;">
   <p> 
     Mi Nombre es Fernando Sanchez Guevara, tengo 22 años, actualmente estudiando la carrera de Ingeniería de Software. Me considero alguien disiplinado respecto con la puntualidad y desarrollar de la mejor manera las asignaciones de trabajo. Ademas, me preocupo por mi equipo, tratando de que no tengan ningun problema respecto al trabajo, y darles la mano para poder ayudar cuando lo necesiten. Por medio de mi compromiso, eh logrado realizar los proyectos en grupo de forma excelente y sin problemas en percanses
@@ -83,7 +83,7 @@ Soy estudiante de la carrera de Ingeniería de Software con un fuerte interés e
 **Gabriela Nicole Shapiama Rivera (u202319448)**
 
 <div id="member-gabriela" align="center">
-  <img src="https://i.ibb.co/Y7svVgXm/gaby.jpg" alt="Imagen Gabriela Shapiama" style="width: 150px; margin-right: 20px; border-radius: 10%;">
+  <img src="https://i.ibb.co/Y7svVgXm/gaby.jpg" alt="Imagen Gabriela Shapiama" style="width: 150px; margin-center: 20px; border-radius: 10%;">
   <div style="flex: 1;">
 <p>
   Soy estudiante de séptimo ciclo de Ingeniería de Software, con un fuerte interés por la lógica, el razonamiento y el desarrollo de soluciones tecnológicas con impacto real.<br>
@@ -91,6 +91,8 @@ Soy estudiante de la carrera de Ingeniería de Software con un fuerte interés e
   Del mismo modo, vengo fortaleciendo mis conocimientos en diseño y arquitectura de proyectos de software, junto con habilidades de liderazgo asertivo. Estoy comprometida con seguir aprendiendo y aportar valor a cada equipo en el que participo.
 </p>
   </div> 
+
+   </div> 
 <br>
 
 ## 1.2 Solution Profile

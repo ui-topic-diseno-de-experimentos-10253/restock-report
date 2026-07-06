@@ -1243,48 +1243,203 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistem
 
 ### 6.3.2. Registro de Entrevistas
 
-#### Segmento 1: Administradores de Restaurantes
+#### Segmento 1: Dueños o administradores de Restaurantes
 
+**Entrevista 1:**
+
+**Nombre:** Alfredo Bernuy
+**Edad:** 52 años
+**Distrito:** Chorrillos
+**Timing:** (00:00- 05:18 min)
+
+![Foto de Entrevista](https://i.ibb.co/S4tpKKYz/image.png)
+ 
+Ver entrevista: https://shorturl.at/YDftM
+
+**Resumen:**
+Alfredo Bernuy, administrador de restaurantes con 4 años de experiencia, tiene 52 años, es casado y vive en el distrito de Chorrillos, Lima. Es una persona comprometida y orientada a la mejora continua.
+
+Alfredo Bernuy destaca que la plataforma le resulta muy intuitiva desde el primer acceso: los menús están organizados de forma clara, los botones de acción son fácilmente reconocibles y el flujo para crear o modificar pedidos se siente natural y ágil. Valora especialmente la sección de gestión de stock, que le permite visualizar en tiempo real los niveles de inventario, recibir alertas automáticas al alcanzar el mínimo definido y filtrar por categorías o fechas para detectar tendencias.
+
+Por otro lado, subraya que el diseño es moderno y atractivo: la paleta de colores es sobria pero actual, la tipografía resulta legible y los iconos comunican su función de un vistazo. Considera que la herramienta le brinda un control total sobre pedidos y stock, le ahorra tiempo y le transmite la confianza necesaria para optimizar sus operaciones diarias.
+
+**Entrevista 2:**
+
+**Nombre:** Mery Pilar
+**Edad:** 49 años
+**Distrito:** Chorrillos
+**Timing:** (05:19 - 10:50 min)
+
+![Foto de Entrevista](https://i.ibb.co/hx5tPWtx/image.png)
+
+Ver entrevista: https://shorturl.at/YDftM
+
+**Resumen:**
+
+Mery Pilar, administradora de restaurantes con 6 años de experiencia, tiene 49 años, es casada y vive en el distrito de Chorrillos, Lima. Es una persona responsable y orientada a la mejora continua e innovación.
+
+Mery Pilar resalta que la herramienta es sumamente sencilla de usar desde el primer contacto: los apartados están dispuestos de manera ordenada, los elementos interactivos resultan intuitivos y el proceso para generar o actualizar pedidos fluye de forma muy eficiente. Aprecia de forma especial el módulo de control de inventario, que le permite monitorear al instante las existencias, recibir notificaciones automáticas cuando un artículo llega al stock mínimo y aplicar filtros por categoría o periodo para identificar patrones de consumo.
+
+Además, enfatiza que la apariencia es fresca y profesional: los tonos empleados son elegantes sin dejar de ser actuales, la tipografía se lee con total nitidez y los iconos transmiten claramente su función. En su opinión, esta solución le proporciona el dominio completo sobre pedidos e inventario, optimiza su tiempo y le infunde la seguridad necesaria para mejorar sus operaciones diarias.
+
+**Entrevista 3:**
+
+**Nombre:** Julián
+**Edad:** 34 años
+**Distrito:** Lima, San Isidro
+**Timing:** (00:00 - 13:00 min)
+
+![Foto de Entrevista](../restock-report/assets/images/chapter6/interview/Dueño_Restaurante_03.png)
+
+Ver entrevista: [Enlace a la entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213468_upc_edu_pe/IQAFxviA7a9cQKs3uzUhPgIKAU1agPonNAaaWMXb2IzJl1c?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=71oZfT)
+
+**Resumen:**
+Julián es el administrador y dueño de un restaurante de hamburguesas en Lima. Durante la validación, navegó por la Landing Page y consideró que las propuestas de valor más pertinentes para su negocio son la gestión de compras, la creación de recetas y el control de mermas/residuos, ya que en el rubro gastronómico el desperdicio impacta directamente en la rentabilidad. Al probar el módulo de Inventario, registró insumos como carne y pan, estableciendo cantidades y precios, pero indicó que el término "Acciones máximas" le resultó confuso y reportó haber obtenido una alerta de error en la interfaz.
+
+En la sección de Órdenes, simuló de manera fluida el envío de un pedido al proveedor. Sin embargo, en el módulo de Ventas, señaló que la estructura actual es demasiado simple para un negocio real, dado que su catálogo tiene más de 60 productos y sus clientes suelen personalizar las órdenes de forma detallada (añadiendo adicionales como tocino, piña o salsas), lo cual el sistema no permite registrar de forma flexible. Finalmente, recomendó aclarar la procedencia del stock en órdenes (si es de almacén propio o de proveedor) y agregar avisos claros que confirmen cuando una acción se guarda con éxito.
 
 #### Segmento 2: Proveedores de Restaurantes
 
-## Entrevista N°1:
-- Nombre: Miguel Angel Leal
-- Sexo: Masculino
-- Edad:28
-- tiempo de duracion: 10:50
-- Ubicación: Lima, Santo Domingo
+**Entrevista 1:**
 
+**Nombre:** Miguel Angel Leal
+**Edad:** 28 años
+**Ubicación:** Lima, Santo Domingo
+**Timing:** (10:50 min)
 
-### Entrevista
-![entevistaS2_1.png](../restock-report/assets/images/chapter6/interview/interviewSegment2_1.png)
+![Foto de Entrevista](../restock-report/assets/images/chapter6/interview/interviewSegment2_1.png)
 
-link: https://youtu.be/GZVfKIVKNkA
+Ver entrevista: https://youtu.be/GZVfKIVKNkA
 
-**Resumen**
+**Resumen:**
+Miguel Angel Leal es un proveedor que actualmente se encarga de gestionar su restaurante. El comenta que su experiencia con la pagina fue bastante grata, aunque igualmente nos da su opinion respecto a la estructura de algunos aspectos que puede ser plan de pagos, la implementacion de un numero telefonico en el apartado de registro y finalmente agregar mas funciones como calidad de distribuidor entre otras, pero en sus opiniones generales dice que nuestra webb esta en buen camino.
 
-Miguel Angel Leal es un proveedor que actualmente se encarga de gestionar su restaurante. El comenta que su experiencia con la pagina fue bastante grata, aunque igualmente nos da su opinion respecto a la estructura de algunos aspectos que puede ser plan de pagos, la implementacion de un numero telefonico en el apartado de registro y finalmente agregar mas funciones como calidad de distribuidor entre otras, pero en sus opiniones generales dice que nuestra webb esta en buen camino
+**Entrevista 2:**
 
-## Entrevista N°2:
-- Nombre: Andrea Roncal Vargas
-- Sexo: femenino
-- Edad:25
-- tiempo de duracion: 10:00
-- Ubicación: Lima, Independencia
+**Nombre:** Andrea Roncal Vargas
+**Edad:** 25 años
+**Ubicación:** Lima, Independencia
+**Timing:** (10:00 min)
 
+![Foto de Entrevista](../restock-report/assets/images/chapter6/interview/interviewSegment2_2.png)
 
+Ver entrevista: https://youtu.be/iEu1wEoSrv0
 
-#### Entrevista: 
-
-![entevistaS2_2.png](../restock-report/assets/images/chapter6/interview/interviewSegment2_2.png)
-
-link: https://youtu.be/iEu1wEoSrv0
-
-**Resumen**
-
+**Resumen:**
 Andrea Roncal trabaja en un restaurante, donde ayuda en la gestion con sus compañeros de trabajo, ya que igual que es es un proveedora, a diferencia del entrevistado anterior, ella nos dios su pespectiva respecto a la implementeacion de guias visuales para ayudar en la navecacion ya sea de registro, como hacer insumos entro otras cosas pequeñas, igual que el entrevistado piensa en el plan de pagos deberia ser ampliados agregando mas planes para adecuarse al presupuesto de restaurante, sin olvidar que nos pidio pulir el apartado de reseña, luego de eso nos dijo que ibamos por buen camino con la horientacion del proyecto.
 
+**Entrevista 3:**
+
+**Nombre:** Alfonso
+**Edad:** 31 años
+**Ubicación:** Lima, San Miguel
+**Timing:** (00:00 - 09:30 min)
+
+![Foto de Entrevista](../restock-report/assets/images/chapter6/interview/Proveedor_03.png)
+
+Ver entrevista: [Enlace a la entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213468_upc_edu_pe/IQBSyVYnjaaNTqRY4OOmPokhATz7Gnj-NxZnxQIblpJlIBI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=vYC5Ab)
+
+**Resumen:**
+Alfonso es un proveedor comercial con experiencia en gestión de distribución y ventas B2B. Durante su interacción con Restock Suppliers, evaluó positivamente el proceso de registro, catalogándolo como amigable y rápido en comparación con otros sistemas que exigen validaciones redundantes o datos irrelevantes. Asimismo, consideró la interfaz general del panel principal como intuitiva y fácil de navegar.
+
+Al simular el registro de productos en el Inventario (pan gourmet), consideró que el sistema funciona de manera eficiente. Sin embargo, sugirió que la plataforma debería permitir el registro de productos personalizados por campo abierto para aquellos que no se encuentran en las categorías preestablecidas. También recomendó implementar una notificación visual de éxito ("Producto guardado correctamente") tras realizar un registro. Finalmente, valoró positivamente la separación de pedidos en pestañas de estado (Nuevas, En proceso e Historial), ya que ayuda a organizar adecuadamente la logística diaria de entrega.
+
 ### 6.3.3. Evaluaciones según heurísticas
+
+Esta sección contiene el proceso de evaluación de las sesiones de validación basado en heurísticas, considerando heurísticas de usabilidad, arquitectura de información e inclusive design de la experiencia propuesta. Para esto, la sección contiene la estructura del formato para evaluaciones de heurísticas indicado en el Anexo D. Formato para Evaluación de User Experience según Heurísticas.
+
+**SITE o APP A EVALUAR:**
+Restock (Plataforma Web para Administradores de Restaurantes y Aplicación Web Restock Suppliers para Proveedores)
+
+**TAREAS A EVALUAR:**
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
+1. Navegación en el Landing Page de Restock para la comprensión de las propuestas de valor.
+2. Proceso de registro e inicio de sesión de usuario (tanto en la aplicación web para restaurantes como en la web para proveedores).
+3. Registro, edición y gestión de insumos/productos en el inventario del restaurante.
+4. Registro de nuevos productos y actualización de precios en el catálogo de proveedores.
+5. Simulación, creación y envío de pedidos (órdenes de compra) a proveedores asignados.
+6. Registro de ventas diarias en la caja registradora del restaurante para verificar el descuento de insumos en inventario.
+7. Visualización y navegación del historial de pedidos del proveedor organizado por pestañas de estado (Nuevas, En proceso, Historial).
+
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+1. Pasarela de cobros reales y automatizados para el pago de las membresías/suscripciones mensuales.
+2. Sincronización en tiempo real de inventarios locales del restaurante con software POS externo.
+3. Envío y visualización de notificaciones push en tiempo real ante niveles críticos de stock bajo.
+4. Exportación en formatos de hoja de cálculo (Excel, PDF) de análisis avanzados de mermas y balances mensuales.
+
+**ESCALA DE SEVERIDAD:**
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
+
+| Nivel | Descripción |
+|---|---|
+| **1** | **Problema superficial:** puede ser fácilmente superado por el usuario o ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| **2** | **Problema menor:** puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja de cara al siguiente release. |
+| **3** | **Problema mayor:** ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta. |
+| **4** | **Problema muy grave:** un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
+
+**TABLA RESUMEN:**
+
+| # | Problema | Escala de severidad | Heurística/Principio violada(o) |
+|---|---|:---:|---|
+| 1 | Campo rotulado como "Acciones máximas" en el registro de inventario causa confusión | 2 | Usability: Consistencia y estándares / Relación entre el sistema y el mundo real |
+| 2 | Alerta de error genérica e inesperada al intentar guardar un producto en el inventario de restaurantes | 3 | Usability: Prevención de errores / Reconocimiento, diagnóstico y recuperación de errores |
+| 3 | Imposibilidad de agregar adicionales o productos personalizados en el registro de ventas diarias | 3 | Usability: Flexibilidad y eficiencia de uso |
+| 4 | Ambigüedad sobre la propiedad del stock (propio o del proveedor) al generar una orden de compra | 2 | Information Architecture: Is it usable? |
+| 5 | Falta de mensajes de confirmación de éxito ("toast" o banners) al registrar productos en el catálogo de proveedores | 2 | Usability: Visibilidad del estado del sistema |
+| 6 | Ausencia de categorías personalizadas o entrada de texto libre para clasificar nuevos productos en el catálogo de proveedores | 2 | Usability: Flexibilidad y eficiencia de uso |
+| 7 | Falta de planes de pago flexibles o adaptados al presupuesto real de pequeños restaurantes y proveedores | 2 | Information Architecture: Is it findable? / Usabilidad: Relación entre el sistema y el mundo real |
+| 8 | Ausencia de guías visuales o tutoriales de navegación rápida para usuarios nuevos | 1 | Usability: Ayuda y documentación |
+
+**DESCRIPCIÓN DE PROBLEMAS:**
+
+**PROBLEMA #1: Campo rotulado como "Acciones máximas" en el registro de inventario causa confusión**
+* **Severidad:** 2
+* **Heurística violada:** Usabilidad - Consistencia y estándares / Relación entre el sistema y el mundo real
+* **Problema:** Al momento de ingresar o modificar un producto en la sección de inventario, el usuario Julián observó un campo etiquetado como "Acciones máximas", lo que generó confusión ya que en el rubro de restaurantes se acostumbra usar términos como "Stock máximo" o "Capacidad máxima". El término actual no corresponde al lenguaje del negocio y se asocia de forma incorrecta con precios.
+* **Recomendación:** Renombrar el campo a "Stock Máximo" o "Límite de Almacén" para adecuarse al lenguaje y estándares del rubro.
+
+**PROBLEMA #2: Alerta de error genérica e inesperada al intentar guardar un producto en el inventario de restaurantes**
+* **Severidad:** 3
+* **Heurística violada:** Usabilidad - Prevención de errores / Reconocimiento, diagnóstico y recuperación de errores
+* **Problema:** Al intentar guardar los cambios de un producto alimentario en el módulo de Inventario, el sistema arrojó un error técnico en pantalla sin dar explicaciones ni sugerencias de cómo corregirlo. Esto interrumpió el flujo del usuario y requirió cancelar el proceso.
+* **Recomendación:** Diseñar mensajes de error amigables que expliquen detalladamente la causa del fallo (ej. "Falta rellenar campos obligatorios" o "Error de conexión") y provean alternativas de solución.
+
+**PROBLEMA #3: Imposibilidad de agregar adicionales o productos personalizados en el registro de ventas diarias**
+* **Severidad:** 3
+* **Heurística violada:** Usabilidad - Flexibilidad y eficiencia de uso
+* **Problema:** El módulo de ventas presenta una lista rígida de platos base (ej. papa a la huancaína) sin permitir la adición de ingredientes extra o adicionales (ej. tocino, queso, piña) que los clientes reales suelen pedir frecuentemente. Esto obliga a realizar múltiples registros manuales o externos fuera del sistema.
+* **Recomendación:** Rediseñar la sección de registro de ventas para permitir seleccionar modificadores, adicionales y cantidades libres en los platos seleccionados.
+
+**PROBLEMA #4: Ambigüedad sobre la propiedad del stock al generar una orden de compra**
+* **Severidad:** 2
+* **Heurística violada:** Arquitectura de la Información - Is it usable?
+* **Problema:** En el flujo de reabastecimiento (sección Órdenes), el sistema muestra cantidades numéricas bajo la columna de stock, pero el usuario no logra distinguir con claridad si se refiere a las existencias remanentes en el almacén de su restaurante o al stock disponible que tiene el proveedor asignado.
+* **Recomendación:** Clarificar la etiqueta de la columna, renombrándola como "Stock en Almacén del Restaurante" y agregando un indicador del "Stock disponible del Proveedor".
+
+**PROBLEMA #5: Falta de mensajes de confirmación de éxito ("toast" o banners) al registrar productos en el catálogo de proveedores**
+* **Severidad:** 2
+* **Heurística violada:** Usabilidad - Visibilidad del estado del sistema
+* **Problema:** Tras guardar un pan gourmet en el catálogo de la versión web de proveedores, la pantalla vuelve al listado de manera abrupta sin mostrar ninguna confirmación de que el registro fue guardado con éxito. El usuario Alfonso sintió desconfianza de si la operación realmente se había realizado hasta que refrescó la pantalla.
+* **Recomendación:** Añadir un mensaje visual flotante (*toast* o notificación de tipo snackbar) en la esquina superior/inferior de la pantalla con el texto: "Producto registrado exitosamente".
+
+**PROBLEMA #6: Ausencia de categorías personalizadas o entrada de texto libre para clasificar nuevos productos en el catálogo de proveedores**
+* **Severidad:** 2
+* **Heurística violada:** Usabilidad - Flexibilidad y eficiencia de uso
+* **Problema:** En la versión web de proveedores, al registrar un nuevo insumo, el selector de categorías obliga al usuario a elegir entre opciones fijas muy restringidas. Si el proveedor maneja bebidas especializadas u otros insumos no contemplados, no tiene forma de clasificar adecuadamente su oferta.
+* **Recomendación:** Habilitar un campo de texto libre o añadir la opción "Otro / Categoría Personalizada" para que el usuario defina libremente el tipo de producto.
+
+**PROBLEMA #7: Falta de planes de pago flexibles o adaptados al presupuesto real de pequeños restaurantes y proveedores**
+* **Severidad:** 2
+* **Heurística violada:** Arquitectura de la Información - Is it findable? / Usabilidad - Ajuste entre el sistema y el mundo real
+* **Problema:** Tanto el dueño del restaurante como el proveedor identificaron que el selector de planes de membresía/suscripción es muy básico y no ofrece opciones escalonadas o adaptables para pequeños negocios locales, lo que genera dudas sobre la viabilidad financiera de adquirir el servicio de Restock.
+* **Recomendación:** Diseñar una sección de planes con una arquitectura de información más delinear o detallada que exponga planes escalonados (Gratuito, Básico, Premium) ajustados a diferentes tamaños de negocio.
+
+**PROBLEMA #8: Ausencia de guías visuales o tutoriales de navegación rápida para usuarios nuevos**
+* **Severidad:** 1
+* **Heurística violada:** Usabilidad - Ayuda y documentación
+* **Problema:** El sistema no provee una guía rápida de inducción o *onboarding* durante el primer inicio de sesión, lo que obliga al usuario a aprender a navegar en la herramienta por ensayo y error.
+* **Recomendación:** Incorporar un asistente de ayuda visual (*walkthrough* interactivo) que señale brevemente la función de cada módulo del panel principal en el primer ingreso.
+
 
 ## 6.4. Auditoría de Experiencias de Usuario
 
