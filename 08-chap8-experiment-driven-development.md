@@ -24,12 +24,12 @@ Esta sección presenta las fuentes de inspiración que dieron origen a las pregu
 
 Las ideas son propuestas para resolver un problema o alcanzar un objetivo del producto. La premisa central de esta sección es que el equipo **no experimenta directamente con la idea**, sino con las suposiciones subyacentes que harían que la idea funcione o fracase.
 
-|  ID  | Idea                                                                                                    | Premisa subyacente a probar                                                                                                                                                               |
-| :--: | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| I-01 | Sistema de alertas automáticas de stock bajo y vencimiento próximo enviadas por notificaciones push   | Los administradores actuarán sobre una alerta automática de la misma forma que actuarían si hubieran detectado el problema manualmente, reduciendo la merma en al menos un 35%.        |
-| I-02 | Flujo de onboarding guiado paso a paso para administradores que nunca han usado software de gestión    | El diseño guiado es suficiente para que un usuario con baja afinidad digital complete su primer pedido de forma autónoma en menos de 5 minutos, sin necesitar soporte externo.          |
-| I-03 | Dashboard web con columna de indicador de rotación (Alta / Media / Baja) en el módulo de Inventario   | Ver el nivel de rotación de un insumo antes de generar una orden cambiará el comportamiento de compra del administrador, reduciendo el volumen de pedidos de insumos de baja rotación. |
-| I-04 | Portal de gestión de catálogo para proveedores, integrado con el flujo de pedidos de los restaurantes | La eficiencia de tener todos los pedidos centralizados en un solo panel es un incentivo suficiente para que el proveedor tradicional abandone WhatsApp/Excel y digitalice su catálogo.   |
+|  ID   | Idea                                                                                                  | Premisa subyacente a probar                                                                                                                                                            |
+| :---: | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| I-01  | Sistema de alertas automáticas de stock bajo y vencimiento próximo enviadas por notificaciones push   | Los administradores actuarán sobre una alerta automática de la misma forma que actuarían si hubieran detectado el problema manualmente, reduciendo la merma en al menos un 35%.        |
+| I-02  | Flujo de onboarding guiado paso a paso para administradores que nunca han usado software de gestión   | El diseño guiado es suficiente para que un usuario con baja afinidad digital complete su primer pedido de forma autónoma en menos de 5 minutos, sin necesitar soporte externo.         |
+| I-03  | Dashboard web con columna de indicador de rotación (Alta / Media / Baja) en el módulo de Inventario   | Ver el nivel de rotación de un insumo antes de generar una orden cambiará el comportamiento de compra del administrador, reduciendo el volumen de pedidos de insumos de baja rotación. |
+| I-04  | Portal de gestión de catálogo para proveedores, integrado con el flujo de pedidos de los restaurantes | La eficiencia de tener todos los pedidos centralizados en un solo panel es un incentivo suficiente para que el proveedor tradicional abandone WhatsApp/Excel y digitalice su catálogo. |
 
 ---
 
@@ -37,36 +37,36 @@ Las ideas son propuestas para resolver un problema o alcanzar un objetivo del pr
 
 Los claims son afirmaciones realizadas sobre el producto, ya sea por el equipo, stakeholders o por los propios usuarios durante sesiones de descubrimiento previas.
 
-|  ID  | Afirmación (Claim)                                                                                                                             | Fuente                                                                                      | Vinculada a |
-| :--: | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ----------- |
-| C-01 | "Las alertas automáticas de Restock permitirán reducir el desperdicio de insumos perecibles en un 35%."                                       | Equipo de producto (basado en benchmarks del sector restaurantero).                         | EQ1, Q1     |
-| C-02 | "Los administradores de restaurantes medianos en Lima no están dispuestos a aprender una nueva aplicación si el proceso inicial es complejo." | Retroalimentación cualitativa de entrevistas de usuario en fases previas del proyecto.     | EQ2, Q2     |
-| C-03 | "Los proveedores tradicionales se integrarán a Restock si perciben que el volumen de pedidos que gestionan aumentará."                        | Hipótesis del equipo fundada en la lógica de incentivos B2B del mercado local.            | EQ3, Q3     |
-| C-04 | "Mostrar datos de rotación en el inventario no cambia la conducta de compra de los administradores; siguen confiando en su intuición."        | Observación del equipo durante sesiones de prueba de usabilidad internas.                  | EQ4, Q4     |
-| C-05 | "El onboarding guiado reduce el tiempo de activación del usuario de 15 minutos a menos de 5 minutos."                                          | Estimación del equipo de diseño basada en el análisis del flujo actual de la app móvil. | EQ2, Q2     |
+|  ID   | Afirmación (Claim)                                                                                                                            | Fuente                                                                                  | Vinculada a |
+| :---: | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ----------- |
+| C-01  | "Las alertas automáticas de Restock permitirán reducir el desperdicio de insumos perecibles en un 35%."                                       | Equipo de producto (basado en benchmarks del sector restaurantero).                     | EQ1, Q1     |
+| C-02  | "Los administradores de restaurantes medianos en Lima no están dispuestos a aprender una nueva aplicación si el proceso inicial es complejo." | Retroalimentación cualitativa de entrevistas de usuario en fases previas del proyecto.  | EQ2, Q2     |
+| C-03  | "Los proveedores tradicionales se integrarán a Restock si perciben que el volumen de pedidos que gestionan aumentará."                        | Hipótesis del equipo fundada en la lógica de incentivos B2B del mercado local.          | EQ3, Q3     |
+| C-04  | "Mostrar datos de rotación en el inventario no cambia la conducta de compra de los administradores; siguen confiando en su intuición."        | Observación del equipo durante sesiones de prueba de usabilidad internas.               | EQ4, Q4     |
+| C-05  | "El onboarding guiado reduce el tiempo de activación del usuario de 15 minutos a menos de 5 minutos."                                         | Estimación del equipo de diseño basada en el análisis del flujo actual de la app móvil. | EQ2, Q2     |
 
 #### Assumptions
 
 Las suposiciones son creencias preexistentes sobre el producto o la audiencia —frecuentemente basadas en la sabiduría del sector o en conocimiento previo— que deben ser probadas mediante experimentación antes de convertirse en decisiones de producto definitivas.
 
-|  ID  | Suposición (Assumption)                                                                                                                                                        | Categoría | Riesgo si resulta falsa                                                                                              | Vinculada a |
-| :--: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------- | ----------- |
-| A-01 | Los administradores de restaurantes medianos en Lima gestionan hoy su inventario de forma manual (Excel, cuadernos, WhatsApp) y no mediante un sistema digital.                 | Audiencia  | Alto: si ya usan software, la propuesta de valor de Restock pierde diferenciación.                                  | EQ1, EQ2    |
-| A-02 | La principal causa de mermas en restaurantes medianos es la falta de visibilidad oportuna del nivel de stock, no el desperdicio en cocina ni el sobrestock deliberado.          | Producto   | Alto: si la causa raíz es otra, las alertas automáticas no reducirán la merma.                                    | EQ1, Q1     |
-| A-03 | Un usuario con baja afinidad digital puede aprender a usar una aplicación móvil de gestión si el flujo es lo suficientemente sencillo y guiado.                              | Audiencia  | Medio: si la barrera cognitiva es mayor a la esperada, ningún onboarding resolverá el problema de adopción.       | EQ2, Q2     |
-| A-04 | Los proveedores de insumos en Lima que operan informalmente (menos de 10 empleados, sin sistema propio) están en búsqueda activa de herramientas que centralicen sus pedidos. | Ecosistema | Alto: si no existe demanda latente, la estrategia de adquisición de proveedores requiere ser rediseñada.           | EQ3, Q3     |
-| A-05 | La visualización de una métrica de rotación histórica es suficiente señal para que el administrador tome una decisión de compra diferente a la habitual.                  | Producto   | Medio: si el usuario ignora el dato o no confía en él, el desarrollo del módulo de reportes no generará retorno. | EQ4, Q4     |
-| A-06 | El canal preferido por los administradores para recibir soporte inicial es el tutorial in-app o el tooltip contextual, por encima de WhatsApp o soporte humano.                 | Audiencia  | Bajo: impacta el diseño del canal de soporte, no la propuesta de valor central.                                     | EQ5         |
+|  ID   | Suposición (Assumption)                                                                                                                                                       | Categoría  | Riesgo si resulta falsa                                                                                          | Vinculada a |
+| :---: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------- | ----------- |
+| A-01  | Los administradores de restaurantes medianos en Lima gestionan hoy su inventario de forma manual (Excel, cuadernos, WhatsApp) y no mediante un sistema digital.               | Audiencia  | Alto: si ya usan software, la propuesta de valor de Restock pierde diferenciación.                               | EQ1, EQ2    |
+| A-02  | La principal causa de mermas en restaurantes medianos es la falta de visibilidad oportuna del nivel de stock, no el desperdicio en cocina ni el sobrestock deliberado.        | Producto   | Alto: si la causa raíz es otra, las alertas automáticas no reducirán la merma.                                   | EQ1, Q1     |
+| A-03  | Un usuario con baja afinidad digital puede aprender a usar una aplicación móvil de gestión si el flujo es lo suficientemente sencillo y guiado.                               | Audiencia  | Medio: si la barrera cognitiva es mayor a la esperada, ningún onboarding resolverá el problema de adopción.      | EQ2, Q2     |
+| A-04  | Los proveedores de insumos en Lima que operan informalmente (menos de 10 empleados, sin sistema propio) están en búsqueda activa de herramientas que centralicen sus pedidos. | Ecosistema | Alto: si no existe demanda latente, la estrategia de adquisición de proveedores requiere ser rediseñada.         | EQ3, Q3     |
+| A-05  | La visualización de una métrica de rotación histórica es suficiente señal para que el administrador tome una decisión de compra diferente a la habitual.                      | Producto   | Medio: si el usuario ignora el dato o no confía en él, el desarrollo del módulo de reportes no generará retorno. | EQ4, Q4     |
+| A-06  | El canal preferido por los administradores para recibir soporte inicial es el tutorial in-app o el tooltip contextual, por encima de WhatsApp o soporte humano.               | Audiencia  | Bajo: impacta el diseño del canal de soporte, no la propuesta de valor central.                                  | EQ5         |
 
 #### Knowledge Gaps
 
 Las brechas de conocimiento son áreas donde el equipo reconoce explícitamente que carece de información. A diferencia de las suposiciones (donde existe una creencia, aunque no confirmada), los Knowledge Gaps son preguntas abiertas sin respuesta inicial, que frecuentemente dan lugar a preguntas exploratorias.
 
-|  ID  | Brecha de Conocimiento                                                                                                                                                                              | Impacto en el producto                                                                                        | Vinculada a |
-| :---: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ----------- |
-| KG-01 | Se desconoce el volumen real de mermas semanales (en kg o costo) que registran los restaurantes objetivo*antes* de usar Restock. Sin esta línea base, es imposible medir la reducción del 35%.  | Crítico: sin baseline, el KPI principal (WRR) no es calculable.                                              | Q1, EQ1     |
-| KG-02 | No se sabe cuánto tiempo tardan actualmente los administradores en realizar un pedido de insumos por sus canales habituales (llamada, WhatsApp, visita presencial).                                | Moderado: impide establecer el umbral realista de "menos de 5 minutos" como mejora significativa.             | Q2, EQ2     |
-| KG-03 | Se ignora qué porcentaje de los proveedores de insumos en Lima ya cuenta con alguna herramienta digital propia (aunque sea básica), lo que afecta la segmentación del experimento de adopción.  | Moderado: podría sesgar la muestra del Experimento 03 si se incluyen proveedores ya digitalizados.           | Q3, EQ3     |
+|  ID   | Brecha de Conocimiento                                                                                                                                                                             | Impacto en el producto                                                                                       | Vinculada a |
+| :---: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ----------- |
+| KG-01 | Se desconoce el volumen real de mermas semanales (en kg o costo) que registran los restaurantes objetivo*antes* de usar Restock. Sin esta línea base, es imposible medir la reducción del 35%.     | Crítico: sin baseline, el KPI principal (WRR) no es calculable.                                              | Q1, EQ1     |
+| KG-02 | No se sabe cuánto tiempo tardan actualmente los administradores en realizar un pedido de insumos por sus canales habituales (llamada, WhatsApp, visita presencial).                                | Moderado: impide establecer el umbral realista de "menos de 5 minutos" como mejora significativa.            | Q2, EQ2     |
+| KG-03 | Se ignora qué porcentaje de los proveedores de insumos en Lima ya cuenta con alguna herramienta digital propia (aunque sea básica), lo que afecta la segmentación del experimento de adopción.     | Moderado: podría sesgar la muestra del Experimento 03 si se incluyen proveedores ya digitalizados.           | Q3, EQ3     |
 | KG-04 | No se conocen las principales barreras operativas que impiden a los proveedores actualizar su inventario digital con frecuencia (tiempo, privacidad de precios, dificultad técnica, desconfianza). | Alto: sin entender la barrera real, el diseño del portal de proveedores puede atacar el problema equivocado. | EQ6         |
 | KG-05 | No existe evidencia interna sobre si los administradores realmente leen los reportes de métricas generados por el sistema, o si los ignoran al tomar decisiones de compra.                         | Moderado: determina si vale la pena invertir en el módulo de reportes avanzados antes de validar su uso.     | Q4, EQ4     |
 
@@ -113,12 +113,12 @@ Se opta por un backlog amplio (broad) para esta fase inicial, con el objetivo de
 
 Cada pregunta ha sido evaluada bajo cuatro criterios en una escala del 1 al 5 (donde 5 es el valor máximo): **Confianza (C)**, **Riesgo (R)**, **Impacto (I)** e **Interés (Int)**. En cumplimiento con el marco de trabajo, en caso de empate en el puntaje total, se ha priorizado la pregunta con mayor índice de Riesgo.
 
-| ID | Pregunta de Investigación (Question)                                                                      | Motivación (The "Why")                                                                                                                | C | R | I | Int | Total |
-| -- | ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | - | - | - | --- | ----- |
-| Q1 | ¿Reducen las alertas en tiempo real el desperdicio de insumos en un 35% como se ha previsto?              | Validar la propuesta de valor core. Si la automatización no impacta la merma, el beneficio económico para el restaurante desaparece. | 2 | 5 | 5 | 5   | 17    |
-| Q2 | ¿Son capaces los administradores con baja afinidad digital de completar un pedido sin asistencia externa? | Mitigar el riesgo de adopción. El mayor riesgo identificado es que la complejidad de la UI aleje al usuario tradicional.             | 3 | 5 | 4 | 4   | 16    |
-| Q3 | ¿Están los proveedores tradicionales dispuestos a digitalizar sus catálogos para integrarse a Restock?  | Asegurar la viabilidad del ecosistema. El sistema depende de que el proveedor alimente los datos de stock y precios.                   | 2 | 4 | 4 | 5   | 15    |
-| Q4 | ¿Influye la visualización de métricas de rotación en la decisión de compra de nuevos insumos?         | Validar el cambio de comportamiento. Queremos saber si el usuario toma decisiones basadas en datos o sigue usando su intuición.       | 4 | 2 | 3 | 4   | 13    |
+| ID  | Pregunta de Investigación (Question)                                                                      | Motivación (The "Why")                                                                                                               | C   | R   | I   | Int | Total |
+| --- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | --- | --- | --- | --- | ----- |
+| Q1  | ¿Reducen las alertas en tiempo real el desperdicio de insumos en un 35% como se ha previsto?              | Validar la propuesta de valor core. Si la automatización no impacta la merma, el beneficio económico para el restaurante desaparece. | 2   | 5   | 5   | 5   | 17    |
+| Q2  | ¿Son capaces los administradores con baja afinidad digital de completar un pedido sin asistencia externa? | Mitigar el riesgo de adopción. El mayor riesgo identificado es que la complejidad de la UI aleje al usuario tradicional.             | 3   | 5   | 4   | 4   | 16    |
+| Q3  | ¿Están los proveedores tradicionales dispuestos a digitalizar sus catálogos para integrarse a Restock?    | Asegurar la viabilidad del ecosistema. El sistema depende de que el proveedor alimente los datos de stock y precios.                 | 2   | 4   | 4   | 5   | 15    |
+| Q4  | ¿Influye la visualización de métricas de rotación en la decisión de compra de nuevos insumos?             | Validar el cambio de comportamiento. Queremos saber si el usuario toma decisiones basadas en datos o sigue usando su intuición.      | 4   | 2   | 3   | 4   | 13    |
 
 ### 8.1.5. Experiment Cards
 
@@ -128,17 +128,17 @@ La Tarjeta de Experimento es el artefacto clave que sustenta el proceso XDPD y s
 
 Esta tarjeta aborda la premisa principal de negocio: la capacidad de la automatización para generar ahorros reales.
 
-| LADO FRONTAL: Concepto y Motivación                                                                                                                                                                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Pregunta:** ¿Reducen las alertas automáticas de "stock bajo" y "vencimiento" el desperdicio de insumos perecibles en un 35%?                                                                                                                                                                            |
-| **Por qué:** Si la automatización no genera una reducción tangible en la merma, la propuesta de valor económica de Restock para el dueño del restaurante desaparece.                                                                                                                                    |
+| LADO FRONTAL: Concepto y Motivación                                                                                                                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Pregunta:** ¿Reducen las alertas automáticas de "stock bajo" y "vencimiento" el desperdicio de insumos perecibles en un 35%?                                                                                                                                                                         |
+| **Por qué:** Si la automatización no genera una reducción tangible en la merma, la propuesta de valor económica de Restock para el dueño del restaurante desaparece.                                                                                                                                   |
 | **Hipótesis:** Creemos que al ofrecer notificaciones push automáticas, los administradores realizarán pedidos preventivos, cuya evidencia se reflejará en una disminución del 35% en los reportes de mermas, bajo la circunstancia de uso diario por dueños de restaurantes medianos.                  |
 | **Qué (Simplest Useful Thing):** Ejecución de un piloto operativo utilizando la aplicación móvil nativa (Kotlin) ya implementada, activando el módulo de notificaciones automáticas mediante OneSignal para enviar alertas reales de inventario a los dispositivos de 5 administradores seleccionados. |
 
-| LADO POSTERIOR: Configuración Técnica                                                                                                                                                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LADO POSTERIOR: Configuración Técnica                                                                                                                                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Medidas:**<br />• Métrica Principal: Reducción porcentual de mermas registradas por semana.<br />• Métrica Secundaria: Tasa de conversión de alerta (clic en notificación) a creación de orden de compra.                                                                      |
-| **Condiciones:**<br />• Experimental: 5 administradores usando el sistema de alertas activas.<br />• Control: 5 administradores usando su método manual actual (Excel/WhatsApp).                                                                                                      |
+| **Condiciones:**<br />• Experimental: 5 administradores usando el sistema de alertas activas.<br />• Control: 5 administradores usando su método manual actual (Excel/WhatsApp).                                                                                                 |
 | **Escala:**<br />• Certeza: Nivel de significancia del 5% y potencia estadística del 80%.<br />• MDE (Efecto Mínimo): Se busca detectar una diferencia mínima del 10% en el volumen de desperdicio.<br />• Tiempo: El experimento durará 14 días (dos ciclos de abastecimiento). |
 
 **Artefacto que se usará como Simplest Useful Thing: Notificaciones en mobile**
@@ -149,17 +149,17 @@ Esta tarjeta aborda la premisa principal de negocio: la capacidad de la automati
 
 Esta tarjeta mitiga el riesgo técnico y de usuario identificado en el segmento de administradores tradicionales.
 
-| LADO FRONTAL: Concepto y Motivación                                                                                                                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Pregunta:** ¿Son capaces los administradores con baja afinidad digital de completar su primer pedido de insumos de forma autónoma?                                                                                                                       |
-| **Por qué:** El mayor riesgo de abandono de la plataforma es la fricción inicial; si el proceso es complejo, el usuario no regresará.                                                                                                                      |
+| LADO FRONTAL: Concepto y Motivación                                                                                                                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Pregunta:** ¿Son capaces los administradores con baja afinidad digital de completar su primer pedido de insumos de forma autónoma?                                                                                                                     |
+| **Por qué:** El mayor riesgo de abandono de la plataforma es la fricción inicial; si el proceso es complejo, el usuario no regresará.                                                                                                                    |
 | **Hipótesis:** Creemos que con un onboarding guiado simplificado, los usuarios nuevos completarán su pedido en menos de 5 minutos, cuya evidencia se verá en el éxito de la tarea, bajo la circunstancia de uso por primera vez sin capacitación previa. |
-| **Qué (Simplest Useful Thing):** Una sesión de prueba de usuario remota utilizando el flujo de "Primer Pedido" implementado actualmente en la aplicación móvil.                                                                                           |
+| **Qué (Simplest Useful Thing):** Una sesión de prueba de usuario remota utilizando el flujo de "Primer Pedido" implementado actualmente en la aplicación móvil.                                                                                          |
 
-| LADO POSTERIOR: Configuración Técnica                                                                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Medidas:**<br />• Métrica Principal: Tasa de éxito de la tarea (Task Success Rate).<br />• Métrica Secundaria: Tiempo promedio en tarea (Time on Task) y número de errores críticos durante el flujo.             |
-| **Condiciones:**<br />• Segmento: Usuarios que declaran usar menos de 2 aplicaciones de gestión en su día a día.                                                                                                       |
+| LADO POSTERIOR: Configuración Técnica                                                                                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Medidas:**<br />• Métrica Principal: Tasa de éxito de la tarea (Task Success Rate).<br />• Métrica Secundaria: Tiempo promedio en tarea (Time on Task) y número de errores críticos durante el flujo.              |
+| **Condiciones:**<br />• Segmento: Usuarios que declaran usar menos de 2 aplicaciones de gestión en su día a día.                                                                                                     |
 | **Escala:**<br />• Certeza: Basado en el estándar de Nielsen, una muestra de 5 usuarios para detectar hasta el 85% de los problemas de usabilidad.<br />• Tiempo: Una sesión única por usuario de máximo 30 minutos. |
 
 **Artefacto que se usará como Simplest Useful Thing: Flujo de Primer pedido implementado en la aplicación móvil**
@@ -170,17 +170,17 @@ Esta tarjeta mitiga el riesgo técnico y de usuario identificado en el segmento 
 
 Esta tarjeta mitiga el riesgo de que el sistema no sea útil si los proveedores no están dispuestos a abandonar sus métodos tradicionales (WhatsApp/Excel).
 
-| LADO FRONTAL: Concepto y Motivación                                                                                                                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Pregunta:** ¿Están los proveedores tradicionales dispuestos a digitalizar sus catálogos para integrarse a Restock a cambio de una gestión de pedidos centralizada?                                                                                                                          |
-| **Por qué:** Validar si el valor percibido de tener todos los pedidos en un solo panel compensa el esfuerzo de mantener el catálogo digitalizado. Sin proveedores activos, el restaurante no puede reabastecerse automáticamente                                                               |
+| LADO FRONTAL: Concepto y Motivación                                                                                                                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Pregunta:** ¿Están los proveedores tradicionales dispuestos a digitalizar sus catálogos para integrarse a Restock a cambio de una gestión de pedidos centralizada?                                                                                                                       |
+| **Por qué:** Validar si el valor percibido de tener todos los pedidos en un solo panel compensa el esfuerzo de mantener el catálogo digitalizado. Sin proveedores activos, el restaurante no puede reabastecerse automáticamente                                                           |
 | **Hipótesis:** Creemos que al ofrecer una herramienta de visualización de pedidos en tiempo real y gestión de productos, el 60% de los proveedores aceptará la migración digital, cuya evidencia se verá en firmas de intención de uso, bajo la circunstancia de proveedores tradicionales |
-| **Qué (Simplest Useful Thing):** Realizar una Prueba de Conserje (*Concierge Test* ) donde el equipo carga manualmente el catálogo de 3 proveedores reales y les muestra el funcionamiento de los módulos Gestión de pedidos y Gestión de Insumos para medir su intención de adopción.   |
+| **Qué (Simplest Useful Thing):** Realizar una Prueba de Conserje (*Concierge Test* ) donde el equipo carga manualmente el catálogo de 3 proveedores reales y les muestra el funcionamiento de los módulos Gestión de pedidos y Gestión de Insumos para medir su intención de adopción.     |
 
-| LADO POSTERIOR: Configuración Técnica                                                                                                                                                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Medidas:**<br />• Métrica Principal: Tasa de conversión de interés (número de proveedores que firman la carta de intención de uso).<br />• Métrica Secundaria: Número de "puntos de fricción" identificados durante la navegación del módulo de gestión de insumos.                |
-| **Condiciones:**<br />• Segmento: Proveedores con más de 10 años en el rubro que actualmente gestionan pedidos solo por canales informales.                                                                                                                                                    |
+| LADO POSTERIOR: Configuración Técnica                                                                                                                                                                                                                                                     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Medidas:**<br />• Métrica Principal: Tasa de conversión de interés (número de proveedores que firman la carta de intención de uso).<br />• Métrica Secundaria: Número de "puntos de fricción" identificados durante la navegación del módulo de gestión de insumos.                     |
+| **Condiciones:**<br />• Segmento: Proveedores con más de 10 años en el rubro que actualmente gestionan pedidos solo por canales informales.                                                                                                                                               |
 | **Escala:**<br />• Certeza: Nivel de confianza del 90% para validar un mercado B2B pequeño.<br />• MDE (Efecto Mínimo): Interés positivo de al menos el 50% de la muestra para considerar el feature como viable.<br />• Tiempo: Sesiones de validación individuales con 3-5 proveedores. |
 
 **Artefacto que se usará como Simplest Useful Thing:**
@@ -197,17 +197,17 @@ Esta tarjeta mitiga el riesgo de que el sistema no sea útil si los proveedores 
 
 Esta tarjeta investiga si añadir indicadores de rotación directamente en la lista de inventario impacta la toma de decisiones.
 
-| LADO FRONTAL: Concepto y Motivación                                                                                                                                                                                                                                                                 |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Pregunta:** ¿Influye la visualización de métricas de rotación en la decisión de compra de nuevos insumos?                                                                                                                                                                              |
-| **Por qué:** Validar si el usuario confía en datos analíticos para gestionar su capital. Si ver que un producto "no se mueve" no cambia su conducta de compra, no vale la pena desarrollar el módulo de reportes avanzado.                                                                |
+| LADO FRONTAL: Concepto y Motivación                                                                                                                                                                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Pregunta:** ¿Influye la visualización de métricas de rotación en la decisión de compra de nuevos insumos?                                                                                                                                                                             |
+| **Por qué:** Validar si el usuario confía en datos analíticos para gestionar su capital. Si ver que un producto "no se mueve" no cambia su conducta de compra, no vale la pena desarrollar el módulo de reportes avanzado.                                                              |
 | **Hipótesis:** Creemos que al mostrar un indicador de rotación en el inventario, los administradores reducirán los errores de sobrestock en un 25%, cuya evidencia se verá en la disminución de cantidades en las órdenes de compra, bajo la circunstancia de reabastecimiento semanal. |
-| **Qué (Simplest Useful Thing):** Modificar la tabla del módulo Overview en la aplicación web Angular para incluir una columna extra llamada "Rotation" (con etiquetas: Alta, Media, Baja) calculada manualmente con datos históricos para 3 administradores de prueba.                    |
+| **Qué (Simplest Useful Thing):** Modificar la tabla del módulo Overview en la aplicación web Angular para incluir una columna extra llamada "Rotation" (con etiquetas: Alta, Media, Baja) calculada manualmente con datos históricos para 3 administradores de prueba.                  |
 
-| LADO POSTERIOR: Configuración Técnica                                                                                                                                                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Medidas:**<br />• Métrica Principal: Porcentajede reducción en el volumen de pedidos para insumos marcados con "Baja Rotación".<br />• Métrica Secundaria: Tiempo de permanencia del usuario en la vista de métricas de rotación.                                             |
-| **Condiciones:**<br />• Experimental: Administradores con acceso al dashboard principal con métricas de rotación.<br />• Control: Administradores realizando su pedido basándose únicamente en su revisión manual de inventario física.                                         |
+| LADO POSTERIOR: Configuración Técnica                                                                                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Medidas:**<br />• Métrica Principal: Porcentajede reducción en el volumen de pedidos para insumos marcados con "Baja Rotación".<br />• Métrica Secundaria: Tiempo de permanencia del usuario en la vista de métricas de rotación.                                            |
+| **Condiciones:**<br />• Experimental: Administradores con acceso al dashboard principal con métricas de rotación.<br />• Control: Administradores realizando su pedido basándose únicamente en su revisión manual de inventario física.                                        |
 | **Escala:**<br />• Certeza: Nivel de significancia del 5% y potencia estadística del 80%.<br />• MDE (Efecto Mínimo): Se busca detectar una mejora mínima del 10% en la precisión del pedido.<br />• Tiempo: Una sesión de observación por usuario durante un ciclo de compra. |
 
 **Artefacto que se usará como Simplest Useful Thing: Módulo Overview con métricas de rotación**
@@ -342,10 +342,10 @@ Esta sección describe las condiciones definidas para cada experimento planifica
 
 **Pregunta:** ¿La activación del módulo de inventario automatizado con alertas reduce las mermas de insumos en los restaurantes?
 
-|                                       | Descripción                                                                                                                                                                                                                                                                                                                                                    |
-| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                | Descripción                                                                                                                                                                                                                                                                                                                                                 |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Condición Experimental (A)** | Los administradores de restaurante acceden a la plataforma Restock con el módulo de inventario activo. Reciben alertas automáticas clasificadas por tipo (stock bajo, exceso de stock, vencimiento próximo) y visualizan el nivel de stock actualizado en tiempo real desde el dashboard. El sistema descuenta insumos automáticamente al registrar ventas. |
-| **Condición de Control (B)**   | Los administradores gestionan su inventario mediante métodos manuales convencionales: hojas de cálculo (Excel o Google Sheets), cuadernos físicos o mensajería (WhatsApp). No tienen acceso al módulo automatizado de Restock durante el período de medición.                                                                                            |
+| **Condición de Control (B)**   | Los administradores gestionan su inventario mediante métodos manuales convencionales: hojas de cálculo (Excel o Google Sheets), cuadernos físicos o mensajería (WhatsApp). No tienen acceso al módulo automatizado de Restock durante el período de medición.                                                                                               |
 
 **Variable independiente:** Activación del módulo de inventario automatizado con alertas en tiempo real.
 **Variable dependiente:** Porcentaje de reducción en mermas de insumos por período de medición.
@@ -360,10 +360,10 @@ Esta sección describe las condiciones definidas para cada experimento planifica
 
 **Pregunta:** ¿Un onboarding guiado combinado con acceso móvil como canal principal incrementa la retención temprana de usuarios?
 
-|                                       | Descripción                                                                                                                                                                                                                                                                                                    |
-| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                | Descripción                                                                                                                                                                                                                                                                                                  |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Condición Experimental (A)** | Los nuevos usuarios (administradores y proveedores) reciben un flujo de onboarding guiado paso a paso al registrarse: tour interactivo, tooltips contextuales en los módulos principales y configuración asistida del primer insumo y primera orden. El canal de acceso recomendado es el dispositivo móvil. |
-| **Condición de Control (B)**   | Los nuevos usuarios acceden a la plataforma sin guía de onboarding: navegan libremente desde la pantalla de inicio sin asistencia contextual. No se sugiere ningún canal preferente de acceso.                                                                                                                |
+| **Condición de Control (B)**   | Los nuevos usuarios acceden a la plataforma sin guía de onboarding: navegan libremente desde la pantalla de inicio sin asistencia contextual. No se sugiere ningún canal preferente de acceso.                                                                                                               |
 
 **Variable independiente:** Presencia de onboarding guiado y disponibilidad de acceso móvil-first.
 **Variable dependiente:** Número de usuarios que inician sesión 3 o más veces durante sus primeros 7 días tras el registro (retención temprana).
@@ -378,10 +378,10 @@ Esta sección describe las condiciones definidas para cada experimento planifica
 
 **Pregunta:** ¿El acceso a reportes automáticos reduce los errores al generar órdenes de compra?
 
-|                                       | Descripción                                                                                                                                                                                                                                                                                                                                            |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                | Descripción                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Condición Experimental (A)** | Los administradores de restaurante tienen acceso al módulo de reportes de Restock, el cual genera automáticamente informes con métricas de rotación de insumos, nivel promedio de stock por período y sugerencias de cantidad de pedido basadas en el historial de consumo. Los reportes están disponibles previo a la generación de cada orden. |
-| **Condición de Control (B)**   | Los administradores generan órdenes de compra sin acceso a reportes automatizados. Toman decisiones de abastecimiento basadas en la observación directa del inventario, criterio propio o registros históricos elaborados manualmente fuera de la plataforma.                                                                                        |
+| **Condición de Control (B)**   | Los administradores generan órdenes de compra sin acceso a reportes automatizados. Toman decisiones de abastecimiento basadas en la observación directa del inventario, criterio propio o registros históricos elaborados manualmente fuera de la plataforma.                                                                                    |
 
 **Variable independiente:** Disponibilidad de reportes automáticos con métricas de rotación y márgenes previo a la generación de órdenes.
 **Variable dependiente:** Porcentaje de líneas de pedido que requieren corrección (edición o eliminación) antes de ser enviadas al proveedor.
@@ -396,10 +396,10 @@ Esta sección describe las condiciones definidas para cada experimento planifica
 
 **Pregunta:** ¿La centralización del catálogo, pedidos y comunicación dentro de la plataforma incrementa el volumen de pedidos gestionados y reduce los errores de pedido?
 
-|                                       | Descripción                                                                                                                                                                                                                                                                                                                                                                         |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|                                | Descripción                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Condición Experimental (A)** | Los administradores de restaurante y sus proveedores asociados gestionan catálogos de productos, creación y seguimiento de pedidos, y comunicación exclusivamente dentro de Restock (módulo de órdenes + catálogo del proveedor + sistema de notificaciones de estado). No se permite el uso de canales externos para estas interacciones durante el período del experimento. |
-| **Condición de Control (B)**   | La gestión de pedidos y comunicación se realiza a través de los canales fragmentados habituales: WhatsApp, llamadas telefónicas, correo electrónico o visitas presenciales. La plataforma Restock no se utiliza para estas interacciones.                                                                                                                                       |
+| **Condición de Control (B)**   | La gestión de pedidos y comunicación se realiza a través de los canales fragmentados habituales: WhatsApp, llamadas telefónicas, correo electrónico o visitas presenciales. La plataforma Restock no se utiliza para estas interacciones.                                                                                                                                     |
 
 **Variable independiente:** Uso exclusivo del canal centralizado de Restock para gestión de catálogos, pedidos y comunicación entre restaurante y proveedor.
 **Variable dependiente (primaria):** Número de pedidos creados dentro de la plataforma por restaurante por mes.
@@ -419,48 +419,48 @@ Al momento de elegir la escala, se ajustará el nivel de significancia, que norm
 
 #### Experimento 1 — Validación de Impacto en Mermas
 
-| Parámetro                   | Valor                                 | Justificación                                                     |
-| ---------------------------- | ------------------------------------- | ------------------------------------------------------------------ |
-| Nivel de significancia (α)  | 5%                                    | Estándar científico para minimizar falsos positivos              |
-| Potencia estadística (1-β) | 80%                                   | Balance aceptable entre tamaño de muestra y fiabilidad            |
-| MDE                          | 10% de reducción en mermas           | Diferencia mínima con impacto económico real para el restaurante |
-| Duración                    | 14 días (2 ciclos de abastecimiento) | Cubre al menos dos ciclos operativos completos                     |
-| Tamaño de muestra           | 5 por grupo (experimental + control)  | Piloto inicial acotado; suficiente para detectar señal fuerte     |
+| Parámetro                  | Valor                                | Justificación                                                    |
+| -------------------------- | ------------------------------------ | ---------------------------------------------------------------- |
+| Nivel de significancia (α) | 5%                                   | Estándar científico para minimizar falsos positivos              |
+| Potencia estadística (1-β) | 80%                                  | Balance aceptable entre tamaño de muestra y fiabilidad           |
+| MDE                        | 10% de reducción en mermas           | Diferencia mínima con impacto económico real para el restaurante |
+| Duración                   | 14 días (2 ciclos de abastecimiento) | Cubre al menos dos ciclos operativos completos                   |
+| Tamaño de muestra          | 5 por grupo (experimental + control) | Piloto inicial acotado; suficiente para detectar señal fuerte    |
 
 **Decisión:** Se acepta una muestra reducida (n=5 por grupo) dado el carácter exploratorio del piloto. Si la señal inicial supera el MDE del 10%, se escalaría a una muestra mayor en una segunda iteración.
 
 #### Experimento 2 — Validación de Adopción Digital
 
-| Parámetro                  | Valor                                      | Justificación                                                |
-| --------------------------- | ------------------------------------------ | ------------------------------------------------------------- |
-| Nivel de significancia (α) | N/A (prueba de usabilidad cualitativa)     | El método no requiere test de hipótesis estadístico formal |
-| Potencia estadística       | N/A                                        | Basado en el estándar de Nielsen para pruebas de usabilidad  |
-| MDE                         | Tasa de éxito de tarea ≥ 80% en ≤ 5 min | Umbral operativo definido por el equipo de producto           |
-| Tamaño de muestra          | 5 usuarios                                 | Nielsen: detecta hasta el 85% de los problemas de usabilidad  |
-| Duración                   | Sesión única de ≤ 30 min por usuario    | Tiempo razonable sin fatiga del participante                  |
+| Parámetro                  | Valor                                   | Justificación                                                |
+| -------------------------- | --------------------------------------- | ------------------------------------------------------------ |
+| Nivel de significancia (α) | N/A (prueba de usabilidad cualitativa)  | El método no requiere test de hipótesis estadístico formal   |
+| Potencia estadística       | N/A                                     | Basado en el estándar de Nielsen para pruebas de usabilidad  |
+| MDE                        | Tasa de éxito de tarea ≥ 80% en ≤ 5 min | Umbral operativo definido por el equipo de producto          |
+| Tamaño de muestra          | 5 usuarios                              | Nielsen: detecta hasta el 85% de los problemas de usabilidad |
+| Duración                   | Sesión única de ≤ 30 min por usuario    | Tiempo razonable sin fatiga del participante                 |
 
 **Decisión:** Para esta prueba de usabilidad, la escala sigue el benchmark de Nielsen (n=5). No se aplica test estadístico formal; el criterio de éxito es cualitativo-cuantitativo: ≥ 4 de 5 usuarios completan el flujo de forma autónoma.
 
 #### Experimento 3 — Validación de Adopción de Proveedores
 
-| Parámetro                  | Valor                                     | Justificación                                                            |
-| --------------------------- | ----------------------------------------- | ------------------------------------------------------------------------- |
-| Nivel de significancia (α) | N/A (entrevistas cualitativas)            | Investigación exploratoria de intención                                 |
-| MDE                         | Tasa de disposición a digitalizar ≥ 60% | Umbral mínimo para justificar inversión en onboarding de proveedores    |
-| Tamaño de muestra          | 6 proveedores (3 formales, 3 informales)  | Muestra estratificada para detectar diferencias entre perfiles            |
-| Duración                   | 1 semana                                  | Tiempo suficiente para coordinar y ejecutar entrevistas semiestructuradas |
+| Parámetro                  | Valor                                    | Justificación                                                             |
+| -------------------------- | ---------------------------------------- | ------------------------------------------------------------------------- |
+| Nivel de significancia (α) | N/A (entrevistas cualitativas)           | Investigación exploratoria de intención                                   |
+| MDE                        | Tasa de disposición a digitalizar ≥ 60%  | Umbral mínimo para justificar inversión en onboarding de proveedores      |
+| Tamaño de muestra          | 6 proveedores (3 formales, 3 informales) | Muestra estratificada para detectar diferencias entre perfiles            |
+| Duración                   | 1 semana                                 | Tiempo suficiente para coordinar y ejecutar entrevistas semiestructuradas |
 
 **Decisión:** Se prioriza investigación cualitativa con muestra estratificada. La señal de interés mínima es que al menos 4 de 6 proveedores expresen disposición a digitalizar su catálogo.
 
 #### Experimento 4 — Validación de Decisiones Basadas en Datos
 
-| Parámetro                   | Valor                                                | Justificación                                                |
-| ---------------------------- | ---------------------------------------------------- | ------------------------------------------------------------- |
-| Nivel de significancia (α)  | 5%                                                   | Estándar para comparación entre grupos                      |
-| Potencia estadística (1-β) | 80%                                                  | Nivel convencional para estudios de comportamiento            |
-| MDE                          | 20% de aumento en precisión de decisiones de compra | Cambio observable en el patrón de órdenes del administrador |
-| Duración                    | 14 días                                             | Equivalente a 2 semanas operativas de observación            |
-| Tamaño de muestra           | 5 por grupo                                          | Piloto inicial; alineado con Experimento 1                    |
+| Parámetro                  | Valor                                               | Justificación                                               |
+| -------------------------- | --------------------------------------------------- | ----------------------------------------------------------- |
+| Nivel de significancia (α) | 5%                                                  | Estándar para comparación entre grupos                      |
+| Potencia estadística (1-β) | 80%                                                 | Nivel convencional para estudios de comportamiento          |
+| MDE                        | 20% de aumento en precisión de decisiones de compra | Cambio observable en el patrón de órdenes del administrador |
+| Duración                   | 14 días                                             | Equivalente a 2 semanas operativas de observación           |
+| Tamaño de muestra          | 5 por grupo                                         | Piloto inicial; alineado con Experimento 1                  |
 
 **Decisión:** Se replica el diseño del Experimento 1 (A/B entre grupo con dashboard y grupo sin dashboard). El MDE del 20% refleja un cambio observable con impacto directo en el volumen de pedidos innecesarios.
 
@@ -515,13 +515,13 @@ El objetivo principal de la analítica es transformar las interacciones de los u
 
 Para asegurar que las métricas permitan detectar cambios precisos, se estructura la selección en los siguientes niveles:
 
-| Nivel             | Nombre del Indicador               | Métrica Atómica (Data Point)                                                 | Justificación de Selección (Economy of Tracking)                                      |
-| ----------------- | ---------------------------------- | ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- |
-| KPI de Negocio    | Tasa de Reducción de Mermas       | Peso (kg/l) de insumos desechados por semana.                                  | Directamente vinculado a la propuesta de valor core de ahorro del 35%.                  |
-| KPI de Adopción  | Task Success Rate (TSR)            | Booleano (éxito/fallo) en el primer pedido.                                   | Métrica binaria simple que elimina la ambigüedad sobre la usabilidad del onboarding.  |
+| Nivel             | Nombre del Indicador              | Métrica Atómica (Data Point)                                                 | Justificación de Selección (Economy of Tracking)                                        |
+| ----------------- | --------------------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| KPI de Negocio    | Tasa de Reducción de Mermas       | Peso (kg/l) de insumos desechados por semana.                                | Directamente vinculado a la propuesta de valor core de ahorro del 35%.                  |
+| KPI de Adopción   | Task Success Rate (TSR)           | Booleano (éxito/fallo) en el primer pedido.                                  | Métrica binaria simple que elimina la ambigüedad sobre la usabilidad del onboarding.    |
 | KPI de Ecosistema | Tasa de Conversión de Proveedores | Número de firmas de intención vs. total contactados.                         | Permite validar la viabilidad del mercado B2B con el menor esfuerzo de rastreo posible. |
-| KPI Estratégico  | Precisión de Compra               | % de líneas de pedido corregidas tras ver reportes.                           | Mide si los datos realmente influyen en el usuario.                                     |
-| Métrica de Salud | Latencia de Alerta Push            | Tiempo (ms) desde el evento de stock bajo hasta el envío de la notificación. | Asegura que la tecnología no sea un obstáculo para la experiencia del usuario.        |
+| KPI Estratégico   | Precisión de Compra               | % de líneas de pedido corregidas tras ver reportes.                          | Mide si los datos realmente influyen en el usuario.                                     |
+| Métrica de Salud  | Latencia de Alerta Push           | Tiempo (ms) desde el evento de stock bajo hasta el envío de la notificación. | Asegura que la tecnología no sea un obstáculo para la experiencia del usuario.          |
 
 **3. Estrategia de Economía de Datos**
 
@@ -565,38 +565,38 @@ La herramienta central es **Firebase Analytics**, cuya integración con la aplic
 
 Los eventos móviles cubren los Experimentos 01 y 02, ya que ambos ocurren sobre la app nativa Kotlin donde ya está integrado Firebase Analytics.
 
-| Evento                        | Experimento | Disparador                                                                          | Parámetros clave                                               | Ventana activa              |
-| ----------------------------- | :---------: | ----------------------------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------- |
-| `notification_received`     |   Exp 01   | El sistema operativo Android entrega la notificación push de alerta de stock       | `notification_type` (stock_low / expiry), `supply_id`       | 14 días (Exp 01)           |
-| `notification_clicked`      |   Exp 01   | El usuario toca la notificación push recibida                                      | `notification_type`, `supply_id`, `timestamp_ms`          | 14 días (Exp 01)           |
-| `order_created_after_alert` |   Exp 01   | El usuario confirma una orden dentro de las 2 horas siguientes a recibir una alerta | `supply_id`, `alert_type`, `time_delta_minutes`           | 14 días (Exp 01)           |
-| `onboarding_step_viewed`    |   Exp 02   | El usuario llega a un paso del flujo de onboarding guiado                           | `step_number` (1–5), `step_name`                           | Primera sesión del usuario |
-| `onboarding_step_completed` |   Exp 02   | El usuario avanza al siguiente paso del onboarding                                  | `step_number`, `time_on_step_seconds`                       | Primera sesión del usuario |
-| `onboarding_abandoned`      |   Exp 02   | La app pasa a segundo plano o se cierra sin completar el onboarding                 | `last_step_number`, `total_time_seconds`                    | Primera sesión del usuario |
-| `first_order_submitted`     |   Exp 02   | El usuario envía su primer pedido (botón de confirmación)                        | `total_time_seconds`, `assisted` (boolean), `error_count` | Primera sesión del usuario |
+| Evento                      | Experimento | Disparador                                                                          | Parámetros clave                                          | Ventana activa             |
+| --------------------------- | :---------: | ----------------------------------------------------------------------------------- | --------------------------------------------------------- | -------------------------- |
+| `notification_received`     |   Exp 01    | El sistema operativo Android entrega la notificación push de alerta de stock        | `notification_type` (stock_low / expiry), `supply_id`     | 14 días (Exp 01)           |
+| `notification_clicked`      |   Exp 01    | El usuario toca la notificación push recibida                                       | `notification_type`, `supply_id`, `timestamp_ms`          | 14 días (Exp 01)           |
+| `order_created_after_alert` |   Exp 01    | El usuario confirma una orden dentro de las 2 horas siguientes a recibir una alerta | `supply_id`, `alert_type`, `time_delta_minutes`           | 14 días (Exp 01)           |
+| `onboarding_step_viewed`    |   Exp 02    | El usuario llega a un paso del flujo de onboarding guiado                           | `step_number` (1–5), `step_name`                          | Primera sesión del usuario |
+| `onboarding_step_completed` |   Exp 02    | El usuario avanza al siguiente paso del onboarding                                  | `step_number`, `time_on_step_seconds`                     | Primera sesión del usuario |
+| `onboarding_abandoned`      |   Exp 02    | La app pasa a segundo plano o se cierra sin completar el onboarding                 | `last_step_number`, `total_time_seconds`                  | Primera sesión del usuario |
+| `first_order_submitted`     |   Exp 02    | El usuario envía su primer pedido (botón de confirmación)                           | `total_time_seconds`, `assisted` (boolean), `error_count` | Primera sesión del usuario |
 
 #### Catálogo de Eventos — Aplicación Web (Angular)
 
 Los eventos web cubren el Experimento 04. Se instrumentan en el componente de la tabla de inventario del módulo *Overview*, activados únicamente para el grupo experimental mediante *feature flag*.
 
-| Evento                            | Experimento | Disparador                                                                     | Parámetros clave                                                      | Ventana activa                         |
-| --------------------------------- | :---------: | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------- | -------------------------------------- |
-| `rotation_column_viewed`        |   Exp 04   | El componente de tabla con la columna "Rotación" termina de renderizar        | `user_id`, `items_visible`                                         | Día de cierre semanal del restaurante |
-| `rotation_level_hovered`        |   Exp 04   | El cursor permanece más de 1 segundo sobre una celda de rotación             | `supply_id`, `rotation_level` (Alta/Media/Baja), `dwell_time_ms` | Día de cierre semanal                 |
-| `order_quantity_entered`        |   Exp 04   | El usuario introduce o modifica una cantidad en el campo de cantidad de pedido | `supply_id`, `rotation_level`, `quantity_entered`                | Día de cierre semanal                 |
-| `low_rotation_item_removed`     |   Exp 04   | El usuario elimina un ítem de baja rotación del carrito antes del checkout   | `supply_id`, `quantity_removed`                                    | Día de cierre semanal                 |
-| `order_submitted_with_rotation` |   Exp 04   | El usuario confirma la orden habiendo tenido la columna de rotación visible   | `low_rotation_items_count`, `total_items`, `total_quantity`      | Día de cierre semanal                 |
+| Evento                          | Experimento | Disparador                                                                     | Parámetros clave                                                 | Ventana activa                        |
+| ------------------------------- | :---------: | ------------------------------------------------------------------------------ | ---------------------------------------------------------------- | ------------------------------------- |
+| `rotation_column_viewed`        |   Exp 04    | El componente de tabla con la columna "Rotación" termina de renderizar         | `user_id`, `items_visible`                                       | Día de cierre semanal del restaurante |
+| `rotation_level_hovered`        |   Exp 04    | El cursor permanece más de 1 segundo sobre una celda de rotación               | `supply_id`, `rotation_level` (Alta/Media/Baja), `dwell_time_ms` | Día de cierre semanal                 |
+| `order_quantity_entered`        |   Exp 04    | El usuario introduce o modifica una cantidad en el campo de cantidad de pedido | `supply_id`, `rotation_level`, `quantity_entered`                | Día de cierre semanal                 |
+| `low_rotation_item_removed`     |   Exp 04    | El usuario elimina un ítem de baja rotación del carrito antes del checkout     | `supply_id`, `quantity_removed`                                  | Día de cierre semanal                 |
+| `order_submitted_with_rotation` |   Exp 04    | El usuario confirma la orden habiendo tenido la columna de rotación visible    | `low_rotation_items_count`, `total_items`, `total_quantity`      | Día de cierre semanal                 |
 
 ---
 
 #### Ventanas de Activación por Experimento
 
-| Experimento            | Plataforma       | Inicio del rastreo                                  | Fin del rastreo                    | Criterio de apagado                                                        |
-| ---------------------- | ---------------- | --------------------------------------------------- | ---------------------------------- | -------------------------------------------------------------------------- |
-| Exp 01 — Alertas push | Kotlin / Android | Día 1 del piloto (grupo experimental)              | Día 14 del piloto                 | Al completarse los 14 días o al alcanzar n=5 en el grupo                  |
+| Experimento           | Plataforma       | Inicio del rastreo                                  | Fin del rastreo                   | Criterio de apagado                                                     |
+| --------------------- | ---------------- | --------------------------------------------------- | --------------------------------- | ----------------------------------------------------------------------- |
+| Exp 01 — Alertas push | Kotlin / Android | Día 1 del piloto (grupo experimental)               | Día 14 del piloto                 | Al completarse los 14 días o al alcanzar n=5 en el grupo                |
 | Exp 02 — Onboarding   | Kotlin / Android | Primera apertura de la app por el usuario de prueba | Confirmación del primer pedido    | Evento`first_order_submitted` recibido (apagado automático por cohorte) |
-| Exp 03 — Concierge    | N/A              | N/A                                                 | N/A                                | Medición cualitativa manual; no requiere telemetría digital              |
-| Exp 04 — Rotación    | Angular (Web)    | Día del cierre semanal del grupo experimental      | Al finalizar la sesión del cierre | Flag apagado automáticamente al terminar la sesión de inventario         |
+| Exp 03 — Concierge    | N/A              | N/A                                                 | N/A                               | Medición cualitativa manual; no requiere telemetría digital             |
+| Exp 04 — Rotación     | Angular (Web)    | Día del cierre semanal del grupo experimental       | Al finalizar la sesión del cierre | Flag apagado automáticamente al terminar la sesión de inventario        |
 
 ---
 
@@ -876,32 +876,32 @@ El presente Sprint Backlog corresponde al sprint de experimentación To-Be de Re
 
 **Sprint #: Sprint 4**
 
-| User Story Id | User Story Title                                                       | Work-Item / Task Id | Work-Item / Task Title                              | Description                                                                                                                                                               | Estimation (Hours) | Assigned To          | Status |
-| ------------- | ---------------------------------------------------------------------- | ------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----------------: | -------------------- | ------ |
-| US-37         | Notificaciones push automáticas de inventario en dispositivo móvil   | T-37-01             | Configurar servicio de notificaciones push          | Configurar Firebase Cloud Messaging / OneSignal en la aplicación móvil para permitir el envío de alertas de stock bajo y vencimiento próximo.                         |                  4 | Gabriela N. Shapiama | Done   |
-| US-37         | Notificaciones push automáticas de inventario en dispositivo móvil   | T-37-02             | Definir reglas de alerta de inventario              | Implementar la lógica que identifica insumos con stock por debajo del mínimo o con fecha de vencimiento dentro de los próximos 5 días.                                |                  5 | Julio D. Castro      | Done   |
-| US-37         | Notificaciones push automáticas de inventario en dispositivo móvil   | T-37-03             | Construir payload de notificación                  | Definir el contenido de la notificación, incluyendo nombre del insumo, tipo de alerta, stock actual o fecha de vencimiento.                                              |                  3 | José J. Guerra      | Done   |
-| US-37         | Notificaciones push automáticas de inventario en dispositivo móvil   | T-37-04             | Implementar navegación desde la notificación      | Habilitar que, al tocar la notificación, la aplicación móvil abra directamente la vista del insumo afectado.                                                           |                  4 | Gabriela N. Shapiama | Done   |
-| US-37         | Notificaciones push automáticas de inventario en dispositivo móvil   | T-37-05             | Registrar eventos analíticos de alertas            | Registrar eventos`notification_received`, `notification_clicked` y `order_created_after_alert` para medir la conversión de alerta a orden.                         |                  3 | Ario Chavez          | Done   |
-| US-37         | Notificaciones push automáticas de inventario en dispositivo móvil   | T-37-06             | Probar flujo de alerta de inventario                | Ejecutar pruebas funcionales para verificar que no se envían alertas cuando el stock es suficiente o el vencimiento no es próximo.                                      |                  3 | José J. Guerra      | Done   |
-| US-38         | Flujo de onboarding guiado para el primer pedido                       | T-38-01             | Diseñar pasos del onboarding                       | Definir los pasos del flujo guiado: registro de insumo, selección de proveedor, creación y confirmación del primer pedido.                                             |                  4 | Fernando I. Sanchez  | Done   |
-| US-38         | Flujo de onboarding guiado para el primer pedido                       | T-38-02             | Detectar primera sesión del usuario                | Implementar la validación que identifica si el administrador inicia sesión por primera vez en la aplicación móvil.                                                    |                  3 | Gabriela N. Shapiama | Done   |
-| US-38         | Flujo de onboarding guiado para el primer pedido                       | T-38-03             | Implementar avance paso a paso                      | Desarrollar la navegación guiada entre los pasos del onboarding, mostrando el progreso hasta la confirmación del pedido.                                                |                  6 | Gabriela N. Shapiama | Done   |
-| US-38         | Flujo de onboarding guiado para el primer pedido                       | T-38-04             | Persistir finalización del onboarding              | Registrar que el usuario completó su primer pedido para evitar que el onboarding vuelva a mostrarse en sesiones posteriores.                                             |                  4 | Julio D. Castro      | Done   |
-| US-38         | Flujo de onboarding guiado para el primer pedido                       | T-38-05             | Registrar eventos del onboarding                    | Implementar los eventos`onboarding_step_viewed`, `onboarding_step_completed`, `onboarding_abandoned` y `first_order_submitted`.                                   |                  4 | Ario Chavez          | Done   |
-| US-38         | Flujo de onboarding guiado para el primer pedido                       | T-38-06             | Preparar prueba de usabilidad                       | Elaborar el guion de prueba, criterios de observación y matriz para registrar tiempo en tarea, errores y éxito del primer pedido.                                       |                  3 | Fernando I. Sanchez  | Done   |
-| US-38         | Flujo de onboarding guiado para el primer pedido                       | T-38-07             | Validar flujo móvil completo                       | Ejecutar pruebas del flujo de primer pedido verificando autonomía, continuidad del onboarding y ausencia de bloqueos críticos.                                          |                  4 | José J. Guerra      | Done   |
-| US-39         | Carga asistida del catálogo de productos del proveedor                | T-39-01             | Definir plantilla de catálogo del proveedor        | Elaborar una plantilla con nombre de producto, precio unitario, unidad de medida y disponibilidad para cargar productos del proveedor.                                    |                  2 | Fernando I. Sanchez  | Done   |
-| US-39         | Carga asistida del catálogo de productos del proveedor                | T-39-02             | Cargar productos de prueba en catálogo             | Registrar manualmente productos de proveedores seleccionados para simular la carga asistida durante el Concierge Test.                                                    |                  3 | Fernando I. Sanchez  | Done   |
-| US-39         | Carga asistida del catálogo de productos del proveedor                | T-39-03             | Validar visualización del catálogo                | Verificar que el proveedor pueda visualizar el listado de productos cargados con información correcta en su módulo web.                                                 |                  3 | Ario Chavez          | Done   |
-| US-39         | Carga asistida del catálogo de productos del proveedor                | T-39-04             | Simular pedido desde cuenta de restaurante          | Crear un pedido de prueba desde una cuenta de restaurante para que el proveedor visualice productos, cantidades y solicitante.                                            |                  3 | Julio D. Castro      | Done   |
-| US-39         | Carga asistida del catálogo de productos del proveedor                | T-39-05             | Registrar intención de uso del proveedor           | Preparar el formulario o registro manual para documentar si el proveedor acepta continuar usando la plataforma después de la demostración.                              |                  2 | Ario Chavez          | Done   |
-| US-40         | Indicador de nivel de rotación por insumo en el módulo de inventario | T-40-01             | Definir cálculo de rotación de insumos            | Establecer la regla de clasificación Alta, Media o Baja según el historial de consumo de las últimas semanas.                                                          |                  3 | Ario Chavez          | Done   |
-| US-40         | Indicador de nivel de rotación por insumo en el módulo de inventario | T-40-02             | Agregar columna de rotación en inventario          | Implementar la columna Rotation en la tabla del módulo de inventario de la aplicación web.                                                                              |                  4 | Gabriela N. Shapiama | Done   |
-| US-40         | Indicador de nivel de rotación por insumo en el módulo de inventario | T-40-03             | Implementar feature flag para grupo experimental    | Configurar que la columna de rotación sea visible únicamente para administradores asignados al grupo experimental.                                                      |                  4 | Julio D. Castro      | Done   |
-| US-40         | Indicador de nivel de rotación por insumo en el módulo de inventario | T-40-04             | Mantener interfaz sin cambios para grupo de control | Verificar que los administradores del grupo de control visualicen la versión previa del inventario sin la columna de rotación.                                          |                  2 | José J. Guerra      | Done   |
-| US-40         | Indicador de nivel de rotación por insumo en el módulo de inventario | T-40-05             | Registrar eventos de interacción con rotación     | Implementar eventos`rotation_column_viewed`, `rotation_level_hovered`, `order_quantity_entered`, `low_rotation_item_removed` y `order_submitted_with_rotation`. |                  4 | Ario Chavez          | Done   |
-| US-40         | Indicador de nivel de rotación por insumo en el módulo de inventario | T-40-06             | Probar comportamiento del indicador de rotación    | Validar que la columna no interfiera con acciones existentes como edición, filtrado, agregado al pedido y confirmación de orden.                                        |                  3 | José J. Guerra      | Done   |
+| User Story Id | User Story Title                                                     | Work-Item / Task Id | Work-Item / Task Title                              | Description                                                                                                                                                     | Estimation (Hours) | Assigned To          | Status |
+| ------------- | -------------------------------------------------------------------- | ------------------- | --------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----------------: | -------------------- | ------ |
+| US-37         | Notificaciones push automáticas de inventario en dispositivo móvil   | T-37-01             | Configurar servicio de notificaciones push          | Configurar Firebase Cloud Messaging / OneSignal en la aplicación móvil para permitir el envío de alertas de stock bajo y vencimiento próximo.                   |                  4 | Gabriela N. Shapiama | Done   |
+| US-37         | Notificaciones push automáticas de inventario en dispositivo móvil   | T-37-02             | Definir reglas de alerta de inventario              | Implementar la lógica que identifica insumos con stock por debajo del mínimo o con fecha de vencimiento dentro de los próximos 5 días.                          |                  5 | Julio D. Castro      | Done   |
+| US-37         | Notificaciones push automáticas de inventario en dispositivo móvil   | T-37-03             | Construir payload de notificación                   | Definir el contenido de la notificación, incluyendo nombre del insumo, tipo de alerta, stock actual o fecha de vencimiento.                                     |                  3 | José J. Guerra       | Done   |
+| US-37         | Notificaciones push automáticas de inventario en dispositivo móvil   | T-37-04             | Implementar navegación desde la notificación        | Habilitar que, al tocar la notificación, la aplicación móvil abra directamente la vista del insumo afectado.                                                    |                  4 | Gabriela N. Shapiama | Done   |
+| US-37         | Notificaciones push automáticas de inventario en dispositivo móvil   | T-37-05             | Registrar eventos analíticos de alertas             | Registrar eventos`notification_received`, `notification_clicked` y `order_created_after_alert` para medir la conversión de alerta a orden.                      |                  3 | Ario Chavez          | Done   |
+| US-37         | Notificaciones push automáticas de inventario en dispositivo móvil   | T-37-06             | Probar flujo de alerta de inventario                | Ejecutar pruebas funcionales para verificar que no se envían alertas cuando el stock es suficiente o el vencimiento no es próximo.                              |                  3 | José J. Guerra       | Done   |
+| US-38         | Flujo de onboarding guiado para el primer pedido                     | T-38-01             | Diseñar pasos del onboarding                        | Definir los pasos del flujo guiado: registro de insumo, selección de proveedor, creación y confirmación del primer pedido.                                      |                  4 | Fernando I. Sanchez  | Done   |
+| US-38         | Flujo de onboarding guiado para el primer pedido                     | T-38-02             | Detectar primera sesión del usuario                 | Implementar la validación que identifica si el administrador inicia sesión por primera vez en la aplicación móvil.                                              |                  3 | Gabriela N. Shapiama | Done   |
+| US-38         | Flujo de onboarding guiado para el primer pedido                     | T-38-03             | Implementar avance paso a paso                      | Desarrollar la navegación guiada entre los pasos del onboarding, mostrando el progreso hasta la confirmación del pedido.                                        |                  6 | Gabriela N. Shapiama | Done   |
+| US-38         | Flujo de onboarding guiado para el primer pedido                     | T-38-04             | Persistir finalización del onboarding               | Registrar que el usuario completó su primer pedido para evitar que el onboarding vuelva a mostrarse en sesiones posteriores.                                    |                  4 | Julio D. Castro      | Done   |
+| US-38         | Flujo de onboarding guiado para el primer pedido                     | T-38-05             | Registrar eventos del onboarding                    | Implementar los eventos`onboarding_step_viewed`, `onboarding_step_completed`, `onboarding_abandoned` y `first_order_submitted`.                                 |                  4 | Ario Chavez          | Done   |
+| US-38         | Flujo de onboarding guiado para el primer pedido                     | T-38-06             | Preparar prueba de usabilidad                       | Elaborar el guion de prueba, criterios de observación y matriz para registrar tiempo en tarea, errores y éxito del primer pedido.                               |                  3 | Fernando I. Sanchez  | Done   |
+| US-38         | Flujo de onboarding guiado para el primer pedido                     | T-38-07             | Validar flujo móvil completo                        | Ejecutar pruebas del flujo de primer pedido verificando autonomía, continuidad del onboarding y ausencia de bloqueos críticos.                                  |                  4 | José J. Guerra       | Done   |
+| US-39         | Carga asistida del catálogo de productos del proveedor               | T-39-01             | Definir plantilla de catálogo del proveedor         | Elaborar una plantilla con nombre de producto, precio unitario, unidad de medida y disponibilidad para cargar productos del proveedor.                          |                  2 | Fernando I. Sanchez  | Done   |
+| US-39         | Carga asistida del catálogo de productos del proveedor               | T-39-02             | Cargar productos de prueba en catálogo              | Registrar manualmente productos de proveedores seleccionados para simular la carga asistida durante el Concierge Test.                                          |                  3 | Fernando I. Sanchez  | Done   |
+| US-39         | Carga asistida del catálogo de productos del proveedor               | T-39-03             | Validar visualización del catálogo                  | Verificar que el proveedor pueda visualizar el listado de productos cargados con información correcta en su módulo web.                                         |                  3 | Ario Chavez          | Done   |
+| US-39         | Carga asistida del catálogo de productos del proveedor               | T-39-04             | Simular pedido desde cuenta de restaurante          | Crear un pedido de prueba desde una cuenta de restaurante para que el proveedor visualice productos, cantidades y solicitante.                                  |                  3 | Julio D. Castro      | Done   |
+| US-39         | Carga asistida del catálogo de productos del proveedor               | T-39-05             | Registrar intención de uso del proveedor            | Preparar el formulario o registro manual para documentar si el proveedor acepta continuar usando la plataforma después de la demostración.                      |                  2 | Ario Chavez          | Done   |
+| US-40         | Indicador de nivel de rotación por insumo en el módulo de inventario | T-40-01             | Definir cálculo de rotación de insumos              | Establecer la regla de clasificación Alta, Media o Baja según el historial de consumo de las últimas semanas.                                                   |                  3 | Ario Chavez          | Done   |
+| US-40         | Indicador de nivel de rotación por insumo en el módulo de inventario | T-40-02             | Agregar columna de rotación en inventario           | Implementar la columna Rotation en la tabla del módulo de inventario de la aplicación web.                                                                      |                  4 | Gabriela N. Shapiama | Done   |
+| US-40         | Indicador de nivel de rotación por insumo en el módulo de inventario | T-40-03             | Implementar feature flag para grupo experimental    | Configurar que la columna de rotación sea visible únicamente para administradores asignados al grupo experimental.                                              |                  4 | Julio D. Castro      | Done   |
+| US-40         | Indicador de nivel de rotación por insumo en el módulo de inventario | T-40-04             | Mantener interfaz sin cambios para grupo de control | Verificar que los administradores del grupo de control visualicen la versión previa del inventario sin la columna de rotación.                                  |                  2 | José J. Guerra       | Done   |
+| US-40         | Indicador de nivel de rotación por insumo en el módulo de inventario | T-40-05             | Registrar eventos de interacción con rotación       | Implementar eventos`rotation_column_viewed`, `rotation_level_hovered`, `order_quantity_entered`, `low_rotation_item_removed` y `order_submitted_with_rotation`. |                  4 | Ario Chavez          | Done   |
+| US-40         | Indicador de nivel de rotación por insumo en el módulo de inventario | T-40-06             | Probar comportamiento del indicador de rotación     | Validar que la columna no interfiera con acciones existentes como edición, filtrado, agregado al pedido y confirmación de orden.                                |                  3 | José J. Guerra       | Done   |
 
 #### 8.3.3.2. Implemented To-Be Landing Page Evidence
 
@@ -913,9 +913,9 @@ El objetivo de esta implementación fue habilitar, en el módulo de inventario d
 
 ##### Frontend Repository Evidence
 
-| Repository     | Branch                                | Commit Id | Commit Message                                                                        | Committed on (Date) |
-| :-------------- | :------------------------------------- | :-------- | :-------------------------------------------------------------------------------------- | :------------------- |
-| restock-webapp | feature/inventory-rotation-indicator | 14fcabc   | feat(inventory): add rotation indicator column for To-Be Experiment 04 (US-40) | 04/07/2026           |
+| Repository     | Branch                               | Commit Id | Commit Message                                                                 | Committed on (Date) |
+| :------------- | :----------------------------------- | :-------- | :----------------------------------------------------------------------------- | :------------------ |
+| restock-webapp | feature/inventory-rotation-indicator | 14fcabc   | feat(inventory): add rotation indicator column for To-Be Experiment 04 (US-40) | 04/07/2026          |
 
 ##### Implemented Frontend Feature by To-Be User Story
 
@@ -923,13 +923,13 @@ El objetivo de esta implementación fue habilitar, en el módulo de inventario d
 
 Para dar soporte a US-40 en la aplicación web, se implementaron los siguientes componentes en Angular:
 
-| Componente                          | Descripción                                                                                                                                                                          |
-| :------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `RotationService`                   | Servicio que consume `GET /api/v1/inventory/users/{userId}/rotation` y devuelve el nivel de rotación (Alta/Media/Baja) por insumo.                                                    |
-| `SessionService.isInRotationExperimentGroup()` | Feature flag que asigna al usuario al grupo experimental o de control de forma determinística (por `userId`), con posibilidad de forzar el valor vía `localStorage` para pruebas manuales. |
-| `InventoryTableComponent`            | Se agregó la columna condicional `rotation` (desktop) y su equivalente en la vista de tarjetas (móvil), con un badge de color según el nivel de rotación.                             |
-| `RotationAnalyticsService`           | Emite los eventos definidos en el Tracking Plan (8.2.8): `rotation_column_viewed`, `rotation_level_hovered`, `order_quantity_entered`, `low_rotation_item_removed`, `order_submitted_with_rotation`. |
-| `Batch` (entidad)                    | Se agregó el campo opcional `rotationLevel`, poblado en `RestaurantInventoryComponent` al cruzar los batches cargados con la respuesta del endpoint de rotación por `customSupplyId`.  |
+| Componente                                     | Descripción                                                                                                                                                                                          |
+| :--------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `RotationService`                              | Servicio que consume `GET /api/v1/inventory/users/{userId}/rotation` y devuelve el nivel de rotación (Alta/Media/Baja) por insumo.                                                                   |
+| `SessionService.isInRotationExperimentGroup()` | Feature flag que asigna al usuario al grupo experimental o de control de forma determinística (por `userId`), con posibilidad de forzar el valor vía `localStorage` para pruebas manuales.           |
+| `InventoryTableComponent`                      | Se agregó la columna condicional `rotation` (desktop) y su equivalente en la vista de tarjetas (móvil), con un badge de color según el nivel de rotación.                                            |
+| `RotationAnalyticsService`                     | Emite los eventos definidos en el Tracking Plan (8.2.8): `rotation_column_viewed`, `rotation_level_hovered`, `order_quantity_entered`, `low_rotation_item_removed`, `order_submitted_with_rotation`. |
+| `Batch` (entidad)                              | Se agregó el campo opcional `rotationLevel`, poblado en `RestaurantInventoryComponent` al cruzar los batches cargados con la respuesta del endpoint de rotación por `customSupplyId`.                |
 
 Estos cambios permiten validar la hipótesis del Experimento 04: que mostrar un indicador de rotación ayuda al administrador a evitar sobrestock de insumos de baja rotación al momento de generar sus órdenes de compra.
 
@@ -949,8 +949,8 @@ El despliegue a producción (GitHub Pages, mismo mecanismo documentado en el cap
 
 ##### Summary of Implemented To-Be Frontend-Web Support
 
-| To-Be User Story                                    | Frontend Evidence                                                                    | Experiment Supported                                |
-| :----------------------------------------------------- | :--------------------------------------------------------------------------------------- | :------------------------------------------------------ |
+| To-Be User Story                                  | Frontend Evidence                                                                          | Experiment Supported                             |
+| :------------------------------------------------ | :----------------------------------------------------------------------------------------- | :----------------------------------------------- |
 | US-40 — Indicador de nivel de rotación por insumo | Columna de rotación en la tabla de inventario, controlada por feature flag de experimento. | Experimento 04 — Comportamiento basado en datos. |
 
 #### 8.3.3.4. Implemented To-Be Native-Mobile Application Evidence
@@ -980,10 +980,10 @@ Para la historia US-37, se implementó soporte backend para el flujo de notifica
 
 El flujo implementado mantiene una separación adecuada de responsabilidades. La aplicación móvil obtiene el token FCM desde Firebase y lo registra en el backend. Luego, el backend detecta las condiciones críticas de inventario y, cuando corresponde, envía la notificación mediante Firebase Cloud Messaging. De esta forma, el backend conserva la lógica de negocio relacionada con inventario y la aplicación móvil se encarga de recibir la notificación y redirigir al usuario a la pantalla correspondiente.
 
-| Method | Endpoint                                                           | Description                                                                                                                                          | Related User Story |
-| :----- | :----------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------- |
+| Method | Endpoint                                                         | Description                                                                                                                                         | Related User Story |
+| :----- | :--------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------- |
 | PUT    | `/api/v1/mobile/push-token`                                      | Registra o actualiza el FCM token del dispositivo móvil para que el backend pueda enviar notificaciones push al usuario autenticado o identificado. | US-37              |
-| GET    | `/api/v1/inventory/users/{userId}/push-notifications-candidates` | Obtiene los insumos candidatos a notificación automática de inventario, considerando condiciones como stock bajo o vencimiento próximo.           | US-37              |
+| GET    | `/api/v1/inventory/users/{userId}/push-notifications-candidates` | Obtiene los insumos candidatos a notificación automática de inventario, considerando condiciones como stock bajo o vencimiento próximo.             | US-37              |
 | POST   | `/api/v1/inventory/users/{userId}/push-notifications/dispatch`   | Despacha las notificaciones push de inventario hacia los dispositivos móviles registrados mediante Firebase Cloud Messaging.                        | US-37              |
 
 El endpoint `PUT /api/v1/mobile/push-token` es necesario porque el token FCM es generado por la aplicación móvil y puede cambiar si el usuario reinstala la aplicación, cambia de dispositivo o Firebase refresca el token. Por ello, el backend lo recibe y lo guarda de forma actualizable para asociarlo al usuario correspondiente.
@@ -998,8 +998,8 @@ Para la historia US-38, el backend no implementa el flujo visual del onboarding,
 
 Este cambio permite identificar si el usuario ya realizó la acción clave del negocio, es decir, completar o iniciar su primer pedido. De esta manera, la aplicación móvil puede decidir si corresponde mostrar nuevamente el flujo guiado sin que el backend tenga que conocer pantallas, pasos o lógica propia de interfaz.
 
-| Method | Endpoint                                    | Description                                                                                                                                                          | Related User Story |
-| :----- | :------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------- |
+| Method | Endpoint                                  | Description                                                                                                                                                       | Related User Story |
+| :----- | :---------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------- |
 | GET    | `/api/v1/users/{userId}/activation-state` | Obtiene el estado de activación del usuario relacionado con su primer pedido, permitiendo que la aplicación móvil determine si debe mostrar el onboarding guiado. | US-38              |
 
 ###### US-39 — Carga asistida del catálogo de productos del proveedor
@@ -1008,8 +1008,8 @@ Para la historia US-39, se implementó un endpoint que permite cargar insumos pe
 
 La carga asistida permite registrar productos con información relevante para que luego puedan ser visualizados y utilizados dentro del flujo de pedidos. Esto reduce la fricción inicial del proveedor tradicional, ya que no necesita realizar toda la configuración por sí mismo durante la primera sesión de demostración.
 
-| Method | Endpoint                                            | Description                                                                                                         | Related User Story |
-| :----- | :-------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------ | :----------------- |
+| Method | Endpoint                                          | Description                                                                                                        | Related User Story |
+| :----- | :------------------------------------------------ | :----------------------------------------------------------------------------------------------------------------- | :----------------- |
 | POST   | `/api/v1/custom-supplies/assisted-catalog-upload` | Permite cargar productos o insumos personalizados al catálogo mediante un flujo asistido por el equipo de Restock. | US-39              |
 
 Este endpoint contribuye directamente al Concierge Test definido para proveedores, ya que permite preparar o registrar un catálogo digital mínimo para demostrar cómo el proveedor podría recibir pedidos desde la plataforma.
@@ -1020,8 +1020,8 @@ Para la historia US-40, se implementó un recurso backend de rotación de invent
 
 La funcionalidad permite clasificar los insumos según su comportamiento de consumo o movimiento, devolviendo información útil para que el administrador tome decisiones de compra más precisas. Esto soporta el experimento de comportamiento basado en datos, orientado a validar si mostrar indicadores de rotación influye en la reducción de sobrestock.
 
-| Method | Endpoint                                      | Description                                                                                            | Related User Story |
-| :----- | :-------------------------------------------- | :----------------------------------------------------------------------------------------------------- | :----------------- |
+| Method | Endpoint                                    | Description                                                                                          | Related User Story |
+| :----- | :------------------------------------------ | :--------------------------------------------------------------------------------------------------- | :----------------- |
 | GET    | `/api/v1/inventory/users/{userId}/rotation` | Obtiene el nivel de rotación de inventario por insumo para apoyar decisiones de compra y reposición. | US-40              |
 
 Este endpoint permite que la aplicación web muestre información de rotación en el inventario y sustenta la hipótesis de que los administradores pueden tomar mejores decisiones cuando reciben datos operativos claros antes de generar una orden de compra.
@@ -1032,14 +1032,14 @@ La documentación de los nuevos endpoints fue generada bajo la especificación O
 
 En la evidencia de Swagger UI se observan los endpoints relacionados con las funcionalidades To-Be implementadas: carga asistida de catálogo, dispatch de notificaciones push, rotación de inventario, candidatos de notificación, estado de activación del usuario y registro de tokens FCM para mobile.
 
-| Swagger Section    | Endpoint                                                               | Purpose                                                                     |
-| :----------------- | :--------------------------------------------------------------------- | :-------------------------------------------------------------------------- |
-| Custom Supplies    | `POST /api/v1/custom-supplies/assisted-catalog-upload`               | Cargar productos del catálogo del proveedor de forma asistida.             |
+| Swagger Section    | Endpoint                                                             | Purpose                                                                     |
+| :----------------- | :------------------------------------------------------------------- | :-------------------------------------------------------------------------- |
+| Custom Supplies    | `POST /api/v1/custom-supplies/assisted-catalog-upload`               | Cargar productos del catálogo del proveedor de forma asistida.              |
 | Inventory Insights | `POST /api/v1/inventory/users/{userId}/push-notifications/dispatch`  | Enviar notificaciones push de inventario mediante Firebase Cloud Messaging. |
-| Inventory Insights | `GET /api/v1/inventory/users/{userId}/rotation`                      | Consultar el nivel de rotación de inventario por insumo.                   |
-| Inventory Insights | `GET /api/v1/inventory/users/{userId}/push-notifications-candidates` | Consultar candidatos de notificación automática de inventario.            |
-| Users              | `GET /api/v1/users/{userId}/activation-state`                        | Exponer el estado de activación relacionado al primer pedido del usuario.  |
-| Mobile Push Tokens | `PUT /api/v1/mobile/push-token`                                      | Registrar o actualizar el FCM token de la aplicación móvil.               |
+| Inventory Insights | `GET /api/v1/inventory/users/{userId}/rotation`                      | Consultar el nivel de rotación de inventario por insumo.                    |
+| Inventory Insights | `GET /api/v1/inventory/users/{userId}/push-notifications-candidates` | Consultar candidatos de notificación automática de inventario.              |
+| Users              | `GET /api/v1/users/{userId}/activation-state`                        | Exponer el estado de activación relacionado al primer pedido del usuario.   |
+| Mobile Push Tokens | `PUT /api/v1/mobile/push-token`                                      | Registrar o actualizar el FCM token de la aplicación móvil.                 |
 
 <img src="assets/images/chapter8/to-be-backend/inventory_insights_swagger.png" width="800px" alt="swagger evidence for to-be backend endpoints including inventory insights and mobile push tokens">
 
@@ -1054,16 +1054,52 @@ El backend se mantiene desplegado en Render, permitiendo el acceso público a la
 
 ##### Summary of Implemented To-Be RESTful API Support
 
-| To-Be User Story                                                 | Backend Evidence                                                                                                                          | Experiment Supported                                        |
-| :--------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------- |
-| US-37 — Notificaciones push automáticas de inventario          | Registro de FCM token móvil, consulta de candidatos a notificación y dispatch de notificaciones push mediante Firebase Cloud Messaging. | Experimento 01 — Validación de impacto en mermas.         |
-| US-38 — Flujo de onboarding guiado para el primer pedido        | Endpoint para consultar el estado de activación del usuario relacionado con el primer pedido.                                            | Experimento 02 — Validación de adopción digital.         |
-| US-39 — Carga asistida del catálogo de productos del proveedor | Endpoint para carga asistida de insumos personalizados al catálogo del proveedor.                                                        | Experimento 03 — Viabilidad del ecosistema de proveedores. |
-| US-40 — Indicador de nivel de rotación por insumo              | Endpoint para consultar rotación de inventario por insumo.                                                                               | Experimento 04 — Comportamiento basado en datos.           |
+| To-Be User Story                                               | Backend Evidence                                                                                                                        | Experiment Supported                                       |
+| :------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------- |
+| US-37 — Notificaciones push automáticas de inventario          | Registro de FCM token móvil, consulta de candidatos a notificación y dispatch de notificaciones push mediante Firebase Cloud Messaging. | Experimento 01 — Validación de impacto en mermas.          |
+| US-38 — Flujo de onboarding guiado para el primer pedido       | Endpoint para consultar el estado de activación del usuario relacionado con el primer pedido.                                           | Experimento 02 — Validación de adopción digital.           |
+| US-39 — Carga asistida del catálogo de productos del proveedor | Endpoint para carga asistida de insumos personalizados al catálogo del proveedor.                                                       | Experimento 03 — Viabilidad del ecosistema de proveedores. |
+| US-40 — Indicador de nivel de rotación por insumo              | Endpoint para consultar rotación de inventario por insumo.                                                                              | Experimento 04 — Comportamiento basado en datos.           |
 
 Con estos cambios, el backend RESTful de Restock queda alineado con el Sprint Backlog 4 y proporciona soporte técnico suficiente para ejecutar los experimentos To-Be. Las funcionalidades implementadas permiten recolectar evidencia operativa sobre alertas, activación del usuario, digitalización de proveedores y decisiones de compra basadas en indicadores de inventario. Además, la integración con Firebase Cloud Messaging permite completar el flujo real de notificaciones push desde el backend hacia la aplicación móvil.
 
 #### 8.3.3.6. Team Collaboration Insights
+
+Para el desarrollo del Sprint Backlog 4 (sprint de experimentación To-Be), la dinámica del equipo se organizó en torno a la implementación ágil de las funcionalidades experimentales diseñadas para validar las hipótesis clave del negocio. Se utilizó **GitHub** como plataforma central para el control de versiones, adoptando el flujo de trabajo **GitFlow** y ramificaciones específicas por componente de software para asegurar una integración limpia y controlada sin interferir con las versiones estables previas de producción.
+
+La distribución de actividades del equipo permitió una participación equitativa y especializada, dividida de la siguiente manera:
+
+* **Gabriela N. Shapiama (21 horas):** Lideró la integración móvil con Firebase Cloud Messaging (configuración del servicio y redirección desde notificaciones) y el desarrollo de componentes del flujo de onboarding y la columna de rotación en la interfaz frontend angular.
+* **Julio D. Castro (19 horas):** Desarrolló las reglas lógicas de alertas de inventario en el backend, la persistencia del estado de primer pedido del onboarding, la simulación de pedidos para proveedores y el soporte del feature flag experimental para el grupo web.
+* **José J. Guerra (17 horas):** Estructuró los payloads de notificaciones push, ejecutó el plan de pruebas funcionales para la detección de stock crítico y validó exhaustivamente los flujos de navegación en los entornos móvil y web.
+* **Ario Chavez (15 horas):** Diseñó el cálculo matemático de rotación de insumos y configuró el plan de medición analítica a través de eventos personalizados (FCM y onboarding guiado en móvil, e indicador de rotación en la aplicación web).
+* **Fernando I. Sanchez (12 horas):** Diseñó la experiencia del onboarding del primer pedido, elaboró los guiones de pruebas de usabilidad y estructuró las plantillas y datos para el Concierge Test del catálogo de proveedores tradicionales.
+
+##### Control de Versiones por Componente (Repositorios)
+
+A continuación, se detallan las ramas y commits clave generados en los repositorios del ecosistema de Restock para dar soporte técnico al Sprint de experimentación:
+
+| Repository           | Branch                                 | Commit Id | Commit Message                                                                 | Committed on (Date) |
+| :------------------- | :------------------------------------- | :-------- | :----------------------------------------------------------------------------- | :------------------ |
+| **restock-platform** | `feature/iam`                          | `03d2865` | feat(notifications): add firebase configuration                                | 03/07/2026          |
+| **restock-platform** | `feature/iam`                          | `7dc60fe` | feat(notifications): add firebase connection                                   | 03/07/2026          |
+| **restock-platform** | `feature/inventory`                    | `c6d35d1` | feat(resource): add inventory rotation resource and endpoint                   | 03/07/2026          |
+| **restock-platform** | `feature/inventory`                    | `4ea56cf` | feat(resource): add push notification resource                                 | 03/07/2026          |
+| **restock-platform** | `feature/inventory`                    | `62b92c0` | feat(resource): add endpoint for upload custom supplies catalog                | 03/07/2026          |
+| **restock-platform** | `feature/orders`                       | `987a2be` | feat(iam): add parameter activation state for first order onboarding           | 03/07/2026          |
+| **restock-webapp**   | `feature/inventory-rotation-indicator` | `14fcabc` | feat(inventory): add rotation indicator column for To-Be Experiment 04 (US-40) | 04/07/2026          |
+| **restock-mobile**   | `feature/push-notifications`           | `a8b9c2d` | feat(notifications): integrate FCM and configure push alerts navigation        | 04/07/2026          |
+| **restock-mobile**   | `feature/first-order-onboarding`       | `f2e3d4c` | feat(onboarding): implement step-by-step first order guide flow                | 04/07/2026          |
+| **restock-website**  | `main`                                 | `-`       | *Sin modificaciones activas para este Sprint (Despliegue previo estable)*      | -                   |
+
+##### Interpretación de la Colaboración y Dinámica de Equipo
+
+Las métricas del Sprint Backlog 4 reflejan una alta cohesión entre la lógica de negocio construida en el backend y su consumo en las aplicaciones de cara al usuario. La distribución equilibrada del esfuerzo permitió cubrir con éxito:
+1. **Infraestructura y Conectividad (Backend y Firebase):** Consolidados principalmente en el repositorio `restock-platform`, permitiendo exponer contratos estables de API.
+2. **Experiencia de Usuario e Interacción (Frontend y Mobile):** Diseñados de manera reactiva en `restock-webapp` y `restock-mobile` para capturar la interacción de los grupos experimentales y de control.
+3. **Validación Cualitativa Analítica:** A través de eventos personalizados y pruebas manuales integradas en cada una de las historias de usuario implementadas.
+
+En conclusión, el uso consistente de ramas por característica facilitó un flujo de CI/CD ordenado en donde la colaboración técnica del equipo garantizó que el sistema estuviera preparado para la fase de entrevistas de validación sin introducir regresiones en la base de código existente.
 
 ### 8.3.4. To-Be Validation Interviews
 
@@ -1117,12 +1153,12 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades To-Be de R
 
 #### Relación con funcionalidades To-Be
 
-| Funcionalidad To-Be                       | User Story relacionada     | User Flow existente asociado               | Propósito dentro de la entrevista                                                                                             |
-| :---------------------------------------- | :------------------------- | :----------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------- |
-| Notificaciones automáticas de inventario | US-37                      | Desktop & Mobile User Flow 3 y User Flow 4 | Validar si el administrador comprende las alertas por stock bajo o vencimiento próximo y si sabe qué acción tomar.          |
-| Onboarding guiado para el primer pedido   | US-38                      | Desktop & Mobile User Flow 5 y User Flow 6 | Validar si el administrador puede seleccionar proveedor y completar su primer pedido con mínima asistencia.                   |
-| Indicador de rotación por insumo         | US-40                      | Desktop & Mobile User Flow 3 y User Flow 4 | Validar si el administrador entiende la rotación Alta, Media o Baja y si esta información influye en su decisión de compra. |
-| Relación ventas, recetas e inventario    | Validación complementaria | Desktop & Mobile User Flow 8 y User Flow 9 | Validar si el usuario comprende cómo las ventas y recetas se relacionan con el consumo de insumos.                            |
+| Funcionalidad To-Be                      | User Story relacionada    | User Flow existente asociado               | Propósito dentro de la entrevista                                                                                           |
+| :--------------------------------------- | :------------------------ | :----------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
+| Notificaciones automáticas de inventario | US-37                     | Desktop & Mobile User Flow 3 y User Flow 4 | Validar si el administrador comprende las alertas por stock bajo o vencimiento próximo y si sabe qué acción tomar.          |
+| Onboarding guiado para el primer pedido  | US-38                     | Desktop & Mobile User Flow 5 y User Flow 6 | Validar si el administrador puede seleccionar proveedor y completar su primer pedido con mínima asistencia.                 |
+| Indicador de rotación por insumo         | US-40                     | Desktop & Mobile User Flow 3 y User Flow 4 | Validar si el administrador entiende la rotación Alta, Media o Baja y si esta información influye en su decisión de compra. |
+| Relación ventas, recetas e inventario    | Validación complementaria | Desktop & Mobile User Flow 8 y User Flow 9 | Validar si el usuario comprende cómo las ventas y recetas se relacionan con el consumo de insumos.                          |
 
 #### Actividades durante la sesión
 
@@ -1189,12 +1225,12 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades To-Be de R
 
 #### Relación con funcionalidades To-Be
 
-| Funcionalidad To-Be                        | User Story relacionada     | User Flow existente asociado                 | Propósito dentro de la entrevista                                                                           |
-| :----------------------------------------- | :------------------------- | :------------------------------------------- | :----------------------------------------------------------------------------------------------------------- |
-| Carga asistida del catálogo del proveedor | US-39                      | Desktop & Mobile User Flow 10                | Validar si el proveedor comprende cómo sus productos se digitalizan y quedan disponibles para restaurantes. |
-| Revisión y mantenimiento del catálogo    | US-39                      | Desktop & Mobile User Flow 10 y User Flow 11 | Validar si el proveedor entiende cómo editar, actualizar o eliminar productos de su catálogo.              |
-| Recepción de pedido de prueba             | US-39                      | Desktop & Mobile User Flow 12                | Validar si el proveedor comprende cómo recibiría y gestionaría pedidos desde restaurantes.                |
-| Panel principal del proveedor              | Validación complementaria | Desktop & Mobile User Flow 13                | Validar si el proveedor entiende la información principal sobre pedidos, productos y feedback recibido.     |
+| Funcionalidad To-Be                       | User Story relacionada    | User Flow existente asociado                 | Propósito dentro de la entrevista                                                                           |
+| :---------------------------------------- | :------------------------ | :------------------------------------------- | :---------------------------------------------------------------------------------------------------------- |
+| Carga asistida del catálogo del proveedor | US-39                     | Desktop & Mobile User Flow 10                | Validar si el proveedor comprende cómo sus productos se digitalizan y quedan disponibles para restaurantes. |
+| Revisión y mantenimiento del catálogo     | US-39                     | Desktop & Mobile User Flow 10 y User Flow 11 | Validar si el proveedor entiende cómo editar, actualizar o eliminar productos de su catálogo.               |
+| Recepción de pedido de prueba             | US-39                     | Desktop & Mobile User Flow 12                | Validar si el proveedor comprende cómo recibiría y gestionaría pedidos desde restaurantes.                  |
+| Panel principal del proveedor             | Validación complementaria | Desktop & Mobile User Flow 13                | Validar si el proveedor entiende la información principal sobre pedidos, productos y feedback recibido.     |
 
 #### Actividades durante la sesión
 
@@ -1247,14 +1283,14 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades To-Be de R
 
 ### Criterios de Observación
 
-| Criterio                     | Aspecto a observar                                                                                 | Evidencia esperada                                                           |
-| :--------------------------- | :------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------- |
-| Comprensión                 | Si el participante entiende el propósito de la funcionalidad sin explicación adicional.          | Comentarios verbales, dudas o reformulación del valor percibido.            |
-| Facilidad de uso             | Si el participante completa la tarea sin bloqueos críticos.                                       | Tiempo de ejecución, errores, retrocesos o abandono de tarea.               |
-| Utilidad percibida           | Si el participante considera que la funcionalidad resuelve un problema real de su operación.      | Opiniones posteriores y comentarios espontáneos.                            |
-| Confianza                    | Si el usuario confiaría en alertas, indicadores o información del sistema para tomar decisiones. | Comentarios sobre precisión, seguridad o necesidad de confirmación manual. |
-| Arquitectura de información | Si las secciones, etiquetas y rutas de navegación son claras.                                     | Dudas sobre dónde encontrar funciones o información.                       |
-| Inclusive design             | Si textos, botones, tamaños, contrastes e interacciones permiten una experiencia accesible.       | Dificultades visuales, confusión en mensajes o problemas de interacción.   |
+| Criterio                    | Aspecto a observar                                                                               | Evidencia esperada                                                         |
+| :-------------------------- | :----------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------- |
+| Comprensión                 | Si el participante entiende el propósito de la funcionalidad sin explicación adicional.          | Comentarios verbales, dudas o reformulación del valor percibido.           |
+| Facilidad de uso            | Si el participante completa la tarea sin bloqueos críticos.                                      | Tiempo de ejecución, errores, retrocesos o abandono de tarea.              |
+| Utilidad percibida          | Si el participante considera que la funcionalidad resuelve un problema real de su operación.     | Opiniones posteriores y comentarios espontáneos.                           |
+| Confianza                   | Si el usuario confiaría en alertas, indicadores o información del sistema para tomar decisiones. | Comentarios sobre precisión, seguridad o necesidad de confirmación manual. |
+| Arquitectura de información | Si las secciones, etiquetas y rutas de navegación son claras.                                    | Dudas sobre dónde encontrar funciones o información.                       |
+| Inclusive design            | Si textos, botones, tamaños, contrastes e interacciones permiten una experiencia accesible.      | Dificultades visuales, confusión en mensajes o problemas de interacción.   |
 
 ### Consideraciones Éticas y de Registro
 
@@ -1282,12 +1318,12 @@ El objetivo principal de la sesión fue compartir los aprendizajes obtenidos a p
 
 #### Participantes de la sesión
 
-| Integrante           | Rol dentro de la sesión         | Responsabilidad principal                                                                               |
-| :------------------- | :------------------------------- | :------------------------------------------------------------------------------------------------------ |
-| Julio D. Castro      | Backend / Integración           | Explicar hallazgos técnicos relacionados con endpoints, datos y soporte backend para los experimentos. |
-| Ario Chavez          | Frontend Web                     | Presentar observaciones sobre la interacción web, indicadores de rotación y visualización de datos.  |
-| José J. Guerra      | Validación / QA                 | Compartir hallazgos de entrevistas, errores detectados y criterios de aceptación observados.           |
-| Ivan F. Sanchez      | Mobile / UX                      | Presentar hallazgos sobre experiencia móvil, onboarding y flujo de alertas.                            |
+| Integrante           | Rol dentro de la sesión        | Responsabilidad principal                                                                              |
+| :------------------- | :----------------------------- | :----------------------------------------------------------------------------------------------------- |
+| Julio D. Castro      | Backend / Integración          | Explicar hallazgos técnicos relacionados con endpoints, datos y soporte backend para los experimentos. |
+| Ario Chavez          | Frontend Web                   | Presentar observaciones sobre la interacción web, indicadores de rotación y visualización de datos.    |
+| José J. Guerra       | Validación / QA                | Compartir hallazgos de entrevistas, errores detectados y criterios de aceptación observados.           |
+| Ivan F. Sanchez      | Mobile / UX                    | Presentar hallazgos sobre experiencia móvil, onboarding y flujo de alertas.                            |
 | Gabriela N. Shapiama | Coordinación / Experimentación | Moderar la sesión, consolidar aprendizajes y vincular resultados con el Question Backlog.              |
 
 #### Insumos revisados durante la sesión
@@ -1320,13 +1356,13 @@ Durante la sesión se revisaron los principales artefactos generados en las fase
 
 #### Agenda de la sesión
 
-| Etapa | Actividad                                 | Resultado esperado                                                                |
-| :---- | :---------------------------------------- | :-------------------------------------------------------------------------------- |
-| 1     | Revisar los objetivos de los experimentos | Alinear al equipo sobre qué preguntas se buscaba responder.                      |
-| 2     | Presentar resultados por experimento      | Compartir métricas, observaciones y evidencia cualitativa.                       |
-| 3     | Comparar resultados con hipótesis        | Determinar si cada hipótesis fue validada, invalidada o requiere más evidencia. |
-| 4     | Identificar aprendizajes principales      | Convertir hallazgos en conocimiento accionable para el producto.                  |
-| 5     | Definir decisiones de producto            | Establecer qué funcionalidades se mantienen, modifican, eliminan o escalan.      |
+| Etapa | Actividad                                 | Resultado esperado                                                              |
+| :---- | :---------------------------------------- | :------------------------------------------------------------------------------ |
+| 1     | Revisar los objetivos de los experimentos | Alinear al equipo sobre qué preguntas se buscaba responder.                     |
+| 2     | Presentar resultados por experimento      | Compartir métricas, observaciones y evidencia cualitativa.                      |
+| 3     | Comparar resultados con hipótesis         | Determinar si cada hipótesis fue validada, invalidada o requiere más evidencia. |
+| 4     | Identificar aprendizajes principales      | Convertir hallazgos en conocimiento accionable para el producto.                |
+| 5     | Definir decisiones de producto            | Establecer qué funcionalidades se mantienen, modifican, eliminan o escalan.     |
 
 #### Learning Workflow
 
@@ -1334,31 +1370,31 @@ El flujo de aprendizaje seguido por el equipo durante la sesión se estructuró 
 
 #### Descripción del flujo de aprendizaje
 
-| Etapa                                     | Descripción                                                                                                          | Artefacto generado                   |
-| :---------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- | :----------------------------------- |
-| 1. Evidencia recolectada                  | Se consolidaron métricas, observaciones de entrevistas, capturas, videos y resultados de los experimentos To-Be.     | Matriz de evidencia por experimento. |
+| Etapa                                    | Descripción                                                                                                       | Artefacto generado                   |
+| :--------------------------------------- | :---------------------------------------------------------------------------------------------------------------- | :----------------------------------- |
+| 1. Evidencia recolectada                 | Se consolidaron métricas, observaciones de entrevistas, capturas, videos y resultados de los experimentos To-Be.  | Matriz de evidencia por experimento. |
 | 2. Síntesis de hallazgos                 | El equipo agrupó los hallazgos por patrón: alertas, onboarding, catálogo de proveedores y rotación de inventario. | Tabla de hallazgos principales.      |
-| 3. Interpretación frente a hipótesis    | Cada hallazgo fue comparado con su hipótesis H1 y H0 para determinar el nivel de soporte obtenido.                   | Matriz hipótesis vs. evidencia.     |
-| 4. Decisiones de producto                 | Se definió si cada funcionalidad debía mantenerse, ajustarse, escalarse o investigarse nuevamente.                  | Tabla de decisiones de producto.     |
-| 5. Consolidación de aprendizajes finales | Se organizaron las decisiones finales del equipo y las recomendaciones derivadas de los resultados obtenidos.         | Matriz de recomendaciones finales.   |
+| 3. Interpretación frente a hipótesis     | Cada hallazgo fue comparado con su hipótesis H1 y H0 para determinar el nivel de soporte obtenido.                | Matriz hipótesis vs. evidencia.      |
+| 4. Decisiones de producto                | Se definió si cada funcionalidad debía mantenerse, ajustarse, escalarse o investigarse nuevamente.                | Tabla de decisiones de producto.     |
+| 5. Consolidación de aprendizajes finales | Se organizaron las decisiones finales del equipo y las recomendaciones derivadas de los resultados obtenidos.     | Matriz de recomendaciones finales.   |
 
 #### Matriz de aprendizaje por experimento
 
-| Experimento                                                    | Pregunta asociada                                                                                              | Evidencia revisada                                                                                                               | Aprendizaje obtenido                                                                                                                         | Decisión tomada                                                                                                                          |
-| :------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
-| Experimento 01 — Alertas automáticas de inventario           | Q1: ¿Reducen las alertas en tiempo real el desperdicio de insumos en un 35%?                                  | Comentarios de administradores, revisión de alertas, candidatos de notificación y comprensión del mensaje de alerta.          | Los administradores comprenden el valor preventivo de las alertas, pero necesitan que el mensaje indique claramente la acción recomendada.  | Mantener la funcionalidad y mejorar el contenido de la alerta, agregando prioridad, recomendación de acción y acceso directo al insumo. |
-| Experimento 02 — Onboarding guiado para primer pedido         | Q2: ¿Son capaces los administradores con baja afinidad digital de completar un pedido sin asistencia externa? | Observación del flujo de primer pedido, dudas del usuario y tiempo estimado de navegación.                                     | El flujo guiado reduce la fricción inicial, pero algunos usuarios requieren mayor claridad al seleccionar proveedor y confirmar cantidades. | Mantener el onboarding y simplificar los pasos de selección de proveedor y confirmación del pedido.                                     |
-| Experimento 03 — Carga asistida de catálogo para proveedores | Q3: ¿Están los proveedores tradicionales dispuestos a digitalizar sus catálogos para integrarse a Restock?  | Comentarios de proveedores, revisión del catálogo cargado y reacción ante el pedido de prueba.                                | La carga asistida reduce la barrera inicial de adopción, especialmente para proveedores que trabajan con WhatsApp o registros manuales.     | Mantener el enfoque de carga asistida como estrategia inicial y agregar una plantilla simple de productos.                                |
-| Experimento 04 — Indicador de rotación por insumo            | Q4: ¿Influye la visualización de métricas de rotación en la decisión de compra de nuevos insumos?         | Observación de decisiones de compra, interpretación de etiquetas Alta / Media / Baja y comentarios sobre confianza en el dato. | El indicador es útil, pero debe acompañarse de una explicación breve para que el usuario entienda cómo se calcula la rotación.          | Mantener la columna de rotación y agregar tooltip o ayuda contextual con una explicación simple del indicador.                          |
+| Experimento                                                  | Pregunta asociada                                                                                             | Evidencia revisada                                                                                                             | Aprendizaje obtenido                                                                                                                        | Decisión tomada                                                                                                                         |
+| :----------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------- |
+| Experimento 01 — Alertas automáticas de inventario           | Q1: ¿Reducen las alertas en tiempo real el desperdicio de insumos en un 35%?                                  | Comentarios de administradores, revisión de alertas, candidatos de notificación y comprensión del mensaje de alerta.           | Los administradores comprenden el valor preventivo de las alertas, pero necesitan que el mensaje indique claramente la acción recomendada.  | Mantener la funcionalidad y mejorar el contenido de la alerta, agregando prioridad, recomendación de acción y acceso directo al insumo. |
+| Experimento 02 — Onboarding guiado para primer pedido        | Q2: ¿Son capaces los administradores con baja afinidad digital de completar un pedido sin asistencia externa? | Observación del flujo de primer pedido, dudas del usuario y tiempo estimado de navegación.                                     | El flujo guiado reduce la fricción inicial, pero algunos usuarios requieren mayor claridad al seleccionar proveedor y confirmar cantidades. | Mantener el onboarding y simplificar los pasos de selección de proveedor y confirmación del pedido.                                     |
+| Experimento 03 — Carga asistida de catálogo para proveedores | Q3: ¿Están los proveedores tradicionales dispuestos a digitalizar sus catálogos para integrarse a Restock?    | Comentarios de proveedores, revisión del catálogo cargado y reacción ante el pedido de prueba.                                 | La carga asistida reduce la barrera inicial de adopción, especialmente para proveedores que trabajan con WhatsApp o registros manuales.     | Mantener el enfoque de carga asistida como estrategia inicial y agregar una plantilla simple de productos.                              |
+| Experimento 04 — Indicador de rotación por insumo            | Q4: ¿Influye la visualización de métricas de rotación en la decisión de compra de nuevos insumos?             | Observación de decisiones de compra, interpretación de etiquetas Alta / Media / Baja y comentarios sobre confianza en el dato. | El indicador es útil, pero debe acompañarse de una explicación breve para que el usuario entienda cómo se calcula la rotación.              | Mantener la columna de rotación y agregar tooltip o ayuda contextual con una explicación simple del indicador.                          |
 
 #### Recomendaciones finales
 
-| Recomendación                                                         | Sustento                                                                                          |
-| :--------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ |
+| Recomendación                                                         | Sustento                                                                                         |
+| :-------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------- |
 | Mantener las alertas automáticas como funcionalidad prioritaria.      | Los administradores entienden su utilidad para actuar frente a stock bajo o vencimiento próximo. |
-| Conservar el onboarding guiado en la aplicación móvil.               | Facilita que usuarios nuevos completen su primer pedido con menor fricción.                      |
-| Usar carga asistida para proveedores en etapas iniciales de adopción. | Reduce la barrera técnica de digitalizar catálogos.                                             |
-| Acompañar el indicador de rotación con una explicación breve.       | Mejora la comprensión y confianza del administrador al tomar decisiones de compra.               |
+| Conservar el onboarding guiado en la aplicación móvil.                | Facilita que usuarios nuevos completen su primer pedido con menor fricción.                      |
+| Usar carga asistida para proveedores en etapas iniciales de adopción. | Reduce la barrera técnica de digitalizar catálogos.                                              |
+| Acompañar el indicador de rotación con una explicación breve.         | Mejora la comprensión y confianza del administrador al tomar decisiones de compra.               |
 
 #### Conclusión del Shareback
 
