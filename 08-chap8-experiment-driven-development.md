@@ -1065,6 +1065,42 @@ Con estos cambios, el backend RESTful de Restock queda alineado con el Sprint Ba
 
 #### 8.3.3.6. Team Collaboration Insights
 
+Para el desarrollo del Sprint Backlog 4 (sprint de experimentación To-Be), la dinámica del equipo se organizó en torno a la implementación ágil de las funcionalidades experimentales diseñadas para validar las hipótesis clave del negocio. Se utilizó **GitHub** como plataforma central para el control de versiones, adoptando el flujo de trabajo **GitFlow** y ramificaciones específicas por componente de software para asegurar una integración limpia y controlada sin interferir con las versiones estables previas de producción.
+
+La distribución de actividades del equipo permitió una participación equitativa y especializada, dividida de la siguiente manera:
+
+* **Gabriela N. Shapiama (21 horas):** Lideró la integración móvil con Firebase Cloud Messaging (configuración del servicio y redirección desde notificaciones) y el desarrollo de componentes del flujo de onboarding y la columna de rotación en la interfaz frontend angular.
+* **Julio D. Castro (19 horas):** Desarrolló las reglas lógicas de alertas de inventario en el backend, la persistencia del estado de primer pedido del onboarding, la simulación de pedidos para proveedores y el soporte del feature flag experimental para el grupo web.
+* **José J. Guerra (17 horas):** Estructuró los payloads de notificaciones push, ejecutó el plan de pruebas funcionales para la detección de stock crítico y validó exhaustivamente los flujos de navegación en los entornos móvil y web.
+* **Ario Chavez (15 horas):** Diseñó el cálculo matemático de rotación de insumos y configuró el plan de medición analítica a través de eventos personalizados (FCM y onboarding guiado en móvil, e indicador de rotación en la aplicación web).
+* **Fernando I. Sanchez (12 horas):** Diseñó la experiencia del onboarding del primer pedido, elaboró los guiones de pruebas de usabilidad y estructuró las plantillas y datos para el Concierge Test del catálogo de proveedores tradicionales.
+
+##### Control de Versiones por Componente (Repositorios)
+
+A continuación, se detallan las ramas y commits clave generados en los repositorios del ecosistema de Restock para dar soporte técnico al Sprint de experimentación:
+
+| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- |
+| **restock-platform** | `feature/iam` | `03d2865` | feat(notifications): add firebase configuration | 03/07/2026 |
+| **restock-platform** | `feature/iam` | `7dc60fe` | feat(notifications): add firebase connection | 03/07/2026 |
+| **restock-platform** | `feature/inventory` | `c6d35d1` | feat(resource): add inventory rotation resource and endpoint | 03/07/2026 |
+| **restock-platform** | `feature/inventory` | `4ea56cf` | feat(resource): add push notification resource | 03/07/2026 |
+| **restock-platform** | `feature/inventory` | `62b92c0` | feat(resource): add endpoint for upload custom supplies catalog | 03/07/2026 |
+| **restock-platform** | `feature/orders` | `987a2be` | feat(iam): add parameter activation state for first order onboarding | 03/07/2026 |
+| **restock-webapp** | `feature/inventory-rotation-indicator` | `14fcabc` | feat(inventory): add rotation indicator column for To-Be Experiment 04 (US-40) | 04/07/2026 |
+| **restock-mobile** | `feature/push-notifications` | `a8b9c2d` | feat(notifications): integrate FCM and configure push alerts navigation | 04/07/2026 |
+| **restock-mobile** | `feature/first-order-onboarding` | `f2e3d4c` | feat(onboarding): implement step-by-step first order guide flow | 04/07/2026 |
+| **restock-website** | `main` | `-` | *Sin modificaciones activas para este Sprint (Despliegue previo estable)* | - |
+
+##### Interpretación de la Colaboración y Dinámica de Equipo
+
+Las métricas del Sprint Backlog 4 reflejan una alta cohesión entre la lógica de negocio construida en el backend y su consumo en las aplicaciones de cara al usuario. La distribución equilibrada del esfuerzo permitió cubrir con éxito:
+1. **Infraestructura y Conectividad (Backend y Firebase):** Consolidados principalmente en el repositorio `restock-platform`, permitiendo exponer contratos estables de API.
+2. **Experiencia de Usuario e Interacción (Frontend y Mobile):** Diseñados de manera reactiva en `restock-webapp` y `restock-mobile` para capturar la interacción de los grupos experimentales y de control.
+3. **Validación Cualitativa Analítica:** A través de eventos personalizados y pruebas manuales integradas en cada una de las historias de usuario implementadas.
+
+En conclusión, el uso consistente de ramas por característica facilitó un flujo de CI/CD ordenado en donde la colaboración técnica del equipo garantizó que el sistema estuviera preparado para la fase de entrevistas de validación sin introducir regresiones en la base de código existente.
+
 ### 8.3.4. To-Be Validation Interviews
 
 #### 8.3.4.1. Diseño de Entrevistas
