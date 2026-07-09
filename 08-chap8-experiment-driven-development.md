@@ -1551,6 +1551,48 @@ Las cuatro entrevistas coincidieron en observaciones que no estaban cubiertas po
 
 ### 8.4.2. Re-scored and Re-prioritized Question Backlog
 
+Tras la ejecución de las sesiones de validación documentadas en el Capítulo 6 — que incluyen las entrevistas de validación con usuarios reales (Sección 6.3.2), las evaluaciones según heurísticas (Sección 6.3.3) y la auditoría de experiencia de usuario recibida por parte del equipo Equilibria (Sección 6.4.2) — el equipo procedió a revisar y actualizar el Question Backlog original definido en la Sección 8.1.4.
+
+El propósito de esta revisión es reflejar el estado actual del conocimiento del equipo: las preguntas que han sido parcialmente respondidas incrementan su **Confianza (C)** y reducen su **Riesgo (R)**, mientras que las que permanecen sin evidencia directa mantienen o incrementan su nivel de incertidumbre.
+
+**Criterios de re-evaluación aplicados:**
+
+| Criterio | Escala | Criterio de cambio |
+|---|---|---|
+| **Confianza (C)** | 1–5 | Sube si se obtuvo evidencia directa de la pregunta; baja si la evidencia contradice la hipótesis. |
+| **Riesgo (R)** | 1–5 | Baja si el riesgo fue mitigado mediante validación; sube si se encontraron nuevos hallazgos críticos. |
+| **Impacto (I)** | 1–5 | Se mantiene estable salvo que la validación cambie la valoración estratégica de la funcionalidad. |
+| **Interés (Int)** | 1–5 | Refleja el nivel de interés del equipo en continuar investigando la pregunta post-experimento. |
+
+---
+
+**Evidencia utilizada para la re-evaluación:**
+
+- **Q1** *(Reducción de mermas)*: No se obtuvo medición cuantitativa directa del porcentaje de reducción de mermas durante el período de validación. La funcionalidad de alertas fue implementada y utilizada en las sesiones, pero sin datos estadísticos de campo que permitan confirmar o refutar la hipótesis del 35%. La confianza sube levemente por tener la funcionalidad implementada; el riesgo se mantiene elevado al no contar con evidencia cuantitativa.
+
+- **Q2** *(Adopción de usuarios de baja afinidad digital)*: La **auditoría recibida (Sección 6.4.2)** realizada por el equipo Equilibria identificó problemas de usabilidad de severidad media-alta en Restock: ambigüedad entre las acciones *"Supply"* y *"New batch"* (sev. 3/4), áreas vacías sin orientación en el inventario móvil (sev. 2/4), y texto de ventas confuso — *"REGISTERED SALES NOT DISCOUNTED IN INVENTORY"* (sev. 3/4). Estas evidencias confirman que la fricción de adopción persiste, pero al haber sido acotados los puntos específicos de falla, el equipo ahora tiene mayor confianza y menor incertidumbre.
+
+- **Q3** *(Disposición de proveedores a digitalizar catálogos)*: Las **entrevistas de validación del Segmento 2 (Sección 6.3.2)** — Miguel Ángel Leal (Lima, Santo Domingo) y Andrea Roncal (Lima, Independencia) — mostraron que los proveedores evaluaron la plataforma de forma positiva, con sugerencias de mejora acotadas (ampliación de planes de pago, guías visuales para navegación, sección de reseñas). Ambos entrevistados indicaron que el proyecto "va por buen camino". La confianza aumenta significativamente; el riesgo de rechazo por parte del segmento proveedor se reduce.
+
+- **Q4** *(Influencia de métricas en decisiones de compra)*: La auditoría recibida (Sección 6.4.2) detectó que el texto de ventas resulta ambiguo (sev. 3/4) y que las áreas de inventario presentan vacíos de orientación, lo que indica que la presentación actual de métricas genera confusión en lugar de orientar decisiones de compra. La confianza en que el diseño actual resuelve este punto disminuye; el riesgo sube.
+
+---
+
+**Question Backlog Re-evaluado:**
+
+| ID | Pregunta de Investigación | C | R | I | Int | Total | Δ vs. 8.1.4 |
+| -- | --- | - | - | - | --- | ----- | ----------- |
+| Q1 | ¿Reducen las alertas en tiempo real el desperdicio de insumos en un 35% como se ha previsto? | 3 | 4 | 5 | 4 | **16** | −1 |
+| Q2 | ¿Son capaces los administradores con baja afinidad digital de completar un pedido sin asistencia externa? | 4 | 3 | 4 | 3 | **14** | −2 |
+| Q3 | ¿Están los proveedores tradicionales dispuestos a digitalizar sus catálogos para integrarse a Restock? | 4 | 2 | 4 | 4 | **14** | −1 |
+| Q4 | ¿Influye la visualización de métricas de rotación en la decisión de compra de nuevos insumos? | 3 | 3 | 3 | 3 | **12** | −1 |
+
+*Nota: En caso de empate en el puntaje total, se prioriza la pregunta con mayor índice de Riesgo (R). Q2 supera a Q3 con R=3 vs. R=2.*
+
+**Nuevo orden de prioridad:** Q1 (16 pts) > Q2 (14 pts) > Q3 (14 pts) > Q4 (12 pts)
+
+**Conclusión del re-scoring:** El backlog revisado muestra un incremento generalizado de la confianza del equipo respecto al estado inicial, con descensos en el riesgo percibido para Q2 y Q3 como resultado directo de las sesiones de validación. Q1 continúa liderando al representar el mayor valor estratégico pendiente de medición cuantitativa. Q4 requiere atención en futuras iteraciones, dado que la presentación actual de métricas aún genera fricción cognitiva en el usuario final.
+
 ## 8.5. Continuous Learning
 
 ### 8.5.1. Shareback Session Artifacts: Learning Workflow
