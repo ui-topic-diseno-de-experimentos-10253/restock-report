@@ -1293,7 +1293,7 @@ A continuación se documentan las entrevistas de validación realizadas sobre la
   <tr>
     <td colspan="2" style="text-align:justify">
     Resumen: <br>
-      Almendra Chong Ruiz, administradora de restaurante, valoró la plataforma como "bastante completa", destacando que la integración directa con proveedores reduce la gestión manual y el margen de error frente a procesos informales. Sobre el indicador de rotación (US-40, Experimento 04), su retroalimentación fue directamente favorable a la hipótesis de trabajo planteada en 8.2.1: indicó que la funcionalidad le "ayuda a tener mapeado qué productos quizás voy a necesitar más y qué productos voy a necesitar menos para el mes siguiente", y que permite "no tener un stock que se pueda vencer y que, al final, termine desperdiciado" — observación que conecta directamente con el Índice de Precisión de Compra (PPI) definido en 8.2.2. Como oportunidad de mejora, señaló fricción en el flujo de alta de insumos: actualmente crear un insumo nuevo y añadirlo al inventario son dos acciones separadas (dos botones distintos), y sugirió unificarlas en un solo flujo para agilizar el registro.
+      Almendra Chong Ruiz, administradora de restaurante, valoró la plataforma como "bastante completa", destacando que la integración directa con proveedores reduce la gestión manual y el margen de error frente a procesos informales. Sobre el onboarding guiado (US-38, Experimento 02), indicó que le pareció útil que la webapp tenga un onboarding inicial, "porque ayuda a que el administrador entienda rápidamente cómo empezar a usar la plataforma"; para alguien que recién ingresa considera importante que se le explique paso a paso qué debe hacer primero — elegir el plan de suscripción, registrar insumos, configurar el inventario y empezar a gestionar pedidos — ya que "eso hace que la experiencia sea más clara y menos confusa". Sobre el indicador de rotación (US-40, Experimento 04), su retroalimentación fue directamente favorable a la hipótesis de trabajo planteada en 8.2.1: indicó que la funcionalidad le "ayuda a tener mapeado qué productos quizás voy a necesitar más y qué productos voy a necesitar menos para el mes siguiente", y que permite "no tener un stock que se pueda vencer y que, al final, termine desperdiciado" — observación que conecta directamente con el Índice de Precisión de Compra (PPI) definido en 8.2.2. Como oportunidad de mejora, señaló fricción en el flujo de alta de insumos: actualmente crear un insumo nuevo y añadirlo al inventario son dos acciones separadas (dos botones distintos), y sugirió unificarlas en un solo flujo para agilizar el registro.
     </td>
   </tr>
   <tr>
@@ -1436,7 +1436,7 @@ A continuación se documentan las entrevistas de validación realizadas sobre la
 
 ### 8.4.1. Analysis and Interpretation of Results
 
-Esta sección interpreta la evidencia recolectada durante la fase de experimentación (secciones 8.3.3 y 8.3.4) a la luz de las hipótesis, métricas de negocio y criterios de decisión definidos en 8.2. Con las cuatro entrevistas completas (Segmento 1: Administradores de Restaurantes y Segmento 2: Proveedores), los Experimentos 01, 03 y 04 ya cuentan con evidencia cualitativa directa de usuario. El Experimento 02 (onboarding guiado del primer pedido) es el único que aún no tiene una sesión de validación dedicada a ese flujo específico, por lo que su análisis se apoya en la evidencia técnica del sprint (sección 8.3.3.1).
+Esta sección interpreta la evidencia recolectada durante la fase de experimentación (secciones 8.3.3 y 8.3.4) a la luz de las hipótesis, métricas de negocio y criterios de decisión definidos en 8.2. Con las cuatro entrevistas completas (Segmento 1: Administradores de Restaurantes y Segmento 2: Proveedores), los cuatro experimentos cuentan con evidencia cualitativa directa de usuario.
 
 #### Experimento 01 — Impacto de Alertas en la Reducción de Mermas
 
@@ -1452,9 +1452,9 @@ Esta sección interpreta la evidencia recolectada durante la fase de experimenta
 | Aspecto | Resultado |
 | :--- | :--- |
 | Métrica de negocio (8.2.2) | Task Success Rate (TSR) — meta: 100% de éxito autónomo en < 5 min |
-| Evidencia disponible | Evidencia técnica del sprint (T-38-01 a T-38-07, "Done"); sin entrevista de usabilidad moderada dedicada al flujo de primer pedido todavía |
-| Hallazgo | Ninguna de las dos entrevistas ejecutó explícitamente el flujo de onboarding guiado como tarea moderada, por lo que no se cuenta con observación directa de Time on Task ni tasa de abandono. |
-| Veredicto sobre H1 | **Pendiente de evidencia.** La funcionalidad está implementada y desplegada, pero la validación cualitativa específica (prueba de usabilidad remota moderada definida en 8.2.6) queda como trabajo pendiente antes de dictaminar H1. |
+| Evidencia disponible | Entrevista de validación (Almendra Chong Ruiz) + evidencia técnica del sprint (T-38-01 a T-38-07, "Done") |
+| Hallazgo | Almendra Chong Ruiz valoró positivamente que la webapp tenga un onboarding inicial, señalando que "ayuda a que el administrador entienda rápidamente cómo empezar a usar la plataforma" y que explicar paso a paso qué hacer primero (suscripción, insumos, inventario, pedidos) "hace que la experiencia sea más clara y menos confusa" — confirmando el mecanismo causal de H1 (guía paso a paso → menor confusión → mayor autonomía). |
+| Veredicto sobre H1 | **Soportada cualitativamente.** La usuaria confirma que el onboarding reduce la confusión inicial del administrador. La medición cuantitativa del Time on Task (< 5 min) y la tasa de abandono definidas en 8.2.3 requiere la prueba de usabilidad remota moderada con observación cronometrada (8.2.6), aún no ejecutada. |
 
 #### Experimento 03 — Disposición de Proveedores a la Integración Digital
 
