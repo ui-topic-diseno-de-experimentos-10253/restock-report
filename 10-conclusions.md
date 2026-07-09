@@ -32,6 +32,10 @@ El proceso de auditoría realizada permitió al equipo evaluar en profundidad la
 
 El desarrollo del proyecto permitió al equipo consolidar competencias en diseño y ejecución de experimentos de software, arquitectura orientada a servicios, prácticas de DevOps, y aplicación del marco de trabajo Lean UX como eje conductor del ciclo de vida del producto. La adopción de GitFlow, Conventional Commits y pipelines automatizados favoreció la colaboración efectiva y la trazabilidad del trabajo de cada integrante. El uso de herramientas como UXPressia, Figma, Structurizr y Jira permitió mantener coherencia entre los artefactos de análisis, diseño e implementación a lo largo de las entregas.
 
+**Sobre el proceso del trabajo Final**
+
+El desarrollo del proyecto Final ayudo a todo el equipo en mejorar varios apartados que no nos dimos cuenta, como la modificaciones que tuvimos que hacer gracias a la actualizacion de statemnt project actualizado hace poco, y aun asi el equipo logro cumplir de la mejor forma posible, restrucutrando el diseño y mejorando apartados fundamentales para completar el proyecto de la mejor manera posible
+
 **Recomendaciones**
 
 - Ejecutar los cuatro experimentos planificados con grupos de usuarios reales para obtener validación cuantitativa de las hipótesis formuladas y respaldar decisiones de roadmap con datos medibles.
@@ -41,6 +45,7 @@ El desarrollo del proyecto permitió al equipo consolidar competencias en diseñ
 - Diseñar flujos de onboarding diferenciados según el rol del usuario (administrador de restaurante vs. proveedor), con quick-wins configurados por defecto que reduzcan el tiempo de obtención del primer valor percibido.
 - Evaluar la certificación en estándares de seguridad y privacidad de datos (ISO 27001 o similares) para fortalecer la confianza de los usuarios ante el manejo de información operativa y financiera sensible.
 - Desarrollar una estrategia de expansión geográfica progresiva hacia otras ciudades del Perú con alta densidad del sector gastronómico (Arequipa, Trujillo, Cusco), aprovechando el modelo SaaS escalable implementado.
+- Desarrollar estrategia de entrevista para las pruebas de uso del proyecto por medio de otros usuarios ademas del equipo en cuestion, para obtener un feedback mas a profundidar para mejorar con las experimentaciones.
 
 ---
 
@@ -51,9 +56,11 @@ El desarrollo del proyecto permitió al equipo consolidar competencias en diseñ
 | Campo | Detalle |
 |---|---|
 | Herramienta utilizada | Firebase App Distribution |
-| Enlace al video | *(URL de Microsoft Stream)* |
-| Duración | *(hh:mm:ss)* |
-| Timing de inicio | *(hh:mm:ss)* |
+| Usuario que realizó la prueba | Larry |
+| Dispositivo utilizado | Dispositivo local |
+| Enlace al video | https://shorturl.at/1PkOk |
+| Duración | 00:15:18 |
+| Timing de inicio | 00:01:22 |
 
 ---
 
@@ -63,22 +70,22 @@ El desarrollo del proyecto permitió al equipo consolidar competencias en diseñ
 
 | Campo | Detalle |
 |---|---|
-| Enlace (Microsoft Stream) | *(URL privada de Stream)* |
-| Enlace (YouTube) | *(URL pública de YouTube)* |
-| Duración total | *(hh:mm:ss)* |
+| Enlace (Microsoft Stream) | https://shorturl.at/onDYe |
+| Enlace (YouTube) | https://youtu.be/hmCdb-iKpmA |
+| Duración total | 00:08:19 |
 
 **Pauta de contenido:**
 
 | Sección | Timing |
 |---|---|
 | Presentación del equipo | 00:00:00 |
-| Resumen del proceso de trabajo | 00:00:XX |
-| Testimonio — Julio Castro Alejos | 00:00:XX |
-| Testimonio — Ario Chavez Uribe | 00:00:XX |
-| Testimonio — José Jahaziel Guerra Perez | 00:00:XX |
-| Testimonio — Ivan Fernando Sanchez Guevara | 00:00:XX |
-| Testimonio — Gabriela Nicole Shapiama Rivera | 00:00:XX |
-| Cierre y reflexión grupal | 00:00:XX |
+| Resumen del proceso de trabajo | 00:00:08 |
+| Testimonio — Julio Castro Alejos | 00:02:09 |
+| Testimonio — Ario Chavez Uribe | 00:03:40 |
+| Testimonio — José Jahaziel Guerra Perez | 00:04:41 |
+| Testimonio — Ivan Fernando Sanchez Guevara | 00:05:18 |
+| Testimonio — Gabriela Nicole Shapiama Rivera | 00:07:00 |
+| Cierre y reflexión grupal | 00:08:15 |
 
 ---
 
