@@ -905,6 +905,16 @@ El presente Sprint Backlog corresponde al sprint de experimentación To-Be de Re
 
 #### 8.3.3.2. Implemented To-Be Landing Page Evidence
 
+Durante la fase de experimentación To-Be, la Landing Page de Restock no requirió modificaciones estructurales. Las sesiones de validación con usuarios de ambos segmentos (administradores de restaurantes y proveedores) confirmaron que la propuesta de valor comunicada en la landing es clara y no generó confusión ni fricciones. En consecuencia, el despliegue permaneció estable sobre la misma base de la entrega anterior, sin nuevos commits en el repositorio `restock-website`.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| restock-website | main | 732099d96c19104dd87599fdd058848e45439b4c | feat: initial landing page deployment. | initial commit | 22/04/2026 |
+
+**Link de despliegue:** [https://ui-topic-diseno-de-experimentos-10253.github.io/restock-website/](https://ui-topic-diseno-de-experimentos-10253.github.io/restock-website/)
+
+![Landing Page desplegada - To-Be](assets/images/chapter-5/landing-evidence/github-pages-config.png)
+
 #### 8.3.3.3. Implemented To-Be Frontend-Web Application Evidence
 
 En esta sección se presenta la evidencia de implementación del frontend web correspondiente al Sprint Backlog 4 de experimentación To-Be. De las cuatro historias de usuario definidas en 8.3.1, únicamente **US-40 (Indicador de nivel de rotación por insumo)** tiene alcance en la aplicación web Angular: US-37 y US-38 pertenecen a la aplicación móvil Kotlin, y US-39 se ejecuta mediante un Concierge Test manual (sección 8.2.6), sin cambios de interfaz web.
