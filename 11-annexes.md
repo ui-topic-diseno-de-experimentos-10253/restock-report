@@ -92,9 +92,12 @@ Se adjuntara el abut the producto, donde se detalla la funcionalidad del product
 
 ![About the product](assets/images/annexes/abouttheproduct.png)
 
+https://www.youtube.com/watch?v=IMWx47x7L2o
+
 ## Anexo I: Validation
 
 Se adjunta el video de validacion del proyecto que se realizo con los 2 apartados, administrado y proovedor para validar el funcionamiento en distintos aparatos.
 
 ![Validation](assets/images/annexes/validation.png)
 
+https://www.youtube.com/watch?v=FGF7uwXhxbc
