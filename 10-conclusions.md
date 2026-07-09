@@ -68,22 +68,22 @@ El desarrollo del proyecto Final ayudo a todo el equipo en mejorar varios aparta
 
 | Campo | Detalle |
 |---|---|
-| Enlace (Microsoft Stream) | *(URL privada de Stream)* |
-| Enlace (YouTube) | *(URL pública de YouTube)* |
-| Duración total | *(hh:mm:ss)* |
+| Enlace (Microsoft Stream) | https://shorturl.at/onDYe |
+| Enlace (YouTube) | https://youtu.be/hmCdb-iKpmA |
+| Duración total | 00:08:19 |
 
 **Pauta de contenido:**
 
 | Sección | Timing |
 |---|---|
 | Presentación del equipo | 00:00:00 |
-| Resumen del proceso de trabajo | 00:00:XX |
-| Testimonio — Julio Castro Alejos | 00:00:XX |
-| Testimonio — Ario Chavez Uribe | 00:00:XX |
-| Testimonio — José Jahaziel Guerra Perez | 00:00:XX |
-| Testimonio — Ivan Fernando Sanchez Guevara | 00:00:XX |
-| Testimonio — Gabriela Nicole Shapiama Rivera | 00:00:XX |
-| Cierre y reflexión grupal | 00:00:XX |
+| Resumen del proceso de trabajo | 00:00:08 |
+| Testimonio — Julio Castro Alejos | 00:02:09 |
+| Testimonio — Ario Chavez Uribe | 00:03:40 |
+| Testimonio — José Jahaziel Guerra Perez | 00:04:41 |
+| Testimonio — Ivan Fernando Sanchez Guevara | 00:05:18 |
+| Testimonio — Gabriela Nicole Shapiama Rivera | 00:07:00 |
+| Cierre y reflexión grupal | 00:08:15 |
 
 ---
 
