@@ -955,6 +955,62 @@ El despliegue a producción (GitHub Pages, mismo mecanismo documentado en el cap
 
 #### 8.3.3.4. Implemented To-Be Native-Mobile Application Evidence
 
+En esta sección se presenta la evidencia de implementación de la aplicación móvil correspondiente a los experimentos diseñados para la fase To-Be.
+
+#### Experimento 01 – Validación de impacto en mermas – mobile nativo
+
+![Notificación push de insumo por vencer](assets/images/chapter8/to-be-mobile/exp01_push_notification.png)
+
+**Descripción:** Evidencia de la recepción de una notificación push automática en el dispositivo móvil indicando un "Insumo por vencer", alertando preventivamente al administrador que los langostinos caducan en los próximos 5 días.
+
+![Detalles del insumo - Langostinos](assets/images/chapter8/to-be-mobile/exp01_supply_details.png)
+
+**Descripción:** Pantalla de detalles del insumo alertado (Langostinos), visualizando información clave como la descripción, el stock mínimo, el stock máximo y la unidad de medida (Kilogramo), facilitando el control de inventario.
+
+![Módulo de inventario](assets/images/chapter8/to-be-mobile/exp01_inventory_management.png)
+
+**Descripción:** Pantalla de gestión de inventario (Inventory Management) mostrando el catálogo de insumos y los lotes activos (Batches), incluyendo la alerta visual en texto rojo de que el insumo es perecible y su fecha exacta de expiración.
+
+#### Mobile Flutter
+
+![Pantalla principal proveedores](assets/images/chapter8/to-be-mobile/flutter_home.png)
+
+**Descripción:** Pantalla de inicio de la aplicación para proveedores (Restock Suppliers) desarrollada en Flutter. Muestra accesos rápidos a las operaciones clave como el Catálogo (Custom supplies), Órdenes, Alertas y Suscripción.
+
+![Notificación push en app proveedores](assets/images/chapter8/to-be-mobile/flutter_push_notification.png)
+
+**Descripción:** Notificación push in-app recibida dentro de la aplicación de proveedores, alertando sobre un insumo por vencer (Pechuga de Pollo) para tomar acciones inmediatas.
+
+![Detalles del insumo - Pechuga de Pollo](assets/images/chapter8/to-be-mobile/flutter_supply_details.png)
+
+**Descripción:** Vista de los detalles de un insumo específico (Pechuga de Pollo) en la aplicación Flutter, mostrando la descripción, stock mínimo requerido, stock máximo y su abreviatura de unidad correspondiente.
+
+#### Experimento 02 – Validación de adopción digital – mobile nativo
+
+![Onboarding paso 1](assets/images/chapter8/to-be-mobile/exp02_onboarding_1.png)
+
+**Descripción:** Pantalla introductoria del flujo de onboarding guiado, que explica al usuario administrador cómo gestionar fácilmente sus pedidos a proveedores, comparar precios y llevar un seguimiento en tiempo real desde un solo lugar.
+
+![Onboarding paso 2](assets/images/chapter8/to-be-mobile/exp02_onboarding_2.png)
+
+**Descripción:** Paso 1 del onboarding. Muestra la selección de insumos desde el inventario registrado, donde el usuario puede buscar y añadir los ingredientes que necesita reponer.
+
+![Onboarding paso 3](assets/images/chapter8/to-be-mobile/exp02_onboarding_3.png)
+
+**Descripción:** Paso 2 del onboarding. Ilustra la comparación de proveedores, listando aquellos que ofrecen el insumo buscado con su respectivo precio y disponibilidad, permitiendo elegir la oferta más conveniente.
+
+![Onboarding paso 4](assets/images/chapter8/to-be-mobile/exp02_onboarding_4.png)
+
+**Descripción:** Paso 3 del onboarding. Consiste en la revisión y solicitud de la orden, donde el usuario verifica los insumos agregados, ajusta las cantidades necesarias y revisa el total antes de enviar la solicitud final.
+
+![Onboarding paso 5](assets/images/chapter8/to-be-mobile/exp02_onboarding_5.png)
+
+**Descripción:** Paso 4 del onboarding. Explica el seguimiento de la orden en tiempo real, detallando los distintos estados por los que pasará: Pendiente, Preparando, Despachada y Entregada.
+
+![Lista de órdenes en hold](assets/images/chapter8/to-be-mobile/exp02_orders_list.png)
+
+**Descripción:** Pantalla del historial de órdenes que muestra el listado de pedidos realizados con su estado actual (por ejemplo, ON_HOLD), detallando el total de ítems y el costo acumulado.
+
 #### 8.3.3.5. Implemented To-Be RESTful API and/or Serverless Backend Evidence
 
 En esta sección se presenta la evidencia de implementación del backend RESTful correspondiente al Sprint Backlog 4 de experimentación To-Be. Los cambios realizados en el backend permiten dar soporte a las historias de usuario experimentales definidas anteriormente: notificaciones automáticas de inventario, estado de activación para el primer pedido, carga asistida del catálogo de proveedores e indicador de rotación por insumo.
