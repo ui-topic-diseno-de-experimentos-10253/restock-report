@@ -1262,9 +1262,138 @@ Antes de iniciar cada entrevista, se explicará al participante que la sesión t
 
 #### 8.3.4.2. Registro de Entrevistas
 
+A continuación se documentan las entrevistas de validación realizadas sobre las funcionalidades To-Be implementadas en el Sprint Backlog 4 (US-37 a US-40), siguiendo el diseño definido en 8.3.4.1. Ambas entrevistas corresponden al **Segmento 1: Administradores de Restaurantes**; las entrevistas del Segmento 2 (Proveedores) se documentan en una rama en paralelo del equipo.
+
+#### Segmento 1: Administradores de Restaurantes
+
+<table align="center">
+   <tr>
+    <th colspan="2" style="text-align:center">Entrevista 1</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>Almendra Chong Ruiz</td>
+  </tr>
+  <tr>
+    <td><strong>Rol</strong></td>
+    <td>Administradora de restaurante</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>Video completo</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+
+  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319831_upc_edu_pe/IQAi4aizRkHASpbfJoung0asAXl20ymASUf21prs7LjQZ6s?e=hts52O
+
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+    Resumen: <br>
+      Almendra Chong Ruiz, administradora de restaurante, valoró la plataforma como "bastante completa", destacando que la integración directa con proveedores reduce la gestión manual y el margen de error frente a procesos informales. Sobre el indicador de rotación (US-40, Experimento 04), su retroalimentación fue directamente favorable a la hipótesis de trabajo planteada en 8.2.1: indicó que la funcionalidad le "ayuda a tener mapeado qué productos quizás voy a necesitar más y qué productos voy a necesitar menos para el mes siguiente", y que permite "no tener un stock que se pueda vencer y que, al final, termine desperdiciado" — observación que conecta directamente con el Índice de Precisión de Compra (PPI) definido en 8.2.2. Como oportunidad de mejora, señaló fricción en el flujo de alta de insumos: actualmente crear un insumo nuevo y añadirlo al inventario son dos acciones separadas (dos botones distintos), y sugirió unificarlas en un solo flujo para agilizar el registro.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br>
+
+![Captura de la entrevista con Almendra Chong Ruiz](assets/images/chapter8/to-be-interviews/entrevista-almendra-chong-ruiz.webp) <br>
+    </td>
+  </tr>
+</table>
+
+<table align="center">
+   <tr>
+    <th colspan="2" style="text-align:center">Entrevista 2</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>André Ruiz</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td><strong>Rol</strong></td>
+    <td>Emprendedor y administrador de su propio restaurante</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>Video completo</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+
+  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319831_upc_edu_pe/IQDTCcGMWs5ITbFG9j3eKU78AYrh6Ae4xcPR2QtQD7ZPP24?e=bZW69i
+
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+    Resumen: <br>
+      André Ruiz recorrió la Landing Page, la aplicación web y la aplicación móvil. Consideró la propuesta "bastante interesante", señalando que el control de inventario resuelve un problema real y recurrente: llegar a preparar un plato y descubrir que falta un insumo, o que un producto ya se venció o malogró. Destacó especialmente las alertas automáticas de inventario (US-37, Experimento 01) como el punto más fuerte de la plataforma, ya que permiten "anticiparse" a un quiebre de stock en insumos clave, evitando compras de último minuto o tener que modificar el menú por falta de productos — retroalimentación cualitativa que respalda directamente la hipótesis de trabajo del Experimento 01. También valoró positivamente la disponibilidad de una versión móvil, al permitirle revisar el negocio sin estar frente a una computadora. Como oportunidades de mejora (fuera del alcance de las historias US-37 a US-40, pero relevantes para futuras iteraciones del backlog), propuso: (1) analítica de ventas más robusta, que permita proyectar compras según qué platos se venden más y en qué días hay mayor demanda; y (2) comparación entre proveedores por precio, tiempo de entrega y calidad. Concluyó que la plataforma "tiene bastante potencial" si logra conectar bien inventario, recetas, ventas y proveedores.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br>
+
+![Captura de la entrevista con André Ruiz](assets/images/chapter8/to-be-interviews/entrevista-andre-ruiz.webp) <br>
+    </td>
+  </tr>
+</table>
+
 ## 8.4. Experiment Aftermath & Analysis
 
 ### 8.4.1. Analysis and Interpretation of Results
+
+Esta sección interpreta la evidencia recolectada durante la fase de experimentación (secciones 8.3.3 y 8.3.4) a la luz de las hipótesis, métricas de negocio y criterios de decisión definidos en 8.2. Dado que el Segmento 2 (Proveedores) y la validación específica del flujo de onboarding aún no cuentan con entrevistas dedicadas, el análisis de los Experimentos 02 y 03 se apoya principalmente en la evidencia técnica del sprint (secciones 8.3.3.1 y 8.3.3.5), mientras que los Experimentos 01 y 04 ya cuentan con evidencia cualitativa directa de usuario.
+
+#### Experimento 01 — Impacto de Alertas en la Reducción de Mermas
+
+| Aspecto | Resultado |
+| :--- | :--- |
+| Métrica de negocio (8.2.2) | Waste Reduction Rate (WRR) — meta: reducción ≥ 35% |
+| Evidencia disponible | Entrevista de validación (André Ruiz) + evidencia técnica del Sprint Backlog 4 (T-37-01 a T-37-06, "Done") |
+| Hallazgo | André Ruiz identificó las alertas automáticas como la funcionalidad de mayor valor percibido, señalando explícitamente que le permiten "anticiparse" a quiebres de stock. No se reportó confusión ni fricción en la comprensión de la alerta. |
+| Veredicto sobre H1 | **Soportada cualitativamente.** El usuario confirma el mecanismo causal propuesto en H1 (alerta → acción preventiva). La medición cuantitativa del 35% de reducción de mermas (WRR) requiere el piloto de 14 días definido en 8.2.5, aún no ejecutado con datos reales de producción. |
+
+#### Experimento 02 — Eficacia del Onboarding en Usuarios no Digitales
+
+| Aspecto | Resultado |
+| :--- | :--- |
+| Métrica de negocio (8.2.2) | Task Success Rate (TSR) — meta: 100% de éxito autónomo en < 5 min |
+| Evidencia disponible | Evidencia técnica del sprint (T-38-01 a T-38-07, "Done"); sin entrevista de usabilidad moderada dedicada al flujo de primer pedido todavía |
+| Hallazgo | Ninguna de las dos entrevistas ejecutó explícitamente el flujo de onboarding guiado como tarea moderada, por lo que no se cuenta con observación directa de Time on Task ni tasa de abandono. |
+| Veredicto sobre H1 | **Pendiente de evidencia.** La funcionalidad está implementada y desplegada, pero la validación cualitativa específica (prueba de usabilidad remota moderada definida en 8.2.6) queda como trabajo pendiente antes de dictaminar H1. |
+
+#### Experimento 03 — Disposición de Proveedores a la Integración Digital
+
+| Aspecto | Resultado |
+| :--- | :--- |
+| Métrica de negocio (8.2.2) | Supplier Conversion Rate (SCR) — meta: ≥ 60% de conversión de interés |
+| Evidencia disponible | Evidencia técnica del sprint (T-39-01 a T-39-05, "Done"); sin entrevistas del Segmento 2 (Proveedores) para el ciclo To-Be |
+| Hallazgo | No hay evidencia cualitativa nueva: las dos entrevistas realizadas corresponden al Segmento 1 (administradores), no al Segmento 2 (proveedores). |
+| Veredicto sobre H1 | **Pendiente de evidencia.** Requiere ejecutar el Concierge Test definido en 8.2.6 con proveedores reales antes de poder dictaminar H1. |
+
+#### Experimento 04 — Influencia de Indicadores de Rotación en el Inventario
+
+| Aspecto | Resultado |
+| :--- | :--- |
+| Métrica de negocio (8.2.2) | Purchase Precision Index (PPI) — meta: reducción ≥ 25% en pedidos de insumos de baja rotación |
+| Evidencia disponible | Entrevista de validación (Almendra Chong Ruiz) + evidencia técnica del sprint (T-40-01 a T-40-06, "Done") |
+| Hallazgo | Almendra Chong Ruiz confirmó comprender el indicador Alta/Media/Baja sin necesitar explicación adicional, y describió espontáneamente su utilidad para decidir en qué insumos "invertir más o mantener mayor stock" y evitar desperdicio — validando el mecanismo causal de H1. |
+| Veredicto sobre H1 | **Soportada cualitativamente.** La medición cuantitativa del 25% de reducción en pedidos de baja rotación (PPI) requiere el ciclo de cierre semanal de 14 días definido en 8.2.5, aún no ejecutado con datos reales de producción. |
+
+#### Hallazgos transversales
+
+Ambas entrevistas coincidieron en dos observaciones que no estaban cubiertas por ninguna hipótesis específica, pero que constituyen aprendizaje accionable para el backlog:
+
+1. **Fricción en el alta de insumos al inventario** (Almendra Chong Ruiz): el flujo de dos pasos (crear insumo → añadir al inventario) genera fricción innecesaria y es candidato a simplificarse en una iteración futura.
+2. **Necesidad de analítica de ventas más robusta** (André Ruiz): proyección de compras según historial de ventas y comparación de proveedores por precio/tiempo/calidad — oportunidades fuera del alcance de US-37 a US-40, mencionadas como Ideas para futuros ciclos de Experiment-Driven Development (ver 8.1.2).
 
 ### 8.4.2. Re-scored and Re-prioritized Question Backlog
 
