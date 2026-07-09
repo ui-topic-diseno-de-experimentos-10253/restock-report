@@ -96,10 +96,10 @@ Se adjunta el diagrama de clases del sistema, detallando las entidades principal
 
 Se detalla la funcionalidad del ecosistema de productos de Restock, contemplando tanto la plataforma web de administración como la aplicación móvil y el panel de proveedores:
 
-* **Enlace (YouTube):** [Video About-the-Product](https://youtu.be/hb5CnSDc2PI?si=mi9CKlrrRgStRkQ3)
-* **Enlace (Microsoft Stream):** [Video About-the-Product (Stream)](https://shortlink.uk/1ox4T)
+* **Enlace (YouTube):** [https://youtu.be/hb5CnSDc2PI?si=mi9CKlrrRgStRkQ3](https://youtu.be/hb5CnSDc2PI?si=mi9CKlrrRgStRkQ3)
+* **Enlace (Microsoft Stream):** [https://shortlink.uk/1ox4T](https://shortlink.uk/1ox4T)
 
-![About the Product](assets/images/annexes/abouttheproduct.png)
+![About the Product - Thumbnail](assets/images/chapter5/about-the-product-screenshot.png)
 
 ## Anexo I: Validation
 
