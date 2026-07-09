@@ -1729,6 +1729,33 @@ El *shareback* permitió revisar los hallazgos obtenidos en la fase de experimen
 
 ### 8.6.1. About-the-Product Intro Video
 
+El video **About-the-Product** ha sido elaborado con el propósito de presentar la propuesta de valor integral de **Restock**, exhibiendo el ecosistema completo de productos desarrollados durante el ciclo. El contenido audiovisual destaca la integración de las siguientes soluciones tecnológicas:
+
+* **Landing Page:** Portal informativo diseñado para la captación de usuarios y presentación de la solución.
+* **Aplicación Web Frontend:** Desarrollada con el framework **Angular**, orientada a la gestión administrativa profunda.
+* **Aplicaciones Móviles:** Se presenta la coexistencia de dos soluciones móviles, una desarrollada de forma **Nativa** y otra mediante el framework **Flutter**, permitiendo una gestión de inventario versátil y en tiempo real.
+
+La narrativa del video guía al espectador a través del flujo principal de la plataforma, mostrando la resolución de problemas reales en la gestión de insumos mediante el uso de sensores y culminando con testimonios de usuarios recolectados durante las sesiones de validación.
+
+**Información del Video:**
+
+* **Nombre del archivo:** `upc-pre-202610-1asi0732-10253-UI-Topic-about-the-product-sprint-1`
+* **Duración:** 00:02:08
+* **Formatos y Plataformas:** Subido a Microsoft Stream (entorno institucional), YouTube (para visualización pública e inserción en el Landing Page).
+
+**Evidencia de Publicación:**
+
+![About the Product - Thumbnail](assets/images/chapter5/about-the-product-screenshot.png)
+*Interfaz de la aplicación Restock presentada en el video institucional.*
+
+**Enlaces de acceso:**
+
+| Plataforma | Enlace de Acceso |
+| :--- | :--- |
+| **Microsoft Stream** | [https://shortlink.uk/1ox4T](https://shortlink.uk/1ox4T) |
+| **YouTube** | [https://youtu.be/hb5CnSDc2PI?si=mi9CKlrrRgStRkQ3](https://youtu.be/hb5CnSDc2PI?si=mi9CKlrrRgStRkQ3) |
+
+
 ## Matriz de Evaluación Etica y de Impacto
 
 La matriz permite demostrar la capacidad de reconocer las responsabilidades éticas y profesionales, y emitir juicios informados considerando el impacto de la solución de ingeniería de software. Se busca evitar el "sentido mercenario de la ingeniería" (donde solo se busca lograr un fin contratado sin cuestionarse el fin en sí mismo) y evidenciar un pensamiento crítico y reflexivo.
