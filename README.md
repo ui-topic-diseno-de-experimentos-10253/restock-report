@@ -81,7 +81,7 @@ Para el desarrollo del **Project Report**, el equipo utiliza un repositorio dent
 
 **Repositorio del informe del proyecto:** [https://shortlink.uk/1tQjs](https://shortlink.uk/1tQjs)
 
-**Total de commits:** 105
+**Total de commits:** 205
 
 **Autores contribuyentes:**
 
@@ -164,6 +164,38 @@ fix(chapter-06): add coding standards and code quality & security analysis
 <img src="assets/images/readme/collaboration_insights_av2.png" alt="Contributors-av2" width="600px">
 
 Contribuciones por integrante durante el AV2
+
+## TB2 – Release Review – Semana 15
+
+Durante esta fase final, el equipo se enfocó en elaborar la versión corregida y mejorada de los artefactos previamente presentados, y en completar el proceso de Experimentación y el pre-lanzamiento de la plataforma To-Be, demostrando responsabilidad ética y profesional y emitiendo juicios que consideran el impacto de la solución en el contexto global, social, ambiental y económico. Los entregables principales abarcaron:
+
+- **Correcciones transversales:** Versión actualizada y mejorada del Registro de Versiones del Informe y de la Sección Student Outcome, incorporando las correcciones a los artefactos presentados en hitos anteriores.
+- **Capítulo VIII (complemento) – Experimentation:** Consolidación de los To-Be User Stories y el To-Be Product Backlog, así como los To-Be Sprint Backlogs dentro del ciclo de vida de la plataforma To-Be soportado por pipelines y experimentación. Se incluyó además la evidencia de implementación To-Be del Landing Page, la Frontend-Web Application, la Native-Mobile Application y el RESTful API y/o Serverless Backend, junto con los Team Collaboration Insights.
+- **To-Be Validation Interviews:** Diseño de Entrevistas y Registro de Entrevistas realizadas a los distintos segmentos de usuarios para la validación del producto.
+- **Experiment Aftermath & Analysis:** Analysis and Interpretation of Results y Re-scored and Re-prioritized Question Backlog, evaluando el impacto de los hallazgos sobre las decisiones del producto.
+- **Continuous Learning:** Documentación de los Shareback Session Artifacts: Learning Workflow.
+- **To-Be Software Platform Pre-launch:** Elaboración del About-the-Product Intro Video.
+- **Matriz de Evaluación Ética y de Impacto**, sistematizando los criterios éticos y de impacto considerados durante el proyecto.
+- **Actualizaciones finales:** Conclusiones y recomendaciones, Video App Validation, Video About-The-Team, y actualización de la Bibliografía y los Anexos.
+
+Los commits reflejaron este trabajo colaborativo enfocado en la corrección de artefactos previos, la culminación del proceso de experimentación y el pre-lanzamiento del producto, siguiendo la convención establecida:
+
+```text
+feat(chapter-08): add to-be user stories, product backlog and sprint backlogs
+feat(chapter-08): add implemented to-be application and backend evidence
+feat(chapter-08): add validation interviews design and registry
+feat(chapter-08): add experiment aftermath analysis and re-prioritized backlog
+docs(chapter-08): add shareback session artifacts and product intro video
+docs(report): add ethical and impact evaluation matrix
+fix(report): update previously presented artifacts and student outcome section
+docs(report): update conclusions, recommendations, bibliography and annexes
+```
+
+**Analíticos de colaboración – GitHub Insights:**
+
+<img src="assets/images/readme/collaboration_insights_tb2.png" alt="Contributors-tb2" width="600px">
+
+Figura: Contribuciones por integrante durante el TB2
 
 # Contenido
 
