@@ -105,6 +105,8 @@ Se detalla la funcionalidad del ecosistema de productos de Restock, contemplando
 
 Se adjunta el video de validacion del proyecto que se realizo con los 2 apartados, administrado y proovedor para validar el funcionamiento en distintos aparatos.
 
-![Validation](assets/images/annexes/validation.png)
+![Validation](assets/images/annexes/app-validation.jpeg)
 
-https://www.youtube.com/watch?v=FGF7uwXhxbc
+* **Enlace (YouTube):** [https://www.youtube.com/watch?v=FGF7uwXhxbc](https://www.youtube.com/watch?v=FGF7uwXhxbc)
+* **Enlace (Microsoft Stream):** [https://shorturl.at/1PkOk](https://shorturl.at/1PkOk)
+  

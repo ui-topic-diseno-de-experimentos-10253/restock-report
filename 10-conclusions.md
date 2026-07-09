@@ -51,7 +51,7 @@ El desarrollo del proyecto Final ayudo a todo el equipo en mejorar varios aparta
 
 ### Video App Validation
 
-> *Incluir en esta sección el resumen del proceso de validación mediante Firebase App Distribution, los dispositivos utilizados, los usuarios participantes y el enlace al video de demostración.*
+![App Validation - Thumbnail](assets/images/videos/app-validation.png)
 
 | Campo | Detalle |
 |---|---|
@@ -66,7 +66,7 @@ El desarrollo del proyecto Final ayudo a todo el equipo en mejorar varios aparta
 
 ### Video About-The-Team
 
-> *Incluir en esta sección el resumen del proceso de trabajo del equipo, los testimonios de cada integrante y el enlace al video.*
+![About the Team - Thumbnail](assets/images/videos/about-the-team.png)
 
 | Campo | Detalle |
 |---|---|
@@ -86,7 +86,5 @@ El desarrollo del proyecto Final ayudo a todo el equipo en mejorar varios aparta
 | Testimonio — Ivan Fernando Sanchez Guevara | 00:05:18 |
 | Testimonio — Gabriela Nicole Shapiama Rivera | 00:07:00 |
 | Cierre y reflexión grupal | 00:08:15 |
-
----
 
 
