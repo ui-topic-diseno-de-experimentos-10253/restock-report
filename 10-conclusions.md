@@ -56,9 +56,11 @@ El desarrollo del proyecto Final ayudo a todo el equipo en mejorar varios aparta
 | Campo | Detalle |
 |---|---|
 | Herramienta utilizada | Firebase App Distribution |
-| Enlace al video | *(URL de Microsoft Stream)* |
-| Duración | *(hh:mm:ss)* |
-| Timing de inicio | *(hh:mm:ss)* |
+| Usuario que realizó la prueba | Larry |
+| Dispositivo utilizado | Dispositivo local |
+| Enlace al video | https://shorturl.at/1PkOk |
+| Duración | 00:15:18 |
+| Timing de inicio | 00:01:22 |
 
 ---
 
