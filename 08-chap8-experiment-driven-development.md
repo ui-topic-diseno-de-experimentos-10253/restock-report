@@ -1261,6 +1261,89 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades To-Be de R
 Antes de iniciar cada entrevista, se explicará al participante que la sesión tiene fines académicos y que se evaluará la solución, no su desempeño personal. Asimismo, se solicitará autorización para grabar pantalla, voz y/o cámara. La información recolectada será utilizada únicamente para documentar la validación del producto y analizar oportunidades de mejora.
 
 #### 8.3.4.2. Registro de Entrevistas
+<table align="center">
+   <tr>
+    <th colspan="2" style="text-align:center">Entrevista 1</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>Andrea Roncal</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>26</td>
+  </tr>
+  <tr>
+    <td><strong>Distrito</strong></td>
+    <td>Idependencia</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>00:02 - 9:14</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+
+  https://youtu.be/6fddYkF2Xhw
+    
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+    Resumen: <br>
+      Andre Roncal es una proovedora que luego de ver nuestro aplicativo, le parecio que la estructura estaba muy bien diseñada, solo consulto que le faltaba indicaciones respecto en algunos casos, pero fue el mayor problema que encontro, lo demas son cosas que se pueden arreglar en poco tiempo, pero principalmente le gusto el resultado final
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br>
+
+![imagen de video.png](assets/images/chapter8/entrevist1/entrevistnumbe1.png) <br>
+    </td>
+  </tr>
+</table>
+
+<table align="center">
+   <tr>
+    <th colspan="2" style="text-align:center">Entrevista 2</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>Miguel Angel</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>27</td>
+  </tr>
+  <tr>
+    <td><strong>Distrito</strong></td>
+    <td>Idependencia</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>00:02 - 10:53</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+
+  https://www.youtube.com/watch?v=XMPFaZEwGeA
+    
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+    Resumen: <br>
+      Miguel Angel luego de revisar la nueva versión del aplicativo, consideró que la información actualizada y el sistema de calificaciones son acertados y suficientes para el objetivo del producto. Respecto al registro, siente que va por buen camino por su simplicidad, aunque sugirió agregar un método de recuperación o verificación. Sobre el modelo de negocio, comprende la decisión de mantener solo tres planes, pero recomendó fuertemente adaptar los precios según la región o país del cliente. En general, notó una mejora significativa en la organización y usabilidad frente a la versión anterior, concluyendo que el aplicativo es muy intuitivo y que, sin duda, lo recomendaría a sus socios, ya que es una herramienta que muchos colegas necesitan para sus restaurantes.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br>
+
+![imagen de video.png](assets/images/chapter8/entrevist1/entrevistnumbe2.png) <br>
+    </td>
+  </tr>
+</table>
 
 A continuación se documentan las entrevistas de validación realizadas sobre las funcionalidades To-Be implementadas en el Sprint Backlog 4 (US-37 a US-40), siguiendo el diseño definido en 8.3.4.1. Ambas entrevistas corresponden al **Segmento 1: Administradores de Restaurantes**; las entrevistas del Segmento 2 (Proveedores) se documentan en una rama en paralelo del equipo.
 
