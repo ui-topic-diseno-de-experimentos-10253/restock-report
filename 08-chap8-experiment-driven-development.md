@@ -1448,6 +1448,48 @@ A continuación se documentan las entrevistas de validación realizadas sobre la
   </tr>
 </table>
 
+<table align="center">
+   <tr>
+    <th colspan="2" style="text-align:center">Entrevista 3</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>Julián</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>34</td>
+  </tr>
+  <tr>
+    <td><strong>Rol</strong></td>
+    <td>Administrador y dueño de su propio restaurante de hamburguesas</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>Video completo</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+
+  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213468_upc_edu_pe/IQAFxviA7a9cQKs3uzUhPgIKAU1agPonNAaaWMXb2IzJl1c?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=71oZfT
+
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+    Resumen: <br>
+      Julián, administrador de un restaurante de hamburguesas, navegó la Landing Page, la aplicación web y la móvil. Consideró relevantes las propuestas de valor de control de mermas y gestión de compras. En la aplicación web interactuó con el módulo de Inventario registrando insumos y precios, recomendando mejorar la terminología para evitar confusiones en los límites de stock. En la aplicación móvil simuló de forma exitosa el flujo de órdenes a proveedores, aunque sugirió incorporar avisos de éxito visual al guardar datos y mayor flexibilidad en la personalización de insumos del catálogo del proveedor para adaptarse a pedidos con ingredientes adicionales.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br>
+
+<img src="assets/images/chapter6/interview/Dueño_Restaurante_03.png" width="550px" alt="Captura de la entrevista con Julián" /> <br>
+    </td>
+  </tr>
+</table>
+
 #### Segmento 2: Proveedores de Restaurantes
 
 <table align="center">
@@ -1530,6 +1572,48 @@ A continuación se documentan las entrevistas de validación realizadas sobre la
     <td colspan="2"><br>
 
 ![imagen de video.png](assets/images/chapter8/entrevist1/entrevistnumbe2.png) <br>
+    </td>
+  </tr>
+</table>
+
+<table align="center">
+   <tr>
+    <th colspan="2" style="text-align:center">Entrevista 3</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>Alfonso</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>31</td>
+  </tr>
+  <tr>
+    <td><strong>Rol</strong></td>
+    <td>Proveedor comercial con experiencia B2B</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>Video completo</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+
+  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213468_upc_edu_pe/IQBSyVYnjaaNTqRY4OOmPokhATz7Gnj-NxZnxQIblpJlIBI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=vYC5Ab
+
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+    Resumen: <br>
+      Alfonso, proveedor comercial, evaluó el registro y panel de control de Restock Suppliers, destacando su simplicidad y agilidad frente a sistemas tradicionales. En el catálogo web, probó registrar un insumo de prueba (pan gourmet). Aunque el registro fue fluido y eficiente, recomendó permitir la inclusión de insumos personalizados en campos abiertos y añadir una notificación visual que confirme que la operación se ha guardado correctamente, aumentando la confianza del usuario al registrar nuevos productos en el catálogo de ventas.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br>
+
+<img src="assets/images/chapter6/interview/Proveedor_03.png" width="550px" alt="Captura de la entrevista con Alfonso" /> <br>
     </td>
   </tr>
 </table>
