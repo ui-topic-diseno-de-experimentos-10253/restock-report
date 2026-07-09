@@ -1262,40 +1262,89 @@ Antes de iniciar cada entrevista, se explicará al participante que la sesión t
 
 #### 8.3.4.2. Registro de Entrevistas
 
-A continuación se documentan las entrevistas de validación realizadas sobre las funcionalidades To-Be implementadas en el Sprint Backlog 4 (US-37 a US-40), siguiendo el diseño definido en 8.3.4.1. Ambas entrevistas corresponden al **Segmento 1: Administradores de Restaurantes**; las entrevistas del Segmento 2 (Proveedores) quedan pendientes de programar para una siguiente ronda de validación.
+A continuación se documentan las entrevistas de validación realizadas sobre las funcionalidades To-Be implementadas en el Sprint Backlog 4 (US-37 a US-40), siguiendo el diseño definido en 8.3.4.1. Ambas entrevistas corresponden al **Segmento 1: Administradores de Restaurantes**; las entrevistas del Segmento 2 (Proveedores) se documentan en una rama en paralelo del equipo.
 
 #### Segmento 1: Administradores de Restaurantes
 
-**Entrevista 1:**
+<table align="center">
+   <tr>
+    <th colspan="2" style="text-align:center">Entrevista 1</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>Almendra Chong Ruiz</td>
+  </tr>
+  <tr>
+    <td><strong>Rol</strong></td>
+    <td>Administradora de restaurante</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>Video completo</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
 
-**Nombre:** Almendra Chong Ruiz
-**Rol:** Administradora de restaurante
+  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319831_upc_edu_pe/IQAi4aizRkHASpbfJoung0asAXl20ymASUf21prs7LjQZ6s?e=hts52O
 
-Ver entrevista: [Enlace a la entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319831_upc_edu_pe/IQAi4aizRkHASpbfJoung0asAXl20ymASUf21prs7LjQZ6s?e=hts52O)
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+    Resumen: <br>
+      Almendra Chong Ruiz, administradora de restaurante, valoró la plataforma como "bastante completa", destacando que la integración directa con proveedores reduce la gestión manual y el margen de error frente a procesos informales. Sobre el indicador de rotación (US-40, Experimento 04), su retroalimentación fue directamente favorable a la hipótesis de trabajo planteada en 8.2.1: indicó que la funcionalidad le "ayuda a tener mapeado qué productos quizás voy a necesitar más y qué productos voy a necesitar menos para el mes siguiente", y que permite "no tener un stock que se pueda vencer y que, al final, termine desperdiciado" — observación que conecta directamente con el Índice de Precisión de Compra (PPI) definido en 8.2.2. Como oportunidad de mejora, señaló fricción en el flujo de alta de insumos: actualmente crear un insumo nuevo y añadirlo al inventario son dos acciones separadas (dos botones distintos), y sugirió unificarlas en un solo flujo para agilizar el registro.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br>
 
-**Resumen:**
+![Captura de la entrevista con Almendra Chong Ruiz](assets/images/chapter8/to-be-interviews/entrevista-almendra-chong-ruiz.webp) <br>
+    </td>
+  </tr>
+</table>
 
-Almendra Chong Ruiz, administradora de restaurante, valoró la plataforma como "bastante completa", destacando que la integración directa con proveedores reduce la gestión manual y el margen de error frente a procesos informales.
+<table align="center">
+   <tr>
+    <th colspan="2" style="text-align:center">Entrevista 2</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>André Ruiz</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td><strong>Rol</strong></td>
+    <td>Emprendedor y administrador de su propio restaurante</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>Video completo</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
 
-Sobre el indicador de rotación (US-40, Experimento 04), su retroalimentación fue directamente favorable a la hipótesis de trabajo planteada en 8.2.1: indicó que la funcionalidad le "ayuda a tener mapeado qué productos quizás voy a necesitar más y qué productos voy a necesitar menos para el mes siguiente", y que permite "no tener un stock que se pueda vencer y que, al final, termine desperdiciado". Esta observación conecta directamente con el Índice de Precisión de Compra (PPI) definido en 8.2.2.
+  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319831_upc_edu_pe/IQDTCcGMWs5ITbFG9j3eKU78AYrh6Ae4xcPR2QtQD7ZPP24?e=bZW69i
 
-Como oportunidad de mejora, señaló fricción en el flujo de alta de insumos: actualmente crear un insumo nuevo y añadirlo al inventario son dos acciones separadas (dos botones distintos), y sugirió unificarlas en un solo flujo para agilizar el registro.
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+    Resumen: <br>
+      André Ruiz recorrió la Landing Page, la aplicación web y la aplicación móvil. Consideró la propuesta "bastante interesante", señalando que el control de inventario resuelve un problema real y recurrente: llegar a preparar un plato y descubrir que falta un insumo, o que un producto ya se venció o malogró. Destacó especialmente las alertas automáticas de inventario (US-37, Experimento 01) como el punto más fuerte de la plataforma, ya que permiten "anticiparse" a un quiebre de stock en insumos clave, evitando compras de último minuto o tener que modificar el menú por falta de productos — retroalimentación cualitativa que respalda directamente la hipótesis de trabajo del Experimento 01. También valoró positivamente la disponibilidad de una versión móvil, al permitirle revisar el negocio sin estar frente a una computadora. Como oportunidades de mejora (fuera del alcance de las historias US-37 a US-40, pero relevantes para futuras iteraciones del backlog), propuso: (1) analítica de ventas más robusta, que permita proyectar compras según qué platos se venden más y en qué días hay mayor demanda; y (2) comparación entre proveedores por precio, tiempo de entrega y calidad. Concluyó que la plataforma "tiene bastante potencial" si logra conectar bien inventario, recetas, ventas y proveedores.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br>
 
-**Entrevista 2:**
-
-**Nombre:** André Ruiz
-**Edad:** 25 años
-**Rol:** Emprendedor y administrador de su propio restaurante
-
-Ver entrevista: [Enlace a la entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319831_upc_edu_pe/IQDTCcGMWs5ITbFG9j3eKU78AYrh6Ae4xcPR2QtQD7ZPP24?e=bZW69i)
-
-**Resumen:**
-
-André Ruiz recorrió la Landing Page, la aplicación web y la aplicación móvil. Consideró la propuesta "bastante interesante", señalando que el control de inventario resuelve un problema real y recurrente: llegar a preparar un plato y descubrir que falta un insumo, o que un producto ya se venció o malogró.
-
-Destacó especialmente las **alertas automáticas de inventario** (US-37, Experimento 01) como el punto más fuerte de la plataforma, ya que permiten "anticiparse" a un quiebre de stock en insumos clave, evitando compras de último minuto o tener que modificar el menú por falta de productos — retroalimentación cualitativa que respalda directamente la hipótesis de trabajo del Experimento 01. También valoró positivamente la disponibilidad de una versión móvil, al permitirle revisar el negocio sin estar frente a una computadora.
-
-Como oportunidades de mejora (fuera del alcance de las historias US-37 a US-40, pero relevantes para futuras iteraciones del backlog), propuso: (1) analítica de ventas más robusta, que permita proyectar compras según qué platos se venden más y en qué días hay mayor demanda; y (2) comparación entre proveedores por precio, tiempo de entrega y calidad. Concluyó que la plataforma "tiene bastante potencial" si logra conectar bien inventario, recetas, ventas y proveedores.
+![Captura de la entrevista con André Ruiz](assets/images/chapter8/to-be-interviews/entrevista-andre-ruiz.webp) <br>
+    </td>
+  </tr>
+</table>
 
 ## 8.4. Experiment Aftermath & Analysis
 
