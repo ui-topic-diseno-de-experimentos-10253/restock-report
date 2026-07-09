@@ -32,6 +32,10 @@ El proceso de auditoría realizada permitió al equipo evaluar en profundidad la
 
 El desarrollo del proyecto permitió al equipo consolidar competencias en diseño y ejecución de experimentos de software, arquitectura orientada a servicios, prácticas de DevOps, y aplicación del marco de trabajo Lean UX como eje conductor del ciclo de vida del producto. La adopción de GitFlow, Conventional Commits y pipelines automatizados favoreció la colaboración efectiva y la trazabilidad del trabajo de cada integrante. El uso de herramientas como UXPressia, Figma, Structurizr y Jira permitió mantener coherencia entre los artefactos de análisis, diseño e implementación a lo largo de las entregas.
 
+**Sobre el proceso del trabajo Final**
+
+El desarrollo del proyecto Final ayudo a todo el equipo en mejorar varios apartados que no nos dimos cuenta, como la modificaciones que tuvimos que hacer gracias a la actualizacion de statemnt project actualizado hace poco, y aun asi el equipo logro cumplir de la mejor forma posible, restrucutrando el diseño y mejorando apartados fundamentales para completar el proyecto de la mejor manera posible
+
 **Recomendaciones**
 
 - Ejecutar los cuatro experimentos planificados con grupos de usuarios reales para obtener validación cuantitativa de las hipótesis formuladas y respaldar decisiones de roadmap con datos medibles.
@@ -41,6 +45,7 @@ El desarrollo del proyecto permitió al equipo consolidar competencias en diseñ
 - Diseñar flujos de onboarding diferenciados según el rol del usuario (administrador de restaurante vs. proveedor), con quick-wins configurados por defecto que reduzcan el tiempo de obtención del primer valor percibido.
 - Evaluar la certificación en estándares de seguridad y privacidad de datos (ISO 27001 o similares) para fortalecer la confianza de los usuarios ante el manejo de información operativa y financiera sensible.
 - Desarrollar una estrategia de expansión geográfica progresiva hacia otras ciudades del Perú con alta densidad del sector gastronómico (Arequipa, Trujillo, Cusco), aprovechando el modelo SaaS escalable implementado.
+- Desarrollar estrategia de entrevista para las pruebas de uso del proyecto por medio de otros usuarios ademas del equipo en cuestion, para obtener un feedback mas a profundidar para mejorar con las experimentaciones.
 
 ---
 
