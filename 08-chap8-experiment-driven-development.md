@@ -1448,6 +1448,48 @@ A continuación se documentan las entrevistas de validación realizadas sobre la
   </tr>
 </table>
 
+<table align="center">
+   <tr>
+    <th colspan="2" style="text-align:center">Entrevista 3</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>Julián</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>34</td>
+  </tr>
+  <tr>
+    <td><strong>Rol</strong></td>
+    <td>Administrador y dueño de su propio restaurante de hamburguesas</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>Video completo</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+
+  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213468_upc_edu_pe/IQAFxviA7a9cQKs3uzUhPgIKAU1agPonNAaaWMXb2IzJl1c?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=71oZfT
+
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+    Resumen: <br>
+      Julián, administrador de un restaurante de hamburguesas, navegó la Landing Page, la aplicación web y la móvil. Validó como nuevos artefactos del experimento la <strong>aplicación móvil</strong>, interactuando con el flujo de onboarding guiado para el primer pedido (US-38) y revisando la lógica de recepción de alertas automáticas (US-37). En la <strong>aplicación web</strong>, interactuó con el nuevo indicador de nivel de rotación de insumos (US-40) en el módulo de Inventario. Consideró que estas herramientas facilitan la gestión y previenen mermas, aunque recomendó simplificar el flujo unificando el alta de insumos con su adición al inventario, y sugirió agregar alertas de confirmación al guardar datos.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br>
+
+<img src="assets/images/chapter6/interview/Dueño_Restaurante_03.png" width="550px" alt="Captura de la entrevista con Julián" /> <br>
+    </td>
+  </tr>
+</table>
+
 #### Segmento 2: Proveedores de Restaurantes
 
 <table align="center">
@@ -1530,6 +1572,48 @@ A continuación se documentan las entrevistas de validación realizadas sobre la
     <td colspan="2"><br>
 
 ![imagen de video.png](assets/images/chapter8/entrevist1/entrevistnumbe2.png) <br>
+    </td>
+  </tr>
+</table>
+
+<table align="center">
+   <tr>
+    <th colspan="2" style="text-align:center">Entrevista 3</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>Alfonso</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>31</td>
+  </tr>
+  <tr>
+    <td><strong>Rol</strong></td>
+    <td>Proveedor comercial con experiencia B2B</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>Video completo</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+
+  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213468_upc_edu_pe/IQBSyVYnjaaNTqRY4OOmPokhATz7Gnj-NxZnxQIblpJlIBI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=vYC5Ab
+
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+    Resumen: <br>
+      Alfonso, proveedor comercial, evaluó como nuevo artefacto del experimento la <strong>interfaz web y API de proveedores (Restock Suppliers)</strong>. Validó el proceso de carga asistida de productos al catálogo digital (US-39), destacando la facilidad de carga del insumo de prueba (pan gourmet) y la recepción de pedidos en la bandeja de entrada. Valoró la simplicidad del flujo que reduce fricciones operativas frente a la gestión informal B2B, sugiriendo como mejora permitir el registro de productos de campo abierto no categorizados previamente y alertas explícitas de confirmación al guardar.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br>
+
+<img src="assets/images/chapter6/interview/Proveedor_03.png" width="550px" alt="Captura de la entrevista con Alfonso" /> <br>
     </td>
   </tr>
 </table>
