@@ -30,7 +30,13 @@ Se incluye el acceso al diseño visual de la plataforma, contemplando tanto los 
 
 ## Anexo C: Videos de Exposiciones
 
-En esta sección se incluyen de forma progresiva los títulos e hipervínculos a los videos de las exposiciones de cada entrega del proyecto, alojados en Microsoft Stream.
+En esta sección se incluyen de forma progresiva los títulos e hipervínculos a los videos de las exposiciones de cada entrega del proyecto, alojados en SharePoint / Microsoft Stream:
+
+| Entrega | Enlace al Video (SharePoint) |
+| :--- | :--- |
+| **AV1 (Semana 4 — Sprint 1)** | [Video de Exposición AV1](https://upcedupe-my.sharepoint.com/:v:/g/personal/gabriela_shapiama_upc_edu_pe/IQBkmqCUTyXcS4X-iADPc8-LATO0HC_NBFzdnhG8wxW0qWA?e=lkpvv7) |
+| **TB1 (Semana 7 — Exposición Parcial)** | [Video de Exposición TB1](https://upcedupe-my.sharepoint.com/:v:/g/personal/gabriela_shapiama_upc_edu_pe/IQD55lUtLo2VQqzYCuLBVKqOAZxKUak2gWKuu5dzcZhFaxY?e=FDirAj) |
+| **AV2 (Semana 12 — Sprint 3)** | [Video de Exposición AV2](https://upcedupe-my.sharepoint.com/:v:/g/personal/gabriela_shapiama_upc_edu_pe/IQChvyotWY-aSbkhoIiKcl_lAV1ekJ8BugC2T-bd9HY9_5g?e=df90eE) |
 
 <br>
 
@@ -86,5 +92,19 @@ Se adjunta el diagrama de clases del sistema, detallando las entidades principal
 
 ![Diagrama de Clases](assets/images/annexes/class-diagram.png)
 
+## Anexo H: About the Product
 
+Se detalla la funcionalidad del ecosistema de productos de Restock, contemplando tanto la plataforma web de administración como la aplicación móvil y el panel de proveedores:
 
+* **Enlace (YouTube):** [https://youtu.be/hb5CnSDc2PI?si=mi9CKlrrRgStRkQ3](https://youtu.be/hb5CnSDc2PI?si=mi9CKlrrRgStRkQ3)
+* **Enlace (Microsoft Stream):** [https://shortlink.uk/1ox4T](https://shortlink.uk/1ox4T)
+
+![About the Product - Thumbnail](assets/images/chapter5/about-the-product-screenshot.png)
+
+## Anexo I: Validation
+
+Se adjunta el video de validacion del proyecto que se realizo con los 2 apartados, administrado y proovedor para validar el funcionamiento en distintos aparatos.
+
+![Validation](assets/images/annexes/validation.png)
+
+https://www.youtube.com/watch?v=FGF7uwXhxbc

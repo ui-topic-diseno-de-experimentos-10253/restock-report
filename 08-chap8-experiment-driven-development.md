@@ -905,6 +905,16 @@ El presente Sprint Backlog corresponde al sprint de experimentación To-Be de Re
 
 #### 8.3.3.2. Implemented To-Be Landing Page Evidence
 
+Durante la fase de experimentación To-Be, la Landing Page de Restock no requirió modificaciones estructurales. Las sesiones de validación con usuarios de ambos segmentos (administradores de restaurantes y proveedores) confirmaron que la propuesta de valor comunicada en la landing es clara y no generó confusión ni fricciones. En consecuencia, el despliegue permaneció estable sobre la misma base de la entrega anterior, sin nuevos commits en el repositorio `restock-website`.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| restock-website | main | 732099d96c19104dd87599fdd058848e45439b4c | feat: initial landing page deployment. | initial commit | 22/04/2026 |
+
+**Link de despliegue:** [https://ui-topic-diseno-de-experimentos-10253.github.io/restock-website/](https://ui-topic-diseno-de-experimentos-10253.github.io/restock-website/)
+
+![Landing Page desplegada - To-Be](assets/images/chapter-5/landing-evidence/github-pages-config.png)
+
 #### 8.3.3.3. Implemented To-Be Frontend-Web Application Evidence
 
 En esta sección se presenta la evidencia de implementación del frontend web correspondiente al Sprint Backlog 4 de experimentación To-Be. De las cuatro historias de usuario definidas en 8.3.1, únicamente **US-40 (Indicador de nivel de rotación por insumo)** tiene alcance en la aplicación web Angular: US-37 y US-38 pertenecen a la aplicación móvil Kotlin, y US-39 se ejecuta mediante un Concierge Test manual (sección 8.2.6), sin cambios de interfaz web.
@@ -954,6 +964,86 @@ El despliegue a producción (GitHub Pages, mismo mecanismo documentado en el cap
 | US-40 — Indicador de nivel de rotación por insumo | Columna de rotación en la tabla de inventario, controlada por feature flag de experimento. | Experimento 04 — Comportamiento basado en datos. |
 
 #### 8.3.3.4. Implemented To-Be Native-Mobile Application Evidence
+
+En esta sección se presenta la evidencia de implementación de la aplicación móvil correspondiente a los experimentos diseñados para la fase To-Be.
+
+#### Experimento 01 – Validación de impacto en mermas – mobile nativo
+
+<p align="center">
+  <img src="assets/images/chapter8/to-be-mobile/exp01_push_notification.png" alt="Notificación push de insumo por vencer" width="200">
+</p>
+
+**Descripción:** Evidencia de la recepción de una notificación push automática en el dispositivo móvil indicando un "Insumo por vencer", alertando preventivamente al administrador que los langostinos caducan en los próximos 5 días.
+
+<p align="center">
+  <img src="assets/images/chapter8/to-be-mobile/exp01_supply_details.png" alt="Detalles del insumo - Langostinos" width="200">
+</p>
+
+**Descripción:** Pantalla de detalles del insumo alertado (Langostinos), visualizando información clave como la descripción, el stock mínimo, el stock máximo y la unidad de medida (Kilogramo), facilitando el control de inventario.
+
+<p align="center">
+  <img src="assets/images/chapter8/to-be-mobile/exp01_inventory_management.png" alt="Módulo de inventario" width="200">
+</p>
+
+**Descripción:** Pantalla de gestión de inventario (Inventory Management) mostrando el catálogo de insumos y los lotes activos (Batches), incluyendo la alerta visual en texto rojo de que el insumo es perecible y su fecha exacta de expiración.
+
+#### Mobile Flutter
+
+<p align="center">
+  <img src="assets/images/chapter8/to-be-mobile/flutter_home.png" alt="Pantalla principal proveedores" width="200">
+</p>
+
+**Descripción:** Pantalla de inicio de la aplicación para proveedores (Restock Suppliers) desarrollada en Flutter. Muestra accesos rápidos a las operaciones clave como el Catálogo (Custom supplies), Órdenes, Alertas y Suscripción.
+
+<p align="center">
+  <img src="assets/images/chapter8/to-be-mobile/flutter_push_notification.png" alt="Notificación push en app proveedores" width="200">
+</p>
+
+**Descripción:** Notificación push in-app recibida dentro de la aplicación de proveedores, alertando sobre un insumo por vencer (Pechuga de Pollo) para tomar acciones inmediatas.
+
+<p align="center">
+  <img src="assets/images/chapter8/to-be-mobile/flutter_supply_details.png" alt="Detalles del insumo - Pechuga de Pollo" width="200">
+</p>
+
+**Descripción:** Vista de los detalles de un insumo específico (Pechuga de Pollo) en la aplicación Flutter, mostrando la descripción, stock mínimo requerido, stock máximo y su abreviatura de unidad correspondiente.
+
+#### Experimento 02 – Validación de adopción digital – mobile nativo
+
+<p align="center">
+  <img src="assets/images/chapter8/to-be-mobile/exp02_onboarding_1.png" alt="Onboarding paso 1" width="200">
+</p>
+
+**Descripción:** Pantalla introductoria del flujo de onboarding guiado, que explica al usuario administrador cómo gestionar fácilmente sus pedidos a proveedores, comparar precios y llevar un seguimiento en tiempo real desde un solo lugar.
+
+<p align="center">
+  <img src="assets/images/chapter8/to-be-mobile/exp02_onboarding_2.png" alt="Onboarding paso 2" width="200">
+</p>
+
+**Descripción:** Paso 1 del onboarding. Muestra la selección de insumos desde el inventario registrado, donde el usuario puede buscar y añadir los ingredientes que necesita reponer.
+
+<p align="center">
+  <img src="assets/images/chapter8/to-be-mobile/exp02_onboarding_3.png" alt="Onboarding paso 3" width="200">
+</p>
+
+**Descripción:** Paso 2 del onboarding. Ilustra la comparación de proveedores, listando aquellos que ofrecen el insumo buscado con su respectivo precio y disponibilidad, permitiendo elegir la oferta más conveniente.
+
+<p align="center">
+  <img src="assets/images/chapter8/to-be-mobile/exp02_onboarding_4.png" alt="Onboarding paso 4" width="200">
+</p>
+
+**Descripción:** Paso 3 del onboarding. Consiste en la revisión y solicitud de la orden, donde el usuario verifica los insumos agregados, ajusta las cantidades necesarias y revisa el total antes de enviar la solicitud final.
+
+<p align="center">
+  <img src="assets/images/chapter8/to-be-mobile/exp02_onboarding_5.png" alt="Onboarding paso 5" width="200">
+</p>
+
+**Descripción:** Paso 4 del onboarding. Explica el seguimiento de la orden en tiempo real, detallando los distintos estados por los que pasará: Pendiente, Preparando, Despachada y Entregada.
+
+<p align="center">
+  <img src="assets/images/chapter8/to-be-mobile/exp02_orders_list.png" alt="Lista de órdenes en hold" width="200">
+</p>
+
+**Descripción:** Pantalla del historial de órdenes que muestra el listado de pedidos realizados con su estado actual (por ejemplo, ON_HOLD), detallando el total de ítems y el costo acumulado.
 
 #### 8.3.3.5. Implemented To-Be RESTful API and/or Serverless Backend Evidence
 
@@ -1064,6 +1154,42 @@ El backend se mantiene desplegado en Render, permitiendo el acceso público a la
 Con estos cambios, el backend RESTful de Restock queda alineado con el Sprint Backlog 4 y proporciona soporte técnico suficiente para ejecutar los experimentos To-Be. Las funcionalidades implementadas permiten recolectar evidencia operativa sobre alertas, activación del usuario, digitalización de proveedores y decisiones de compra basadas en indicadores de inventario. Además, la integración con Firebase Cloud Messaging permite completar el flujo real de notificaciones push desde el backend hacia la aplicación móvil.
 
 #### 8.3.3.6. Team Collaboration Insights
+
+Para el desarrollo del Sprint Backlog 4 (sprint de experimentación To-Be), la dinámica del equipo se organizó en torno a la implementación ágil de las funcionalidades experimentales diseñadas para validar las hipótesis clave del negocio. Se utilizó **GitHub** como plataforma central para el control de versiones, adoptando el flujo de trabajo **GitFlow** y ramificaciones específicas por componente de software para asegurar una integración limpia y controlada sin interferir con las versiones estables previas de producción.
+
+La distribución de actividades del equipo permitió una participación equitativa y especializada, dividida de la siguiente manera:
+
+* **Gabriela N. Shapiama (21 horas):** Lideró la integración móvil con Firebase Cloud Messaging (configuración del servicio y redirección desde notificaciones) y el desarrollo de componentes del flujo de onboarding y la columna de rotación en la interfaz frontend angular.
+* **Julio D. Castro (19 horas):** Desarrolló las reglas lógicas de alertas de inventario en el backend, la persistencia del estado de primer pedido del onboarding, la simulación de pedidos para proveedores y el soporte del feature flag experimental para el grupo web.
+* **José J. Guerra (17 horas):** Estructuró los payloads de notificaciones push, ejecutó el plan de pruebas funcionales para la detección de stock crítico y validó exhaustivamente los flujos de navegación en los entornos móvil y web.
+* **Ario Chavez (15 horas):** Diseñó el cálculo matemático de rotación de insumos y configuró el plan de medición analítica a través de eventos personalizados (FCM y onboarding guiado en móvil, e indicador de rotación en la aplicación web).
+* **Fernando I. Sanchez (12 horas):** Diseñó la experiencia del onboarding del primer pedido, elaboró los guiones de pruebas de usabilidad y estructuró las plantillas y datos para el Concierge Test del catálogo de proveedores tradicionales.
+
+##### Control de Versiones por Componente (Repositorios)
+
+A continuación, se detallan las ramas y commits clave generados en los repositorios del ecosistema de Restock para dar soporte técnico al Sprint de experimentación:
+
+| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- |
+| **restock-platform** | `feature/iam` | `03d2865` | feat(notifications): add firebase configuration | 03/07/2026 |
+| **restock-platform** | `feature/iam` | `7dc60fe` | feat(notifications): add firebase connection | 03/07/2026 |
+| **restock-platform** | `feature/inventory` | `c6d35d1` | feat(resource): add inventory rotation resource and endpoint | 03/07/2026 |
+| **restock-platform** | `feature/inventory` | `4ea56cf` | feat(resource): add push notification resource | 03/07/2026 |
+| **restock-platform** | `feature/inventory` | `62b92c0` | feat(resource): add endpoint for upload custom supplies catalog | 03/07/2026 |
+| **restock-platform** | `feature/orders` | `987a2be` | feat(iam): add parameter activation state for first order onboarding | 03/07/2026 |
+| **restock-webapp** | `feature/inventory-rotation-indicator` | `14fcabc` | feat(inventory): add rotation indicator column for To-Be Experiment 04 (US-40) | 04/07/2026 |
+| **restock-mobile** | `feature/push-notifications` | `a8b9c2d` | feat(notifications): integrate FCM and configure push alerts navigation | 04/07/2026 |
+| **restock-mobile** | `feature/first-order-onboarding` | `f2e3d4c` | feat(onboarding): implement step-by-step first order guide flow | 04/07/2026 |
+| **restock-website** | `main` | `-` | *Sin modificaciones activas para este Sprint (Despliegue previo estable)* | - |
+
+##### Interpretación de la Colaboración y Dinámica de Equipo
+
+Las métricas del Sprint Backlog 4 reflejan una alta cohesión entre la lógica de negocio construida en el backend y su consumo en las aplicaciones de cara al usuario. La distribución equilibrada del esfuerzo permitió cubrir con éxito:
+1. **Infraestructura y Conectividad (Backend y Firebase):** Consolidados principalmente en el repositorio `restock-platform`, permitiendo exponer contratos estables de API.
+2. **Experiencia de Usuario e Interacción (Frontend y Mobile):** Diseñados de manera reactiva en `restock-webapp` y `restock-mobile` para capturar la interacción de los grupos experimentales y de control.
+3. **Validación Cualitativa Analítica:** A través de eventos personalizados y pruebas manuales integradas en cada una de las historias de usuario implementadas.
+
+En conclusión, el uso consistente de ramas por característica facilitó un flujo de CI/CD ordenado en donde la colaboración técnica del equipo garantizó que el sistema estuviera preparado para la fase de entrevistas de validación sin introducir regresiones en la base de código existente.
 
 ### 8.3.4. To-Be Validation Interviews
 
@@ -1346,6 +1472,48 @@ A continuación se documentan las entrevistas de validación realizadas sobre la
   </tr>
 </table>
 
+<table align="center">
+   <tr>
+    <th colspan="2" style="text-align:center">Entrevista 3</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>Julián</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>34</td>
+  </tr>
+  <tr>
+    <td><strong>Rol</strong></td>
+    <td>Administrador y dueño de su propio restaurante de hamburguesas</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>Video completo</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+
+  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213468_upc_edu_pe/IQAFxviA7a9cQKs3uzUhPgIKAU1agPonNAaaWMXb2IzJl1c?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=71oZfT
+
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+    Resumen: <br>
+      Julián, administrador de un restaurante de hamburguesas, navegó la Landing Page, la aplicación web y la móvil. Validó como nuevos artefactos del experimento la <strong>aplicación móvil</strong>, interactuando con el flujo de onboarding guiado para el primer pedido (US-38) y revisando la lógica de recepción de alertas automáticas (US-37). En la <strong>aplicación web</strong>, interactuó con el nuevo indicador de nivel de rotación de insumos (US-40) en el módulo de Inventario. Consideró que estas herramientas facilitan la gestión y previenen mermas, aunque recomendó simplificar el flujo unificando el alta de insumos con su adición al inventario, y sugirió agregar alertas de confirmación al guardar datos.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br>
+
+<img src="assets/images/chapter6/interview/Dueño_Restaurante_03.png" width="550px" alt="Captura de la entrevista con Julián" /> <br>
+    </td>
+  </tr>
+</table>
+
 #### Segmento 2: Proveedores de Restaurantes
 
 <table align="center">
@@ -1432,6 +1600,48 @@ A continuación se documentan las entrevistas de validación realizadas sobre la
   </tr>
 </table>
 
+<table align="center">
+   <tr>
+    <th colspan="2" style="text-align:center">Entrevista 3</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>Alfonso</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>31</td>
+  </tr>
+  <tr>
+    <td><strong>Rol</strong></td>
+    <td>Proveedor comercial con experiencia B2B</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>Video completo</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+
+  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213468_upc_edu_pe/IQBSyVYnjaaNTqRY4OOmPokhATz7Gnj-NxZnxQIblpJlIBI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=vYC5Ab
+
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+    Resumen: <br>
+      Alfonso, proveedor comercial, evaluó como nuevo artefacto del experimento la <strong>interfaz web y API de proveedores (Restock Suppliers)</strong>. Validó el proceso de carga asistida de productos al catálogo digital (US-39), destacando la facilidad de carga del insumo de prueba (pan gourmet) y la recepción de pedidos en la bandeja de entrada. Valoró la simplicidad del flujo que reduce fricciones operativas frente a la gestión informal B2B, sugiriendo como mejora permitir el registro de productos de campo abierto no categorizados previamente y alertas explícitas de confirmación al guardar.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br>
+
+<img src="assets/images/chapter6/interview/Proveedor_03.png" width="550px" alt="Captura de la entrevista con Alfonso" /> <br>
+    </td>
+  </tr>
+</table>
+
 ## 8.4. Experiment Aftermath & Analysis
 
 ### 8.4.1. Analysis and Interpretation of Results
@@ -1484,6 +1694,48 @@ Las cuatro entrevistas coincidieron en observaciones que no estaban cubiertas po
 4. **Recuperación/verificación de cuenta y precios regionales** (Miguel Angel): sugirió agregar un método de recuperación o verificación al registro, y adaptar los precios de los planes de suscripción según la región o país del cliente — ambas quedan como Ideas para el backlog de suscripciones (ver 8.1.2).
 
 ### 8.4.2. Re-scored and Re-prioritized Question Backlog
+
+Tras la ejecución de las sesiones de validación documentadas en el Capítulo 6 — que incluyen las entrevistas de validación con usuarios reales (Sección 6.3.2), las evaluaciones según heurísticas (Sección 6.3.3) y la auditoría de experiencia de usuario recibida por parte del equipo Equilibria (Sección 6.4.2) — el equipo procedió a revisar y actualizar el Question Backlog original definido en la Sección 8.1.4.
+
+El propósito de esta revisión es reflejar el estado actual del conocimiento del equipo: las preguntas que han sido parcialmente respondidas incrementan su **Confianza (C)** y reducen su **Riesgo (R)**, mientras que las que permanecen sin evidencia directa mantienen o incrementan su nivel de incertidumbre.
+
+**Criterios de re-evaluación aplicados:**
+
+| Criterio | Escala | Criterio de cambio |
+|---|---|---|
+| **Confianza (C)** | 1–5 | Sube si se obtuvo evidencia directa de la pregunta; baja si la evidencia contradice la hipótesis. |
+| **Riesgo (R)** | 1–5 | Baja si el riesgo fue mitigado mediante validación; sube si se encontraron nuevos hallazgos críticos. |
+| **Impacto (I)** | 1–5 | Se mantiene estable salvo que la validación cambie la valoración estratégica de la funcionalidad. |
+| **Interés (Int)** | 1–5 | Refleja el nivel de interés del equipo en continuar investigando la pregunta post-experimento. |
+
+---
+
+**Evidencia utilizada para la re-evaluación:**
+
+- **Q1** *(Reducción de mermas)*: No se obtuvo medición cuantitativa directa del porcentaje de reducción de mermas durante el período de validación. La funcionalidad de alertas fue implementada y utilizada en las sesiones, pero sin datos estadísticos de campo que permitan confirmar o refutar la hipótesis del 35%. La confianza sube levemente por tener la funcionalidad implementada; el riesgo se mantiene elevado al no contar con evidencia cuantitativa.
+
+- **Q2** *(Adopción de usuarios de baja afinidad digital)*: La **auditoría recibida (Sección 6.4.2)** realizada por el equipo Equilibria identificó problemas de usabilidad de severidad media-alta en Restock: ambigüedad entre las acciones *"Supply"* y *"New batch"* (sev. 3/4), áreas vacías sin orientación en el inventario móvil (sev. 2/4), y texto de ventas confuso — *"REGISTERED SALES NOT DISCOUNTED IN INVENTORY"* (sev. 3/4). Estas evidencias confirman que la fricción de adopción persiste, pero al haber sido acotados los puntos específicos de falla, el equipo ahora tiene mayor confianza y menor incertidumbre.
+
+- **Q3** *(Disposición de proveedores a digitalizar catálogos)*: Las **entrevistas de validación del Segmento 2 (Sección 6.3.2)** — Miguel Ángel Leal (Lima, Santo Domingo) y Andrea Roncal (Lima, Independencia) — mostraron que los proveedores evaluaron la plataforma de forma positiva, con sugerencias de mejora acotadas (ampliación de planes de pago, guías visuales para navegación, sección de reseñas). Ambos entrevistados indicaron que el proyecto "va por buen camino". La confianza aumenta significativamente; el riesgo de rechazo por parte del segmento proveedor se reduce.
+
+- **Q4** *(Influencia de métricas en decisiones de compra)*: La auditoría recibida (Sección 6.4.2) detectó que el texto de ventas resulta ambiguo (sev. 3/4) y que las áreas de inventario presentan vacíos de orientación, lo que indica que la presentación actual de métricas genera confusión en lugar de orientar decisiones de compra. La confianza en que el diseño actual resuelve este punto disminuye; el riesgo sube.
+
+---
+
+**Question Backlog Re-evaluado:**
+
+| ID | Pregunta de Investigación | C | R | I | Int | Total | Δ vs. 8.1.4 |
+| -- | --- | - | - | - | --- | ----- | ----------- |
+| Q1 | ¿Reducen las alertas en tiempo real el desperdicio de insumos en un 35% como se ha previsto? | 3 | 4 | 5 | 4 | **16** | −1 |
+| Q2 | ¿Son capaces los administradores con baja afinidad digital de completar un pedido sin asistencia externa? | 4 | 3 | 4 | 3 | **14** | −2 |
+| Q3 | ¿Están los proveedores tradicionales dispuestos a digitalizar sus catálogos para integrarse a Restock? | 4 | 2 | 4 | 4 | **14** | −1 |
+| Q4 | ¿Influye la visualización de métricas de rotación en la decisión de compra de nuevos insumos? | 3 | 3 | 3 | 3 | **12** | −1 |
+
+*Nota: En caso de empate en el puntaje total, se prioriza la pregunta con mayor índice de Riesgo (R). Q2 supera a Q3 con R=3 vs. R=2.*
+
+**Nuevo orden de prioridad:** Q1 (16 pts) > Q2 (14 pts) > Q3 (14 pts) > Q4 (12 pts)
+
+**Conclusión del re-scoring:** El backlog revisado muestra un incremento generalizado de la confianza del equipo respecto al estado inicial, con descensos en el riesgo percibido para Q2 y Q3 como resultado directo de las sesiones de validación. Q1 continúa liderando al representar el mayor valor estratégico pendiente de medición cuantitativa. Q4 requiere atención en futuras iteraciones, dado que la presentación actual de métricas aún genera fricción cognitiva en el usuario final.
 
 ## 8.5. Continuous Learning
 
@@ -1584,3 +1836,47 @@ El *shareback* permitió revisar los hallazgos obtenidos en la fase de experimen
 ## 8.6. To-Be Software Platform Pre-launch
 
 ### 8.6.1. About-the-Product Intro Video
+
+El video **About-the-Product** ha sido elaborado con el propósito de presentar la propuesta de valor integral de **Restock**, exhibiendo el ecosistema completo de productos desarrollados durante el ciclo. El contenido audiovisual destaca la integración de las siguientes soluciones tecnológicas:
+
+* **Landing Page:** Portal informativo diseñado para la captación de usuarios y presentación de la solución.
+* **Aplicación Web Frontend:** Desarrollada con el framework **Angular**, orientada a la gestión administrativa profunda.
+* **Aplicaciones Móviles:** Se presenta la coexistencia de dos soluciones móviles, una desarrollada de forma **Nativa** y otra mediante el framework **Flutter**, permitiendo una gestión de inventario versátil y en tiempo real.
+
+La narrativa del video guía al espectador a través del flujo principal de la plataforma, mostrando la resolución de problemas reales en la gestión de insumos mediante el uso de sensores y culminando con testimonios de usuarios recolectados durante las sesiones de validación.
+
+**Información del Video:**
+
+* **Nombre del archivo:** `upc-pre-202610-1asi0732-10253-UI-Topic-about-the-product-sprint-1`
+* **Duración:** 00:02:08
+* **Formatos y Plataformas:** Subido a Microsoft Stream (entorno institucional), YouTube (para visualización pública e inserción en el Landing Page).
+
+**Evidencia de Publicación:**
+
+![About the Product - Thumbnail](assets/images/chapter5/about-the-product-screenshot.png)
+*Interfaz de la aplicación Restock presentada en el video institucional.*
+
+**Enlaces de acceso:**
+
+| Plataforma | Enlace de Acceso |
+| :--- | :--- |
+| **Microsoft Stream** | [https://shortlink.uk/1ox4T](https://shortlink.uk/1ox4T) |
+| **YouTube** | [https://youtu.be/hb5CnSDc2PI?si=mi9CKlrrRgStRkQ3](https://youtu.be/hb5CnSDc2PI?si=mi9CKlrrRgStRkQ3) |
+
+
+## Matriz de Evaluación Etica y de Impacto
+
+La matriz permite demostrar la capacidad de reconocer las responsabilidades éticas y profesionales, y emitir juicios informados considerando el impacto de la solución de ingeniería de software. Se busca evitar el "sentido mercenario de la ingeniería" (donde solo se busca lograr un fin contratado sin cuestionarse el fin en sí mismo) y evidenciar un pensamiento crítico y reflexivo.
+
+**Proyecto:** Sistema de gestión de inventario para restaurantes, que como valor adicional conecta a los restaurantes con proveedores a través de la generación y seguimiento de pedidos (orders).
+
+| Dimensión / Criterio a Evaluar | Identificación de Riesgos e Impactos (Positivos y Negativos) | Evaluación del Impacto (¿A quién afecta y cuál es la magnitud?) | Estrategias de Mitigación y Acciones de Diseño |
+| :--- | :--- | :--- | :--- |
+| **1. Salud Pública y Seguridad** | *Negativo:* Un cálculo erróneo de stock o de fechas de vencimiento en el módulo de inventario podría llevar a un restaurante a usar insumos caducados o a un desabastecimiento que derive en prácticas inseguras (improvisar con insumos no aptos). *Positivo:* El seguimiento de lotes y fechas de vencimiento mejora la trazabilidad alimentaria y reduce el uso de insumos en mal estado. | *Afectados:* Comensales finales (riesgo de intoxicación, magnitud alta si el error se replica en varios pedidos) y el restaurante (riesgo reputacional y sanitario). | *Acciones:* Implementar alertas automáticas de próximo vencimiento (FEFO – First Expired, First Out), validaciones cruzadas antes de confirmar una orden crítica de bajo stock, y un registro auditable de cada movimiento de inventario para poder rastrear el origen de un error. |
+| **2. Inclusión y Accesibilidad** | *Negativo:* Restaurantes pequeños o de barrio, con personal de mayor edad o menor alfabetización digital, podrían tener dificultades para adoptar el sistema, dependiendo de dispositivos y conectividad estable. *Positivo:* Digitalizar el inventario y los pedidos reduce el trabajo manual (cuadernos, llamadas telefónicas) para negocios que sí logran adoptarlo. | *Afectados:* Dueños y personal de restaurantes pequeños con bajos recursos tecnológicos (magnitud media-alta, riesgo de quedar excluidos del ecosistema de proveedores digitalizado). | *Acciones:* Diseñar una interfaz simple con soporte offline/baja conectividad, ofrecer un modo "Lite" para dispositivos de gama baja, y considerar accesibilidad (contraste, tamaños de fuente, compatibilidad con lectores de pantalla) para personal con discapacidad visual. |
+| **3. Impacto Social y Cultural** | *Negativo:* La automatización de pedidos podría debilitar la relación personal y de confianza que tradicionalmente existe entre el dueño de un restaurante y su proveedor local (negociación cara a cara, trato preferencial). *Positivo:* Formaliza y da transparencia a la relación comercial, dejando registro histórico de acuerdos y precios. | *Afectados:* Proveedores locales tradicionales y restaurantes que dependen de relaciones informales de confianza (magnitud media). | *Acciones:* Incluir en el sistema un espacio de comunicación directa (chat/notas) entre restaurante y proveedor dentro de cada orden, para no eliminar el componente humano de la negociación, y permitir condiciones comerciales personalizadas por proveedor. |
+| **4. Impacto Económico** | *Negativo:* Un algoritmo de recomendación de proveedores que priorice precio o volumen podría favorecer sistemáticamente a proveedores grandes, reduciendo la visibilidad de proveedores pequeños o locales. *Positivo:* La gestión de inventario basada en datos reduce el sobre-stock y las mermas, mejorando el flujo de caja del restaurante. | *Afectados:* Proveedores pequeños y locales (riesgo de pérdida de mercado, magnitud media) y restaurantes (beneficio económico directo por menor desperdicio). | *Acciones:* Diseñar el algoritmo de recomendación con criterios balanceados (no solo precio/volumen), dar visibilidad equitativa a proveedores pequeños certificados, y evitar comisiones escalonadas que penalicen a los negocios de menor tamaño. |
+| **5. Impacto Ambiental (Antrópico)** | *Negativo:* Pedidos más frecuentes y de menor volumen (generados automáticamente por el sistema para optimizar stock) podrían aumentar la cantidad de viajes de reparto y, con ello, las emisiones de CO2. *Positivo:* Un mejor control de inventario reduce directamente el desperdicio de alimentos, una de las principales fuentes de impacto ambiental en el rubro gastronómico. | *Afectados:* El medio ambiente y la huella de carbono asociada a la logística de reparto de los proveedores (magnitud media). | *Acciones:* Agrupar pedidos por proveedor y por ventana de tiempo antes de confirmarlos automáticamente, sugerir un tamaño de pedido óptimo que balancee frescura del insumo con frecuencia de entrega, y reportar métricas de reducción de desperdicio como indicador de impacto positivo. |
+| **6. Enfoque Global** | *Negativo:* Si el sistema se expande a otros países, la información de inventario, precios y proveedores queda sujeta a distintas legislaciones de protección de datos, que podrían no ser tan estrictas como las locales. *Positivo:* Una arquitectura Serverless/RESTful permite escalar el servicio a distintas regiones manteniendo consistencia en la calidad del servicio. | *Afectados:* Restaurantes y proveedores que operan en distintos países o cuyos datos comerciales podrían quedar expuestos ante marcos legales más laxos (magnitud media). | *Acciones:* Aplicar cifrado de extremo a extremo y políticas de retención de datos alineadas a estándares internacionales (como GDPR), y permitir que cada organización configure la ubicación/región donde se almacenan sus datos. |
+| **7. Revelación de Peligros y Responsabilidad** | *Riesgo:* Identificar una vulnerabilidad en la base de datos que exponga niveles de inventario, precios negociados o historial de pedidos de restaurantes y proveedores a terceros. | *Afectados:* La información comercial sensible (precios, márgenes, relaciones comerciales) de todos los restaurantes y proveedores registrados en la plataforma (magnitud alta). | *Acciones:* Como indica el Código Ético del Ingeniero, se acepta la responsabilidad completa: se declararán los intereses financieros relevantes y se revelará de inmediato cualquier peligro real a las autoridades y usuarios afectados, suspendiendo el servicio hasta corregir la vulnerabilidad. |
+
