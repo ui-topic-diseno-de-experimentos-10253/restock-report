@@ -86,5 +86,15 @@ Se adjunta el diagrama de clases del sistema, detallando las entidades principal
 
 ![Diagrama de Clases](assets/images/annexes/class-diagram.png)
 
+## Anexo H: About the product
 
+Se adjuntara el abut the producto, donde se detalla la funcionalidad del producto en ambos apartados, uno es en el proovedores y el otro es de administradores
+
+![About the product](assets/images/annexes/abouttheproduct.png)
+
+## Anexo I: Validation
+
+Se adjunta el video de validacion del proyecto que se realizo con los 2 apartados, administrado y proovedor para validar el funcionamiento en distintos aparatos.
+
+![Validation](assets/images/annexes/validation.png)
 
