@@ -34,9 +34,10 @@ En esta sección se incluyen de forma progresiva los títulos e hipervínculos a
 
 | Entrega | Enlace al Video (SharePoint) |
 | :--- | :--- |
-| **AV1 (Semana 4 — Sprint 1)** | [Video de Exposición AV1](https://upcedupe-my.sharepoint.com/:v:/g/personal/gabriela_shapiama_upc_edu_pe/IQBkmqCUTyXcS4X-iADPc8-LATO0HC_NBFzdnhG8wxW0qWA?e=lkpvv7) |
-| **TB1 (Semana 7 — Exposición Parcial)** | [Video de Exposición TB1](https://upcedupe-my.sharepoint.com/:v:/g/personal/gabriela_shapiama_upc_edu_pe/IQD55lUtLo2VQqzYCuLBVKqOAZxKUak2gWKuu5dzcZhFaxY?e=FDirAj) |
-| **AV2 (Semana 12 — Sprint 3)** | [Video de Exposición AV2](https://upcedupe-my.sharepoint.com/:v:/g/personal/gabriela_shapiama_upc_edu_pe/IQChvyotWY-aSbkhoIiKcl_lAV1ekJ8BugC2T-bd9HY9_5g?e=df90eE) |
+| **AV1 (Semana 4 — Sprint 1)** | [https://short-url.cc/1tkng](https://short-url.cc/1tkng) |
+| **TB1 (Semana 7 — Sprint 2)** | [https://short-url.cc/1tknh](https://short-url.cc/1tknh) |
+| **AV2 (Semana 12 — Sprint 3)** | [https://short-url.cc/1yRvy](https://short-url.cc/1yRvy) |
+| **TB2 (Semana 15 — Sprint 4)** | [https://short-url.cc/1yRw2](https://short-url.cc/1yRw2) |
 
 <br>
 
@@ -96,10 +97,10 @@ Se adjunta el diagrama de clases del sistema, detallando las entidades principal
 
 Se detalla la funcionalidad del ecosistema de productos de Restock, contemplando tanto la plataforma web de administración como la aplicación móvil y el panel de proveedores:
 
+![About the Product - Thumbnail](assets/images/chapter5/about-the-product-screenshot.png)
+
 * **Enlace (YouTube):** [https://youtu.be/hb5CnSDc2PI?si=mi9CKlrrRgStRkQ3](https://youtu.be/hb5CnSDc2PI?si=mi9CKlrrRgStRkQ3)
 * **Enlace (Microsoft Stream):** [https://shortlink.uk/1ox4T](https://shortlink.uk/1ox4T)
-
-![About the Product - Thumbnail](assets/images/chapter5/about-the-product-screenshot.png)
 
 ## Anexo I: Validation
 

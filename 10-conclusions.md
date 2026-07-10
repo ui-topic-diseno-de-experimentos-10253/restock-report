@@ -51,7 +51,7 @@ El desarrollo del proyecto Final ayudo a todo el equipo en mejorar varios aparta
 
 ### Video App Validation
 
-![App Validation - Thumbnail](assets/images/videos/app-validation.png)
+![App Validation - Thumbnail](assets/images/videos/app-validation.jpeg)
 
 | Campo | Detalle |
 |---|---|
