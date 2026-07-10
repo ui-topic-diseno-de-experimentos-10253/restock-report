@@ -1438,7 +1438,7 @@ A continuación se documentan las entrevistas de validación realizadas sobre la
     <td><strong>URL</strong></td>
     <td>
 
-  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319831_upc_edu_pe/IQAi4aizRkHASpbfJoung0asAXl20ymASUf21prs7LjQZ6s?e=hts52O
+  https://shorturl.at/y3e6c
 
   </td>
   </tr>
@@ -1480,7 +1480,7 @@ A continuación se documentan las entrevistas de validación realizadas sobre la
     <td><strong>URL</strong></td>
     <td>
 
-  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319831_upc_edu_pe/IQDTCcGMWs5ITbFG9j3eKU78AYrh6Ae4xcPR2QtQD7ZPP24?e=bZW69i
+  https://shorturl.at/4DBJJ
 
   </td>
   </tr>
@@ -1522,7 +1522,7 @@ A continuación se documentan las entrevistas de validación realizadas sobre la
     <td><strong>URL</strong></td>
     <td>
 
-  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213468_upc_edu_pe/IQAFxviA7a9cQKs3uzUhPgIKAU1agPonNAaaWMXb2IzJl1c?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=71oZfT
+  https://shorturl.at/xPloY
 
   </td>
   </tr>
@@ -1566,7 +1566,7 @@ A continuación se documentan las entrevistas de validación realizadas sobre la
     <td><strong>URL</strong></td>
     <td>
 
-  https://youtu.be/6fddYkF2Xhw
+  https://shorturl.at/KbjlC
     
   </td>
   </tr>
@@ -1608,7 +1608,7 @@ A continuación se documentan las entrevistas de validación realizadas sobre la
     <td><strong>URL</strong></td>
     <td>
 
-  https://www.youtube.com/watch?v=XMPFaZEwGeA
+  https://short-url.cc/1yRqq
     
   </td>
   </tr>
@@ -1650,7 +1650,7 @@ A continuación se documentan las entrevistas de validación realizadas sobre la
     <td><strong>URL</strong></td>
     <td>
 
-  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213468_upc_edu_pe/IQBSyVYnjaaNTqRY4OOmPokhATz7Gnj-NxZnxQIblpJlIBI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=vYC5Ab
+  https://short-url.cc/1yRqA
 
   </td>
   </tr>
