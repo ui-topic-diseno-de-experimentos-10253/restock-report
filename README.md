@@ -37,7 +37,7 @@
 
 ### u202319448 - Shapiama Rivera, Gabriela Nicole
 
-### Junio 2026
+### Julio 2026
 
 </div>
 
