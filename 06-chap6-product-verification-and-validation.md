@@ -793,41 +793,41 @@ Resumen de ejecución de las pruebas de sistema del backend, mostrando los resul
 
 ST-KT-01: Se evidencia la pantalla inicial de autenticación en la aplicación móvil Kotlin, validando que el administrador de restaurante pueda acceder al flujo de inicio de sesión.
 
-<img src="assets/images/chapter6/core-system-tests/mobile-kotlin-admin/test1-0-login.jpeg" height="350px"  alt="kotlin-restaurant-login-screen">
+<img src="assets/images/chapter6/core-system-tests/mobile-kotlin-admin/test1-0-login.jpeg" style="display:block; margin:20px auto; height:250px; width:auto;" alt="kotlin-restaurant-login-screen">
 
-<img src="assets/images/chapter6/core-system-tests/mobile-kotlin-admin/test1-2-login.jpeg" height="350px" alt="kotlin-restaurant-successful-login">
+<img src="assets/images/chapter6/core-system-tests/mobile-kotlin-admin/test1-2-login.jpeg" style="display:block; margin:20px auto; height:250px; width:auto;" alt="kotlin-restaurant-successful-login">
 
 ST-KT-02: Se evidencia la consulta del módulo de inventario desde la aplicación Kotlin, validando que el administrador pueda visualizar los insumos registrados y sus niveles de stock.
 
-<img src="assets/images/chapter6/core-system-tests/mobile-kotlin-admin/test2-inventory.jpeg" height="350px"  alt="kotlin-restaurant-inventory-test">
+<img src="assets/images/chapter6/core-system-tests/mobile-kotlin-admin/test2-inventory.jpeg" style="display:block; margin:20px auto; height:250px; width:auto;" alt="kotlin-restaurant-inventory-test">
 
 ST-KT-03: Se muestra el inicio del flujo de creación de pedido desde la aplicación móvil Kotlin, validando que el administrador pueda seleccionar insumos para generar una orden.
 
-<img src="assets/images/chapter6/core-system-tests/mobile-kotlin-admin/test3-0-create-order.jpeg" height="350px" alt="kotlin-restaurant-create-order-flow">
+<img src="assets/images/chapter6/core-system-tests/mobile-kotlin-admin/test3-0-create-order.jpeg" style="display:block; margin:20px auto; height:250px; width:auto;" alt="kotlin-restaurant-create-order-flow">
 
-<img src="assets/images/chapter6/core-system-tests/mobile-kotlin-admin/test3-1-create-order.jpeg" height="350px"  alt="kotlin-restaurant-order-created">
+<img src="assets/images/chapter6/core-system-tests/mobile-kotlin-admin/test3-1-create-order.jpeg" style="display:block; margin:20px auto; height:250px; width:auto;" alt="kotlin-restaurant-order-created">
 
 1. **Mobile system test evidence - (Flutter, proveedores de insumos)**
 
 ST-FL-01: Esta prueba valida que el proveedor pueda acceder correctamente a la aplicación móvil Flutter mediante credenciales válidas. El flujo inicia en la pantalla de autenticación y finaliza cuando el usuario ingresa a la interfaz principal del proveedor.
 
-<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test1-login.png" height="350px" alt="flutter-supplier-login-screen">
+<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test1-login.png" style="display:block; margin:20px auto; height:250px; width:auto;" alt="flutter-supplier-login-screen">
 
-<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test1-2-login.png" height="350px" alt="flutter-supplier-successful-login">
+<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test1-2-login.png" style="display:block; margin:20px auto; height:250px; width:auto;" alt="flutter-supplier-successful-login">
 
 ST-FL-02: Esta prueba valida que el proveedor pueda acceder al módulo de inventario o catálogo de productos, visualizando correctamente los insumos registrados en la aplicación móvil.
 
-<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test2-inventory.png" height="350px" alt="flutter-supplier-inventory-list">
+<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test2-inventory.png" style="display:block; margin:20px auto; height:250px; width:auto;" alt="flutter-supplier-inventory-list">
 
-<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test2-2-inventory.png" height="350px" alt="flutter-supplier-inventory-detail">
+<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test2-2-inventory.png" style="display:block; margin:20px auto; height:250px; width:auto;" alt="flutter-supplier-inventory-detail">
 
 ST-FL-03: Esta prueba valida que el proveedor pueda acceder al módulo de órdenes, revisar los pedidos recibidos por parte de los restaurantes y consultar la información asociada a cada orden desde la aplicación móvil Flutter.
 
-<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test3-order.png" height="350px" alt="flutter-supplier-order-list">
+<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test3-order.png" style="display:block; margin:20px auto; height:250px; width:auto;" alt="flutter-supplier-order-list">
 
-<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test3-2-order.png" height="350px" alt="flutter-supplier-order-detail">
+<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test3-2-order.png" style="display:block; margin:20px auto; height:250px; width:auto;" alt="flutter-supplier-order-detail">
 
-<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test3-3-order.png" height="350px" alt="flutter-supplier-order-management" >
+<img src="assets/images/chapter6/core-system-tests/mobile-flutter-supplier/test3-3-order.png" style="display:block; margin:20px auto; height:250px; width:auto;" alt="flutter-supplier-order-management">
 
 1. **Cross-platform E2E system test**
 
