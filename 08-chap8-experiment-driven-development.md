@@ -1155,19 +1155,46 @@ Con estos cambios, el backend RESTful de Restock queda alineado con el Sprint Ba
 
 #### 8.3.3.6. Team Collaboration Insights
 
-Para el desarrollo del Sprint Backlog 4 (sprint de experimentación To-Be), la dinámica del equipo se organizó en torno a la implementación ágil de las funcionalidades experimentales diseñadas para validar las hipótesis clave del negocio. Se utilizó **GitHub** como plataforma central para el control de versiones, adoptando el flujo de trabajo **GitFlow** y ramificaciones específicas por componente de software para asegurar una integración limpia y controlada sin interferir con las versiones estables previas de producción.
+Para el desarrollo del Sprint Backlog 4 (sprint de experimentación To-Be), la implementación del código se concentró en los repositorios `restock-platform`, `restock-webapp` y `restock-mobile` (versiones nativa y Flutter), utilizando **GitHub** como plataforma central de control de versiones bajo el flujo de trabajo **GitFlow**, con ramas específicas por feature.
 
-La distribución de actividades del equipo permitió una participación equitativa y especializada, dividida de la siguiente manera:
+La participación en la implementación de código durante este Sprint se distribuyó de la siguiente manera, según lo evidenciado en los analíticos de GitHub:
 
-* **Gabriela N. Shapiama (21 horas):** Lideró la integración móvil con Firebase Cloud Messaging (configuración del servicio y redirección desde notificaciones) y el desarrollo de componentes del flujo de onboarding y la columna de rotación en la interfaz frontend angular.
-* **Julio D. Castro (19 horas):** Desarrolló las reglas lógicas de alertas de inventario en el backend, la persistencia del estado de primer pedido del onboarding, la simulación de pedidos para proveedores y el soporte del feature flag experimental para el grupo web.
-* **José J. Guerra (17 horas):** Estructuró los payloads de notificaciones push, ejecutó el plan de pruebas funcionales para la detección de stock crítico y validó exhaustivamente los flujos de navegación en los entornos móvil y web.
-* **Ario Chavez (15 horas):** Diseñó el cálculo matemático de rotación de insumos y configuró el plan de medición analítica a través de eventos personalizados (FCM y onboarding guiado en móvil, e indicador de rotación en la aplicación web).
-* **Fernando I. Sanchez (12 horas):** Diseñó la experiencia del onboarding del primer pedido, elaboró los guiones de pruebas de usabilidad y estructuró las plantillas y datos para el Concierge Test del catálogo de proveedores tradicionales.
+* **Gabriela N. Shapiama y Julio D. Castro:** Concentraron la implementación en el backend (`restock-platform`), desarrollando las reglas de alertas de inventario, la persistencia del estado de onboarding, y la integración de notificaciones vía Firebase.
+* **Julio D. Castro y Gabriela N.:** Desarrollaron la aplicación móvil nativa (`restock-mobile`), integrando Firebase Cloud Messaging y el flujo guiado de primer pedido.
+* **José J. Guerra:** Desarrolló el indicador de rotación de insumos en el frontend web (`restock-webapp`).
+* **Julio D. Castro :** Implementó el módulo experimental en la versión Flutter de la aplicación móvil.
+
+En paralelo, **Ario Chavez y Fernando I. Sanchez** concentraron su aporte del Sprint en la elaboración y actualización del Informe del Proyecto (secciones 8.1 a 8.4 correspondientes a este hito), cuya evidencia de colaboración se documenta en la sección "Project Report Collaboration Insights" de este informe.
+
+
+##### Analíticas de Colaboración (GitHub Insights)
+
+**Backend — restock-platform**
+
+![Contributors restock-platform](assets/images/chapter8/team-collaboration-insights/platform-insights.png)
+
+*Captura del gráfico de Insights → Contributors del repositorio `restock-platform` (periodo 09/06/2026 – 09/07/2026): 2 autores registraron 4 commits a `main` (5 en total considerando todas las ramas) mediante 6 pull requests fusionados, modificando 40 archivos (+2,805 / −734 líneas).*
+
+**Frontend Web — restock-webapp**
+
+![Contributors restock-webapp](assets/images/chapter8/team-collaboration-insights/webapp-insights.png)
+
+*Captura del gráfico de Insights → Contributors del repositorio `restock-webapp` (periodo 09/06/2026 – 09/07/2026): 2 autores registraron 7 commits a `main` (9 en total) mediante 7 pull requests fusionados, modificando 25 archivos (+778 / −7 líneas).*
+
+**Aplicación Móvil — restock-mobile**
+
+![Contributors restock-mobile-flutter](assets/images/chapter8/team-collaboration-insights/mobile-insights-flutter.png)
+
+*Captura del gráfico de Insights → Contributors del repositorio `restock-mobile-flutter` (periodo 09/06/2026 – 09/07/2026): 1 autor registró 4 commits a `main` (4 en total) mediante 4 pull requests fusionados, modificando 25 archivos (+2,126 / −775 líneas).*
+
+![Contributors restock-mobile-android](assets/images/chapter8/team-collaboration-insights/mobile-insights-native.png)
+
+*Captura del gráfico de Insights → Contributors del repositorio `restock-mobile-android` (periodo 09/06/2026 – 09/07/2026): 1 autor registró 5 commits a `main` (10 en total) mediante 8 pull requests fusionados, modificando 20 archivos (+259 / −14 líneas).*
+
+> **Nota:** El repositorio `restock-website` (Landing Page) no registró actividad de commits durante este Sprint, dado que su despliegue se mantuvo estable desde entregas previas y ninguna de las historias de usuario To-Be planificadas requería modificaciones sobre este componente.
+
 
 ##### Control de Versiones por Componente (Repositorios)
-
-A continuación, se detallan las ramas y commits clave generados en los repositorios del ecosistema de Restock para dar soporte técnico al Sprint de experimentación:
 
 | Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -1184,12 +1211,11 @@ A continuación, se detallan las ramas y commits clave generados en los reposito
 
 ##### Interpretación de la Colaboración y Dinámica de Equipo
 
-Las métricas del Sprint Backlog 4 reflejan una alta cohesión entre la lógica de negocio construida en el backend y su consumo en las aplicaciones de cara al usuario. La distribución equilibrada del esfuerzo permitió cubrir con éxito:
-1. **Infraestructura y Conectividad (Backend y Firebase):** Consolidados principalmente en el repositorio `restock-platform`, permitiendo exponer contratos estables de API.
-2. **Experiencia de Usuario e Interacción (Frontend y Mobile):** Diseñados de manera reactiva en `restock-webapp` y `restock-mobile` para capturar la interacción de los grupos experimentales y de control.
-3. **Validación Cualitativa Analítica:** A través de eventos personalizados y pruebas manuales integradas en cada una de las historias de usuario implementadas.
+Como se observa en los analíticos de Insights, la actividad de commits del Sprint 4 se concentró en `restock-platform` y `restock-mobile` (versión nativa), con 2 autores cada uno, reflejando el trabajo conjunto en la lógica de negocio del backend y su integración con la app móvil. Los repositorios `restock-webapp` y la versión Flutter de `restock-mobile` registraron un autor cada uno, correspondiente al desarrollo especializado del indicador de rotación y del módulo experimental respectivamente.
 
-En conclusión, el uso consistente de ramas por característica facilitó un flujo de CI/CD ordenado en donde la colaboración técnica del equipo garantizó que el sistema estuviera preparado para la fase de entrevistas de validación sin introducir regresiones en la base de código existente.
+Complementariamente, la participación de **Ario Chavez y Fernando I. Sanchez** se concentró en la elaboración del Informe del Proyecto durante este Sprint, cuya evidencia de colaboración (commits y analíticos del repositorio del informe) se documenta en la sección "Project Report Collaboration Insights".
+
+En conclusión, la combinación de ramas por feature en los repositorios de código y el control de versiones del informe permitió que, en conjunto, los 5 integrantes del equipo tuvieran participación evidenciable durante el Sprint 4, ya sea en la implementación técnica o en la documentación del proyecto.
 
 ### 8.3.4. To-Be Validation Interviews
 
@@ -1412,7 +1438,7 @@ A continuación se documentan las entrevistas de validación realizadas sobre la
     <td><strong>URL</strong></td>
     <td>
 
-  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319831_upc_edu_pe/IQAi4aizRkHASpbfJoung0asAXl20ymASUf21prs7LjQZ6s?e=hts52O
+  https://shorturl.at/y3e6c
 
   </td>
   </tr>
@@ -1454,7 +1480,7 @@ A continuación se documentan las entrevistas de validación realizadas sobre la
     <td><strong>URL</strong></td>
     <td>
 
-  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319831_upc_edu_pe/IQDTCcGMWs5ITbFG9j3eKU78AYrh6Ae4xcPR2QtQD7ZPP24?e=bZW69i
+  https://shorturl.at/4DBJJ
 
   </td>
   </tr>
@@ -1496,7 +1522,7 @@ A continuación se documentan las entrevistas de validación realizadas sobre la
     <td><strong>URL</strong></td>
     <td>
 
-  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213468_upc_edu_pe/IQAFxviA7a9cQKs3uzUhPgIKAU1agPonNAaaWMXb2IzJl1c?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=71oZfT
+  https://shorturl.at/xPloY
 
   </td>
   </tr>
@@ -1540,7 +1566,7 @@ A continuación se documentan las entrevistas de validación realizadas sobre la
     <td><strong>URL</strong></td>
     <td>
 
-  https://youtu.be/6fddYkF2Xhw
+  https://shorturl.at/KbjlC
     
   </td>
   </tr>
@@ -1582,7 +1608,7 @@ A continuación se documentan las entrevistas de validación realizadas sobre la
     <td><strong>URL</strong></td>
     <td>
 
-  https://www.youtube.com/watch?v=XMPFaZEwGeA
+  https://short-url.cc/1yRqq
     
   </td>
   </tr>
@@ -1624,7 +1650,7 @@ A continuación se documentan las entrevistas de validación realizadas sobre la
     <td><strong>URL</strong></td>
     <td>
 
-  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213468_upc_edu_pe/IQBSyVYnjaaNTqRY4OOmPokhATz7Gnj-NxZnxQIblpJlIBI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=vYC5Ab
+  https://short-url.cc/1yRqA
 
   </td>
   </tr>
